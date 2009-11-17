@@ -1,0 +1,23 @@
+Run a desktop EC2 instance
+
+http://alestic.com/
+
+http://ec2jaunty-desktop.notlong.com/
+ami-caf615a3 - desktop 32-bit (US)
+
+htp://console.aws.amazon.com/
+
+connect via key pair
+
+    ssh -i ~/Work/Amazon\ Keys/wes-test.pem root@ec2-174-129-115-180.compute-1.amazonaws.com
+
+Update
+
+    apt-get update && apt-get upgrade -y
+
+Setup user
+
+    user-setup
+
+Connect with NX client, requires Rosetta (and X11)
+
