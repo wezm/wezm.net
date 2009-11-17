@@ -1,0 +1,12 @@
+WezM.net
+========
+
+Site Structure
+--------------
+
+    /articles
+      /technical
+        /category
+      /personal
+        /category
+    /about
