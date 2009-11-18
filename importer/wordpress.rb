@@ -9,6 +9,32 @@ module Importer
       @export_file = File.open(wordpress_export_path)
       @export = Nokogiri::XML(@export_file)
       @site = Nanoc3::Site.new(nanoc_site_path)
+
+      load_categories
+      load_tags
+    end
+
+    def load_categories
+      @categories = {}
+      @export.xpath('//rss/channel/wp:category').each do |category|
+        name = get(category, 'wp:cat_name')
+        parent = get(category, 'wp:category_parent')
+        parent = nil if parent.empty?
+        @categories[name] = {
+          :slug => get(category, 'wp:category_nicename'),
+          :name => name,
+          :parent => parent
+        }
+      end
+    end
+
+    def load_tags
+      @tags = {}
+    end
+
+    def find_topmost_category(category)
+      return category if category[:parent].nil?
+      find_topmost_category(@categories[category[:parent]])
     end
 
     def run
@@ -52,10 +78,11 @@ module Importer
       post.css('category[domain=category]').each do |category|
         categories << category.text
       end
+      categories.uniq!
 
       attributes = {
         :tags => tags.uniq,
-        :categories => categories.uniq,
+        :categories => categories,
         :permalink => get(post, 'link'),
         :status => get(post, 'wp:status'),
         :slug => get(post, 'wp:post_name'),
@@ -63,13 +90,26 @@ module Importer
         :post_date => get(post, 'wp:post_date_gmt'),
       }
 
-      unless attributes[:slug]
-        puts "Error post #{post_id} has no slug"
+      if attributes[:slug].empty?
+        puts "WARNING: Error post #{attributes[:post_id]} has no slug"
+        #TODO prompt for slug or derive one from the title here
         return
       end
 
-      path = "/articles/#{slug}"
-      add_item(content, attributes, identifier)
+      main_category = @categories[categories.first]
+      top_category = find_topmost_category(main_category)
+
+      if main_category == top_category
+        puts "WARNING: Need a secondary category"
+        #TODO prompt for second category here
+      end
+
+      path = ['', 'articles', top_category[:slug], main_category[:slug], attributes[:slug], ''].join('/')
+
+      require 'pp'
+      pp attributes
+      puts path
+      # add_item(content, attributes, identifier)
     end
 
     def process_page(page)
