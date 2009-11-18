@@ -2,6 +2,11 @@ require 'rubygems'
 
 require 'wordpress'
 
-i = Importer::Wordpress.new('wezm.net.2009-11-17.xml')
+if ARGV.size < 2
+  puts "Usage importer.rb worpress-export.xml /path/to/nanoc/site"
+  exit 3
+end
+
+i = Importer::Wordpress.new(ARGV[0], ARGV[1])
 
 i.run
