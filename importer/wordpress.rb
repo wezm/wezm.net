@@ -1,14 +1,17 @@
 require 'nokogiri'
 require 'nanoc3'
+require 'uri'
 
 module Importer
 
   class Wordpress
 
-    def initialize(wordpress_export_path, nanoc_site_path)
+    def initialize(wordpress_export_path, nanoc_site_path, rewrite_map_path)
       @export_file = File.open(wordpress_export_path)
       @export = Nokogiri::XML(@export_file)
       @site = Nanoc3::Site.new(nanoc_site_path)
+      @rewrite_map = []
+      @rewrite_map_path = rewrite_map_path
 
       load_categories
       load_tags
@@ -61,6 +64,7 @@ module Importer
           puts "Unknown post type: #{item_type}"
         end
       end
+      write_rewrite_map
     end
 
     protected
@@ -118,7 +122,7 @@ module Importer
       # require 'pp'
       # pp attributes
 
-      # add_item(content, attributes, identifier)
+      add_item(content, attributes, path)
     end
 
     def process_page(page)
@@ -140,8 +144,21 @@ module Importer
       #   :excerpt      => row['post_excerpt']
       # }
       # identifier = '/posts/' + post_date.year.to_s + '/' + post_date.month.to_s + '/' + post_name + '/'
+      if attributes[:status] == 'publish'
+        @rewrite_map << [attributes[:permalink], identifier]
+      end
       @site.data_sources.first.create_item(content, attributes, identifier)
       puts "Added item at #{identifier}"
+    end
+
+    def write_rewrite_map
+      File.open(@rewrite_map_path, 'w') do |f|
+        @rewrite_map.each do |old_url, new_path|
+          uri = URI.parse(old_url)
+          f.puts uri.path + "\t" + new_path
+          puts uri.path + " => " + new_path
+        end
+      end
     end
 
   end
