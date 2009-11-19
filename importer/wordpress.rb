@@ -71,7 +71,7 @@ module Importer
     end
 
     def process_post(post)
-      puts "Processing post: #{post.css('title').first.text}"
+      puts "Processing post: #{post.at_css('title').text}"
       content = get(post, 'content:encoded')
 
       tags = []
@@ -102,9 +102,10 @@ module Importer
         :status => get(post, 'wp:status'),
         :slug => get(post, 'wp:post_name'),
         :post_id => get(post, 'wp:post_id').to_i,
-        :post_date => get(post, 'wp:post_date_gmt'),
         :section => find_topmost_category(@categories[categories.first])[:slug],
         :title => get(post, 'title'),
+        :created_at => get(post, 'wp:post_date_gmt'),
+        :kind => 'article',
       }
 
       if attributes[:slug].empty?
@@ -121,15 +122,12 @@ module Importer
     end
 
     def process_page(page)
-      puts "Processing page: #{page.css('title').first.text}"
+      puts "WARNING: Skipping page: #{page.at_css('title').text}"
     end
 
     def process_attachment(attachment)
-      puts "Processing attachment"
-
-      url = get(attachment, 'guid')
-      
-      
+      # puts "Processing attachment"
+      # Don't need these for now
     end
 
     def add_item(content, attributes, identifier)
