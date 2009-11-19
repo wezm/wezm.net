@@ -15,6 +15,7 @@ module Importer
     end
 
     def load_categories
+      puts "Loading categories"
       @categories = {}
       @export.xpath('//rss/channel/wp:category').each do |category|
         name = get(category, 'wp:cat_name')
@@ -29,7 +30,15 @@ module Importer
     end
 
     def load_tags
+      puts "Loading tags"
       @tags = {}
+      @export.xpath('//rss/channel/wp:tag').each do |tag|
+        slug = get(tag, 'wp:tag_slug')
+        @tags[slug] = {
+          :slug => slug,
+          :name => get(tag, 'wp:tag_name'),
+        }
+      end
     end
 
     def find_topmost_category(category)
@@ -57,7 +66,7 @@ module Importer
     protected
 
     def get(node, xpath)
-      elem = node.xpath(xpath).first
+      elem = node.at_xpath(xpath)
       elem ? elem.content : nil
     end
 
@@ -80,6 +89,12 @@ module Importer
       end
       categories.uniq!
 
+      begin
+        post_date = Date.strptime(get(post, 'wp:post_date_gmt'), "%Y-%m-%d %H:%M:%S")
+      rescue ArgumentError
+        post_date = Date.today
+      end
+
       attributes = {
         :tags => tags.uniq,
         :categories => categories,
@@ -88,27 +103,20 @@ module Importer
         :slug => get(post, 'wp:post_name'),
         :post_id => get(post, 'wp:post_id').to_i,
         :post_date => get(post, 'wp:post_date_gmt'),
+        :section => find_topmost_category(@categories[categories.first])[:slug],
+        :title => get(post, 'title'),
       }
 
       if attributes[:slug].empty?
-        puts "WARNING: Error post #{attributes[:post_id]} has no slug"
-        #TODO prompt for slug or derive one from the title here
-        return
+        puts "WARNING: Error post #{attributes[:post_id]} has no slug, generating one"
+        attributes[:slug] = attributes[:title].downcase.gsub(/[^0-9a-zA-Z]/, '-').gsub(/-{2,}/, '-')
       end
 
-      main_category = @categories[categories.first]
-      top_category = find_topmost_category(main_category)
+      path = ['', attributes[:section], post_date.year, ("%02d" % post_date.month), attributes[:slug], ''].join('/')
 
-      if main_category == top_category
-        puts "WARNING: Need a secondary category"
-        #TODO prompt for second category here
-      end
+      # require 'pp'
+      # pp attributes
 
-      path = ['', 'articles', top_category[:slug], main_category[:slug], attributes[:slug], ''].join('/')
-
-      require 'pp'
-      pp attributes
-      puts path
       # add_item(content, attributes, identifier)
     end
 
@@ -118,6 +126,10 @@ module Importer
 
     def process_attachment(attachment)
       puts "Processing attachment"
+
+      url = get(attachment, 'guid')
+      
+      
     end
 
     def add_item(content, attributes, identifier)
