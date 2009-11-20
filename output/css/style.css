@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Titillium";
+  src: url(/fonts/TitilliumMaps26L001.otf) format("opentype");
+}
+/*@font-face {
+  font-family: "Contra";
+  src: url(/fonts/CONTRA__.ttf) format("truetype");
+}
+@font-face {
+  font-family: "League Gothic";
+  src: url(/fonts/League%20Gothic.otf) format("opentype");
+}*/
+
+body {
+  font-family: Constantia, Georgia, "Bitstream Vera Serif", "Liberation Serif", serif;
+  font-size: 62.5%;
+}
+
+p {
+  font-size: 1.6em;
+  line-height: 1.2;
+  margin: 1em 0;
+}
+
+p.georgia {
+    font-family: Georgia, Palatino, Times, 'Times New Roman', sans-serif;
+}
+
+h1 {
+  font-size: 4.5em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+/*  font-family: "League Gothic", Contra, Titillium, Calibri, Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;*/
+  font-family: Titillium, Calibri, Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
+  margin: 0.75em 0 0.25em 0;
+}
+
+body {
+  background: #fff;
+  padding: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: #f30;
+}
+
+a:hover {
+  color: #f90;
+}
+
