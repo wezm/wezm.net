@@ -11,7 +11,7 @@
 <body>
   <%= render 'header' %>
   <div id="main">
-    <h1><%= @item[:title] %></h1>
+    <h1><a href="<%= @item.reps.first.path %>"><%= @item[:title] %></a></h1>
     <%= yield %>
   </div>
   <%= render 'footer' %>

@@ -11,9 +11,25 @@
 <body>
   <%= render 'header' %>
   <div id="main">
+    <ul class="articles">
     <% sorted_articles[0..9].each do |article| %>
-      <h1><a href="<%= article.reps.first.path %>"><%= article[:title] %></a></h1>
+      <% post_date = WezM::Helpers.post_date(article) %>
+      <li>
+        <abbr class="calender date" title="<%= post_date.iso8601 %>">
+          <span class="day"><%= post_date.day %></span>
+          <span class="month"><%= post_date.strftime('%b') %></span>
+          <span class="year"><%= post_date.year %></span>
+        </span>
+        <a href="<%= article.reps.first.path %>"><%= article[:title] %></a>
+      </li>
     <% end %>
+    </ul>
+    
+    <div class="pagination">
+      <a href="">&laquo; Newer</a>
+      |
+      <a href="">Older &raquo;</a>
+    </div>
   </div>
   <%= render 'footer' %>
 </body>
