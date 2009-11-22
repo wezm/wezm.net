@@ -11,10 +11,6 @@
 <body>
   <div id="main">
     <h1><%= @item[:title] %></h1>
-
-    <p class="georgia">Something that seems to be a regression on the iPhone relative to all previous iPods is that song titles get truncated. Even in the original iPod the Now Playing screen would scroll the current song title so that you could read it all when it didn't fit on screen. Later model iPods also scrolled text that was wider than the screen when browsing menus. It seems the iPhone 3G does neither of these. I tried the three main views: Now Playing, List view (flip side of album art in now playing screen) and the track browsing screen. All three are pictured at the end of this post (which incidently was written using the very cool iPhone WordPress app). It seems the only way to see the full track name is to rotate the iPhone into the Coverflow view where the text fits given the added width of the screen. If anyone has any better suggestions I'd love to hear them.</p>
-
-
     <%= yield %>
   </div>
 </body>
