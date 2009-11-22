@@ -12,7 +12,7 @@
   <%= render 'header' %>
   <div id="main">
     <% sorted_articles[0..9].each do |article| %>
-      <h1><%= article.attributes[:title] %></h1>
+      <h1><a href="<%= article.reps.first.path %>"><%= article[:title] %></a></h1>
     <% end %>
   </div>
   <%= render 'footer' %>
