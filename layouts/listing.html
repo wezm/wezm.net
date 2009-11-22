@@ -11,8 +11,9 @@
 <body>
   <%= render 'header' %>
   <div id="main">
-    <h1><%= @item[:title] %></h1>
-    <%= yield %>
+    <% sorted_articles.each do |article| %>
+      <h1><%= article.title %></h1>
+    <% end %>
   </div>
   <%= render 'footer' %>
 </body>

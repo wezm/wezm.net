@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+compile '/' do
+  layout 'listing'
+end
+
 compile '*' do
   filter :rdiscount
   layout 'default'
