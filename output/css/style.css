@@ -85,16 +85,20 @@ pre {
   font-family: Titillium, Calibri, Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
   background-color: rgb(112, 128, 144); /* Slate gray */
   padding: 0.5em 1em;
-  text-shadow: rgb(187, 187, 187) 0px 1px 1px;
+  text-shadow: rgb(187, 187, 187) 1px 1px 1px;
   font-size: 2.1em;
   font-weight: bold;
-/*  margin: 1em 1em 0 1em;*/
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
   border-radius: 0.5em;
 }
-#header a{
+#header a {
   text-decoration: none;
+  color: black;
+}
+#header a:hover {
+  color: #36454F;
+/*  text-shadow: rgb(0, 187, 0) 1px 1px 1px;*/
 }
 
 ul#menu {
@@ -106,7 +110,7 @@ ul#menu {
 ul#menu li {
   display: inline;
   font-size: inherit;
-  text-shadow: rgb(187, 187, 187) 0px 1px 1px;
+/*  text-shadow: rgb(187, 187, 187) 0px 1px 1px;*/
 /*  width: 5em;*/
 }
 
