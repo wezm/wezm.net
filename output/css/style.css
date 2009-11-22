@@ -7,34 +7,118 @@ body {
   font-family: Constantia, Georgia, "Bitstream Vera Serif", "Liberation Serif", serif;
   font-size: 62.5%;
   background: #fff;
-  padding: 1em;
+  color: #223;
+}
+
+p,li {
+  font-size: 1.6em;
+  line-height: 1.2;
 }
 
 p {
-  font-size: 1.6em;
-  line-height: 1.2;
   margin: 1em 0;
 }
 
+ul, ol {
+  margin: 1em 0 1em 1em;
+}
+ul {
+  list-style: disc;
+}
+li {
+  margin-left: 1em;
+}
+
+/* 6,7,8,9,10,11,12,14,16,18,21,24,36,48,60,72 */
 h1 {
-  font-size: 4.5em;
+  font-size: 4.8em;
+/*  color: black;*/
+}
+h2 {
+  font-size: 3.6em;
+}
+h3 {
+  font-size: 2.4em;
+}
+h4 {
+  font-size: 2.1em;
+}
+h5 {
+  font-size: 1.8em;
+}
+h6 {
+  font-size: 1.6em;
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: Titillium, Calibri, Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
-  margin: 0.75em 0 0.25em 0;
+  margin: 0.5em 0 0.25em 0;
+  color: #111;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:link,
 a:visited {
-  color: #f30;
+  color: #36454F;
 }
 
 a:hover {
-  color: #f90;
+/*  color: #f90;*/
 }
 
+sup {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+pre,code {
+  font-family: Consolas, "Andale Mono", "Liberation Mono", Menlo, Monaco, "Bitstream Vera Sans Mono", fixed;
+}
+pre {
+  font-size: 1.2em;
+}
+
+#header {
+  font-family: Titillium, Calibri, Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
+  background-color: rgb(112, 128, 144); /* Slate gray */
+  padding: 0.5em 1em;
+  text-shadow: rgb(187, 187, 187) 0px 1px 1px;
+  font-size: 2.1em;
+  font-weight: bold;
+}
+#header a{
+  text-decoration: none;
+}
+
+ul#menu {
+  list-style: none;
+  background-color: rgb(112, 128, 144); /* Slate gray */
+  float: right;
+  margin: 0;
+}
+ul#menu li {
+  display: inline;
+  font-size: inherit;
+  text-shadow: rgb(187, 187, 187) 0px 1px 1px;
+/*  width: 5em;*/
+}
+
+#main {
+  padding: 0 1em;
+  clear: both;
+}
+
+#footer {
+  color: #666;
+  border-top: 1px solid #666;
+  margin: 1em;
+}
+#footer .copyright {
+  font-family: Titillium, Calibri, Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
+  font-size: 1.4em;
+  padding-top: 1em;
+  display: block;
+}
