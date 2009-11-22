@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Titillium";
-  src: url(/fonts/TitilliumMaps26L001.otf) format("opentype");
+  src: url(/fonts/TitilliumMaps26L004.otf) format("opentype");
 }
 
 body {
@@ -8,6 +8,7 @@ body {
   font-size: 62.5%;
   background: #fff;
   color: #223;
+  padding: 2em;
 }
 
 p,li {
@@ -32,7 +33,6 @@ li {
 /* 6,7,8,9,10,11,12,14,16,18,21,24,36,48,60,72 */
 h1 {
   font-size: 4.8em;
-/*  color: black;*/
 }
 h2 {
   font-size: 3.6em;
@@ -88,6 +88,10 @@ pre {
   text-shadow: rgb(187, 187, 187) 0px 1px 1px;
   font-size: 2.1em;
   font-weight: bold;
+/*  margin: 1em 1em 0 1em;*/
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
 }
 #header a{
   text-decoration: none;
@@ -107,14 +111,14 @@ ul#menu li {
 }
 
 #main {
-  padding: 0 1em;
+/*  padding: 0 1em;*/
   clear: both;
 }
 
 #footer {
   color: #666;
   border-top: 1px solid #666;
-  margin: 1em;
+  margin: 1em 0;
 }
 #footer .copyright {
   font-family: Titillium, Calibri, Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
