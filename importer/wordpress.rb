@@ -109,8 +109,8 @@ module Importer
         :section => find_topmost_category(@categories[categories.first])[:slug],
         :title => get(post, 'title'),
         :created_at => get(post, 'wp:post_date_gmt'),
-        :kind => 'article',
       }
+      attributes[:kind] = attributes[:status] == 'publish' ? 'article' : 'draft'
 
       if attributes[:slug].empty?
         puts "WARNING: Error post #{attributes[:post_id]} has no slug, generating one"
