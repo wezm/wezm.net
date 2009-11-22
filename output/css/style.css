@@ -30,12 +30,20 @@ li {
   margin-left: 1em;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
+  margin: 0.5em 0 0.25em 0;
+  color: #111;
+  font-weight: 200;
+}
+
 /* 6,7,8,9,10,11,12,14,16,18,21,24,36,48,60,72 */
 h1 {
   font-size: 3.6em;
 }
 h2 {
   font-size: 2.4em;
+  border-bottom: 1px solid gray;
 }
 h3 {
   font-size: 2.1em;
@@ -50,11 +58,6 @@ h6 {
   font-size: 1.4em;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: Titillium, Calibri, Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
-  margin: 0.5em 0 0.25em 0;
-  color: #111;
-}
 
 a {
   text-decoration: underline;
@@ -82,12 +85,12 @@ pre {
 }
 
 #header {
-  font-family: Titillium, Calibri, Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
   background-color: rgb(112, 128, 144); /* Slate gray */
   padding: 0.5em 1em;
   text-shadow: rgb(187, 187, 187) 1px 1px 1px;
   font-size: 1.8em;
-  font-weight: bold;
+  font-weight: 200;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
   border-radius: 0.5em;
@@ -120,13 +123,14 @@ ul#menu li {
 }
 
 #footer {
-  color: #666;
-  border-top: 1px solid #666;
+  color: gray;
+  border-top: 1px solid gray;
   margin: 1em;
 }
 #footer .copyright {
-  font-family: Titillium, Calibri, Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
   font-size: 1.4em;
   padding-top: 1em;
   display: block;
+  font-weight: 200;
 }
