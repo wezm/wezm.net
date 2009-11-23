@@ -143,3 +143,8 @@ ul#menu li {
   display: block;
   font-weight: 200;
 }
+
+.pagination {
+  display: none;
+  text-align: center;
+}
