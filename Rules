@@ -4,9 +4,23 @@ compile '/' do
   layout 'listing'
 end
 
+compile '/articles/', :rep => :json do
+  filter :erb
+end
+compile '/articles/' do
+  layout 'articles'
+end
+
 compile '*' do
   filter :rdiscount
   layout 'default'
+end
+
+route '/articles/', :rep => :json do
+  item.identifier + 'index.json'
+end
+route '/articles/' do
+  item.identifier + 'index.html'
 end
 
 route '*' do
