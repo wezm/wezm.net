@@ -8,7 +8,7 @@ body {
   font-size: 62.5%;
   background: #fff;
   color: #223;
-  padding: 2em;
+/*  padding: 2em;*/
 }
 
 p,li {
@@ -95,18 +95,26 @@ pre {
 
 #header {
   font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
-  background-color: rgb(112, 128, 144); /* Slate gray */
-  padding: 0.5em 1em;
-  text-shadow: rgb(187, 187, 187) 1px 1px 1px;
+  /*background-color: rgb(112, 128, 144);  Slate gray */
+/*  padding: 0.5em 1em;*/
+/*  text-shadow: rgb(187, 187, 187) 1px 1px 1px;*/
   font-size: 1.8em;
-  font-weight: 200;
+/*  font-weight: 200;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  border-radius: 0.5em;
+  border-radius: 0.5em;*/
+  background: url(/images/quadrant.png) top left no-repeat;
+  height: 75px;
 }
 #header a {
   text-decoration: none;
   color: black;
+}
+#header > a {
+  float: left;
+  display: block;
+  color: white;
+  padding: 1em 0 0 0.75em;
 }
 #header a:hover {
   color: #36454F;
@@ -115,9 +123,10 @@ pre {
 
 ul#menu {
   list-style: none;
-  background-color: rgb(112, 128, 144); /* Slate gray */
+  /* background-color: rgb(112, 128, 144); Slate gray */
   float: right;
   margin: 0;
+  padding: 1em 1em 0;
 }
 ul#menu li {
   display: inline;
