@@ -147,10 +147,14 @@ ul#menu li {
 }
 
 .column {
-  width: 30%;
+  width: 31%;
   float: left;
+  margin-left: 2em;
+  margin-bottom: 4em;
 }
-
+.first {
+  margin-left: 0;
+}
 .flickr {
   clear: both;
 }
