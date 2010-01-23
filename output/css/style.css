@@ -98,6 +98,7 @@ pre {
   font-size: 1.8em;
   color: white;
   padding: 0.5em;
+  margin-right: 1em;
   -webkit-border-bottom-right-radius: 1em;
   -moz-border-bottom-right-radius: 1em;
   border-bottom-right-radius: 1em;
@@ -130,6 +131,7 @@ ul#menu li {
   color: gray;
   border-top: 1px solid gray;
   margin: 1em;
+  clear: both;
 }
 #footer .copyright {
   font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
@@ -142,4 +144,20 @@ ul#menu li {
 .pagination {
   display: none;
   text-align: center;
+}
+
+.column {
+  width: 30%;
+  float: left;
+}
+
+.flickr {
+  clear: both;
+}
+.flickr ul {
+  list-style: none;
+  margin: 0;
+}
+.flickr li {
+  display: inline;
 }

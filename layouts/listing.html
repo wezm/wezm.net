@@ -11,19 +11,82 @@
 <body>
   <%= render 'header' %>
   <div id="main">
-    <ul class="articles">
-    <% sorted_articles[0..9].each do |article| %>
-      <% post_date = WezM::Helpers.post_date(article) %>
-      <li>
-        <abbr class="calender date" title="<%= post_date.iso8601 %>">
-          <span class="day"><%= post_date.day %></span>
-          <span class="month"><%= post_date.strftime('%b') %></span>
-          <span class="year"><%= post_date.year %></span>
-        </abbr>
-        <a href="<%= article.reps.first.path %>"><%= article[:title] %></a>
-      </li>
-    <% end %>
-    </ul>
+    <div class="column personal">
+      <h1>Geeky</h1>
+      <ul>
+      <% sorted_articles[0..9].each do |article| %>
+        <% post_date = WezM::Helpers.post_date(article) %>
+        <li>
+          <abbr class="calender date" title="<%= post_date.iso8601 %>">
+            <span class="day"><%= post_date.day %></span>
+            <span class="month"><%= post_date.strftime('%b') %></span>
+            <span class="year"><%= post_date.year %></span>
+          </abbr>
+          <a href="<%= article.reps.first.path %>"><%= article[:title] %></a>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+
+    <div class="column technical">
+      <h1>Non-Geeky</h1>
+      <ul>
+      <% sorted_articles[0..9].each do |article| %>
+        <% post_date = WezM::Helpers.post_date(article) %>
+        <li>
+          <abbr class="calender date" title="<%= post_date.iso8601 %>">
+            <span class="day"><%= post_date.day %></span>
+            <span class="month"><%= post_date.strftime('%b') %></span>
+            <span class="year"><%= post_date.year %></span>
+          </abbr>
+          <a href="<%= article.reps.first.path %>"><%= article[:title] %></a>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+
+    <div class="column twitter">
+      <h1>Tweets</h1>
+      <ul>
+      <% sorted_articles[0..9].each do |article| %>
+        <% post_date = WezM::Helpers.post_date(article) %>
+        <li>
+          <abbr class="calender date" title="<%= post_date.iso8601 %>">
+            <span class="day"><%= post_date.day %></span>
+            <span class="month"><%= post_date.strftime('%b') %></span>
+            <span class="year"><%= post_date.year %></span>
+          </abbr>
+          <a href="<%= article.reps.first.path %>"><%= article[:title] %></a>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+    
+    <div class="flickr">
+      <ul>
+        <li>
+          <a href="http://www.flickr.com/photos/wezm/4268597148/" title="Blue Flower by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4013/4268597148_ab83667f21_s.jpg" width="75" height="75" alt="Blue Flower" /></a>
+        </li>
+        <li>
+          <a href="http://www.flickr.com/photos/wezm/4267852401/" title="Wes on Steps in the Rainforest by wezm, on Flickr"><img src="http://farm3.static.flickr.com/2677/4267852401_e2d539967b_s.jpg" width="75" height="75" alt="Wes on Steps in the Rainforest" /></a>
+        </li>
+        <li>
+          <a href="http://www.flickr.com/photos/wezm/4267852153/" title="Wes and Manda in the Rainforest by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4021/4267852153_1060f0d092_s.jpg" width="75" height="75" alt="Wes and Manda in the Rainforest" /></a>
+        </li>
+        <li>
+          <a href="http://www.flickr.com/photos/wezm/4268596618/" title="Manda in the Rainforest by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4061/4268596618_c9755d8507_s.jpg" width="75" height="75" alt="Manda in the Rainforest" /></a>
+        </li>
+        <li>
+          <a href="http://www.flickr.com/photos/wezm/4268596324/" title="Mossy Path and Seat by wezm, on Flickr"><img src="http://farm3.static.flickr.com/2755/4268596324_eaf83cde01_s.jpg" width="75" height="75" alt="Mossy Path and Seat" /></a>
+        </li>
+        <li>
+          <a href="http://www.flickr.com/photos/wezm/4267851415/" title="Manda Sitting in Linden Gardens by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4049/4267851415_bd068d2d12_s.jpg" width="75" height="75" alt="Manda Sitting in Linden Gardens" /></a>
+        </li>
+        <li>
+          <a href="http://www.flickr.com/photos/wezm/4268595626/" title="Tea and Coffee Supplies by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4033/4268595626_999db17916_s.jpg" width="75" height="75" alt="Tea and Coffee Supplies" /></a>
+        </li>
+      </ul>
+    </div>
     
     <div class="pagination">
       <a href="#newer">&laquo; Newer</a>
