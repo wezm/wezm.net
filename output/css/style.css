@@ -98,10 +98,6 @@ pre {
   font-size: 1.8em;
   color: white;
   padding: 0.5em;
-  margin-right: 1em;
-  -webkit-border-bottom-right-radius: 1em;
-  -moz-border-bottom-right-radius: 1em;
-  border-bottom-right-radius: 1em;
   background-color: #1C1C1C;
 }
 #header a {
