@@ -1,17 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
   <title><%= @item[:title] %></title>
   <link rel="stylesheet" href="/css/reset.css" type="text/css" media="screen,projector" />
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projector" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/css/mobile.css" type="text/css" media="only screen and (max-device-width: 480px)" />  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAOgyewQJRALbOFE6pebbIGxT86vvqu6OnXxNObPf8e1JU6DVn3hS0DkeXsUXWU5ycqtFtNgmG_7fV2g"></script>
+  <script src="/js/home.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
   <%= render 'header' %>
-  <div id="main">
-    <div class="first column personal">
+  <div id="technical" class="first column">
+    <div>
       <h1>Geeky</h1>
       <ul>
       <% sorted_articles[0..9].each do |article| %>
@@ -22,15 +25,29 @@
             <span class="month"><%= post_date.strftime('%b') %></span>
             <span class="year"><%= post_date.year %></span>
           </abbr>
-          <a href="<%= article.reps.first.path %>"><%= article[:title] %></a>
+          <p>
+            <strong><a href="<%= article.reps.first.path %>"><%= article[:title] %></a></strong>
+            A one sentence summary of this post would go here this one is longer then the other one.</p>
         </li>
       <% end %>
       </ul>
     </div>
+  </div>
 
-    <div class="column technical">
+  <div id="personal" class="column">
+    <div>
       <h1>Non-Geeky</h1>
       <ul>
+        <li> 
+          <abbr class="calender date" title="2009-09-19T04:02:43+10:00"> 
+            <span class="day">19</span> 
+            <span class="month">Sep</span> 
+            <span class="year">2009</span> 
+          </abbr> 
+          <p> 
+            <strong><a href="/technical/2009/09/font-smoothing-in-snow-leopard/">Font Smoothing in Snow Leopard</a></strong> 
+            A one sentence summary of this post would go here this one is longer then the other one.</p> 
+        </li> 
       <% sorted_articles[0..9].each do |article| %>
         <% post_date = WezM::Helpers.post_date(article) %>
         <li>
@@ -39,62 +56,53 @@
             <span class="month"><%= post_date.strftime('%b') %></span>
             <span class="year"><%= post_date.year %></span>
           </abbr>
-          <a href="<%= article.reps.first.path %>"><%= article[:title] %></a>
+          <p>
+            <strong><a href="<%= article.reps.first.path %>"><%= article[:title] %></a></strong>
+            A one sentence summary of this post would go here.</p>
         </li>
       <% end %>
       </ul>
     </div>
+  </div>
 
-    <div class="column twitter">
-      <h1>Tweets</h1>
-      <ul>
-      <% sorted_articles[0..9].each do |article| %>
-        <% post_date = WezM::Helpers.post_date(article) %>
-        <li>
-          <abbr class="calender date" title="<%= post_date.iso8601 %>">
-            <span class="day"><%= post_date.day %></span>
-            <span class="month"><%= post_date.strftime('%b') %></span>
-            <span class="year"><%= post_date.year %></span>
-          </abbr>
-          <a href="<%= article.reps.first.path %>"><%= article[:title] %></a>
-        </li>
-      <% end %>
-      </ul>
-    </div>
-    
-    <div class="flickr">
-      <!-- <h1>Photos</h1> -->
-      make these monochrome
-      <ul>
-        <li>
-          <a href="http://www.flickr.com/photos/wezm/4268597148/" title="Blue Flower by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4013/4268597148_ab83667f21_s.jpg" width="75" height="75" alt="Blue Flower" /></a>
-        </li>
-        <li>
-          <a href="http://www.flickr.com/photos/wezm/4267852401/" title="Wes on Steps in the Rainforest by wezm, on Flickr"><img src="http://farm3.static.flickr.com/2677/4267852401_e2d539967b_s.jpg" width="75" height="75" alt="Wes on Steps in the Rainforest" /></a>
-        </li>
-        <li>
-          <a href="http://www.flickr.com/photos/wezm/4267852153/" title="Wes and Manda in the Rainforest by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4021/4267852153_1060f0d092_s.jpg" width="75" height="75" alt="Wes and Manda in the Rainforest" /></a>
-        </li>
-        <li>
-          <a href="http://www.flickr.com/photos/wezm/4268596618/" title="Manda in the Rainforest by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4061/4268596618_c9755d8507_s.jpg" width="75" height="75" alt="Manda in the Rainforest" /></a>
-        </li>
-        <li>
-          <a href="http://www.flickr.com/photos/wezm/4268596324/" title="Mossy Path and Seat by wezm, on Flickr"><img src="http://farm3.static.flickr.com/2755/4268596324_eaf83cde01_s.jpg" width="75" height="75" alt="Mossy Path and Seat" /></a>
-        </li>
-        <li>
-          <a href="http://www.flickr.com/photos/wezm/4267851415/" title="Manda Sitting in Linden Gardens by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4049/4267851415_bd068d2d12_s.jpg" width="75" height="75" alt="Manda Sitting in Linden Gardens" /></a>
-        </li>
-        <li>
-          <a href="http://www.flickr.com/photos/wezm/4268595626/" title="Tea and Coffee Supplies by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4033/4268595626_999db17916_s.jpg" width="75" height="75" alt="Tea and Coffee Supplies" /></a>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="pagination">
-      <a href="#newer">&laquo; Newer</a>
-      |
-      <a href="#older">Older &raquo;</a>
-    </div>
+  <div id="twitter" class="column">
+    <h1>Tweets</h1>
+    <ul>
+      <li>Loading&hellip;</li>
+    </ul>
+  </div>
+  
+  <div class="flickr">
+    <!-- <h1>Photos</h1> -->
+    <ul class="inline">
+      <li>
+        <a href="http://www.flickr.com/photos/wezm/4268597148/" title="Blue Flower by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4013/4268597148_ab83667f21_s.jpg" width="75" height="75" alt="Blue Flower" class="desaturate" /></a>
+      </li>
+      <li>
+        <a href="http://www.flickr.com/photos/wezm/4267852401/" title="Wes on Steps in the Rainforest by wezm, on Flickr"><img src="http://farm3.static.flickr.com/2677/4267852401_e2d539967b_s.jpg" width="75" height="75" alt="Wes on Steps in the Rainforest" class="desaturate" /></a>
+      </li>
+      <li>
+        <a href="http://www.flickr.com/photos/wezm/4267852153/" title="Wes and Manda in the Rainforest by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4021/4267852153_1060f0d092_s.jpg" width="75" height="75" alt="Wes and Manda in the Rainforest" class="desaturate" /></a>
+      </li>
+      <li>
+        <a href="http://www.flickr.com/photos/wezm/4268596618/" title="Manda in the Rainforest by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4061/4268596618_c9755d8507_s.jpg" width="75" height="75" alt="Manda in the Rainforest" class="desaturate" /></a>
+      </li>
+      <li>
+        <a href="http://www.flickr.com/photos/wezm/4268596324/" title="Mossy Path and Seat by wezm, on Flickr"><img src="http://farm3.static.flickr.com/2755/4268596324_eaf83cde01_s.jpg" width="75" height="75" alt="Mossy Path and Seat" class="desaturate" /></a>
+      </li>
+      <li>
+        <a href="http://www.flickr.com/photos/wezm/4267851415/" title="Manda Sitting in Linden Gardens by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4049/4267851415_bd068d2d12_s.jpg" width="75" height="75" alt="Manda Sitting in Linden Gardens" class="desaturate" /></a>
+      </li>
+      <li>
+        <a href="http://www.flickr.com/photos/wezm/4268595626/" title="Tea and Coffee Supplies by wezm, on Flickr"><img src="http://farm5.static.flickr.com/4033/4268595626_999db17916_s.jpg" width="75" height="75" alt="Tea and Coffee Supplies" class="desaturate" /></a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="pagination">
+    <a href="#newer">&laquo; Newer</a>
+    |
+    <a href="#older">Older &raquo;</a>
   </div>
   <%= render 'footer' %>
 </body>

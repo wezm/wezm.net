@@ -12,12 +12,12 @@ body {
 }
 
 p,li {
-  font-size: 1.6em;
+  font-size: 16px;
   line-height: 1.2;
 }
 
 p {
-  margin: 1em 0;
+  margin: 0 0 1em 0;
 }
 
 ul, ol {
@@ -39,23 +39,23 @@ h1,h2,h3,h4,h5,h6 {
 
 /* 6,7,8,9,10,11,12,14,16,18,21,24,36,48,60,72 */
 h1 {
-  font-size: 3.6em;
+  font-size: 36px;
 }
 h2 {
-  font-size: 2.4em;
-  border-bottom: 1px solid gray;
+  font-size: 24px;
+/*  border-bottom: 1px solid gray;*/
 }
 h3 {
-  font-size: 2.1em;
+  font-size: 21px;
 }
 h4 {
-  font-size: 1.8em;
+  font-size: 18px;
 }
 h5 {
-  font-size: 1.6em;
+  font-size: 16px;
 }
 h6 {
-  font-size: 1.4em;
+  font-size: 14px;
 }
 
 
@@ -108,13 +108,13 @@ pre {
 }
 
 ul#menu {
-  list-style: none;
+/*  list-style: none;*/
   float: right;
-  margin: 0;
+/*  margin: 0;*/
   padding-right: 0.25em;
 }
 ul#menu li {
-  display: inline;
+/*  display: inline;*/
   font-size: inherit;
 }
 
@@ -142,22 +142,54 @@ ul#menu li {
   text-align: center;
 }
 
+/* Home page post listing columns */
 .column {
-  width: 31%;
   float: left;
-  margin-left: 2em;
-  margin-bottom: 4em;
+  width: 50%;
+  margin: 0;
+  min-width: 480px;
 }
-.first {
-  margin-left: 0;
+#personal div {
+  padding-right: 2em;
 }
+.column div {
+  padding: 0 0 0 2em;
+}
+.column strong {
+  font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
+  margin: 0;
+  font-weight: 200;
+  display: block;
+  font-size: 18px;
+}
+#twitter {
+  display: none;
+}
+.column ul {
+  list-style: none;
+  margin: 0;
+  padding: 1em;
+}
+.column ul li {
+  margin: 0 0 1em 0;
+  float: left;
+}
+.column abbr {
+  display: block;
+  font-size: 0.8em;
+}
+
+
+/* Flickr thumbnails */
 .flickr {
   clear: both;
 }
-.flickr ul {
+
+/* Inline flat list style */
+ul.inline {
   list-style: none;
   margin: 0;
 }
-.flickr li {
+ul.inline li {
   display: inline;
 }
