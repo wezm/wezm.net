@@ -174,7 +174,6 @@ ul#menu li {
 }
 .column ul li {
   margin: 0;
-  border-top: 1px solid #eee;
   padding-top: 1em;
   height: 80px;
 }
@@ -185,7 +184,6 @@ ul#menu li {
 .column abbr {
   display: block;
   font-size: 0.8em;
-  float: right;
   color: #aaa;
 }
 

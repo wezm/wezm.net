@@ -15,7 +15,9 @@
   <%= render 'header' %>
   <div id="technical" class="first column">
     <div>
-      <h1>Geeky</h1>
+      <h1>Geeky
+        <sup><a href="<%= feed_url %>"><img src="/images/black-feed-icon.png" width="12" height="12" /></a></sup>
+      </h1>
       <ul>
       <% sorted_articles[0..4].each do |article| %>
         <% post_date = WezM::Helpers.post_date(article) %>
@@ -37,7 +39,9 @@
 
   <div id="personal" class="column">
     <div>
-      <h1>Non-Geeky</h1>
+      <h1>Non-Geeky
+        <sup><a href="<%= feed_url %>"><img src="/images/black-feed-icon.png" width="12" height="12" /></a></sup>
+      </h1>
       <ul>
         <li> 
           <abbr class="calender date" title="2009-09-19T04:02:43+10:00"> 
