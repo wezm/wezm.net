@@ -165,20 +165,27 @@ ul#menu li {
 #twitter {
   display: none;
 }
+.column p {
+/*  margin-bottom: 1em;*/
+}
 .column ul {
   list-style: none;
   margin: 0;
-  padding: 1em;
 }
 .column ul li {
-  margin: 0 0 1em 0;
-  float: left;
+  margin: 0;
+  border-top: 1px solid #eee;
+  padding-top: 1em;
+  height: 80px;
+}
+.column ul li:first-child {
+  border-top: none;
+  padding-top: 1em;
 }
 .column abbr {
   display: block;
   font-size: 0.8em;
 }
-
 
 /* Flickr thumbnails */
 .flickr {
