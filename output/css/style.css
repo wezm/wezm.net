@@ -182,9 +182,32 @@ ul#menu li {
   border-top: none;
   padding-top: 1em;
 }
-.column abbr {
+abbr.date {
   display: block;
-  font-size: 0.8em;
+  width: 30px;
+  height: 60px;
+  float: left;
+  padding-right: 0.5em;
+}
+abbr.date span {
+  display: block;
+  text-align: center;
+}
+abbr.date .day {
+  font-size: 14px;
+  font-weight: bold;
+}
+abbr.date .month {
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
+  font-size: 10px;
+}
+abbr.date .year {
+/*  border: 1px solid red;*/
+/*  -webkit-transform-origin: bottom right;
+  -webkit-transform: rotate(-90deg);*/
+  font-size: 9px;
+  font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
 }
 
 /* Flickr thumbnails */
