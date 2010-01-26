@@ -27,7 +27,8 @@
           </abbr>
           <p>
             <strong><a href="<%= article.reps.first.path %>"><%= article[:title] %></a></strong>
-            A one sentence summary of this post would go here this one is longer then the other one.</p>
+            A one sentence summary of this post would go here this one is longer then the other one.
+          </p>
         </li>
       <% end %>
       </ul>
@@ -45,8 +46,9 @@
             <span class="year">2009</span> 
           </abbr> 
           <p> 
-            <strong><a href="/technical/2009/09/font-smoothing-in-snow-leopard/">Font Smoothing in Snow Leopard</a></strong> 
-            A one sentence summary of this post would go here this one is longer then the other one.</p> 
+            <strong><a href="/technical/2009/09/font-smoothing-in-snow-leopard/">A Long Post Title That Goes More Than a Line Possibly Going Into The Second Line</a></strong> 
+            A one sentence summary of this post would go.
+          </p> 
         </li> 
       <% sorted_articles[5..9].each do |article| %>
         <% post_date = WezM::Helpers.post_date(article) %>
