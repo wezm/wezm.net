@@ -191,6 +191,12 @@ ul#menu li {
 .flickr {
   clear: both;
 }
+.flickr li img {
+  opacity: 0.5;
+}
+.flickr li img:hover {
+  opacity: 1;
+}
 
 /* Inline flat list style */
 ul.inline {
