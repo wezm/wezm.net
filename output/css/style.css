@@ -188,13 +188,13 @@ ul#menu li {
 }
 
 /* Flickr thumbnails */
-.flickr {
+#flickr {
   clear: both;
 }
-.flickr li img {
+#flickr li img {
   opacity: 0.5;
 }
-.flickr li img:hover {
+#flickr li img:hover {
   opacity: 1;
 }
 
