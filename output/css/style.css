@@ -98,8 +98,7 @@ pre {
   font-size: 1.8em;
   color: white;
   padding: 0.5em;
-  background: #1C1C1C url(/images/texture.png) repeat-y top left;
-  background
+  background: #1C1C1C; /* url(/images/texture.png) repeat-y top left; */
 }
 #header a {
   text-decoration: none;
