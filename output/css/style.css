@@ -192,7 +192,7 @@ ul#menu li {
   clear: both;
 }
 #flickr li img {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 #flickr li img:hover {
   opacity: 1;
