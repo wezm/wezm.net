@@ -2,7 +2,7 @@
 jQuery(function () {
   function populate_flickr(data, text_status) {
     var ul = $("ul", "#flickr");
-    ul.empty();
+    // ul.empty();
     jQuery.each(data.photos.photo, function(i, photo) {
       var li = $("<li></li>");
       var a = $("<a></a>");
