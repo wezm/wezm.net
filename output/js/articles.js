@@ -29,5 +29,5 @@ jQuery(function() {
     return false;
   });
 
-  jQuery.get('/articles/index.json', {}, articles_loaded, 'json');
+  jQuery.get('json/articles.json', {}, articles_loaded, 'json');
 });
