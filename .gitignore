@@ -1,2 +1,3 @@
-output/*.html
+output/*/*/*/*/*.html
+output/fonts/*
 tmp/*
