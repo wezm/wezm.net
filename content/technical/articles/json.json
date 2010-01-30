@@ -1,0 +1,7 @@
+<%
+  articles = []
+  technical_articles.each do |article|
+    articles << article_to_json(article)
+  end
+%>
+<%= articles.to_json %>

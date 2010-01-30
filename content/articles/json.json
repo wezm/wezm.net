@@ -1,7 +1,7 @@
 <%
   articles = []
   sorted_articles.each do |article|
-    articles << { :title => article[:title] }
+    articles << article_to_json(article)
   end
 %>
 <%= articles.to_json %>

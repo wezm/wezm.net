@@ -4,13 +4,23 @@ compile '/' do
   layout 'home'
 end
 
-compile '/articles/', :rep => :json do
+compile '/articles/json/' do
   filter :erb
 end
+compile '/technical/articles/json/' do
+  filter :erb
+end
+compile '/personal/articles/json/' do
+  filter :erb
+end
+
 compile '/articles/' do
   layout 'articles'
 end
-compile '/*/articles/' do
+compile '/technical/articles/' do
+  layout 'articles'
+end
+compile '/personal/articles/' do
   layout 'articles'
 end
 
@@ -19,11 +29,14 @@ compile '*' do
   layout 'default'
 end
 
-route '/articles/', :rep => :json do
-  item.identifier + 'index.json'
+route '/articles/json/' do
+  item.identifier + 'articles.json'
 end
-route '/articles/' do
-  item.identifier + 'index.html'
+route '/technical/articles/json/' do
+  item.identifier + 'articles.json'
+end
+route '/personal/articles/json/' do
+  item.identifier + 'articles.json'
 end
 
 route '*' do
