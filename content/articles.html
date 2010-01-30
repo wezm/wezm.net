@@ -1,0 +1,11 @@
+<ul class="articles">
+<% sorted_articles[0..9].each do |article| %>
+  <%= render 'article', :article => article %>
+<% end %>
+</ul>
+
+<div class="pagination">
+  <a href="/articles/#page-0" class="older">&laquo; Older</a>
+  |
+  <a href="/articles/#page-2" class="newer">Newer &raquo;</a>
+</div>

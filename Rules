@@ -15,12 +15,15 @@ compile '/personal/articles/json/' do
 end
 
 compile '/articles/' do
+  filter :erb
   layout 'articles'
 end
 compile '/technical/articles/' do
+  filter :erb
   layout 'articles'
 end
 compile '/personal/articles/' do
+  filter :erb
   layout 'articles'
 end
 
