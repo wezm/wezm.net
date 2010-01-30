@@ -192,6 +192,9 @@ ul.articles strong {
 a.more {
 /*  float: right;*/
 }
+a.active {
+  font-weight: bold;
+}
 
 /* Inline flat list style */
 ul.inline {

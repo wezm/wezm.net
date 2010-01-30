@@ -10,10 +10,20 @@
   <div id="content">
     <h1>Archives</h1>
 
+    <%
+      menu = [
+        ['All', sorted_articles.size],
+        ['Technical', technical_articles.size],
+        ['Personal', personal_articles.size],
+      ]
+    %>
     <ul class="inline">
-      <li><a href="/articles/">All</a> (<%= sorted_articles.size %>)</li>
-      <li><a href="/technical/articles/">Technical</a> (<%= technical_articles.size %>)</li>
-      <li><a href="/personal/articles/">Personal</a> (<%= personal_articles.size %>)</li>
+      <% menu.each do |menu_item|
+        label, count = menu_item
+        path = (label != "All" ? '/' + label.downcase : '') + "/articles/"
+      %>
+      <li><a href="<%= path %>"<%= %Q{class="active"} if @item.identifier == path %>><%= label %></a> (<%= count %>)</li>
+      <% end %>
     </ul>
 
     <ul class="articles">
