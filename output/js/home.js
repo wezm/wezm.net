@@ -1,4 +1,3 @@
-
 jQuery(function () {
   function populate_flickr(data, text_status) {
     var ul = $("ul", "#flickr");

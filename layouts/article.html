@@ -1,0 +1,12 @@
+<% post_date = WezM::Helpers.post_date(@article) %>
+<li>
+  <abbr class="calender date" title="<%= post_date.iso8601 %>">
+    <span class="day"><%= post_date.day %></span>
+    <span class="month"><%= post_date.strftime('%b') %></span>
+    <span class="year"><%= post_date.year %></span>
+  </abbr>
+  <p>
+    <strong><a href="<%= @article.reps.first.path %>"><%= @article[:title] %></a></strong>
+    A one sentence summary of this post would go here this one is longer then the other one.
+  </p>
+</li>

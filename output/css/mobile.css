@@ -1,3 +1,7 @@
 #technical div, #personal div {
   padding: 0 1em;
 }
+
+.column {
+  min-width: 600px;
+}

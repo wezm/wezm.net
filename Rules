@@ -1,13 +1,16 @@
 #!/usr/bin/env ruby
 
 compile '/' do
-  layout 'listing'
+  layout 'home'
 end
 
 compile '/articles/', :rep => :json do
   filter :erb
 end
 compile '/articles/' do
+  layout 'articles'
+end
+compile '/*/articles/' do
   layout 'articles'
 end
 
