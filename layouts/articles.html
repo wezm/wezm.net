@@ -17,7 +17,7 @@
         ['Personal', personal_articles.size],
       ]
     %>
-    <ul class="inline">
+    <ul class="inline menu">
       <% menu.each do |menu_item|
         label, count = menu_item
         path = (label != "All" ? '/' + label.downcase : '') + "/articles/"
