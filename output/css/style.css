@@ -204,6 +204,9 @@ ul.inline {
 ul.inline li {
   display: inline;
 }
+ul.menu li:first-child {
+  margin-left: 0;
+}
 
 /* Flickr thumbnails */
 #flickr {
