@@ -15,6 +15,7 @@ module WezM
           :title => article[:title],
           :path => article.identifier,
           :date => Time.parse(article[:created_at]).rfc2822,
+          :summary => 'Insert summary here'
         }
       end
 
