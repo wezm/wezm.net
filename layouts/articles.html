@@ -27,12 +27,15 @@
       %>
       <li><a href="<%= path %>"<%= %Q{class="active"} if @item.identifier == path %>><%= label %></a> (<%= count %>)</li>
       <% end %>
+      <li id="search">
+        <fieldset>
+          <label for="query">Search</label>
+          <input type="text" name="q" id="query" value="" />
+          <!-- <input type="submit" name="submitquery" id="submitquery" value="Go" />  -->
+          <span class="sbox_r"></span>
+        </fieldset>
+      </li>
     </ul>
-
-    <div id="search">
-      <label>Quick Search:</label>
-      <input type="text" name="q" />
-    </div>
 
     <ul class="articles">
       <%= yield %>

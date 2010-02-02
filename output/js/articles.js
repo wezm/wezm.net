@@ -78,6 +78,11 @@
       // the event now, to handle the hash the page may have loaded with.
       $(window).trigger('hashchange', true);
       $('.pagination').slideDown('fast');
+      
+      if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0) {
+        // WebKit browser
+        $('#search input').css('paddingTop', 0);
+      }
     });
   };
 
