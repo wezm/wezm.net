@@ -29,7 +29,7 @@
   function articles_loaded(data) {
     articles = data;
     jQuery(function() {
-      $(window).bind('hashchange', function(e) {
+      $(window).bind('hashchange', function(e, first_time) {
         // Get the hash (fragment) as a string, with any leading # removed. Note that
         // in jQuery 1.4, you should use e.fragment instead of $.param.fragment().
         var page;
@@ -42,9 +42,16 @@
           update_pagination_controls(1);
           return false;
         }
+        
+        var container = $('ul.articles');
+        if(first_time && page != 1) {
+          container.block({ 
+              message: '<span>Loading</span>', 
+              css: { border: '3px solid #1c1c1c' } 
+          }); 
+        }
 
         // Generate the items
-        var container = $('ul.articles');
         container.empty();
         var i = (page - 1) * per_page;
         for(; i < page * per_page && i < articles.length; i++) {
@@ -63,12 +70,13 @@
           container.append(li);
         }
         
+        if(first_time && page != 1) container.unblock();
         update_pagination_controls(page);
       });
 
       // Since the event is only triggered when the hash changes, we need to trigger
       // the event now, to handle the hash the page may have loaded with.
-      $(window).trigger( 'hashchange' );
+      $(window).trigger('hashchange', true);
       $('.pagination').slideDown('fast');
     });
   };
