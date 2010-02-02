@@ -1,6 +1,7 @@
 (function() {
-  // Load articles JSON ASAP
   var articles = null;
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var per_page = 10;
 
   function render_article(o) {
     return '<li>\n\
@@ -16,6 +17,15 @@
     </li>';
   };
 
+  function update_pagination_controls(page) {
+    var newer = $('.pagination .newer').attr('href', '#page-' + (page + 1));
+    var older = $('.pagination .older').attr('href', '#page-' + (page - 1));
+    
+    // Hide if out of range
+    older.css('visibility', page <= 1 ? 'hidden' : 'visible');
+    newer.css('visibility', page * per_page >= articles.length ? 'hidden' : 'visible');
+  };
+
   function articles_loaded(data) {
     articles = data;
     jQuery(function() {
@@ -29,22 +39,22 @@
           page = new Number(matches[1]);
         }
         else {
+          update_pagination_controls(1);
           return false;
         }
 
         // Generate the items
-        var per_page = 10;
         var container = $('ul.articles');
         container.empty();
         var i = (page - 1) * per_page;
-        for(; i < page * per_page; i++) {
+        for(; i < page * per_page && i < articles.length; i++) {
           var article = articles[i];
           var date = new Date(Date.parse(article.date));
           var article_view = {
             date: article.date,
-            day: date.getDay(),
-            month: date.getMonth(),
-            year: date.getYear(),
+            day: date.getDate(),
+            month: months[date.getMonth()],
+            year: date.getYear() + 1900,
             path: article.path,
             title: article.title,
             summary: article.summary
@@ -53,14 +63,16 @@
           container.append(li);
         }
         
+        update_pagination_controls(page);
       });
-
-      $('.pagination').slideDown('fast');
 
       // Since the event is only triggered when the hash changes, we need to trigger
       // the event now, to handle the hash the page may have loaded with.
       $(window).trigger( 'hashchange' );
+      $('.pagination').slideDown('fast');
     });
   };
+
+  // Load articles JSON ASAP
   jQuery.getJSON('json/articles.json', {}, articles_loaded);
 })();
