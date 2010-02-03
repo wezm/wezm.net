@@ -3,10 +3,19 @@
 <head>
   <%= render 'head_common' %>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js" type="text/javascript"></script>
+  <% if @item.identifier =~ %r{/page/$} %>
   <script src="/js/jquery.ba-bbq.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/js/jquery.blockUI.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/mojo.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/articles.js" type="text/javascript" charset="utf-8"></script>
+  <% else %>
+  <script type="text/javascript" charset="utf-8">
+    jQuery(function() {
+      // pagination and search require javascript, so reveal them with javascript
+      $('.pagination').show();
+      $('#search').show();
+    });
+  </script>
+  <% end %>
 </head>
 <body class="articles">
   <%= render 'header' %>
@@ -31,7 +40,6 @@
         <fieldset>
           <label for="query">Search</label>
           <input type="text" name="q" id="query" value="" />
-          <!-- <input type="submit" name="submitquery" id="submitquery" value="Go" />  -->
           <span class="sbox_r"></span>
         </fieldset>
       </li>
@@ -42,9 +50,10 @@
     </ul>
 
     <div class="pagination">
-      <a href="#page-0" class="older">&laquo; Older</a>
+      <% pagepath = @item.identifier; pagepath += 'page/' if pagepath !~ %r{/page/$} %>
+      <a href="<%= pagepath %>" class="older">&laquo; Older</a>
       |
-      <a href="#page-2" class="newer">Newer &raquo;</a>
+      <a href="<%= pagepath %>#2" class="newer">Newer &raquo;</a>
     </div>
   </div>
   <%= render 'footer' %>

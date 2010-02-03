@@ -145,6 +145,9 @@ body.article #content {
   display: none;
   text-align: center;
 }
+.pagination .older {
+  visibility: hidden;
+}
 
 /* Home page post listing columns */
 .column {
@@ -233,7 +236,7 @@ ul.menu li:first-child {
 #search {
   margin: 0;
   padding: 0;
-  display: block;
+  display: none;
   float: left;
   margin-right: 20px;
   background: #fff url(/images/srch_l.gif) 0 0 no-repeat;

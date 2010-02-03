@@ -18,9 +18,9 @@
   };
 
   function update_pagination_controls(page) {
-    var newer = $('.pagination .newer').attr('href', '#page-' + (page + 1));
-    var older = $('.pagination .older').attr('href', '#page-' + (page - 1));
-    
+    var newer = $('.pagination .newer').attr('href', '#' + (page + 1));
+    var older = $('.pagination .older').attr('href', '#' + (page - 1));
+
     // Hide if out of range
     older.css('visibility', page <= 1 ? 'hidden' : 'visible');
     newer.css('visibility', page * per_page >= articles.length ? 'hidden' : 'visible');
@@ -29,30 +29,23 @@
   function articles_loaded(data) {
     articles = data;
     jQuery(function() {
-      $(window).bind('hashchange', function(e, first_time) {
+      $(window).bind('hashchange', function(e) {
         // Get the hash (fragment) as a string, with any leading # removed. Note that
         // in jQuery 1.4, you should use e.fragment instead of $.param.fragment().
         var page;
         var matches;
         var page_fragment = e.fragment;
-        if(matches = page_fragment.match(/page-(\d+)$/)) {
+        if(matches = page_fragment.match(/(\d+)$/)) {
           page = new Number(matches[1]);
         }
         else {
-          update_pagination_controls(1);
-          return false;
-        }
-        
-        var container = $('ul.articles');
-        if(first_time && page != 1) {
-          container.block({ 
-              message: '<span>Loading</span>', 
-              css: { border: '3px solid #1c1c1c' } 
-          }); 
+          page = 1;
         }
 
-        // Generate the items
+        var container = $('ul.articles');
         container.empty();
+
+        // Generate the items
         var i = (page - 1) * per_page;
         for(; i < page * per_page && i < articles.length; i++) {
           var article = articles[i];
@@ -69,16 +62,17 @@
           var li = render_article(article_view);
           container.append(li);
         }
-        
-        if(first_time && page != 1) container.unblock();
+
         update_pagination_controls(page);
+        window.document.title = "All Articles - Page " + page
       });
 
       // Since the event is only triggered when the hash changes, we need to trigger
       // the event now, to handle the hash the page may have loaded with.
-      $(window).trigger('hashchange', true);
-      $('.pagination').slideDown('fast');
-      
+      $(window).trigger('hashchange');
+      $('.pagination').show();
+      $('#search').show();
+
       if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0) {
         // WebKit browser
         $('#search input').css('paddingTop', 0);
@@ -87,5 +81,5 @@
   };
 
   // Load articles JSON ASAP
-  jQuery.getJSON('json/articles.json', {}, articles_loaded);
+  jQuery.getJSON('../json/articles.json', {}, articles_loaded);
 })();

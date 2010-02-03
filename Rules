@@ -18,11 +18,23 @@ compile '/articles/' do
   filter :erb
   layout 'articles'
 end
+compile '/articles/page/' do
+  filter :erb
+  layout 'articles'
+end
 compile '/technical/articles/' do
   filter :erb
   layout 'articles'
 end
+compile '/technical/articles/page/' do
+  filter :erb
+  layout 'articles'
+end
 compile '/personal/articles/' do
+  filter :erb
+  layout 'articles'
+end
+compile '/personal/articles/page/' do
   filter :erb
   layout 'articles'
 end
