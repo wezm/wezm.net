@@ -35,6 +35,12 @@ h1,h2,h3,h4,h5,h6 {
 /* 6,7,8,9,10,11,12,14,16,18,21,24,36,48,60,72 */
 h1 {
   font-size: 36px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+body.home h1 {
+  padding-left: 0;
+  padding-right: 0;
 }
 h2 {
   font-size: 24px;
@@ -113,18 +119,20 @@ ul#menu li {
   font-size: inherit;
 }
 
-body.article h1 {
+/*body.article h1 {
   padding-left: 20px;
   padding-right: 20px;
-}
+}*/
 
 #content {
   padding: 0 20px;
   clear: both;
-}
-body.article #content {
   min-width: 600px;
   margin-right: 40%;
+}
+body.articles #content {
+  min-width: auto;
+  margin-right: 0;
 }
 
 #footer {
