@@ -70,13 +70,8 @@
       // Since the event is only triggered when the hash changes, we need to trigger
       // the event now, to handle the hash the page may have loaded with.
       $(window).trigger('hashchange');
-      $('.pagination').show();
-      $('#search').show();
-
-      if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0) {
-        // WebKit browser
-        $('#search input').css('paddingTop', 0);
-      }
+      show_javascript_widgets();
+      webkit_search_tweak();
     });
   };
 

@@ -3,6 +3,7 @@
 <head>
   <%= render 'head_common' %>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js" type="text/javascript"></script>
+  <script src="/js/common.js" type="text/javascript" charset="utf-8"></script>
   <% if @item.identifier =~ %r{/page/$} %>
   <script src="/js/jquery.ba-bbq.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/mojo.js" type="text/javascript" charset="utf-8"></script>
@@ -10,17 +11,16 @@
   <% else %>
   <script type="text/javascript" charset="utf-8">
     jQuery(function() {
-      // pagination and search require javascript, so reveal them with javascript
-      $('.pagination').show();
-      $('#search').show();
+      show_javascript_widgets();
+      webkit_search_tweak();
     });
   </script>
   <% end %>
 </head>
 <body class="articles">
   <%= render 'header' %>
+  <h1>Archives</h1>
   <div id="content">
-    <h1>Archives</h1>
 
     <%
       menu = [
@@ -33,8 +33,9 @@
       <% menu.each do |menu_item|
         label, count = menu_item
         path = (label != "All" ? '/' + label.downcase : '') + "/articles/"
+        active = (@item.identifier.sub(%r{page/$}, '') == path)
       %>
-      <li><a href="<%= path %>"<%= %Q{class="active"} if @item.identifier == path %>><%= label %></a> (<%= count %>)</li>
+      <li><a href="<%= path %>"<%= %Q{class="active"} if active %>><%= label %></a> (<%= count %>)</li>
       <% end %>
       <li id="search">
         <fieldset>
@@ -51,9 +52,9 @@
 
     <div class="pagination">
       <% pagepath = @item.identifier; pagepath += 'page/' if pagepath !~ %r{/page/$} %>
-      <a href="<%= pagepath %>" class="older">&laquo; Older</a>
+      <a href="<%= pagepath %>#2" class="newer">&laquo; Newer</a>
       |
-      <a href="<%= pagepath %>#2" class="newer">Newer &raquo;</a>
+      <a href="<%= pagepath %>" class="older">Older &raquo;</a>
     </div>
   </div>
   <%= render 'footer' %>
