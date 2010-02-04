@@ -1,12 +1,10 @@
-<% post_date = WezM::Helpers.post_date(@article) %>
-<li>
-  <abbr class="calender date" title="<%= post_date.iso8601 %>">
-    <span class="day"><%= post_date.day %></span>
-    <span class="month"><%= post_date.strftime('%b') %></span>
-    <span class="year"><%= post_date.year %></span>
-  </abbr>
-  <p>
-    <strong><a href="<%= @article.reps.first.path %>"><%= @article[:title] %></a></strong>
-    <%= @item[:summary] %>
-  </p>
-</li>
+<%= yield %>
+<% short = short_url("http://www.wezm.net#{@item.identifier}") %>
+<div class="respond">
+  <h2>Got Something to Add?</h2>
+  <ul class="inline">
+    <li><a href="#">Email Me</a></li>
+    <li><a href="http://twitter.com/home?status=<%= URI.encode("@wezm #{short}") %>">Tweet</a></li>
+    <li>Short URL: <a href="<%= short %>"><%= short %></a></li>
+  </ul>
+</div>

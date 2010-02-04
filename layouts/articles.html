@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= render 'head_common' %>
+  <%= render '_head' %>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js" type="text/javascript"></script>
   <script src="/js/common.js" type="text/javascript" charset="utf-8"></script>
   <% if @item.identifier =~ %r{/page/$} %>
@@ -18,9 +18,9 @@
   <% end %>
 </head>
 <body class="articles">
-  <%= render 'header' %>
-  <h1>Archives</h1>
+  <%= render '_header' %>
   <div id="content">
+    <h1>Archives</h1>
 
     <%
       menu = [
@@ -57,6 +57,6 @@
       <a href="<%= pagepath %>" class="older">Older &raquo;</a>
     </div>
   </div>
-  <%= render 'footer' %>
+  <%= render '_footer' %>
 </body>
 </html>

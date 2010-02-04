@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="/css/mobile.css" type="text/css" media="only screen and (max-device-width: 480px)" />  
 </head>
 <body<%= %Q( class="#{@item[:body_class]}") if @item[:body_class] %>>
-  <%= render 'header' %>
-  <h1><a href="<%= @item.reps.first.path %>"><%= @item[:title] %></a></h1>
+  <%= render '_header' %>
   <div id="content">
+    <h1><a href="<%= @item.reps.first.path %>"><%= @item[:title] %></a></h1>
     <%= yield %>
   </div>
-  <%= render 'footer' %>
+  <%= render '_footer' %>
 </body>
 </html>

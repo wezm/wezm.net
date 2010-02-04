@@ -1,3 +1,5 @@
+require 'bitly'
+
 module WezM
   module Helpers
     module Articles
@@ -17,6 +19,17 @@ module WezM
           :date => Time.parse(article[:created_at]).rfc2822,
           :summary => article[:summary]
         }
+      end
+
+      def short_url(url)
+        @bitly ||= Bitly.new('wezm', 'R_f2bfdace56c886671086eb0c8acb9ce7')
+        @cache ||= {}
+        unless u = @cache[url]
+          u = @bitly.shorten(url)
+        else
+          puts "Cache hit on #{url}"
+        end
+        u.short_url
       end
 
     end

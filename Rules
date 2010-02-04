@@ -4,39 +4,19 @@ compile '/' do
   layout 'home'
 end
 
-compile '/articles/json/' do
-  filter :erb
-end
-compile '/technical/articles/json/' do
-  filter :erb
-end
-compile '/personal/articles/json/' do
+compile '*/json/' do
   filter :erb
 end
 
-compile '/articles/' do
+compile %r{/(technical|personal|)articles/(page/|)} do
   filter :erb
   layout 'articles'
 end
-compile '/articles/page/' do
-  filter :erb
-  layout 'articles'
-end
-compile '/technical/articles/' do
-  filter :erb
-  layout 'articles'
-end
-compile '/technical/articles/page/' do
-  filter :erb
-  layout 'articles'
-end
-compile '/personal/articles/' do
-  filter :erb
-  layout 'articles'
-end
-compile '/personal/articles/page/' do
-  filter :erb
-  layout 'articles'
+
+compile %r(/\d{4}/*) do
+  filter :rdiscount
+  layout 'article'
+  layout 'default'
 end
 
 compile '*' do
@@ -44,13 +24,7 @@ compile '*' do
   layout 'default'
 end
 
-route '/articles/json/' do
-  item.identifier + 'articles.json'
-end
-route '/technical/articles/json/' do
-  item.identifier + 'articles.json'
-end
-route '/personal/articles/json/' do
+route '*/json/' do
   item.identifier + 'articles.json'
 end
 

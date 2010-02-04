@@ -13,15 +13,15 @@
   <script src="/js/home.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body class="home">
-  <%= render 'header' %>
+  <%= render '_header' %>
   <div id="technical" class="column">
     <div>
       <h1>Geeky
         <sup><a href="<%= feed_url %>"><img src="/images/black-feed-icon.png" width="12" height="12" /></a></sup>
       </h1>
       <ul class="articles">
-      <% sorted_articles[0..4].each do |article| %>
-        <%= render 'article', :article => article %>
+      <% technical_articles[0..4].each do |article| %>
+        <%= render '_article', :article => article %>
       <% end %>
       </ul>
       <a href="/technical/articles/" class="more">More</a>
@@ -34,8 +34,8 @@
         <sup><a href="<%= feed_url %>"><img src="/images/black-feed-icon.png" width="12" height="12" /></a></sup>
       </h1>
       <ul class="articles">
-      <% sorted_articles[5..9].each do |article| %>
-        <%= render 'article', :article => article %>
+      <% personal_articles[0..4].each do |article| %>
+        <%= render '_article', :article => article %>
       <% end %>
       </ul>
       <a href="/personal/articles/" class="more">More</a>
@@ -49,6 +49,6 @@
         <a href="http://farm3.static.flickr.com/2708/4302496460_a1ec313d06.jpg" rel="prettyPhoto[flickr]"><img src="/images/photos/4302496460_a1ec313d06.jpg" alt="Test Monochrome" /></a>
       </li>
   </div>
-  <%= render 'footer' %>
+  <%= render '_footer' %>
 </body>
 </html>
