@@ -52,9 +52,9 @@
 
     <div class="pagination">
       <% pagepath = @item.identifier; pagepath += 'page/' if pagepath !~ %r{/page/$} %>
-      <a href="<%= pagepath %>#2" class="newer">&laquo; Newer</a>
+      <a href="<%= pagepath %>" class="newer">&laquo; Newer</a>
       |
-      <a href="<%= pagepath %>" class="older">Older &raquo;</a>
+      <a href="<%= pagepath %>#2" class="older">Older &raquo;</a>
     </div>
   </div>
   <%= render '_footer' %>

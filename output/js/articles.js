@@ -18,12 +18,12 @@
   };
 
   function update_pagination_controls(page) {
-    var newer = $('.pagination .newer').attr('href', '#' + (page + 1));
-    var older = $('.pagination .older').attr('href', '#' + (page - 1));
+    var older = $('.pagination .older').attr('href', '#' + (page + 1));
+    var newer = $('.pagination .newer').attr('href', '#' + (page - 1));
 
     // Hide if out of range
-    older.css('visibility', page <= 1 ? 'hidden' : 'visible');
-    newer.css('visibility', page * per_page >= articles.length ? 'hidden' : 'visible');
+    older.css('visibility', page * per_page >= articles.length ? 'hidden' : 'visible');
+    newer.css('visibility', page <= 1 ? 'hidden' : 'visible');
   };
 
   function articles_loaded(data) {

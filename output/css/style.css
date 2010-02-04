@@ -145,7 +145,7 @@ body.articles #content {
   display: none;
   text-align: center;
 }
-.pagination .older {
+.pagination .newer {
   visibility: hidden;
 }
 
