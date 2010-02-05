@@ -1,4 +1,4 @@
-<% post_date = WezM::Helpers.post_date(@article) %>
+<% post_date = WezM::Helpers.parse_post_date(@article) %>
 <li>
   <abbr class="calender date" title="<%= post_date.iso8601 %>">
     <span class="day"><%= post_date.day %></span>

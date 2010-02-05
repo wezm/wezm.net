@@ -1,3 +1,13 @@
+<% post_date = WezM::Helpers.parse_post_date(@item) %>
+<div class="published">
+  Published on
+  <abbr class="calender date" title="<%= post_date.iso8601 %>">
+    <span class="weekday"><%= post_date.strftime('%a') %></span>,
+    <span class="day"><%= post_date.day %></span>
+    <span class="month"><%= post_date.strftime('%B') %></span>
+    <span class="year"><%= post_date.year %></span>
+  </abbr>
+</div>
 <%= yield %>
 <% short = short_url("http://www.wezm.net#{@item.identifier}") %>
 <div class="respond">

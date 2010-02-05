@@ -280,6 +280,19 @@ ul.inline li:first-child {
   height: 19px;
 }
 
+/* Extra parts on post page */
 .respond {
-  border-top: 1px solid gray;
+/*  border-top: 1px solid gray;*/
+}
+.respond h2 {
+  padding-left: 42px;
+  line-height: 32px;
+  background: url(/images/comment32.png) no-repeat top left;
+}
+.published {
+  font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
+	color: #999;
+/*  margin-top: -3px;*/
+	padding-bottom: 10px;
+	font-size: 14px;
 }
