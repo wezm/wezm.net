@@ -12,8 +12,9 @@
 <% short = short_url("http://www.wezm.net#{@item.identifier}") %>
 <div class="respond">
   <h2>Got Something to Add?</h2>
+  <p>Contact me by email or Twitter if you have a comment, correction or just want to get in touch.</p>
   <ul class="inline">
-    <li><a href="#">Email Me</a></li>
+    <li><a href="#">Email</a></li>
     <li><a href="http://twitter.com/home?status=<%= URI.encode("@wezm #{short}") %>">Tweet</a></li>
     <li>Short URL: <a href="<%= short %>"><%= short %></a></li>
   </ul>
