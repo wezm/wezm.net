@@ -1,22 +1,26 @@
 jQuery(function () {
+  function render_image(o) {
+    return '<li>\n\
+    <a href="' + (Mojo.escape(Mojo.normalize(o.href))) + '" rel="' + (Mojo.escape(Mojo.normalize(o.rel))) + '"></a>\n\
+    </li>';
+  };
+
   function populate_flickr(data, text_status) {
     var ul = $("ul", "#flickr");
     // ul.empty();
-    jQuery.each(data.photos.photo, function(i, photo) {
-      var li = $("<li></li>");
-      var a = $("<a></a>");
-      a.attr("href", photo.url_m);
-      a.attr("rel", "prettyPhoto[flickr]");
-      var img = $("<img />");
-      img.attr('src', photo.url_sq);
-      img.attr('alt', photo.title);
-      a.append(img)
-      li.append(a);
+    jQuery.each($('photo', data), function(i, obj) {
+      var photo = $(obj);
+      var image = {
+        href: photo.attr('url_m'),
+        rel: "prettyPhoto[flickr]",
+      };
+      var li = $(render_image(image));
+      $('a', li).css({backgroundPosition: (i + 1) * -75 + "px -75px"});
       ul.append(li);
     });
     $("a[rel^='prettyPhoto']").prettyPhoto({theme: "facebook"});
   };
 
   // Populate Flickr
-  //jQuery.getJSON("http://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=aa003631cc50bd47f27f242d30bcd22f&user_id=40215689%40N00&format=json&per_page=20&extras=url_sq,url_m&jsoncallback=?", populate_flickr);
+  jQuery.get("/photos.xml", {dataType: 'xml'}, populate_flickr);
 });
