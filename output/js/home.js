@@ -18,5 +18,5 @@ jQuery(function () {
   };
 
   // Populate Flickr
-  jQuery.getJSON("http://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=aa003631cc50bd47f27f242d30bcd22f&user_id=40215689%40N00&format=json&per_page=20&extras=url_sq,url_m&jsoncallback=?", populate_flickr);
+  //jQuery.getJSON("http://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=aa003631cc50bd47f27f242d30bcd22f&user_id=40215689%40N00&format=json&per_page=20&extras=url_sq,url_m&jsoncallback=?", populate_flickr);
 });
