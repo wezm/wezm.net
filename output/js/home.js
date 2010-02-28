@@ -1,21 +1,22 @@
 jQuery(function () {
   function render_image(o) {
     return '<li>\n\
-    <a href="' + (Mojo.escape(Mojo.normalize(o.href))) + '" rel="' + (Mojo.escape(Mojo.normalize(o.rel))) + '"></a>\n\
-    </li>';
+  <a href="' + (Mojo.escape(Mojo.normalize(o.href))) + '" rel="prettyPhoto[flickr]"><img src="' + (Mojo.escape(Mojo.normalize(o.src))) + '" alt="' + (Mojo.escape(Mojo.normalize(o.alt))) + '" /></a>\n\
+</li>';
   };
 
   function populate_flickr(data, text_status) {
     var ul = $("ul", "#flickr");
-    // ul.empty();
+    ul.empty();
     jQuery.each($('photo', data), function(i, obj) {
       var photo = $(obj);
       var image = {
         href: photo.attr('url_m'),
-        rel: "prettyPhoto[flickr]",
+        src: '/images/photos.jpg',
+        alt: photo.attr('title'),
       };
       var li = $(render_image(image));
-      $('a', li).css({backgroundPosition: (i + 1) * -75 + "px -75px"});
+      $('img', li).css({left: (i * -75) + 'px'});
       ul.append(li);
     });
     $("a[rel^='prettyPhoto']").prettyPhoto({theme: "facebook"});
