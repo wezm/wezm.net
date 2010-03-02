@@ -17,7 +17,9 @@ module WezM
           :title => article[:title],
           :path => article.identifier,
           :date => Time.parse(article[:created_at]).rfc2822,
-          :summary => article[:summary]
+          :summary => article[:summary],
+          :text => article[:title],
+          :extra => article[:summary]
         }
       end
 

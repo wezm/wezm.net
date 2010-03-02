@@ -3,6 +3,25 @@
   var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   var per_page = 10;
 
+  function search_item_selected(item) {
+  };
+
+  function show_javascript_widgets() {
+    $('.pagination').show();
+    $('#search').show();
+    $('#search input').jsonSuggest(articles, {
+      onSelect: search_item_selected,
+      width: 400
+    });
+  };
+
+  function webkit_search_tweak() {
+    if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0) {
+      $('#search input').css('paddingTop', 0);
+    }
+  };
+    
+
   function render_article(o) {
     return '<li>\n\
       <abbr class="calender date" title="' + (Mojo.escape(Mojo.normalize(o.date))) + '">\n\
@@ -35,6 +54,9 @@
         var page;
         var matches;
         var page_fragment = e.fragment;
+        if(!page_fragment) {
+          page_fragment = $.param.fragment();
+        }
         if(matches = page_fragment.match(/(\d+)$/)) {
           page = new Number(matches[1]);
         }
@@ -76,5 +98,9 @@
   };
 
   // Load articles JSON ASAP
-  jQuery.getJSON('../json/articles.json', {}, articles_loaded);
+  var path = 'json/articles.json';
+  if(document.location.pathname.match(/page\/$/)) {
+    path = '../json/articles.json';
+  }
+  jQuery.getJSON(path, {}, articles_loaded);
 })();
