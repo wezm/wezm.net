@@ -24,14 +24,18 @@ module WezM
       end
 
       def short_url(url)
-        @bitly ||= Bitly.new('wezm', 'R_f2bfdace56c886671086eb0c8acb9ce7')
-        @cache ||= {}
-        unless u = @cache[url]
-          u = @bitly.shorten(url)
-        else
-          puts "Cache hit on #{url}"
+        begin
+          @bitly ||= Bitly.new('wezm', 'R_f2bfdace56c886671086eb0c8acb9ce7')
+          @cache ||= {}
+          unless u = @cache[url]
+            u = @bitly.shorten(url)
+          else
+            puts "Cache hit on #{url}"
+          end
+          u.short_url
+        rescue BitlyError
+          nil
         end
-        u.short_url
       end
 
     end
