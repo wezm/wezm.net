@@ -7,7 +7,22 @@
   <script src="/js/jquery.ba-bbq.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/jquery.jsonSuggest.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/mojo.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/js/articles.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/application.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    WezM.loadArticles(function() {
+      jQuery(function() {
+        WezM.showJavascriptWidgets();
+        <% if @item.identifier =~ %r{/page/$} %>
+        $(window).bind('hashchange', function(e) {
+          WezM._hashChanged(e)
+        });
+        // Since the event is only triggered when the hash changes, we need to trigger
+        // the event now, to handle the hash the page may have loaded with.
+        $(window).trigger('hashchange');
+        <% end %>
+      });
+    });
+  </script>
 </head>
 <body class="articles">
   <%= render '_header' %>
