@@ -8,7 +8,7 @@ body {
 /*p,li,div {
   font-size: 16px;
 }*/
-p,li {
+p,li,blockquote {
   line-height: 1.2;
 }
 p {
@@ -92,6 +92,12 @@ pre,code {
 }
 pre {
   font-size: 12px;
+}
+
+blockquote {
+  border-left: 2px solid #999;
+  padding-left: 1em;
+  margin: 0 0 1em 0;
 }
 
 #header {
