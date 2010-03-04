@@ -274,17 +274,14 @@ ul.inline li:first-child {
   font: 11px/13px "Lucida Grande", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
   color: #000;
 }
-#search .sbox_r {
+#search .clear {
   background: #fff url(/images/srch_r.gif) 0 0 no-repeat;
   float: left;
   width: 19px;
   height: 19px;
 }
-#search .sbox_r_f2 {
-  background: #fff url(/images/srch_r.gif) 0 -19px no-repeat;
-  float: left;
-  width: 19px;
-  height: 19px;
+#search .active {
+  background-position: 0 -19px;
 }
 
 /* Extra parts on post page */

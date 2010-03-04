@@ -12,6 +12,21 @@ var WezM = {
     if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0) {
       $('#search input').css('paddingTop', 0);
     }
+    $('#search input').keyup(function(e) {
+      var input = $(this);
+      var clear_search = $('#search .clear');
+      var value = input.attr('value');
+      if(value && (value != '')) {
+        clear_search.addClass('active');
+      }
+      else {
+        clear_search.removeClass('active');
+      }
+    });
+    $('#search .clear.active').live('click', function() {
+      $('#search input').attr('value', '').keyup(); // Simulate keypress to clear results
+
+    });
   },
   _searchItemSelected: function() {},
   _renderArticle: function(o) {
