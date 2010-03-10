@@ -21,6 +21,9 @@ ul, ol {
 ul {
   list-style: disc;
 }
+ol {
+  list-style: decimal;
+}
 li {
   margin-left: 1em;
 }
