@@ -1,7 +1,7 @@
 --- 
 output_dir: output
 data_sources: 
-- items_root: /
-  layouts_root: /
-  type: filesystem_compact
+  - items_root: /
+    layouts_root: /
+    type: filesystem_compact
 base_url: 'http://www.wezm.net'
