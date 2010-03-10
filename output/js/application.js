@@ -12,6 +12,8 @@ var WezM = {
     if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0) {
       $('#search input').css('paddingTop', 0);
     }
+    // The following should be triggered onchange for the input as well
+    // (to handle things like Cut with the mouse)
     $('#search input').keyup(function(e) {
       var input = $(this);
       var clear_search = $('#search .clear');
@@ -52,9 +54,9 @@ var WezM = {
   },
   loadArticles: function(callback) {
     if(!this.articles) {
-      var path = 'json/articles.json';
+      var path = 'articles.json';
       if(document.location.pathname.match(/page\/$/)) {
-        path = '../json/articles.json';
+        path = '../articles.json';
       }
       jQuery.getJSON(path, {}, function(data) {
         WezM.articles = data;
