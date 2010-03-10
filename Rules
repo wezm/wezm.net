@@ -10,7 +10,7 @@ compile '*/json/' do
   filter :erb
 end
 
-compile %r{/(technical|personal|)articles/(page/|)} do
+compile %r{/(?:technical|personal|)articles/(page/|)} do
   filter :erb
   layout 'articles'
 end
@@ -22,6 +22,10 @@ compile %r(/\d{4}/*) do
 end
 
 compile %r{.*/feed/} do
+  filter :erb
+end
+
+compile %r{(?:/robots/|/sitemap)} do
   filter :erb
 end
 
@@ -40,6 +44,13 @@ route %r{.*/feed/} do
   path.cleanpath.to_s + '.xml'
 end
 
+route '/robots/' do
+  '/robots.txt'
+end
+
+route '/sitemap/' do
+  '/sitemap.xml'
+end
 
 route '*' do
   item.identifier + 'index.html'
