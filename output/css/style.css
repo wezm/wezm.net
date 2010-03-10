@@ -88,10 +88,8 @@ sup {
 }
 
 pre,code {
-  font-family: Consolas, "Andale Mono", "Liberation Mono", Menlo, Monaco, "Bitstream Vera Sans Mono", fixed;
-}
-pre {
   font-size: 12px;
+  font-family: Consolas, "Andale Mono", "Liberation Mono", Menlo, Monaco, "Bitstream Vera Sans Mono", fixed;
 }
 
 blockquote {
