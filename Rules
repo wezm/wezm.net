@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'pathname'
+
 compile '/' do
   layout 'home'
 end
@@ -19,14 +21,25 @@ compile %r(/\d{4}/*) do
   layout 'default'
 end
 
+compile %r{.*/feed/} do
+  filter :erb
+end
+
 compile '*' do
   filter :rdiscount
   layout 'default'
 end
 
 route '*/json/' do
-  item.identifier + 'articles.json'
+  path = Pathname(item.identifier)
+  (path.dirname + 'articles.json').to_s
 end
+
+route %r{.*/feed/} do
+  path = Pathname(item.identifier)
+  path.cleanpath.to_s + '.xml'
+end
+
 
 route '*' do
   item.identifier + 'index.html'
