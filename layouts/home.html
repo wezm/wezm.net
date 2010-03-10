@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=600" />
-  <title><%= @item[:title] %></title>
-  <link rel="stylesheet" href="/css/reset.css" type="text/css" media="screen,projection" />
-  <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen,projection" />
+  <%= render '_head' %>
   <link rel="stylesheet" href="/css/thumbs.css" type="text/css" media="screen,projection" />
-  <link rel="stylesheet" href="/css/mobile.css" type="text/css" media="only screen and (max-device-width: 480px)" />  
   <link rel="stylesheet" href="/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
   <script src="/js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
@@ -19,7 +14,7 @@
   <div id="technical" class="column">
     <div>
       <h1>Geeky
-        <sup><a href="<%= feed_url %>"><img src="/images/black-feed-icon.png" width="12" height="12" /></a></sup>
+        <sup><a href="/technical/feed.xml"><img src="/images/black-feed-icon.png" width="12" height="12" /></a></sup>
       </h1>
       <ul class="articles">
       <% technical_articles[0..4].each do |article| %>
@@ -33,7 +28,7 @@
   <div id="personal" class="column">
     <div>
       <h1>Non-Geeky
-        <sup><a href="<%= feed_url %>"><img src="/images/black-feed-icon.png" width="12" height="12" /></a></sup>
+        <sup><a href="/personal/feed.xml"><img src="/images/black-feed-icon.png" width="12" height="12" /></a></sup>
       </h1>
       <ul class="articles">
       <% personal_articles[0..4].each do |article| %>
