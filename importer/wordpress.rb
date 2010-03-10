@@ -93,6 +93,10 @@ module Importer
       end
       categories.uniq!
 
+      if categories.empty?
+        categories << 'Uncategorized'
+      end
+
       begin
         post_date = Date.strptime(get(post, 'wp:post_date_gmt'), "%Y-%m-%d %H:%M:%S")
       rescue ArgumentError
