@@ -1,1 +1,1 @@
-<%#= atom_feed(:articles => technical_articles) %>
+<%= atom_feed(:articles => technical_articles, :limit => 10) %>

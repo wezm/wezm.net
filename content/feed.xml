@@ -1,1 +1,1 @@
-<%#= atom_feed %>
+<%= atom_feed(:limit => 10) %>
