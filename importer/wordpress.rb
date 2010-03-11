@@ -121,10 +121,11 @@ module Importer
         attributes[:slug] = attributes[:title].downcase.gsub(/[^0-9a-zA-Z]/, '-').gsub(/-{2,}/, '-')
       end
 
-      path = ['', attributes[:section], post_date.year, ("%02d" % post_date.month), attributes[:slug], ''].join('/')
-
-      # require 'pp'
-      # pp attributes
+      if attributes[:status] == 'draft'
+        path = ['', 'drafts', attributes[:slug], ''].join('/')
+      else
+        path = ['', attributes[:section], post_date.year, ("%02d" % post_date.month), attributes[:slug], ''].join('/')
+      end
 
       add_item(content, attributes, path)
     end
