@@ -1,0 +1,81 @@
+<h3>Introduction</h3>
+
+I've been meaning to write a post about backup for some time now. This morning after posting a <a href="http://popcorn.cx/blog/2009/08/i-dont-trust-the-cloud/#comment-53264">comment on Stephen's blog</a> about it I decided it was time to finish it off.
+
+My backup strategy has been evolving since around 2006 when I decided that my photos were not amply secure in case of disaster. My backup solution at the time was to periodically burn a copy to CD, which I kept in my house. The obvious limitation here is that if the house is destroyed, by fire for example, all my photos are lost. What got me thinking about this originally was there actually was a major fire in one of the apartments in the block that I lived in. I was away at the time so was fortunate it didn't spread to the other apartments.
+<!--more-->
+<h3>Contents</h3>
+<ul>
+<li><a href="/2009/08/the-art-of-backup/#ipod">The iPod Solution</a></li>
+<li><a href="/2009/08/the-art-of-backup/#exavault">ExaVault</a></li>
+<li><a href="/2009/08/the-art-of-backup/#s3">Amazon S3</a></li>
+<li><a href="/2009/08/the-art-of-backup/#backblaze">Backblaze</a></li>
+<li><a href="/2009/08/the-art-of-backup/#conclusion">Conclusion</a></li>
+</ul>
+
+<a name="ipod"></a>
+<h3>The iPod Solution</h3>
+
+I looked in to off-site backup solutions such a burning CDs and sending them to my parents and syncing to an external drive and storing it at work. Online, "cloud" solutions were too expensive at the time for the amount of data I wanted to store. My solution in the end was to buy the biggest iPod available at the time, a fifth generation, 60Gb. This had enough room to store all my music and photos as well as some other important data. It was also always on me when I went out. I figured that if a fire or something happened when I was at home I would grab it on the way out.
+
+This worked reasonably well as iTunes synced the music and photos automatically. There was a manual step to sync the data though, which mean it was never as up to date. This was all fine until the iPod was stolen. Whilst I was more upset at the circumstances that led to it being taken I also didn't like the idea of someone having all of my important data.
+
+<a name="exavault"></a>
+<h3>ExaVault</h3>
+
+With the iPod gone I started using <a href="http://www.exavault.com/">ExaVault</a>, an online service that gives you access to a certain amount of storage via rsync for a monthly fee. This worked well for smaller datasets (ie. not photos and music) but it was too expensive to consider pushing tens of gigabytes to. ExaVault was great because I could schedule the backup to run via cron and it didn't require any thought after that.
+
+To mitigate the risk of losing photos I setup a Time Machine drive when Mac OS X 10.5 was released and also stored a copy of my Aperture library in a vault on an external drive. I still didn't have a remote solution for them though.
+
+<a name="s3"></a>
+<h3>Amazon S3</h3>
+
+When I started a new job a coleegue mentioned that he was using <a href="https://s3.amazonaws.com/">Amazon S3</a> for backup and it was really cheap. I looked into it and found that S3 offered pricing low enough that it was financially feasible to push a copy of all my photos to the service. I considered <a href="http://www.jungledisk.com/">Jungle Disk</a> but in the end didn't go with it because I wanted a single solution that I could use on my Linux VPS as well as my Mac. I ended up using <a href="http://s3sync.net/">s3sync</a>, which is basically <a href="http://www.samba.org/rsync/">rsync</a> for S3. This had the added benefit of being a drop in replacement for my ExaVault setup.
+
+The initial upload of over 40Gb of photos to S3 took a couple of weeks I think but after that it happily ran without any drama. I also moved VPS hosts and was able to pull down configs from S3 after the old server had become inaccessible.
+
+Whilst I had the S3 solution in place I upgraded my Mac. I bought a second drive for the new Mac, which left me with the factory supplied drive. I use this drive as a Time Machine drive and it is big enough to keep a copy of almost everything on the main drive. The few things that aren't backed up are my Downloads folder and my Movies folder (although it does copy movies I take on my camera).
+
+<h4>S3 Problems</h4>
+
+After a while I noticed that s3sync was coping a few files every time it ran, even though they hadn't changed. These files had Unicode filenames. After some research I found out that <a href="http://developer.apple.com/technotes/tn/tn1150.html#UnicodeSubtleties">HFS+ uses decompesed character sequences in filenames</a>. However these did not play nice with s3sync. Presumably they were stored in pre-composed format on S3 and were then seen as different when the sync was run.
+
+s3sync also uses a questionable method to store the attributes of the folders that it syncs. Since S3 doesn't have a concept of folders s3sync creates a file with the name of the folder and stores its attributes (permissions, owner, etc.) in it. What this ends up meaning is that s3sync is the only tool that can perform a restore. Other tools create a file with the name of a folder then try to create files in that folder but can't because the name is already taken.
+
+<a name="backblaze"></a>
+<h3>Moving to Backblaze</h3>
+
+To save money I moved all the services I had running on my Linux VPS to my Mac at home. Since I now only had one machine that needed backing up and I didn't need Linux compatibility I had some more options. With the S3 issues I was seeing I decided to move to <a href="http://www.backblaze.com/partner/af0192">Backblaze</a><sup><abbr title="Affiliate link">$</abbr></sup>. For US$50 per year I get unlimited, versioned, encrypted storage and decent Mac support. They also have a web interface that can be handy for grabbing files from my Mac at home when I'm at work.
+
+The move to Backblaze took a lot longer than I had planned. First off uploading nearly 200Gb of data was always going to take a long time but it took far longer than it needed to due to a questionable default upload limit in the Backblaze application. It wasn't until after the two month or so initial upload finsihed that I discoved the setting. So advice to anyone performing an initial upload, <a href="https://www.backblaze.com/speedtest/">remove the upload limit</a>!
+
+<h4>Deleting All Data in an S3 Bucket</h4>
+
+An additional unexpected complexity in the move away from S3 was deleting the data in S3 after the Backblaze upload was complete. It isn't possible to just delete an S3 bucket and have all its data go with it. You have to delete all the data individually. This is where S3 as a backup service started to show its limitations. Its great if you're storing just photos or music but when you start syncing arbitrary files on a computer system you end up putting lots of little files up, some of which are quite weird. The primary example being Mac OS X Icon files, which are actually named 'Icon\r', yes that's a carriage return character in the filename. I have no idea why they are named like this but attempting to delete these files gave me all sorts of grief.
+
+I started deleting eveything using <a href="http://s3tools.org/s3cmd">s3cmd</a> and its 'deleteall' action.
+
+<pre>S3CONF=/path/to/conf.yml s3cmd -s -v deleteall bucket-name
+
+-v : verbose - show files
+-s : SSL
+</pre>
+
+This ran for a couple of days before I noticed it had got stuck in an infinite loop. It was deleting the same files over and over again. It was here that I had to step in and start deleting stuff interactively. This is when I found the awkward Icon files. I tried several S3 clients for the Mac. <a href="http://cyberduck.ch/">Cyberduck</a> ended up being the only one capable of removing them.
+
+<ul>
+<li><a href="http://s3hub.com/">S3 Hub</a> could see but not delete</li>
+<li><a href="http://people.no-distance.net/ol/software/s3/">S3 Browser</a> couldn't delete</li>
+<li>s3cmd looked like it deleted but didn't</li>
+</ul>
+
+Eventually I did get everything deleted but it seemed a lot harder than it should have been.
+
+<a name="conclusion"></a>
+<h3>Conclusion</h3>
+
+So that's my backup story to date. Pretty much everything is stored on two or more hard disks plus remotely on Backblaze.
+
+S3 is a great service but I don't think its well suited to backup, particularly if you're storing lots of small files. Using something like Jungle Disk would probably make it a lot more suitable though.
+
+Backup is important and can be difficult to get right as well as keep it affordable. I believe my current setup keeps my data secure barring any worldwide catastrophes, which I think is good enough. The one one remaining thing that this strategy doesn't cover is <a href="http://blogs.zdnet.com/storage/?p=191">silent data corruption</a>. Hopefully <a href="http://opensolaris.org/os/community/zfs/">ZFS</a> will become fully supported in Mac OS X soon and that will no longer be a problem.

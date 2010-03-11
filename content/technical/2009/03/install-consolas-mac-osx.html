@@ -1,0 +1,40 @@
+With the introduction of Windows Vista and Office 2007 Microsoft included some new fonts, which became the defaults in Office. Their names all start with 'C' and they are quite attractive. In particular there is a monospaced font called <a href="http://en.wikipedia.org/wiki/Consolas">Consolas</a> that is nice to use as a text editor font and Terminal font. The problem is they aren't technically free, although Microsoft does include them in a number of freely available updaters. What follows is how I went about installing the fonts on my Mac.
+<!--more-->
+<ol>
+	<li>Download the Open XML File Format Converter for Mac from the <a href="http://www.microsoft.com/mac/downloads.mspx">Microsoft Mactopia download page</a>.</li>
+	<li>Double click the disk image if it wasn't automatically mounted. You will see an Open XML File Format Converter meta package (.mpkg). This is an installer package comprised of several sub-installer packages. One of which is the fonts I was after.</li>
+	<li>Run the Open XML Fonts Installer package. Running the following in the Terminal will achieve this in a typical Mac OS X install:
+<code>open "/Volumes/Open XML File Format Converter for Mac 1.0.2/Open XML File Format Converter for Mac 1.0.2.mpkg/Contents/Packages/OpenXML_all_fonts.pkg"</code></li>
+	<li>Follow the prompts and you're done. You can now configure you text editor and Terminal to use Consolas.</li>
+</ol>
+
+<strong>Note:</strong> I deemed that the <code>OpenXML_all_fonts.pkg</code> was safe to install without fear that it will install any other rubbish using the <code>lsbom</code> command as follows:
+
+<pre style="overflow: scroll">$ lsbom -s /Volumes/Open\ XML\ File\ Format\ Converter\ for\ Mac\ 1.0.2/Open\ XML\ File\ Format\ Converter\ for\ Mac\ 1.0.2.mpkg/Contents/Packages/OpenXML_all_fonts.pkg/Contents/Archive.bom 
+.
+./Calibri Bold Italic.ttf
+./Calibri Bold.ttf
+./Calibri Italic.ttf
+./Calibri.ttf
+./Cambria Bold Italic.ttf
+./Cambria Bold.ttf
+./Cambria Italic.ttf
+./Cambria.ttf
+./Candara Bold Italic.ttf
+./Candara Bold.ttf
+./Candara Italic.ttf
+./Candara.ttf
+./Consolas Bold Italic.ttf
+./Consolas Bold.ttf
+./Consolas Italic.ttf
+./Consolas.ttf
+./Constantia Bold Italic.ttf
+./Constantia Bold.ttf
+./Constantia Italic.ttf
+./Constantia.ttf
+./Corbel Bold Italic.ttf
+./Corbel Bold.ttf
+./Corbel Italic.ttf
+./Corbel.ttf</pre>
+
+This listing shows that the package only contains fonts, nothing else.

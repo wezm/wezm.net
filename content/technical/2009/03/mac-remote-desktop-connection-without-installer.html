@@ -1,0 +1,15 @@
+Microsoft provide a Remote Desktop Connection (RDC) client for the Mac. This is a good thing. However it is packaged as an Installer meta package, which to me seemed unnecessary, so I went digging. Viewing the Packages folder within the meta package shows that Microsoft have thoughtfully included an Office updater, error reporter and help viewer as well as the RDC client itself:
+<ol>
+	<li>Office2008_en_autoupdate.pkg</li>
+	<li>Office2008_en_errorreporting.pkg</li>
+	<li>Office2008_en_helpviewer.pkg</li>
+	<li>Remote Desktop Connection 2.pkg</li>
+	<li>Remote Desktop Connection.pkg</li>
+</ol>
+<strong>Note:</strong> From what I can tell the second RDC package (the one with 2 on the end) exists to provide internationalisation, something I don't need. If you aren't an English speaker (yes I'm aware of the irony of this post being written in English) then you may not want to follow these directions.
+<!--more-->
+Further examination with the ever trusty <code><a href="http://developer.apple.com/DOCUMENTATION/DARWIN/Reference/ManPages/man8/lsbom.8.html">lsbom</a></code> command shows that <code>Remote Desktop Connection.pkg</code> contains solely the RDC client app. This means that Microsoft could <em>potentially</em> distribute the app simply zipped or if desired on a disk image without the Installer package. Anyway, what this means is that you can extract the <code>Archive.pax.gz</code> file in the package and happily skip the Installer. On a typical Mac OS X (10.5) installation (I.e. mine) with the Remote Desktop Connection disk image mounted this can be achieved by running the following terminal command:
+
+<code>open /Volumes/Remote\ Desktop\ Connection/Remote\ Desktop\ Connection.mpkg/Contents/Packages/Remote\ Desktop\ Connection.pkg/Contents/Archive.pax.gz</code>
+
+This should open a Finder window with your shiny new Remote Desktop Connection.app in it. You can then move it to you Applications folder if desired.

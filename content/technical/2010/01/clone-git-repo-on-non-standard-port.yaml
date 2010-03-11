@@ -1,0 +1,17 @@
+--- 
+slug: clone-git-repo-on-non-standard-port
+permalink: http://www.wezm.net/2010/01/clone-git-repo-on-non-standard-port/
+kind: article
+section: technical
+created_at: 2010-01-13 10:21:51
+title: Clone git Repo on Non-Standard Port
+post_id: 293
+tags: 
+- clone
+- git
+- port
+- ssh
+- tunnel
+categories: 
+- Technical
+status: publish

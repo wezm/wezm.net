@@ -1,0 +1,44 @@
+In order to cope with having to use Windows at work I run Cygwin. My shell of choice is zsh. For whatever reason the Cygwin package of zsh installs with a serious of directories that the zsh completion system deems to be insecure and it makes sure you know this. Each time a new shell is opened (in my case through a Windows native rxvt terminal) I would receive the following warning:
+
+<code>Ignore insecure directories and continue [ny]?</code>
+
+Pressing 'y' becomes a bit tedious after a while so I decided to track down these insecure directories and fix them.
+<!--more-->
+<tt>man zshcompsys</tt> reveals the following about the security check:
+
+<blockquote>For security reasons compinit also  checks  if  the  completion  system
+would  use  files not owned by root or by the current user, or files in
+directories that are world- or group-writable or that are not owned  by
+root  or  by the current user.  If such files or directories are found,
+compinit will ask if the completion system should really be  used.   To
+avoid  these tests and make all files found be used without asking, use
+the option -u, and to make compinit silently ignore all insecure  files
+and  directories  use  the  option  -i.  This security check is skipped
+entirely when the -C option is given.
+
+The security check can be retried at any time by running  the  function
+compaudit.
+</blockquote>
+
+Running compaudit revealed the following:
+<code>% compaudit 
+There are insecure directories:
+/usr/share/zsh/site-functions
+/usr/share/zsh/4.3.4/functions
+/usr/share/zsh
+/usr/share/zsh/4.3.4</code>
+
+Examining the permissions on these directories showed they were all group writable.
+
+<code>% ls -ld /usr/share/zsh/site-functions
+drwxrwx---+ 2 wmoore mkgroup-l-d 0 Sep  4 10:54 /usr/share/zsh/site-functions</code>
+
+Stripping them of the group write permission fixed the problem and made starting a new shell a little more pleasant.
+
+<code>% chmod g-w /usr/share/zsh/site-functions /usr/share/zsh/4.3.4/functions /usr/share/zsh /usr/share/zsh/4.3.4
+% compaudit                                                                 
+% 
+</code>
+
+<strong>Update:</strong> kylexlau provides this one line solution for correcting to permissions on each of the directories that compaudit returns:
+<code>compaudit | xargs chmod g-w</code>

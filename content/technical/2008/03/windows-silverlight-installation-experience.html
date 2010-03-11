@@ -1,0 +1,27 @@
+I encountered a (Microsoft) site the other day that required <a href="http://silverlight.net/">Silverlight</a> to be installed. Given I was using my work laptop (running Windows XP) I thought I'd give it a try. The first attempt at running the setup file I downloaded resulted in the following error message (which was opened in a browser window, not displayed by the installer):
+
+<blockquote>The Microsoft Silverlight download was automatically extracted to a virtual drive. You should manually extract the download to a physical drive, and then run it from there. Please follow these steps to complete your installation:
+
+   1. Create a new folder on drive C called SilverlightTemp.
+   2. Save the Silverlight download to this folder.
+   3. Click Start, click Run, type cmd.exe, and then click OK.
+   4. In the cmd.exe window, type cd C:\SilverlightTemp\, and then press Enter.
+   5. This step depends on which version of Silverlight you are installing.
+          * For Silverlight 1.0 Beta:
+            In the cmd.exe window, type Silverlight.1.0beta.exe /X, and then press Enter.
+          * For Silverlight 1.1 Alpha:
+   6. In the cmd.exe window, type Silverlight.1.1alpha.exe /X, and then press Enter.
+   7. If you receive a User Account Control (UAC) prompt, click Continue.
+   8. In the Choose Directory For Extracted Files box, type C:\SilverlightTemp, and then click OK.
+   9. In the Extraction Complete box, click OK.
+  10. In the cmd.exe window, type install.exe, and then press Enter.
+  11. If you receive a UAC prompt, click Continue.
+  12. In the cmd.exe window, type cd.. and then press Enter.
+  13. In the cmd.exe window, type rmdir SilverlightTemp /S /Q, and then press Enter.
+  14. In the cmd.exe window, type exit, and then press Enter.</blockquote>
+
+After recovering from the initial shock of the installation instructions for a very consumer oriented technology requiring use of the command line, I followed the instructions only to be shown another web based error message:
+
+<blockquote>This installation is forbidden by system policy. Contact your system administrator for assistance.</blockquote>
+
+Yes, that's right I don't have administrator privileges on my work laptop. Surely the installer could have worked this out at the start of the process. 

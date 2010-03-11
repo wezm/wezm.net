@@ -1,0 +1,14 @@
+Translate foundation from NS to CP
+No pointers so lose the *
+Local variables are not typed, so just declare then with var
+No properties so convert dot notation to method calls
+No synthesize but can add @accessors to ivars to create basic accessor methods
+#pragma's don't work and cause syntax errors
+No header files, just put it all in the j file
+#import becomes @import
+CGPointZero, CGRectZero -> CGMakePointZero(), CGMakeRectZero()
+
+
+TextMate regexes to convert properties to method calls:
+Find: (\s*)([^.]+)\.([^ ]+) = ([^;]+);
+Replace: $1[$2 set\u$3:$4];

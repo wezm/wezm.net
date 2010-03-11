@@ -1,0 +1,5 @@
+This week I wanted to write a script that would get my account balances from <a href="http://www.nab.com.au/">nab</a> Internet Banking. These types of things are generally quite simple with Ruby and <a href="http://mechanize.rubyforge.org/mechanize/">Mechanize</a>. I got the basics of the script up and running fairly quickly but when I ran it the site always rejected my username and password.
+
+After a lot more time in the Safari Web Inspector I finally worked out that the site actually expects the password submitted to the login page to be 'mixed' with a key that is unique for each page load. The 'mixing' (for lack of a better description) is performed by a javascript function. After I reimplemented this function in my Ruby script I was then able to sucessfully login and retrieve my account balances. My code is supplied below for anyone else who is wanting to do something like this.
+<!--more-->
+<script src="http://gist.github.com/149565.js"></script>

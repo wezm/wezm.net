@@ -1,0 +1,21 @@
+--- 
+slug: exclude-directories-from-textmate-side-bar-for-faster-find-in-project
+permalink: http://www.wezm.net/2009/05/exclude-directories-from-textmate-side-bar-for-faster-find-in-project/
+kind: article
+section: technical
+created_at: 2009-05-15 03:29:30
+title: Exclude Directories From TextMate Side Bar for Faster Find in Project
+post_id: 124
+tags: 
+- bash
+- extended
+- find-in-project
+- globbing
+- script
+- shell
+- textmate
+categories: 
+- Mac OS X
+- Programming
+- Tips
+status: publish

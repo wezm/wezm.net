@@ -1,0 +1,48 @@
+Hubert Feyrer posted, <a href="http://www.feyrer.de/NetBSD/bx/blosxom.cgi/nb_20100212_1706.html">Musing about git's object store efficiency</a> yesterday. In it he compared the apparent efficiency of git's object store to CVS's stacked patches. His methodology was to checkout all 963 versions of the NetBSD i386 GENERIC kernel configuration file and then sum up the space used. He comes to the following conclusion:
+
+<blockquote>the git model requires about 37 times the space that CVS does</blockquote>
+
+and:
+<blockquote>that's not counting the overhead of 962 inodes and the related directory bookkeeping</blockquote>
+
+He finishes off with an acknowledgement that git has data packing features:
+<blockquote> I know that git offers some more efficient storage methods via "pack" files, but investigating those is left as an exercise to the reader. </blockquote>
+
+I generally enjoy Hubert's posts but as a daily user of git this one didn't sit right with me. I thought I'd take up the aforementioned exercise.
+<!--more-->I retrieved the GENERIC,v rcs file<sup>1</sup> and created a git repository<sup>2</sup>.
+
+I then ran <a href="http://gist.github.com/303277">a script</a><sup>3</sup>, which committed each revision of the file along with a single line commit message extracted from the rcs log.
+
+The repository then weighed in at 22,352kb<sup>4</sup> with 3,174 files and directories<sup>5</sup>. This is where git-gc comes in. From the man page, "git-gc - Cleanup unnecessary files and optimize the local repository". After running <code>git gc</code><sup>6</sup> the size of the repository was down to 1,068kb, 1.24 times the rcs file. The file and directory count also vastly smaller at 64.
+
+So all in all git fares pretty well. Sure the repository is bigger than CVS and there's a few more files but its not in order Hubert suggests and its a small price to pay for all the benefits git provides.
+
+________________________
+
+1. From <a href="ftp://ftp.netbsd.org/pub/NetBSD/misc/repositories/cvsroot/src/sys/arch/i386/conf/GENERIC,v">ftp.netbsd.org</a>.
+
+2.
+<pre>mkdir git
+cd git
+git init
+Initialized empty Git repository in /Users/wmoore/Source/NetBSD i386 GENERIC/git/.git/</pre>
+
+3.
+<script src="http://gist.github.com/303277.js?file=populate_git_repo.sh"></script>
+
+4. Repository sizes detemined via:
+<pre>du -sk .</pre>
+
+5. File and directory counts determined via:
+<pre>find . | wc -l</pre>
+
+6.
+<pre>git gc
+Counting objects: 2871, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (1914/1914), done.
+Writing objects: 100% (2871/2871), done.
+Total 2871 (delta 951), reused 0 (delta 0)
+Removing duplicate objects: 100% (256/256), done.</pre>
+
+Testing performed on Mac OS X 10.6.2 with git 1.6.4.2

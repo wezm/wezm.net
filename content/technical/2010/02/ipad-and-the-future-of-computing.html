@@ -1,0 +1,65 @@
+<blockquote cite="http://twitter.com/mmustapic/status/8461582923">The iPad is the console of computers
+  -- <cite><a href="http://twitter.com/mmustapic/status/8461582923">mmustapic</a></cite></blockquote>
+
+
+<p>The iPad announcement last week created a cacophony of commentary ranging from, "Meh, its just a big iPod touch", to, "Wow, we're witnessing the future of computing". On announcement day I was firmly in the former camp. There appeared to be nothing new aside from the larger screen and a custom Apple <abbr title="System on Chip">SoC</abbr> inside.</p>
+
+<p>Since then I've read a lot of smart commentary on the iPad, which has swayed my opinion quite a bit.</p>
+<!--more-->
+<h3>Computing For Everyone Else</h3>
+
+<p>Rob Foster suggests <a href="http://northtemple.com/2010/02/01/on-ipads-grandmas-and-gam">its not the geeks that are excited about the iPad</a>:</p>
+
+<blockquote><p>The darndest thing happened in the last five days and I was fortunate to be privy to it. Apple has gotten people excited about computing.</p>
+
+<p>But this time, it’s not nerds or geeks and certainly not IT industry analysts. It’s everyone else.</p></blockquote>
+
+<p>I'm a programmer, I write software both as a profession and a hobby. On my computer I frequently use compilers, interpreters, an IDE, advanced text editors, web servers, database servers and command line tools in addition to the more common web browsers, email client, music player, video player and chat client. The iPad feels weak to me because I clearly can't do a lot of those things on it. I am of course in a minority. For everyone else a computer that just works is all they ask. Your typical computer user shouldn't have to know about drivers, viruses, file permissions, software installers.</p>
+
+<h3>The Console of Computing</h3>
+
+<blockquote cite="http://twitter.com/johnthedebs/statuses/8488904733">Think of it as a video game console where you download the games. Now extend that thinking to all the applications.
+  -- <cite><a href="http://twitter.com/johnthedebs/statuses/8488904733">John Debs</a></cite></blockquote>
+
+<blockquote cite="http://twitter.com/cory_foy/status/8525045866">I realized today that we think of the iPad as a computer, when it's really a console. No outcries about the Wii being closed
+  -- <cite><a href="http://twitter.com/cory_foy/status/8525045866">Cory Foy</a></cite></blockquote>
+
+<p>There's a class of computers that has been operating like Apple's mobile platform for decades: video game consoles. The model of computing that Apple is using for the iPad, iPhone and iPod touch is very similar to that of say Nintendo. Closed systems, software approval, single main task at a time, limited expandability, ease of use, hardware abstraction are all features of both consoles and Apple's mobile devices.</p>
+
+<p><a href="http://stevenf.tumblr.com/post/359224392/i-need-to-talk-to-you-about-computers-ive-been">Steven Frank</a> and <a href="http://speirs.org/blog/2010/1/29/future-shock.html">Fraser Speirs</a> suggest we're entering the future of computing with the iPad and I now think they may be right. The iPad and its successors will make computing a bit less general but a lot more approachable for the typical consumer.</p>
+
+<p>All is not lost for us tinkerers though. Just like game consoles the iPad needs software too. And whilst the iPad is not self-hosting (yet) there's still a need for "real" computers and programmers to write the software.</p>
+
+<h3>A Dark Future?</h3>
+
+<p>Alex Payne <a href="http://al3x.net/2010/01/28/ipad.html">is wary of the future that iPad style computing may bring</a>:</p>
+
+<blockquote><p>For now, though, I remain disturbed. The future of personal computing that the iPad shows us is both seductive and dystopian. It’s not a future I want to bring into my home.</p></blockquote>
+
+<p>He makes a good point. If every computer out there were an iPad style device, totally locked down and under the control of its parent company there would be little room for exploration. However that's never stopped people before, just look at the efforts of the iPhone jail-breaking teams or the ongoing efforts to conquer the Xbox 360. Not only that, there's the open source movement fuelled by a desire to make everything from hardware to software totally visible and free to modify.</p>
+
+<p>The products of open source projects don't have a great reputation for having a fine attention to detail or remarkable ease of use but they exist. And just by existing they ensure that there will always be things for the budding tinkerers out there to explore, modify, extend and learn from.</p>
+
+<h3>Single Focus Computing</h3>
+
+<p>Much attention has been made of the fact that its only possible to run one app at a time. Many people seem to attributing this to a limitation of the processor used in the iPad or the iPhone OS itself. Both of these are of course totally wrong. The iPad, along with the iPhone and iPod touch are quite capable of running more that one process at a time. In fact that's how email gets sent and received in the background and how your music keeps playing when you're in the Facebook app. Milind Alvares attempts to clear up some of these misconceptions in, <a href="http://smokingapples.com/opinion/multi-tasking-iphone-ipad/">Understanding Multi-tasking on the iPad: What is it really?</a>.</p>
+
+<p>The iPad is promoting single focus computing. It does away with the memory requirements, power use, and task management that comes along with running more than one major app at a time. Just like hiding the underlying file layout simplifies things, so does this.</p>
+
+<p>As the iPhone has shown us, there's very little actual need for more than one app running at a time. As long as the experience of switching between apps is fast and state preserving it often doesn't really matter if an app is stopped and started or just switched to. There are of some widely cited exceptions to this though: Chat clients and third party music players.</p>
+
+<blockquote cite="http://twitter.com/ekabanov/status/8692060865">iPad doubters -- remember how iPhone didn't have COPY-PASTE for 2 years? Now compare THAT to multitasking!
+  -- <cite><a href="http://twitter.com/ekabanov/status/8692060865">Jevgeni Kabanov</a></cite></blockquote>
+
+<p>The inability to run a chat client or third party music player in the background right now does not mean that it won't be added in the future. I'm sure Apple is well aware of these use cases, just like it proved to be well aware of the need for copy-and-paste on the iPhone.</p>
+
+<p>There are solutions to both these problems that don't require full graphical apps to be run in parallel. The music player problem would be solved if the iPad SDK permitted a non-graphical background process to be left running. The OS could even impose strict limitations on the system resources that the process may use. In fact this is already possible in Mac OS X<sup><a href="http://developer.apple.com/mac/library/documentation/Darwin/Reference/ManPages/man2/setrlimit.2.html#//apple_ref/doc/man/2/setrlimit">1</a></sup>, so given iPhone OS's pedigree may already be present.</p>
+
+<p>The chat client problem could be addressed in a similar fashion: A non-graphical background process with the added ability to send notifications. This is already possible with push notifications, however imagine they  could be generated by the background app and perhaps also include standard user interface elements, much like third party apps in the Settings app. This way a new chat message could be displayed, with a field to allow a reply. Obviously these notifications would need to be less intrusive than they are now but it shows its possible.</p>
+
+<h3>Flash Must Die</h3>
+
+<blockquote cite="http://twitter.com/kirkoconnor/statuses/8655575132">RT @mashable: Apple's iPad: Will it Improve the Web? (Cashmore/CNN)- http://bit.ly/d1UgWF flash, like IE6, must die
+  -- <cite><a href="http://twitter.com/kirkoconnor/statuses/8655575132">Jevgeni Kabanov</a></cite></blockquote>
+
+<p>From my geeky point of view Flash is a rash on the web and the quicker it just goes away the better. However I know there's a lot of people out there that are writing the iPad off due its lack of support for Flash. The thing is, if Apple sticks to its guns and doesn't include Flash on the iPad it can only help push the adoption of alternatives like the HTML5 <code>canvas</code> and <code>video</code> tags. Sure there's going to be some pain until that time but we'll all be better off at the end.</p>

@@ -1,0 +1,11 @@
+For a while now I've had it in my mind to create a temperature logger. For no explainable reason I'm always curious about the temperature, particularly the extremes and strange fluctuations in one day. My idea is a basically to come up with a device that can read the inside and outside temperature and report these back to a host computer. The host would log the values in a database and make the current value and ideally the history available via a website.
+
+I finally got started on the project a couple of weeks back. I'm using an <a href="http://store.gravitech.us/arna30wiatp.html">Arduino Nano</a> as the bridge between the temperature sensors and the computer. Originally I was going to use (and actually purchased) the PIC based <abbr title="USB Bit Whacker"><a href="http://www.schmalzhaus.com/UBW/">UBW</a></abbr> but after seeing that the Arduino only cost a little more and had a full, freely available development tools for Mac OS X I switched to that.
+
+The temperature sensors are TI <a href="http://focus.ti.com/docs/prod/folders/print/tmp275.html">TMP275</a>, 2-wire (SMBus) high accuracy digital temperature sensors. The largest package I could get them in was SOIC so I ordered some little adaptor PCBs from eBay. To solder them I also bought a fine soldering iron tip and solder paste from Jaycar.
+
+So far I have soldered the temperature sensors to their adaptor boards and got the Arduino up and running with an LCD. The next step is to wire in the sensors. When that's all working I'd like to use a simple RF transmitter/receiver pair to allow the outside sensor to be put on a separate device outside by itself and have its reading collected wirelessly.
+
+Some pictures of the build so far are below:
+
+[gallery link="file"] 

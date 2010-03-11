@@ -1,0 +1,33 @@
+Following Nick Kreeger's <a href="http://nkreeger.com/2008/09/macvim-ftw.html">handy post</a> on tweaking MacVim on Mac OS X I applied some of the tips to GVim under Windows to make it a little easier on the eye. The following settings are placed in your _vimrc/.vimrc file.
+
+First up is a change of font. With the introduction of Windows Vista Microsoft had a <a href="http://www.officeformac.com/blog/Brave-New-Fonts">set of new standard fonts</a> created. These also ship with the latest versions of Office. The Consolas monospaced font makes a good programmers font so I this as the font when running under Windows. I've also set the size to be relatively small.
+
+<pre>if has("gui_win32")
+    :set guifont=Consolas:h8,<a href="http://www.proggyfonts.com/index.php?menu=download">ProggyTiny</a>:h8,Luxi_Mono:h12:cANSI
+endif</pre><!--more-->Next up set the window to start tall and a little wider than normal:
+
+<code>set columns=90 lines=65</code>
+
+I share my vim config with Cygwin and Windows native vim. In order to get the Windows version to pick up the UNIX plugins etc in the .vim I include the following:
+
+<pre>" Make Windows use my UNIX vimfiles
+if has("win32")
+    set runtimepath=$HOME/.vim,$HOME/vimfiles,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/vimfiles/after
+endif</pre>
+
+Turn on a custom status line which includes the file name, file type, modified and read only status, line and column numbers and the percentage through the file.
+
+<code>set laststatus=2
+set statusline=%&lt;%f\ %m%a%=%([%R%H%Y]%)\ %-19(%3l\ of\ %L,%c%)%P
+set showcmd</code>
+
+Along the lines of what Nick did I turned line numbers on and toned the colour down a bit:
+
+<code>colorscheme koehler
+hi LineNr guifg=#666666
+set number</code>
+
+So what does it all like in the end? Still not as good as MacVim but not too bad (click for full size version, scaled version looks a bit average):
+
+<a href='http://www.wezm.net/wp-content/uploads/wezm.net/2008/09/windows-gvim.png'><img src="http://www.wezm.net/wp-content/uploads/wezm.net/2008/09/windows-gvim.png" alt="Screenshot of GVim on Windows after customisation" title="Customised GVim" width="500" height="847" class="alignnone size-full wp-image-67" /></a>
+

@@ -1,0 +1,13 @@
+Tonight I began migrating from my current VPS at <a href="http://www.vpsfarm.com/">vpsFarm</a> to a new one at <a href="http://www.crucial.com.au/">Crucial Paradigm</a>. The primary driver behind this is financial. Firstly I wanted to reduce the cost of running a VPS and secondly I wanted a VPS billed in Australian dollars so I wasn't exposed to wildly varying value of the Australian dollar. Due to the recent slump in the exchange rate the vpsFarm server started costing $10 or so more a month.
+<!--more-->
+With my fresh Debian 4 VPS up and running I now wanted to install all the various packages that I had on the vpsFarm server. However I'm aware that when using <a href="http://wiki.debian.org/Aptitude">aptitude</a> to install packages it tracks which ones were included automatically as dependencies and can then clean them up if they are later on no longer needed by anything. As a result of this I didn't want to just install every package listed by <code>`dpkg -l`</code> on the old server. The solution I came up with was as follows. Its not particularly elegant but got the job done:
+
+<pre># On old server
+aptitude search '~i' | grep -v 'i A' > ~/installed.txt
+# scp installed.txt to new server
+# Then on new server
+aptitude search '~i' | grep -v 'i A' > ~/installed2.txt
+# Then determine which ones the new server doesn't have already
+diff installed*.txt | awk '{ print $3 }'|sort |uniq</pre>
+
+I joined the resulting list into a single line (Text > Unwrap Selection in TextMate or :%j in vim), removed a few that I didn't want then did <code>sudo aptitude install </code> and pasted the list of packages from TextMate. The <code>aptitude search '~i'</code> lists installed packages, the <code>grep</code> removes ones that were automatically installed and the <code>diff</code> finds ones that the new server doesn't already have.

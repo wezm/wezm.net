@@ -1,0 +1,20 @@
+--- 
+slug: determining-non-automatically-installed-debian-packages
+permalink: http://www.wezm.net/2009/01/determining-non-automatically-installed-debian-packages/
+kind: article
+section: technical
+created_at: 2009-01-20 13:18:54
+title: Determining Non-Automatically Installed Debian Packages
+post_id: 81
+tags: 
+- apt
+- debian
+- installed
+- linux
+- packages
+- server
+- vps
+categories: 
+- Linux
+- Tips
+status: publish

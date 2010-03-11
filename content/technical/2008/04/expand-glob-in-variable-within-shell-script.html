@@ -1,0 +1,8 @@
+I had the need today to read in a list of patterns from a file, expand them and then operate upon each file all from within a shell script. Apparently there is a <a href="http://docs.sun.com/app/docs/doc/816-0210/6m6nb7mas?a=view">shell built-in for csh</a>, but I didn't want to learn csh at that point. The eventual solution was to run an extra shell with the -c argument.
+
+Example:
+<pre>#!/bin/bash
+FILES=`cat patterns.txt`
+for pattern in $FILES; do
+    bash -c "ls -l ${pattern}"
+done</pre>

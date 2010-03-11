@@ -1,0 +1,6 @@
+A few days ago I decided I wanted a feed of the <a href="http://www.virtualbox.org/wiki/News">VirtualBox News</a> page. I mainly wanted this to know when new releases are made. Whilst the application does update itself, sometimes I go a while without firing it up so seeing the release in <a href="http://feedafever.com/">Fever</a> would be nice.
+
+After some brief Googling I didn't come across anything that was obviously designed to create feeds from Ruby (outside of Rails). So I opened up the <a href="http://tools.ietf.org/html/rfc4287">Atom Feed spec</a> and built the feed manually. The end result is a Ruby script and a feed (updated daily) at: <a href="http://home.wezm.net/files/virtualbox.atom">http://home.wezm.net/files/virtualbox.atom</a>. Thanks to the brilliant <a href="http://nokogiri.rubyforge.org/nokogiri/">nokogiri</a> this was relatively straightforward.
+
+My script is below:<!--more-->
+<script src="http://gist.github.com/137179.js"></script>
