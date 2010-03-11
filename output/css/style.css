@@ -288,11 +288,14 @@ ul.inline li:first-child {
 /* Extra parts on post page */
 .respond {
 /*  border-top: 1px solid #999;*/
+  padding: 10px;
+  background-color: #ddd;
 }
 .respond h2 {
   padding-left: 42px;
   line-height: 32px;
   background: url(/images/comment32.png) no-repeat top left;
+  margin-top: 0;
 }
 .published {
   font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
@@ -300,4 +303,19 @@ ul.inline li:first-child {
 /*  margin-top: -3px;*/
 	padding-bottom: 10px;
 	font-size: 14px;
+}
+
+/* Wordpress element alignment classes */
+.alignleft, img.alignleft {
+  float:left;
+  margin:5px 10px 5px 0;
+}
+.alignright, img.alignright {
+  float:right;
+  margin:5px 0 5px 10px;
+}
+.aligncenter, div.aligncenter, img.aligncenter {
+  text-align:center;
+  display:block;
+  margin:10px auto;
 }
