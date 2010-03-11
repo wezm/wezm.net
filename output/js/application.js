@@ -98,7 +98,7 @@ var WezM = {
         year: date.getYear() + 1900,
         path: article.path,
         title: article.title,
-        summary: article.summary
+        summary: article.extra
       };
       var li = this._renderArticle(article_view);
       container.append(li);
