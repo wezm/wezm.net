@@ -16,7 +16,7 @@ compile %r{/(?:technical|personal|)articles/(page/|)} do
 end
 
 compile %r(/\d{4}/*) do
-  filter :rdiscount
+  filter :smart_rdiscount
   layout 'article'
   layout 'default'
 end
@@ -30,7 +30,7 @@ compile %r{(?:/robots/|/sitemap)} do
 end
 
 compile '*' do
-  filter :rdiscount
+  filter :smart_rdiscount
   layout 'default'
 end
 
