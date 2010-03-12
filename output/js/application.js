@@ -30,7 +30,9 @@ var WezM = {
 
     });
   },
-  _searchItemSelected: function() {},
+  _searchItemSelected: function(article) {
+    document.location.href = article.path;
+  },
   _renderArticle: function(o) {
     return '<li>\n\
       <abbr class="calender date" title="' + (Mojo.escape(Mojo.normalize(o.date))) + '">\n\
