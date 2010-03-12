@@ -275,11 +275,12 @@ ul.inline li:first-child {
   font: 11px/13px "Lucida Grande", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
   color: #000;
 }
-#search .clear {
+#search span.clear {
   background: #fff url(/images/srch_r.gif) 0 0 no-repeat;
   float: left;
   width: 19px;
   height: 19px;
+  clear: none; /* for generic .clear below */
 }
 #search .active {
   background-position: 0 -19px;
