@@ -323,3 +323,11 @@ ul.inline li:first-child {
 #content .clear {
   clear: both;
 }
+#content hr {
+  border: 0;
+  border-top-width: 1px;
+  border-style: solid;
+  border-top-color: #999;
+  width: 10em;
+  margin: 0;
+}
