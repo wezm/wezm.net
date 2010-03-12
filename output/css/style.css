@@ -287,18 +287,18 @@ ul.inline li:first-child {
 }
 
 /* Extra parts on post page */
-.respond {
-/*  border-top: 1px solid #999;*/
+#content .respond {
+  margin-top: 10px;
   padding: 10px;
   background-color: #ddd;
 }
-.respond h2 {
+#content .respond h2 {
   padding-left: 42px;
   line-height: 32px;
   background: url(/images/comment32.png) no-repeat top left;
   margin-top: 0;
 }
-.published {
+#content .published {
   font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif;
 	color: #999;
 /*  margin-top: -3px;*/
@@ -307,19 +307,19 @@ ul.inline li:first-child {
 }
 
 /* Wordpress element alignment classes */
-.alignleft, img.alignleft {
+#content .alignleft, img.alignleft {
   float:left;
   margin:5px 10px 5px 0;
 }
-.alignright, img.alignright {
+#content .alignright, img.alignright {
   float:right;
   margin:5px 0 5px 10px;
 }
-.aligncenter, div.aligncenter, img.aligncenter {
+#content .aligncenter, div.aligncenter, img.aligncenter {
   text-align:center;
   display:block;
   margin:10px auto;
 }
-.clear {
+#content .clear {
   clear: both;
 }
