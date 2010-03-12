@@ -308,17 +308,17 @@ ul.inline li:first-child {
 
 /* Wordpress element alignment classes */
 #content .alignleft, img.alignleft {
-  float:left;
-  margin:5px 10px 5px 0;
+  float: left;
+  margin: 5px 10px 5px 0;
 }
 #content .alignright, img.alignright {
-  float:right;
-  margin:5px 0 5px 10px;
+  float: right;
+  margin: 5px 0 5px 10px;
 }
 #content .aligncenter, div.aligncenter, img.aligncenter {
-  text-align:center;
-  display:block;
-  margin:10px auto;
+  text-align: center;
+  display: block;
+  margin: 10px auto;
 }
 #content .clear {
   clear: both;
