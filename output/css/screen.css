@@ -331,3 +331,18 @@ ul.inline li:first-child {
   width: 10em;
   margin: 0;
 }
+
+/* Styles for MP3 Decoder post */
+table.left_headers, table.top_headers {
+    border: 1px solid #D8D8D8;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+table.left_headers td, table.left_headers th,
+table.top_headers td, table.top_headers th {
+    border: 1px solid #D8D8D8;
+    padding: 0.3em 0.7em 0.3em 0.7em;
+}
+table.left_headers th {
+    text-align: right;
+}

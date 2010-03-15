@@ -9,6 +9,7 @@ I did some searching and came up with two other libraries that seemed well suite
 I built the two additional libraries with the default configuration options, except for libmad, which I added the <code>--enable-speed</code> option. With the help of example code I made programs out of each that were comparable to the first version for Core Audio. I.e. MP3 file in, 16-bit Linear PCM audio samples out.
 
 To provide a benchmark I wrote a script that would run each of the three programs against a source MP3 file. Each program reported the elapsed time (via <a href="http://developer.apple.com/documentation/Darwin/Reference/ManPages/man3/time.3.html">time(3)</a>) and the processor time (via <a href="http://developer.apple.com/documentation/Darwin/Reference/ManPages/man3/clock.3.html">clock(3)</a>) when it finished decoding. The programs were run one after another on the source file 10 times. Their PCM output was written to a new file for each invocation.
+
 <!--more-->
 <h3>Environment</h3>
 
@@ -22,180 +23,180 @@ The results of the tests for my sample MP3s is below. The individual times were 
 <!-- 1-08 Pushin.mp3 -->
 
 <table class="left_headers">
-<tr>
-<th>Size</th><td>4,296,251 bytes</td>
-</tr>
-<tr>
-<th>Bitrate</th><td>160 kbps</td>
-</tr>
-<tr>
-<th>Channels</th><td>2 (Joint Stereo)</td>
-</tr>
-<tr>
-<th>Length</th><td>3:34</td>
-</tr>
+  <tr>
+    <th>Size</th><td>4,296,251 bytes</td>
+  </tr>
+  <tr>
+    <th>Bitrate</th><td>160 kbps</td>
+  </tr>
+  <tr>
+    <th>Channels</th><td>2 (Joint Stereo)</td>
+  </tr>
+  <tr>
+    <th>Length</th><td>3:34</td>
+  </tr>
 </table>
 
 <table class="top_headers">
-<tr>
-<th>Library</th>
-<th>Average Elapsed Time</th>
-<th>Average Processor Time</th>
-<th>Processor Time Std. Deviation</th>
-</tr>
-<tr>
-<td>mpg123</td>
-<td>2.30</td>
-<td>1.71</td>
-<td>0.95</td>
-</tr>
-<tr>
-<td>Core Audio</td>
-<td>4.10</td>
-<td>3.63</td>
-<td>0.27</td>
-</tr>
-<tr>
-<td>mad</td>
-<td>4.80</td>
-<td>4.42</td>
-<td>0.02</td>
-</tr>
+  <tr>
+    <th>Library</th>
+    <th>Average Elapsed Time</th>
+    <th>Average Processor Time</th>
+    <th>Processor Time Std. Deviation</th>
+  </tr>
+  <tr>
+    <td>mpg123</td>
+    <td>2.30</td>
+    <td>1.71</td>
+    <td>0.95</td>
+  </tr>
+  <tr>
+    <td>Core Audio</td>
+    <td>4.10</td>
+    <td>3.63</td>
+    <td>0.27</td>
+  </tr>
+  <tr>
+    <td>mad</td>
+    <td>4.80</td>
+    <td>4.42</td>
+    <td>0.02</td>
+  </tr>
 </table>
 
 <h4>Medium Mono File</h4>
 <!-- Sensation Black 2007 Warm Up Mix.mp3 -->
 
 <table class="left_headers">
-<tr>
-<th>Size</th><td>83,091,456 bytes</td>
-</tr>
-<tr>
-<th>Bitrate</th><td>320 kbps</td>
-</tr>
-<tr>
-<th>Channels</th><td>1 (Mono)</td>
-</tr>
-<tr>
-<th>Length</th><td>34:37</td>
-</tr>
+  <tr>
+    <th>Size</th><td>83,091,456 bytes</td>
+  </tr>
+  <tr>
+    <th>Bitrate</th><td>320 kbps</td>
+  </tr>
+  <tr>
+    <th>Channels</th><td>1 (Mono)</td>
+  </tr>
+  <tr>
+    <th>Length</th><td>34:37</td>
+  </tr>
 </table>
 
 <table class="top_headers">
-<tr>
-<th>Library</th>
-<th>Average Elapsed Time</th>
-<th>Average Processor Time</th>
-<th>Processor Time Std. Deviation</th>
-</tr>
-<tr>
-<td>mpg123</td>
-<td>11.10</td>
-<td>9.40</td>
-<td>0.03</td>
-</tr>
-<tr>
-<td>mad</td>
-<td>26.90</td>
-<td>24.60</td>
-<td>0.03</td>
-</tr>
-<tr>
-<td>Core Audio</td>
-<td>33.60</td>
-<td>30.33</td>
-<td>1.18</td>
-</tr>
+  <tr>
+    <th>Library</th>
+    <th>Average Elapsed Time</th>
+    <th>Average Processor Time</th>
+    <th>Processor Time Std. Deviation</th>
+  </tr>
+  <tr>
+    <td>mpg123</td>
+    <td>11.10</td>
+    <td>9.40</td>
+    <td>0.03</td>
+  </tr>
+  <tr>
+    <td>mad</td>
+    <td>26.90</td>
+    <td>24.60</td>
+    <td>0.03</td>
+  </tr>
+  <tr>
+    <td>Core Audio</td>
+    <td>33.60</td>
+    <td>30.33</td>
+    <td>1.18</td>
+  </tr>
 </table>
 
 <h4>Large File</h4>
 <!-- 1-01 Clubbers Guide 2007 - CD 1.mp3 -->
 
 <table class="left_headers">
-<tr>
-<th>Size</th><td>126,083,072 bytes</td>
-</tr>
-<tr>
-<th>Bitrate</th><td>224 kbps</td>
-</tr>
-<tr>
-<th>Channels</th><td>2 (Joint Stereo)</td>
-</tr>
-<tr>
-<th>Length</th><td>1:15:02</td>
-</tr>
+  <tr>
+    <th>Size</th><td>126,083,072 bytes</td>
+  </tr>
+  <tr>
+    <th>Bitrate</th><td>224 kbps</td>
+  </tr>
+  <tr>
+    <th>Channels</th><td>2 (Joint Stereo)</td>
+  </tr>
+  <tr>
+    <th>Length</th><td>1:15:02</td>
+  </tr>
 </table>
 
 <table class="top_headers">
-<tr>
-<th>Library</th>
-<th>Average Elapsed Time</th>
-<th>Average Processor Time</th>
-<th>Processor Time Std. Deviation</th>
-</tr>
-<tr>
-<td>mpg123</td>
-<td>37.00</td>
-<td>32.21</td>
-<td>0.19</td>
-</tr>
-<tr>
-<td>Core Audio</td>
-<td>84.00</td>
-<td>78.34</td>
-<td>0.34</td>
-</tr>
-<tr>
-<td>mad</td>
-<td>100.10</td>
-<td>94.44</td>
-<td>0.15</td>
-</tr>
+  <tr>
+    <th>Library</th>
+    <th>Average Elapsed Time</th>
+    <th>Average Processor Time</th>
+    <th>Processor Time Std. Deviation</th>
+  </tr>
+  <tr>
+    <td>mpg123</td>
+    <td>37.00</td>
+    <td>32.21</td>
+    <td>0.19</td>
+  </tr>
+  <tr>
+    <td>Core Audio</td>
+    <td>84.00</td>
+    <td>78.34</td>
+    <td>0.34</td>
+  </tr>
+  <tr>
+    <td>mad</td>
+    <td>100.10</td>
+    <td>94.44</td>
+    <td>0.15</td>
+  </tr>
 </table>
 
 <h4>Large VBR File</h4>
 <!-- 1-01 Clubbers Guide to 2007 (AU Edition).mp3 -->
 
 <table class="left_headers">
-<tr>
-<th>Size</th><td>123,028,672 bytes</td>
-</tr>
-<tr>
-<th>Bitrate</th><td>210 kbps (VBR)</td>
-</tr>
-<tr>
-<th>Channels</th><td>2 (Joint Stereo)</td>
-</tr>
-<tr>
-<th>Length</th><td>1:17:46</td>
-</tr>
+  <tr>
+    <th>Size</th><td>123,028,672 bytes</td>
+  </tr>
+  <tr>
+    <th>Bitrate</th><td>210 kbps (VBR)</td>
+  </tr>
+  <tr>
+    <th>Channels</th><td>2 (Joint Stereo)</td>
+  </tr>
+  <tr>
+    <th>Length</th><td>1:17:46</td>
+  </tr>
 </table>
 
 <table class="top_headers">
-<tr>
-<th>Library</th>
-<th>Average Elapsed Time</th>
-<th>Average Processor Time</th>
-<th>Processor Time Std. Deviation</th>
-</tr>
-<tr>
-<td>mpg123</td>
-<td>37.90</td>
-<td>32.96</td>
-<td>0.13</td>
-</tr>
-<tr>
-<td>Core Audio</td>
-<td>86.40</td>
-<td>80.52</td>
-<td>0.18</td>
-</tr>
-<tr>
-<td>mad</td>
-<td>104.30</td>
-<td>98.43</td>
-<td>0.10</td>
-</tr>
+  <tr>
+    <th>Library</th>
+    <th>Average Elapsed Time</th>
+    <th>Average Processor Time</th>
+    <th>Processor Time Std. Deviation</th>
+  </tr>
+  <tr>
+    <td>mpg123</td>
+    <td>37.90</td>
+    <td>32.96</td>
+    <td>0.13</td>
+  </tr>
+  <tr>
+    <td>Core Audio</td>
+    <td>86.40</td>
+    <td>80.52</td>
+    <td>0.18</td>
+  </tr>
+  <tr>
+    <td>mad</td>
+    <td>104.30</td>
+    <td>98.43</td>
+    <td>0.10</td>
+  </tr>
 </table>
 
 <br />
