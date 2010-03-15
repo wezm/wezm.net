@@ -1,5 +1,5 @@
-I use vim coupled with the <a href="http://www.vim.org/scripts/script.php?script_id=182">SuperTab</a> plugin for my text editing and auto-completion needs. In some vim setups (E.g. Mac OS X) it is configured by default to search included files when completing words. This sounds like a useful feature but it turns out not to be. It has a habit of searching the include files of system libraries and modules, the keywords of which you rarely want. Its also quite a slow operation as it trawls through all the files. The solution is to add the following in your .vimrc file.
+I use vim coupled with the <a href="http://www.vim.org/scripts/script.php?script_id=182">SuperTab</a> plugin for my text editing and auto-completion needs. In some vim setups (E.g. Mac OS X) it is configured by default to search included files when completing words. This sounds like a useful feature but it turns out not to be. It has a habit of searching the include files of system libraries and modules, the keywords of which you rarely want. Its also quite a slow operation as it trawls through all the files. The solution is to add the following in your `.vimrc` file.
 
-<code>set complete=.,w,b,u,t</code>
+    set complete=.,w,b,u,t
 
-This is the same set of flags as the default except with the '<code>i</code>' option removed. See the help for the <a href="http://www.vim.org/htmldoc/options.html#%27complete%27">'complete' option</a> for an explanation of what each flag means.
+This is the same set of flags as the default except with the '`i`' option removed. See the help for the <a href="http://www.vim.org/htmldoc/options.html#%27complete%27">'complete' option</a> for an explanation of what each flag means.

@@ -11,7 +11,7 @@ body {
 p,li,blockquote {
   line-height: 1.2;
 }
-p {
+p,pre {
   margin: 0 0 1em 0;
 }
 
