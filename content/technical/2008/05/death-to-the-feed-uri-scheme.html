@@ -2,13 +2,14 @@ Can people please stop using the <a href="http://en.wikipedia.org/wiki/Feed:_URI
 
 From what I can tell this URI scheme was proposed around Dec 2003 as an unofficial <a href="http://www.25hoursaday.com/draft-obasanjo-feed-URI-scheme-02.html">pre-draft RFC</a>. The reasoning behind the proposal was:
 
-<blockquote>...to provide a straightforward way for end users to subscribe to the data feed for a particular online resource while browsing the World Wide Web. The expectation is that clicking on a hyperlink that points at a "feed" URI will cause the Web browser to invoke the specified handler for the "feed" URI scheme which SHOULD provide the user with information about the data feed as well as the possess the ability to subscribe to the feed.</blockquote>
+> &hellip;to provide a straightforward way for end users to subscribe to the data feed for a particular online resource while browsing the World Wide Web. The expectation is that clicking on a hyperlink that points at a "feed" URI will cause the Web browser to invoke the specified handler for the "feed" URI scheme which SHOULD provide the user with information about the data feed as well as the possess the ability to subscribe to the feed.
 
-Fast forward to 2008 and all the major browsers have support for discovery of feeds specified by the <a href="http://www.w3schools.com/tags/tag_link.asp">link tag</a> and a user interface to access them. Additionally they are able to auto-detect a feed when specified with the normal http URI scheme. With the built in support the browser is able to launch the appropriate feed reader on the system, be it within the browser or an external application; thus removing the need for the URI to be specified with the 'feed:' scheme.
+Fast forward to 2008 and all the major browsers have support for discovery of feeds specified by the <a href="http://www.w3schools.com/tags/tag_link.asp">link tag</a> and a user interface to access them. Additionally they are able to auto-detect a feed when specified with the normal http URI scheme. With the built in support the browser is able to launch the appropriate feed reader on the system, be it within the browser or an external application. Thus removing the need for the URI to be specified with the 'feed:' scheme.
+
 <!--more-->
 It seems use of the scheme really took off around the release of Safari 2, which included RSS support. When viewing a feed in Safari it presents the URI using the 'feed:' scheme, thus making its use highly visible.
 
-<a href="/images/2008/04/picture-4.png"><img src="/images/2008/04/picture-4.png" alt="" title="Safari feed: URI scheme" width="194" height="30" class="center" /></a>
+<a href="/images/2008/04/picture-4.png"><img src="/images/2008/04/picture-4.png" alt="" title="Safari feed: URI scheme" width="194" height="30" class="aligncenter" /></a>
 
 I understand that using the scheme makes it easy at an operating system level to associate a particular application with the scheme but it should be entirely internal an invisible to the user. The reasons its use irks me is when adding a feed to <a href="http://www.google.com/reader/">Google Reader</a> its necessary to copy and paste the link and then remove the 'feed:' at the start. Additionally Firefox removes the colon from http, meaning that has to be replaced too. Okay so I'm lazy but all the hassle can be avoided by simply linking to the feed with the normal 'http:' scheme.
 
