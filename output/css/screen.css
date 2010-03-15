@@ -287,12 +287,13 @@ ul.inline li:first-child {
 }
 
 /* Extra parts on post page */
-#content .respond {
+#respond {
   margin-top: 10px;
   padding: 10px;
   background-color: #ddd;
+  clear: both;
 }
-#content .respond h2 {
+#respond h2 {
   padding-left: 42px;
   line-height: 32px;
   background: url(/images/comment32.png) no-repeat top left;
