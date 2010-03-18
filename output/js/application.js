@@ -7,7 +7,7 @@ var WezM = {
     $('#search').show();
     $('#search input').jsonSuggest(this.articles, {
       onSelect: this._searchItemSelected,
-      width: 400
+      width: '400px'
     });
     if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0) {
       $('#search input').css('paddingTop', 0);

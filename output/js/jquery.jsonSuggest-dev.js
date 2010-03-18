@@ -107,7 +107,7 @@
 
 			var obj = $(this),
 				wildCardPatt = new RegExp(regexEscape(settings.wildCard || ''),'g'),
-				results = $('<div />'),
+				results = $('<ul></ul>'),
 				currentSelection, pageX, pageY;
 
 			// When an item has been selected then update the input box,
@@ -125,10 +125,19 @@
 			// current set of results and add it only to the given element. We also
 			// need to set the current selection to the given element here.
 			function setHoverClass(el) {
-				$('div.resultItem', results).removeClass('hover');
+				$('.resultItem', results).removeClass('hover');
 				$(el).addClass('hover');
 
 				currentSelection = el;
+			}
+
+			function renderResult(o) {
+				return '<li>\n\
+					<p>\n\
+						<strong></strong>\n\
+						' + (Mojo.escape(Mojo.normalize(o.summary))) + '\n\
+					</p>\n\
+				</li>';
 			}
 
 			// Build the results HTML based on an array of objects that matched
@@ -143,17 +152,15 @@
 				$(results).html('').hide();
 
 				for (i = 0; i < resultObjects.length; i += 1) {
-					var item = $('<div />'),
-						text = resultObjects[i].text;
-
+					var text = resultObjects[i].text;
 					if (settings.highlightMatches === true) {
-						text = text.replace(filterPatt, "<strong>$1</strong>");
+						text = text.replace(filterPatt, "<em>$1</em>");
 					}
 
-					$(item).append('<p class="text">' + text + '</p>');
+					// $(item).append('<p class="text">' + text + '</p>');
 
 					if (typeof resultObjects[i].extra === 'string') {
-						$(item).append('<p class="extra">' + resultObjects[i].extra + '</p>');
+						// $(item).append('<p class="extra">' + resultObjects[i].extra + '</p>');
 					}
 
 					if (typeof resultObjects[i].image === 'string') {
@@ -161,16 +168,19 @@
 							append('<br style="clear:both;" />');
 					}
 
-					$(item).addClass('resultItem').
-						addClass((bOddRow) ? 'odd' : 'even').
-						click(function(n) { return function() {
-							selectResultItem(resultObjects[n]);
-						};}(i)).
-						mouseover(function(el) { return function() {
-							setHoverClass(el);
-						};}(item));
+					var li = $(renderResult({ summary: resultObjects[i].extra }));
+					$('strong', li).html(text);
 
-					$(results).append(item);
+					li.addClass('resultItem').
+					addClass((bOddRow) ? 'odd' : 'even').
+					click(function(n) { return function() {
+						selectResultItem(resultObjects[n]);
+					};}(i)).
+					mouseover(function(el) { return function() {
+						setHoverClass(el);
+					};}(li));
+
+					$(results).append(li);
 
 					bOddRow = !bOddRow;
 
@@ -180,7 +190,7 @@
 					}
 				}
 
-				if ($('div', results).length > 0) {
+				if ($('li', results).length > 0) {
 					currentSelection = undefined;
 					$(results).show().css('height', 'auto');
 
@@ -285,9 +295,11 @@
 			$(results).addClass('jsonSuggestResults').
 				css({
 					'top': (obj.position().top + obj.height() + 5) + 'px',
-					'left': obj.position().left + 'px',
+					'left': (obj.position().left - 10) + 'px',
 					'width': settings.width || ((obj.width() + 5) + 'px')
 				}).hide();
+
+      console.log((obj.position().left - 15) + 'px');
 
 			obj.after(results).
 				keyup(keyListener).
@@ -306,7 +318,7 @@
 				focus(function(e) {
 					$(results).css({
 						'top': (obj.position().top + obj.height() + 5) + 'px',
-						'left': obj.position().left + 'px'
+						'left': (obj.position().left - 15) + 'px'
 					});
 
 					if ($('div', results).length > 0) {
