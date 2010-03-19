@@ -210,6 +210,10 @@ a.more {
 a.active {
   font-weight: bold;
 }
+a.affiliate {
+  background: url(/images/dollar.gif) no-repeat top right;
+  padding-right: 4px;
+}
 
 /* Inline flat list style */
 ul.inline {
