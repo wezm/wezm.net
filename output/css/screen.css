@@ -179,6 +179,7 @@ body.articles #content {
 ul.articles {
   list-style: none;
   margin: 0;
+  clear: left;
 }
 ul.articles li {
   margin: 0;
@@ -186,7 +187,8 @@ ul.articles li {
   height: 80px;
 }
 body.articles ul.articles li {
-  height: 60px;
+  height: auto;
+  padding-top: 0;
 }
 ul.articles li:first-child {
   border-top: none;
@@ -204,6 +206,7 @@ ul.articles strong {
   display: block;
   font-size: 18px;
 }
+
 a.more {
 /*  float: right;*/
 }
@@ -250,6 +253,9 @@ ul.inline li:first-child {
 
 /* Search Form //----------------------------------------------------------*/
 /* Via http://www.brandspankingnew.net/archive/2005/08/adding_an_os_x.html */
+ul.menu {
+  padding-bottom: 1em;
+}
 #search {
   margin: 0;
   padding: 0;
