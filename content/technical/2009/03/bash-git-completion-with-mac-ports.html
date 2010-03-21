@@ -1,5 +1,9 @@
-Git comes with bash completion support which comes in handy for completing branch names and things like that. To get this support when installing git via Mac Ports you must add the bash_completion variant. You'll also want to install the bash_completion port. After that you need to add the following to your ~/.bashrc file:<pre>if [ -f /opt/local/etc/bash_completion ]; then
-    . /opt/local/etc/bash_completion
-fi</pre>
-For reference I have the folloowing Git related config in my <code>.bashrc</code>:
+Git comes with bash completion support which comes in handy for completing branch names and things like that. To get this support when installing git via Mac Ports you must add the bash\_completion variant. You'll also want to install the bash\_completion port. After that you need to add the following to your `~/.bashrc` file:
+
+    if [ -f /opt/local/etc/bash_completion ]; then
+        . /opt/local/etc/bash_completion
+    fi
+
+For reference I have the following Git related config in my `.bashrc`:
+
 <script src="http://gist.github.com/87724.js"></script>
