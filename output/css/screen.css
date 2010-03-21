@@ -95,8 +95,8 @@ sup {
   font-size: 0.8em;
 }
 
-pre,code {
-  font-size: 12px;
+pre,code,tt {
+  font-size: 13px;
   font-family: Consolas, "Andale Mono", "Liberation Mono", Menlo, Monaco, "Bitstream Vera Sans Mono", fixed;
 }
 
