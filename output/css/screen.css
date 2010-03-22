@@ -99,6 +99,9 @@ pre,code,tt {
   font-size: 13px;
   font-family: Consolas, "Andale Mono", "Liberation Mono", Menlo, Monaco, "Bitstream Vera Sans Mono", fixed;
 }
+pre {
+  overflow-x: auto;
+}
 
 blockquote {
   border-left: 2px solid #999;
@@ -132,7 +135,7 @@ ul#menu li {
   padding: 0 20px;
   clear: both;
   min-width: 600px;
-  margin-right: 40%;
+  margin-right: 33%;
 }
 body.articles #content {
   min-width: auto;
