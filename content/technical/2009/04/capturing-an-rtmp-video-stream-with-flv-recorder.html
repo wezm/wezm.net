@@ -2,23 +2,21 @@
 
 Today I was pointed towards a video on the Today Tonight website (an Australian current affairs TV show) and told to save a copy. Our client had gained approval to use the video on their site and needed a copy for that purpose. It was a flash video and whilst I've never saved one before I knew there were various tools out there to do it.
 
-My first attempt was a couple of different Firefox Add-ons. None of the three I tried would tackle this video, they save the empty player and a few ads but that was all. After some Googling I jumped on a Windows virtual machine and tried out <a href="http://www.orbitdownloader.com/">Orbit Downloader</a>. Its use was a little convoluted but it did indeed seem to identify the RTMP stream and attempt to download it. Unfortunately I think the host was blocking it and it just sat in a loop successfully connecting, then retrying.
+My first attempt was a couple of different Firefox Add-ons. None of the three I tried would tackle this video, they saved the empty player and a few ads but that was all. After some Googling I jumped on a Windows virtual machine and tried out <a href="http://www.orbitdownloader.com/">Orbit Downloader</a>. Its use was a little convoluted but it did indeed seem to identify the RTMP stream and attempt to download it. Unfortunately I think the host was blocking it and it just sat in a loop successfully connecting, then retrying.
 
-<img src="http://www.wezm.net/wp-content/uploads/2009/04/flvrecorder-225x300.png" alt="flvrecorder" title="flvrecorder" width="225" height="300" class="alignleft size-medium wp-image-19" />Next up I found <a href="http://www.flvrecorder.com/">FLV Recorder</a> it wasn't immediately obvious how to get it up and running but after following one of the many guides on the site I discovered that I had to tell it what network interface to listen to. I assume that it eavesdrops on the interface to detect and record the video stream, which is pretty cool.
+<img src="/images/2009/04/flvrecorder-225x300.png" alt="flvrecorder" title="flvrecorder" width="225" height="300" class="alignleft size-medium wp-image-19" />Next up I found <a href="http://www.flvrecorder.com/">FLV Recorder</a>. It wasn't immediately obvious how to get it up and running but after following one of the many guides on the site I discovered that I had to tell it what network interface to listen to. I assume that it eavesdrops on the interface to detect and record the video stream, which is pretty cool.
 
 After the interface was selected I was on my way. I clicked the record button, loaded the webpage and started the video playing. FLV Recorder detected the video and started capturing it. As it is capturing the network traffic it's necessary to let the video play all the way through in the browser. A few minutes later and I had my video. I was able to play it back in the built-in FLV player before uploading it to YouTube.
 
-During my attempts I was able to determine that video itself was in Flash video format (FLV) being transferred using <abbr title="Real Time Messaging Protocol">RTMP</abbr>, which according to Wikipedia is, "a proprietary protocol developed by Adobe Systems for streaming audio, video and data over the Internet, between a Flash player and a server". It seems that the Flash player itself implements RTMP, which I think is why the Firefox Add-on's weren't able to see the network activity.
+During my attempts I was able to determine that the video itself was in Flash video format (FLV) being transferred using <abbr title="Real Time Messaging Protocol">RTMP</abbr>, which according to Wikipedia is, "a proprietary protocol developed by Adobe Systems for streaming audio, video and data over the Internet, between a Flash player and a server". It seems that the Flash player itself implements RTMP, which I think is why the Firefox Add-on's weren't able to see the network activity.
 
 <a name="solution"></a>
 <h3>Capturing an RTMP Video Stream with FLV Recorder</h3>
 
 If  anyone else is in the same position as me I highly suggest you check out FLV Recorder. These are the steps I followed to save my video:
-<ol>
-	<li>Set the network interface in the FLV Recorder options to the one that you use to connect to the Internet (This is a once off setting).</li>
-	<li>Click the record button in FLV Recorder (bottom left).</li>
 
-	<li>Browse to the page that has the video on it in your web browser.</li>
-	<li>Start the video playing that you want to record. FLV Recorder should start recording.</li>
-	<li>Let the video play all the way through and you're done!</li>
-</ol>
+1. Set the network interface in the FLV Recorder options to the one that you use to connect to the Internet (This is a once off setting).
+1. Click the record button in FLV Recorder (bottom left).
+1. Browse to the page that has the video on it in your web browser.
+1. Start the video playing that you want to record. FLV Recorder should start recording.
+1. Let the video play all the way through and you're done!
