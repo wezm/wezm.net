@@ -365,3 +365,17 @@ table.top_headers td, table.top_headers th {
 table.left_headers th {
     text-align: right;
 }
+
+/* Photo gallery table */
+table.gallery {
+  border-collapse: collapse;
+  width: 100%;
+}
+table.gallery td {
+  padding: 10px 0;
+  text-align: center;
+  vertical-align: middle;
+}
+table.gallery img a {
+  border: none;
+}
