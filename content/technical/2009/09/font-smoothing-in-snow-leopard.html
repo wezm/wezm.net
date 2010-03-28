@@ -1,13 +1,14 @@
 Apple have touted Mac OS X Snow Leopard as having no new features. Whilst there are no new big ticket features there have been plenty of tweaks and refinements. One part that got this treatment was the font smoothing options in System Preferences. In Leopard this allowed you to enable font smoothing and choose between four different levels of smoothing. In Snow Leopard there's now only a single option to enable the smoothing.
 
-The problem with this change is that is appears to default to the light option. As previously identified in, "<a href="http://www.wezm.net/2009/03/consolas-on-mac-update/">Consolas on Mac Update</a>", my preferred fixed width font Consolas doesn't look nice with the light smoothing and I prefer medium. Fortunately you can still choose the medium option but setting the preference directly via the defaults command in the Terminal:
+The problem with this change is that is appears to default to the light option. As previously identified in, "<a href="/technical/2009/03/consolas-on-mac-update/">Consolas on Mac Update</a>", my preferred fixed width font Consolas doesn't look nice with the light smoothing and I prefer medium. Fortunately you can still choose the medium option by setting the preference directly via the defaults command in the Terminal:
+
 <!--more-->
-<code>defaults -currentHost write -globalDomain AppleFontSmoothing -int 2</code>
+    defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
 
 You will need to relaunch any running applications for the change to be picked up. You can do this either by quitting and relaunching or logging out and then back in again.
 
-Before:
+Before:  
 <img src="/images/2009/09/Screen-shot-2009-09-19-at-1.52.25-PM.png" alt="Screen shot 2009-09-19 at 1.52.25 PM" title="Screen shot 2009-09-19 at 1.52.25 PM" width="406" height="194" class="alignnone size-full wp-image-247" />
 
-After:
+After:  
 <img src="/images/2009/09/Screen-shot-2009-09-19-at-1.57.58-PM.png" alt="Screen shot 2009-09-19 at 1.57.58 PM" title="Screen shot 2009-09-19 at 1.57.58 PM" width="406" height="194" class="alignnone size-full wp-image-248" />
