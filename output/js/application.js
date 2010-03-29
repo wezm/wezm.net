@@ -42,7 +42,7 @@ var WezM = {
       </abbr>\n\
       <p>\n\
         <strong><a href="' + (Mojo.escape(Mojo.normalize(o.path))) + '">' + (Mojo.escape(Mojo.normalize(o.title))) + '</a></strong>\n\
-        ' + (Mojo.escape(Mojo.normalize(o.summary))) + '\n\
+        ' + (Mojo.normalize(o.summary)) + '\n\
       </p>\n\
     </li>';
   },
