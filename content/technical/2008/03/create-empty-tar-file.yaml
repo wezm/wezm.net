@@ -16,3 +16,4 @@ categories:
 - Tips
 - UNIX
 status: publish
+extra: "How to create an empty tar file with BSD tar, GNU tar and Solaris tar"

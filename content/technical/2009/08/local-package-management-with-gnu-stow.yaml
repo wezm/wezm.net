@@ -16,3 +16,4 @@ categories:
 - Tips
 - UNIX
 status: publish
+extra: How to manage custom built software without polluting the system directories with GNU stow.

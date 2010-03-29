@@ -15,3 +15,4 @@ categories:
 - Tips
 - UNIX
 status: publish
+extra: "How to stop vim searching all included files when applying word completion."
