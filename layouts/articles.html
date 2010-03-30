@@ -40,9 +40,13 @@
       <% menu.each do |menu_item|
         label, count = menu_item
         path = (label != "All" ? '/' + label.downcase : '') + "/articles/"
+        feed = (label != "All" ? '/' + label.downcase : '') + "/feed.xml"
         active = (@item.identifier.sub(%r{page/$}, '') == path)
       %>
-      <li><a href="<%= path %>"<%= %Q{class="active"} if active %>><%= label %></a> (<%= count %>)</li>
+      <li>
+        <a href="<%= feed %>"><img src="/images/black-feed-icon.png" width="12" height="12" alt="Black Feed Icon" /></a>
+        <a href="<%= path %>"<%= %Q{class="active"} if active %>><%= label %></a> (<%= count %>)
+      </li>
       <% end %>
       <li id="search">
         <fieldset>
