@@ -1,2 +1,16 @@
-* Style search results
-* Implement clicking on search results
+* Commits tagged #todo
+* Analytics
+* Rewrite if necessary for images, check/download image search details
+* Get published version of installing-debian-with-gpxe-and-netboot-me
+* Fix search result keyboard navigation
+* Implement Linux version of monothumb
+* Layout More links on front page properly
+* Content for Contact page
+  * vcard microformat
+* Revise About page content
+* Add initial Project page content
+* Hook feeds up to feedburner
+* Add Email link to posts
+* Add a photo to the about page
+* Get proper lens specs for About page
+* Add page numbers to pagination controls
