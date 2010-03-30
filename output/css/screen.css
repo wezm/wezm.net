@@ -135,7 +135,7 @@ ul#menu li {
   padding: 0 20px;
   clear: both;
   min-width: 600px;
-  margin-right: 33%;
+  margin-right: 40%;
 }
 body.articles #content {
   min-width: auto;
@@ -187,7 +187,7 @@ ul.articles {
 ul.articles li {
   margin: 0;
   padding-top: 1em;
-  height: 80px;
+  height: 70px;
 }
 body.articles ul.articles li {
   height: auto;

@@ -5,3 +5,7 @@
 .column {
   min-width: 600px;
 }
+
+#content {
+  min-width: 320px;
+}
