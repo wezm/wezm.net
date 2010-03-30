@@ -1,16 +1,16 @@
 WezM.net was down again this weekend. The cause this time was the the large <a href="http://www.heraldsun.com.au/news/melbourne-storm-leaves-bill-in-its-wake/story-e6frf7jo-1225838413382">storms in Melbourne</a> flooding the office where the computer that hosts this site lives. The computer escaped the water but the network and Internet connection did not.
 
 The office is located 60km from home so fixing problems like these have to wait until office hours, hence the extended downtime. This is the second time in an many weeks that I've run into this problem so I've decided to move WezM.net to my <a href="http://en.wikipedia.org/wiki/Mini-ITX">Mini ITX</a> server, which is more accessible out of hours as its at home.
+
 <!--more-->
 The ITX server flawlessly powered WezM.net from 2005 to 2007 with a personal best uptime of 407 days. I recently dug it up and had planned on running FreeBSD on it. However over the weekend I decided to take the easy way out and just go back <a href="http://www.debian.org/">Debian</a>, which originally powered the server. Its a little better suited to this server due the wide availability of binary packages; compiling stuff is not fast on an 800Mhz Via C3. In case you're wondering why I'm bothering with self hosting its because I'm too stingy to pay for a <abbr title="Virtual Private Server">VPS</abbr>.
 
 The ITX server lacks a CDROM drive and my previous attempts to boot from USB flash drives have failed. This makes installing new OSes a bit of a challenge. I decided to try out installing Debian via <a href="http://www.netboot.me/">netboot.me</a>. As the name suggests, netboot.me allows you to netboot a PC via the Internet. To do so you download and burn their bootable image to CD, floppy or USB drive. I didn't use any of these though as I already had a 8Mb (yes Mb) bootable CF card with <a href="http://www.etherboot.org/">gPXE</a> installed on it. gPXE is an open source and enhanced network bootloader.
 
 The installation involved the following steps:
-<ol>
-	<li>Connecting the CF card to the server (via a CF to IDE adaptor) and booting from it.</li>
-	<li>Entering the gPXE prompt via Ctrl-b. At this point gPXE had configured the network interface with DHCP.</li>
-	<li>Boot the Debian installer with the chain command: <code>chain http://netboot.me/2013</code></li>
-</ol>
+
+* Connecting the CF card to the server (via a CF to IDE adaptor) and booting from it.
+* Entering the gPXE prompt via Ctrl-b. At this point gPXE had configured the network interface with DHCP.
+* Boot the Debian installer with the chain command: `chain <a href="http://netboot.me/2013">http://netboot.me/2013</a>`
 
 After that it downloads a kernel and initrd image and boots. All directly off the Internet. Brilliant!
