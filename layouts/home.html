@@ -13,7 +13,7 @@
   <%= render '_header' %>
   <div id="technical" class="column">
     <div>
-      <h1>Technical
+      <h1><a href="/technical/articles/">Technical</a>
         <sup><a href="/technical/feed.xml"><img src="/images/black-feed-icon.png" width="12" height="12" alt="Black Feed Icon" /></a></sup>
       </h1>
       <ul class="articles">
@@ -21,13 +21,13 @@
         <%= render '_article', :article => article %>
       <% end %>
       </ul>
-      <a href="/technical/articles/" class="more">More</a>
+      <a href="/technical/articles/" class="more">More &raquo;</a>
     </div>
   </div>
 
   <div id="personal" class="column">
     <div>
-      <h1>Personal
+      <h1><a href="/personal/articles/">Personal</a>
         <sup><a href="/personal/feed.xml"><img src="/images/black-feed-icon.png" width="12" height="12" /></a></sup>
       </h1>
       <ul class="articles">
@@ -35,7 +35,7 @@
         <%= render '_article', :article => article %>
       <% end %>
       </ul>
-      <a href="/personal/articles/" class="more">More</a>
+      <a href="/personal/articles/" class="more">More &raquo;</a>
     </div>
   </div>
 
