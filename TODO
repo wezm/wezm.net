@@ -10,7 +10,9 @@
 * Revise About page content
 * Add initial Project page content
 * Hook feeds up to feedburner
-* Add Email link to posts
+* Add Email link to posts - Get Enkoder
 * Add a photo to the about page
 * Get proper lens specs for About page
 * Add page numbers to pagination controls
+* Find a JS smarty pants implementation
+* Fix Next/Prev when you go to an article then come back to a /page/#n page
