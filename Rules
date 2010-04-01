@@ -44,8 +44,7 @@ route '*/json/' do
 end
 
 route %r{.*/feed/} do
-  path = Pathname(item.identifier)
-  path.cleanpath.to_s + '.xml'
+  item.identifier + 'index.xml'
 end
 
 route '/robots/' do

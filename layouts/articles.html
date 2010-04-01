@@ -40,7 +40,8 @@
       <% menu.each do |menu_item|
         label, count = menu_item
         path = (label != "All" ? '/' + label.downcase : '') + "/articles/"
-        feed = (label != "All" ? '/' + label.downcase : '') + "/feed.xml"
+        feed = 'http://feeds.feedburner.com/wezm'
+        feed += "-#{label.downcase}" if label != "All"
         active = (@item.identifier.sub(%r{page/$}, '') == path)
       %>
       <li>
