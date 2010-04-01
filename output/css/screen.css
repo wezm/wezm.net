@@ -4,10 +4,10 @@ body {
   background: #fff;
   color: #223;
 }
+body.home {
+  min-width: 520px;
+}
 
-/*p,li,div {
-  font-size: 16px;
-}*/
 p,li,blockquote {
   line-height: 1.2;
 }
@@ -43,16 +43,9 @@ h1,h2,h3,h4,h5,h6 {
 /* 6,7,8,9,10,11,12,14,16,18,21,24,36,48,60,72 */
 h1 {
   font-size: 36px;
-/*  padding-left: 20px;
-  padding-right: 20px;*/
-}
-body.home h1 {
-/*  padding-left: 0;
-  padding-right: 0;*/
 }
 h2 {
   font-size: 24px;
-/*  border-bottom: 1px solid #999;*/
 }
 h3 {
   font-size: 21px;
@@ -173,7 +166,7 @@ body.articles #content {
   float: left;
   width: 50%;
   margin: 0;
-  min-width: 400px;
+  min-width: 500px;
 }
 #personal div {
   padding-right: 2em;
