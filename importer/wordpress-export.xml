@@ -15,7 +15,7 @@
 <!-- 6. WordPress will then import each of the posts, comments, and categories -->
 <!--    contained in this file into your blog -->
 
-<!-- generator="WordPress/2.9.1" created="2010-03-09 10:00"-->
+<!-- generator="WordPress/2.9.2" created="2010-04-01 01:21"-->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.0/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -28,8 +28,8 @@
 	<title>WezM.net</title>
 	<link>http://www.wezm.net</link>
 	<description>The weblog of Wesley Moore</description>
-	<pubDate>Mon, 15 Feb 2010 22:13:57 +0000</pubDate>
-	<generator>http://wordpress.org/?v=2.9.1</generator>
+	<pubDate>Thu, 11 Mar 2010 02:16:40 +0000</pubDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
 	<language>en</language>
 	<wp:wxr_version>1.0</wp:wxr_version>
 	<wp:base_site_url>http://www.wezm.net</wp:base_site_url>
@@ -114,6 +114,7 @@
 	<wp:tag><wp:tag_slug>gmail</wp:tag_slug><wp:tag_name><![CDATA[gmail]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>gnu</wp:tag_slug><wp:tag_name><![CDATA[gnu]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>gps</wp:tag_slug><wp:tag_name><![CDATA[gps]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:tag_slug>gpxe</wp:tag_slug><wp:tag_name><![CDATA[gpxe]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>gripe</wp:tag_slug><wp:tag_name><![CDATA[gripe]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>headphones</wp:tag_slug><wp:tag_name><![CDATA[headphones]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>headset</wp:tag_slug><wp:tag_name><![CDATA[headset]]></wp:tag_name></wp:tag>
@@ -123,6 +124,7 @@
 	<wp:tag><wp:tag_slug>ipad</wp:tag_slug><wp:tag_name><![CDATA[iPad]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>iphone</wp:tag_slug><wp:tag_name><![CDATA[iPhone]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>ipod</wp:tag_slug><wp:tag_name><![CDATA[ipod]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:tag_slug>itx</wp:tag_slug><wp:tag_name><![CDATA[itx]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>lcd</wp:tag_slug><wp:tag_name><![CDATA[lcd]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>lenny</wp:tag_slug><wp:tag_name><![CDATA[lenny]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>linux</wp:tag_slug><wp:tag_name><![CDATA[Linux]]></wp:tag_name></wp:tag>
@@ -144,6 +146,7 @@
 	<wp:tag><wp:tag_slug>mpg123</wp:tag_slug><wp:tag_name><![CDATA[mpg123]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>music</wp:tag_slug><wp:tag_name><![CDATA[music]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>nab</wp:tag_slug><wp:tag_name><![CDATA[nab]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:tag_slug>netboot</wp:tag_slug><wp:tag_name><![CDATA[netboot]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>nye</wp:tag_slug><wp:tag_name><![CDATA[nye]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>oamc</wp:tag_slug><wp:tag_name><![CDATA[oamc]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:tag_slug>objective-c</wp:tag_slug><wp:tag_name><![CDATA[objective-c]]></wp:tag_name></wp:tag>
@@ -313,56 +316,6 @@ Today, whilst reading http://orderedlist.com/our-writing/resources/html-css/sing
 <wp:postmeta>
 <wp:meta_key>_edit_last</wp:meta_key>
 <wp:meta_value>1</wp:meta_value>
-</wp:postmeta>
-	</item>
-<item>
-<title>Installing Debian With gPXE and netboot.me</title>
-<link>http://www.wezm.net/?p=327</link>
-<pubDate>Wed, 30 Nov -0001 00:00:00 +0000</pubDate>
-<dc:creator><![CDATA[Wes]]></dc:creator>
-
-		<category><![CDATA[Miscellaneous]]></category>
-
-		<category domain="category" nicename="miscellaneous"><![CDATA[Miscellaneous]]></category>
-
-<guid isPermaLink="false">http://www.wezm.net/?p=327</guid>
-<description></description>
-<content:encoded><![CDATA[WezM.net was down again this weekend. The cause this time was the the large <a href="http://www.heraldsun.com.au/news/melbourne-storm-leaves-bill-in-its-wake/story-e6frf7jo-1225838413382">storms in Melbourne</a> flooding the office where the computer that hosts this site lives. The computer escaped the water but the network and Internet connection did not.
-
-The office is located 60km from home so fixing problems like these have to wait until office hours, hence the extended downtime. This is the second time in an many weeks that I've run into this problem so I've decided to move WezM.net to my <a href="http://en.wikipedia.org/wiki/Mini-ITX">Mini ITX</a> server, which is more accessible out of hours as its at home.
-<!--more-->
-The ITX server flawlessly powered WezM.net from 2005 to 2007 with a personal best uptime of 407 days. I recently dug it up and had planned on running FreeBSD on it. However over the weekend I decided to take the easy way out and just go back <a href="http://www.debian.org/">Debian</a>, which originally powered the server. Its a little better suited to this server due the wide availability of binary packages; compiling stuff is not fast on an 800Mhz Via C3. In case you're wondering why I'm bothering with self hosting its because I'm too stingy to pay for a <abbr title="Virtual Private Server">VPS</abbr>.
-
-The ITX server lacks a CDROM drive and my previous attempts to boot from USB flash drives have failed. This makes installing new OSes a bit of a challenge. I decided to try out installing Debian via <a href="http://www.netboot.me/">netboot.me</a>. As the name suggests, netboot.me allows you to netboot a PC via the Internet. To do so you download and burn their bootable image to CD, floppy or USB drive. I didn't use any of these though as I already had a 8Mb (yes Mb) bootable CF card with <a href="http://www.etherboot.org/">gPXE</a> installed on it. gPXE is an open source and enhanced network bootloader.
-
-The installation involved the following steps:
-<ol>
-	<li>Connecting the CF card to the server (via a CF to IDE adaptor) and booting from it.</li>
-	<li>Entering the gPXE prompt via Ctrl-b. At this point gPXE had configured the network interface with DHCP.</li>
-	<li>Boot the Debian installer with the chain command: <code>chain http://netboot.me/2013</code></li>
-</ol>
-
-After that it downloads a kernel and initrd image and boots. All directly off the Internet. Brilliant!]]></content:encoded>
-<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-<wp:post_id>327</wp:post_id>
-<wp:post_date>2010-03-09 02:37:24</wp:post_date>
-<wp:post_date_gmt>0000-00-00 00:00:00</wp:post_date_gmt>
-<wp:comment_status>open</wp:comment_status>
-<wp:ping_status>open</wp:ping_status>
-<wp:post_name></wp:post_name>
-<wp:status>draft</wp:status>
-<wp:post_parent>0</wp:post_parent>
-<wp:menu_order>0</wp:menu_order>
-<wp:post_type>post</wp:post_type>
-<wp:post_password></wp:post_password>
-<wp:is_sticky>0</wp:is_sticky>
-<wp:postmeta>
-<wp:meta_key>_edit_last</wp:meta_key>
-<wp:meta_value>1</wp:meta_value>
-</wp:postmeta>
-<wp:postmeta>
-<wp:meta_key>_edit_lock</wp:meta_key>
-<wp:meta_value>1268109986</wp:meta_value>
 </wp:postmeta>
 	</item>
 <item>
@@ -1355,39 +1308,6 @@ done</pre>
 <wp:meta_key>_edit_last</wp:meta_key>
 <wp:meta_value>1</wp:meta_value>
 </wp:postmeta>
-<wp:comment>
-<wp:comment_id>3870</wp:comment_id>
-<wp:comment_author><![CDATA[AstorsIntisse]]></wp:comment_author>
-<wp:comment_author_email>unonereow@gmail.com</wp:comment_author_email>
-<wp:comment_author_url>http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720143</wp:comment_author_url>
-<wp:comment_author_IP>192.168.1.142</wp:comment_author_IP>
-<wp:comment_date>2010-03-02 07:49:40</wp:comment_date>
-<wp:comment_date_gmt>2010-03-02 07:49:40</wp:comment_date_gmt>
-<wp:comment_content><![CDATA[<a href="http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720143" rel="nofollow">MACKENZIE ROSMAN NUDE</a>
-http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720143 - MACKENZIE ROSMAN NUDE
-<a href="http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720143" rel="nofollow">MACKENZIE ROSMAN NUDE</a>
- http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720143  -  MACKENZIE ROSMAN NUDE 
-<a href="http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720144" rel="nofollow">TONI BRAXTON NUDE</a>
-http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720144 - TONI BRAXTON NUDE
-<a href="http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720144" rel="nofollow">TONI BRAXTON NUDE</a>
- http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720144  -  TONI BRAXTON NUDE 
-<a href="http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720145" rel="nofollow">ZOE KRAVITZ NUDE</a>
-http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720145 - ZOE KRAVITZ NUDE
-<a href="http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720145" rel="nofollow">ZOE KRAVITZ NUDE</a>
- http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720145  -  ZOE KRAVITZ NUDE 
-<a href="http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720146" rel="nofollow">GINA GERSHON NUDE</a>
-http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720146 - GINA GERSHON NUDE
-<a href="http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720146" rel="nofollow">GINA GERSHON NUDE</a>
- http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720146  -  GINA GERSHON NUDE 
-<a href="http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720149" rel="nofollow">ABBIE CORNISH NUDE</a>
-http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720149 - ABBIE CORNISH NUDE
-<a href="http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720149" rel="nofollow">ABBIE CORNISH NUDE</a>
- http://www.vidilife.com/index.cfm?f=profile.main&amp;intUserAccountID=1720149  -  ABBIE CORNISH NUDE]]></wp:comment_content>
-<wp:comment_approved>spam</wp:comment_approved>
-<wp:comment_type></wp:comment_type>
-<wp:comment_parent>0</wp:comment_parent>
-<wp:comment_user_id>0</wp:comment_user_id>
-</wp:comment>
 	</item>
 <item>
 <title>Death to the &#039;feed:&#039; URI Scheme</title>
@@ -4212,39 +4132,6 @@ I hope to see it held again next year as I'm certainly up for going again. Who k
 <wp:meta_key>_edit_lock</wp:meta_key>
 <wp:meta_value>1263022052</wp:meta_value>
 </wp:postmeta>
-<wp:comment>
-<wp:comment_id>3869</wp:comment_id>
-<wp:comment_author><![CDATA[Bill]]></wp:comment_author>
-<wp:comment_author_email>bill@berlin.com</wp:comment_author_email>
-<wp:comment_author_url>http://plantpuffed.in/</wp:comment_author_url>
-<wp:comment_author_IP>192.168.1.142</wp:comment_author_IP>
-<wp:comment_date>2010-03-01 23:46:11</wp:comment_date>
-<wp:comment_date_gmt>2010-03-01 23:46:11</wp:comment_date_gmt>
-<wp:comment_content><![CDATA[<a href="http://calcoloovulazione.gotpuffed.in/" rel="nofollow">calcolo ovulazione</a>   
-<a href="http://famoushoodiesclothing.oncepuffed.in/" rel="nofollow">famous hoodies clothing</a>   
-<a href="http://jeanatomasinanaked.saidstakt.in/" rel="nofollow">jeana tomasina naked</a>   
-<a href="http://symanticliveupdatedownload.readypuffed.in/" rel="nofollow">symantic live update download</a>   
-<a href="http://flavoroflove3.saidstakt.in/" rel="nofollow">flavor oflove 3</a>   
-<a href="http://niurcadesnuda.readypuffed.in/" rel="nofollow">niurca desnuda</a>   
-<a href="http://panochaspeludasvergasgrandesvergratis.airpuffed.in/" rel="nofollow">panochas peludas vergas grandes ver gratis</a>   
-<a href="http://freseniusdialysiscenterinbrentwoodcalifornia.cutstakt.in/" rel="nofollow">fresenius dialysis center in brentwood california</a>   
-<a href="http://daytonmudtire.onlypuffed.in/" rel="nofollow">dayton mud tire</a>   
-<a href="http://2008cabilinecollection.gotpuffed.in/" rel="nofollow">2008 cabi line collection</a>   
-<a href="http://bennhaccomvietnam.cutstakt.in/" rel="nofollow">bennhaccom viet nam</a>   
-<a href="http://karrinestephensmrmark.onlypuffed.in/" rel="nofollow">karrine stephens mr mark</a>   
-<a href="http://wwwmydisholivegardennet.oncepuffed.in/" rel="nofollow">www mydish olive garden net</a>   
-<a href="http://chudaikistory.saidstakt.in/" rel="nofollow">chudai ki story</a>   
-<a href="http://jessiecombsxtreme4x4.plantpuffed.in/" rel="nofollow">jessie combs xtreme 4x4</a>   
-<a href="http://bieberbusschedule.plantpuffed.in/" rel="nofollow">bieber bus schedule</a>   
-<a href="http://moen82345cartridgeremoval.gotpuffed.in/" rel="nofollow">moen 82345 cartridge removal</a>   
-<a href="http://bruisedtailbonesymptoms.plantpuffed.in/" rel="nofollow">bruised tailbone symptoms</a>   
-<a href="http://myspacehuntinglayouts.gotpuffed.in/" rel="nofollow">myspace hunting layouts</a>   
-<a href="http://jovesitasmojadasgratis.airpuffed.in/" rel="nofollow">jovesitas mojadas gratis</a>]]></wp:comment_content>
-<wp:comment_approved>spam</wp:comment_approved>
-<wp:comment_type></wp:comment_type>
-<wp:comment_parent>0</wp:comment_parent>
-<wp:comment_user_id>0</wp:comment_user_id>
-</wp:comment>
 	</item>
 <item>
 <title>Determining Non-Automatically Installed Debian Packages</title>
@@ -4965,6 +4852,20 @@ I used the way Billy Bob told, because it's a lot easier if you are not familiar
 <wp:comment_date>2010-02-26 13:06:34</wp:comment_date>
 <wp:comment_date_gmt>2010-02-26 13:06:34</wp:comment_date_gmt>
 <wp:comment_content><![CDATA[Awesome, thanks a bunch.]]></wp:comment_content>
+<wp:comment_approved>1</wp:comment_approved>
+<wp:comment_type></wp:comment_type>
+<wp:comment_parent>0</wp:comment_parent>
+<wp:comment_user_id>0</wp:comment_user_id>
+</wp:comment>
+<wp:comment>
+<wp:comment_id>3880</wp:comment_id>
+<wp:comment_author><![CDATA[Plamen]]></wp:comment_author>
+<wp:comment_author_email>plamen_b@yahoo.com</wp:comment_author_email>
+<wp:comment_author_url></wp:comment_author_url>
+<wp:comment_author_IP>94.155.107.94</wp:comment_author_IP>
+<wp:comment_date>2010-03-31 07:11:45</wp:comment_date>
+<wp:comment_date_gmt>2010-03-31 07:11:45</wp:comment_date_gmt>
+<wp:comment_content><![CDATA[Very useful! 10x]]></wp:comment_content>
 <wp:comment_approved>1</wp:comment_approved>
 <wp:comment_type></wp:comment_type>
 <wp:comment_parent>0</wp:comment_parent>
@@ -6006,6 +5907,22 @@ If  anyone else is in the same position as me I highly suggest you check out FLV
 <wp:comment_parent>0</wp:comment_parent>
 <wp:comment_user_id>0</wp:comment_user_id>
 </wp:comment>
+<wp:comment>
+<wp:comment_id>3875</wp:comment_id>
+<wp:comment_author><![CDATA[Flv Recorder]]></wp:comment_author>
+<wp:comment_author_email>webflvrecorder@gmail.com</wp:comment_author_email>
+<wp:comment_author_url>http://www.webflvrecorder.net</wp:comment_author_url>
+<wp:comment_author_IP>117.193.228.217</wp:comment_author_IP>
+<wp:comment_date>2010-03-20 14:22:40</wp:comment_date>
+<wp:comment_date_gmt>2010-03-20 14:22:40</wp:comment_date_gmt>
+<wp:comment_content><![CDATA[good job...
+
+Thanks for the information.]]></wp:comment_content>
+<wp:comment_approved>1</wp:comment_approved>
+<wp:comment_type></wp:comment_type>
+<wp:comment_parent>0</wp:comment_parent>
+<wp:comment_user_id>0</wp:comment_user_id>
+</wp:comment>
 	</item>
 <item>
 <title>footer-logo</title>
@@ -6757,42 +6674,6 @@ How does one actually use your code... I can't run it from the command line...]]
 </wp:postmeta>
 	</item>
 <item>
-<title>_MG_7190</title>
-<link>http://www.wezm.net/2009/08/temperature-logger-project/_mg_7190/</link>
-<pubDate>Wed, 12 Aug 2009 11:14:37 +0000</pubDate>
-<dc:creator><![CDATA[Wes]]></dc:creator>
-
-		<category><![CDATA[Miscellaneous]]></category>
-
-		<category domain="category" nicename="miscellaneous"><![CDATA[Miscellaneous]]></category>
-
-<guid isPermaLink="false">http://www.wezm.net/wp-content/uploads/wezm.net/2009/08/MG_7190.jpg</guid>
-<description></description>
-<content:encoded><![CDATA[]]></content:encoded>
-<excerpt:encoded><![CDATA[Working at the table]]></excerpt:encoded>
-<wp:post_id>199</wp:post_id>
-<wp:post_date>2009-08-12 21:14:37</wp:post_date>
-<wp:post_date_gmt>2009-08-12 11:14:37</wp:post_date_gmt>
-<wp:comment_status>open</wp:comment_status>
-<wp:ping_status>open</wp:ping_status>
-<wp:post_name>_mg_7190</wp:post_name>
-<wp:status>inherit</wp:status>
-<wp:post_parent>198</wp:post_parent>
-<wp:menu_order>0</wp:menu_order>
-<wp:post_type>attachment</wp:post_type>
-<wp:post_password></wp:post_password>
-<wp:is_sticky>0</wp:is_sticky>
-<wp:attachment_url>http://www.wezm.net/wp-content/uploads/wezm.net/2009/08/MG_7190.jpg</wp:attachment_url>
-<wp:postmeta>
-<wp:meta_key>_wp_attached_file</wp:meta_key>
-<wp:meta_value>2009/08/MG_7190.jpg</wp:meta_value>
-</wp:postmeta>
-<wp:postmeta>
-<wp:meta_key>_wp_attachment_metadata</wp:meta_key>
-<wp:meta_value>a:5:{s:5:"width";s:3:"533";s:6:"height";s:3:"800";s:14:"hwstring_small";s:22:"height='96' width='63'";s:4:"file";s:19:"2009/08/MG_7190.jpg";s:10:"image_meta";a:10:{s:8:"aperture";s:1:"5";s:6:"credit";s:0:"";s:6:"camera";s:22:"Canon EOS 400D DIGITAL";s:7:"caption";s:0:"";s:17:"created_timestamp";s:10:"1247974731";s:9:"copyright";s:0:"";s:12:"focal_length";s:2:"34";s:3:"iso";s:3:"400";s:13:"shutter_speed";s:5:"0.025";s:5:"title";s:0:"";}}</wp:meta_value>
-</wp:postmeta>
-	</item>
-<item>
 <title>_MG_7192</title>
 <link>http://www.wezm.net/2009/08/temperature-logger-project/_mg_7192/</link>
 <pubDate>Wed, 12 Aug 2009 11:14:37 +0000</pubDate>
@@ -6826,6 +6707,42 @@ How does one actually use your code... I can't run it from the command line...]]
 <wp:postmeta>
 <wp:meta_key>_wp_attachment_metadata</wp:meta_key>
 <wp:meta_value>a:5:{s:5:"width";s:3:"800";s:6:"height";s:3:"534";s:14:"hwstring_small";s:23:"height='85' width='128'";s:4:"file";s:19:"2009/08/MG_7192.jpg";s:10:"image_meta";a:10:{s:8:"aperture";s:3:"7.1";s:6:"credit";s:0:"";s:6:"camera";s:22:"Canon EOS 400D DIGITAL";s:7:"caption";s:0:"";s:17:"created_timestamp";s:10:"1247974747";s:9:"copyright";s:0:"";s:12:"focal_length";s:2:"55";s:3:"iso";s:3:"400";s:13:"shutter_speed";s:5:"0.025";s:5:"title";s:0:"";}}</wp:meta_value>
+</wp:postmeta>
+	</item>
+<item>
+<title>_MG_7190</title>
+<link>http://www.wezm.net/2009/08/temperature-logger-project/_mg_7190/</link>
+<pubDate>Wed, 12 Aug 2009 11:14:37 +0000</pubDate>
+<dc:creator><![CDATA[Wes]]></dc:creator>
+
+		<category><![CDATA[Miscellaneous]]></category>
+
+		<category domain="category" nicename="miscellaneous"><![CDATA[Miscellaneous]]></category>
+
+<guid isPermaLink="false">http://www.wezm.net/wp-content/uploads/wezm.net/2009/08/MG_7190.jpg</guid>
+<description></description>
+<content:encoded><![CDATA[]]></content:encoded>
+<excerpt:encoded><![CDATA[Working at the table]]></excerpt:encoded>
+<wp:post_id>199</wp:post_id>
+<wp:post_date>2009-08-12 21:14:37</wp:post_date>
+<wp:post_date_gmt>2009-08-12 11:14:37</wp:post_date_gmt>
+<wp:comment_status>open</wp:comment_status>
+<wp:ping_status>open</wp:ping_status>
+<wp:post_name>_mg_7190</wp:post_name>
+<wp:status>inherit</wp:status>
+<wp:post_parent>198</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:post_type>attachment</wp:post_type>
+<wp:post_password></wp:post_password>
+<wp:is_sticky>0</wp:is_sticky>
+<wp:attachment_url>http://www.wezm.net/wp-content/uploads/wezm.net/2009/08/MG_7190.jpg</wp:attachment_url>
+<wp:postmeta>
+<wp:meta_key>_wp_attached_file</wp:meta_key>
+<wp:meta_value>2009/08/MG_7190.jpg</wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key>_wp_attachment_metadata</wp:meta_key>
+<wp:meta_value>a:5:{s:5:"width";s:3:"533";s:6:"height";s:3:"800";s:14:"hwstring_small";s:22:"height='96' width='63'";s:4:"file";s:19:"2009/08/MG_7190.jpg";s:10:"image_meta";a:10:{s:8:"aperture";s:1:"5";s:6:"credit";s:0:"";s:6:"camera";s:22:"Canon EOS 400D DIGITAL";s:7:"caption";s:0:"";s:17:"created_timestamp";s:10:"1247974731";s:9:"copyright";s:0:"";s:12:"focal_length";s:2:"34";s:3:"iso";s:3:"400";s:13:"shutter_speed";s:5:"0.025";s:5:"title";s:0:"";}}</wp:meta_value>
 </wp:postmeta>
 	</item>
 <item>
@@ -8243,28 +8160,159 @@ Testing performed on Mac OS X 10.6.2 with git 1.6.4.2]]></content:encoded>
 <wp:meta_key>_wp_old_slug</wp:meta_key>
 <wp:meta_value>dispelling-git-misinformation</wp:meta_value>
 </wp:postmeta>
+	</item>
+<item>
+<title>gPXE net boot</title>
+<link>http://www.wezm.net/2010/03/installing-debian-with-gpxe-and-netboot-me/_mg_8024/</link>
+<pubDate>Thu, 11 Mar 2010 02:07:46 +0000</pubDate>
+<dc:creator><![CDATA[Wes]]></dc:creator>
+
+		<category><![CDATA[Miscellaneous]]></category>
+
+		<category domain="category" nicename="miscellaneous"><![CDATA[Miscellaneous]]></category>
+
+<guid isPermaLink="false">http://www.wezm.net/wp-content/uploads/wezm.net/2010/03/MG_8024.jpg</guid>
+<description></description>
+<content:encoded><![CDATA[]]></content:encoded>
+<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+<wp:post_id>333</wp:post_id>
+<wp:post_date>2010-03-11 02:07:46</wp:post_date>
+<wp:post_date_gmt>2010-03-11 02:07:46</wp:post_date_gmt>
+<wp:comment_status>open</wp:comment_status>
+<wp:ping_status>open</wp:ping_status>
+<wp:post_name>_mg_8024</wp:post_name>
+<wp:status>inherit</wp:status>
+<wp:post_parent>327</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:post_type>attachment</wp:post_type>
+<wp:post_password></wp:post_password>
+<wp:is_sticky>0</wp:is_sticky>
+<wp:attachment_url>http://www.wezm.net/wp-content/uploads/wezm.net/2010/03/MG_8024.jpg</wp:attachment_url>
+<wp:postmeta>
+<wp:meta_key>_wp_attachment_metadata</wp:meta_key>
+<wp:meta_value>a:5:{s:5:"width";s:4:"1024";s:6:"height";s:3:"586";s:14:"hwstring_small";s:23:"height='73' width='128'";s:4:"file";s:19:"2010/03/MG_8024.jpg";s:10:"image_meta";a:10:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";}}</wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key>_wp_attached_file</wp:meta_key>
+<wp:meta_value>2010/03/MG_8024.jpg</wp:meta_value>
+</wp:postmeta>
+	</item>
+<item>
+<title>gPXE net boot small</title>
+<link>http://www.wezm.net/2010/03/installing-debian-with-gpxe-and-netboot-me/_mg_8024_sml-2/</link>
+<pubDate>Thu, 11 Mar 2010 02:14:11 +0000</pubDate>
+<dc:creator><![CDATA[Wes]]></dc:creator>
+
+		<category><![CDATA[Miscellaneous]]></category>
+
+		<category domain="category" nicename="miscellaneous"><![CDATA[Miscellaneous]]></category>
+
+<guid isPermaLink="false">http://www.wezm.net/wp-content/uploads/wezm.net/2010/03/MG_8024_sml1.jpg</guid>
+<description></description>
+<content:encoded><![CDATA[]]></content:encoded>
+<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+<wp:post_id>336</wp:post_id>
+<wp:post_date>2010-03-11 02:14:11</wp:post_date>
+<wp:post_date_gmt>2010-03-11 02:14:11</wp:post_date_gmt>
+<wp:comment_status>open</wp:comment_status>
+<wp:ping_status>open</wp:ping_status>
+<wp:post_name>_mg_8024_sml-2</wp:post_name>
+<wp:status>inherit</wp:status>
+<wp:post_parent>327</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:post_type>attachment</wp:post_type>
+<wp:post_password></wp:post_password>
+<wp:is_sticky>0</wp:is_sticky>
+<wp:attachment_url>http://www.wezm.net/wp-content/uploads/wezm.net/2010/03/MG_8024_sml1.jpg</wp:attachment_url>
+<wp:postmeta>
+<wp:meta_key>_wp_attached_file</wp:meta_key>
+<wp:meta_value>2010/03/MG_8024_sml1.jpg</wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key>_wp_attachment_metadata</wp:meta_key>
+<wp:meta_value>a:5:{s:5:"width";s:3:"550";s:6:"height";s:3:"315";s:14:"hwstring_small";s:23:"height='73' width='128'";s:4:"file";s:24:"2010/03/MG_8024_sml1.jpg";s:10:"image_meta";a:10:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";}}</wp:meta_value>
+</wp:postmeta>
+	</item>
+<item>
+<title>Installing Debian With gPXE and netboot.me</title>
+<link>http://www.wezm.net/2010/03/installing-debian-with-gpxe-and-netboot-me/</link>
+<pubDate>Thu, 11 Mar 2010 02:16:17 +0000</pubDate>
+<dc:creator><![CDATA[Wes]]></dc:creator>
+
+		<category><![CDATA[Technical]]></category>
+
+		<category domain="category" nicename="technical"><![CDATA[Technical]]></category>
+
+		<category domain="tag"><![CDATA[debian]]></category>
+
+		<category domain="tag" nicename="debian"><![CDATA[debian]]></category>
+
+		<category domain="tag"><![CDATA[gpxe]]></category>
+
+		<category domain="tag" nicename="gpxe"><![CDATA[gpxe]]></category>
+
+		<category domain="tag"><![CDATA[itx]]></category>
+
+		<category domain="tag" nicename="itx"><![CDATA[itx]]></category>
+
+		<category domain="tag"><![CDATA[Linux]]></category>
+
+		<category domain="tag" nicename="linux"><![CDATA[Linux]]></category>
+
+		<category domain="tag"><![CDATA[netboot]]></category>
+
+		<category domain="tag" nicename="netboot"><![CDATA[netboot]]></category>
+
+<guid isPermaLink="false">http://www.wezm.net/?p=327</guid>
+<description></description>
+<content:encoded><![CDATA[WezM.net was down again this weekend. The cause this time was the the large <a href="http://www.heraldsun.com.au/news/melbourne-storm-leaves-bill-in-its-wake/story-e6frf7jo-1225838413382">storms in Melbourne</a> flooding the office where the computer that hosts this site lives. The computer escaped the water but the network and Internet connection did not.
+
+The office is located 60km from home so fixing problems like these have to wait until office hours, hence the extended downtime. This is the second time in an many weeks that I've run into this problem so I've decided to move WezM.net to my <a href="http://en.wikipedia.org/wiki/Mini-ITX">Mini ITX</a> server, which is more accessible out of hours as its at home.
+<!--more-->
+The ITX server flawlessly powered WezM.net from 2005 to 2007 with a personal best uptime of 407 days. I recently dug it up and had planned on running FreeBSD on it. However over the weekend I decided to take the easy way out and just go back <a href="http://www.debian.org/">Debian</a>, which originally powered the server. Its a little better suited to this server due the wide availability of binary packages; compiling stuff is not fast on an 800Mhz Via C3. In case you're wondering why I'm bothering with self hosting its because I'm too stingy to pay for a <abbr title="Virtual Private Server">VPS</abbr>.
+
+The ITX server lacks a CDROM drive and my previous attempts to boot from USB flash drives have failed. This makes installing new OSes a bit of a challenge. I decided to try out installing Debian via <a href="http://www.netboot.me/">netboot.me</a>. As the name suggests, netboot.me allows you to netboot a PC via the Internet. To do so you download and burn their bootable image to CD, floppy or USB drive. I didn't use any of these though as I already had a 8Mb (yes Mb) bootable CF card with <a href="http://www.etherboot.org/">gPXE</a> installed on it. gPXE is an open source and enhanced network bootloader.
+
+The installation involved the following steps:
+<ol>
+	<li>Connecting the CF card to the server (via a CF to IDE adaptor) and booting from it.</li>
+	<li>Entering the gPXE prompt via Ctrl-b. At this point gPXE had configured the network interface with DHCP.</li>
+	<li>Boot the Debian installer with the chain command: <code>chain http://netboot.me/2013</code></li>
+</ol>
+
+After that it downloads a kernel and initrd image and boots. All directly off the Internet. Brilliant!
+
+<a href="http://www.wezm.net/wp-content/uploads/wezm.net/2010/03/MG_8024.jpg"><img src="http://www.wezm.net/wp-content/uploads/wezm.net/2010/03/MG_8024_sml1.jpg" alt="" title="gPXE net boot small" width="550" height="315" class="alignnone size-full wp-image-336" /></a>
+]]></content:encoded>
+<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+<wp:post_id>327</wp:post_id>
+<wp:post_date>2010-03-11 02:16:17</wp:post_date>
+<wp:post_date_gmt>2010-03-11 02:16:17</wp:post_date_gmt>
+<wp:comment_status>open</wp:comment_status>
+<wp:ping_status>open</wp:ping_status>
+<wp:post_name>installing-debian-with-gpxe-and-netboot-me</wp:post_name>
+<wp:status>publish</wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:post_type>post</wp:post_type>
+<wp:post_password></wp:post_password>
+<wp:is_sticky>0</wp:is_sticky>
+<wp:postmeta>
+<wp:meta_key>_edit_last</wp:meta_key>
+<wp:meta_value>1</wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key>_edit_lock</wp:meta_key>
+<wp:meta_value>1268273800</wp:meta_value>
+</wp:postmeta>
 <wp:comment>
-<wp:comment_id>3872</wp:comment_id>
-<wp:comment_author><![CDATA[generic drugs pharmacy]]></wp:comment_author>
+<wp:comment_id>3876</wp:comment_id>
+<wp:comment_author><![CDATA[cheapest generic cialis]]></wp:comment_author>
 <wp:comment_author_email>kuchkonaru@gmail.com</wp:comment_author_email>
-<wp:comment_author_url>http://www.cojonesconsulting.com/</wp:comment_author_url>
-<wp:comment_author_IP>192.168.1.142</wp:comment_author_IP>
-<wp:comment_date>2010-03-09 01:21:47</wp:comment_date>
-<wp:comment_date_gmt>2010-03-09 01:21:47</wp:comment_date_gmt>
-<wp:comment_content><![CDATA[In truth, immediately i didn't understand the essence. But after re-reading all at once became clear.]]></wp:comment_content>
-<wp:comment_approved>spam</wp:comment_approved>
-<wp:comment_type></wp:comment_type>
-<wp:comment_parent>0</wp:comment_parent>
-<wp:comment_user_id>0</wp:comment_user_id>
-</wp:comment>
-<wp:comment>
-<wp:comment_id>3865</wp:comment_id>
-<wp:comment_author><![CDATA[generic viagra]]></wp:comment_author>
-<wp:comment_author_email>bromenaro@gmail.com</wp:comment_author_email>
-<wp:comment_author_url>http://www.southwestohiocrochetguild.net/buy-viagra.html</wp:comment_author_url>
-<wp:comment_author_IP>192.168.1.142</wp:comment_author_IP>
-<wp:comment_date>2010-02-23 21:43:51</wp:comment_date>
-<wp:comment_date_gmt>2010-02-23 21:43:51</wp:comment_date_gmt>
+<wp:comment_author_url>http://www.cojonesconsulting.com/buy-cheap-generic-cialis-online.html</wp:comment_author_url>
+<wp:comment_author_IP>187.9.42.206</wp:comment_author_IP>
+<wp:comment_date>2010-03-20 19:55:04</wp:comment_date>
+<wp:comment_date_gmt>2010-03-20 19:55:04</wp:comment_date_gmt>
 <wp:comment_content><![CDATA[I read a few topics. I respect your work and added blog to favorites.]]></wp:comment_content>
 <wp:comment_approved>spam</wp:comment_approved>
 <wp:comment_type></wp:comment_type>
@@ -8272,42 +8320,44 @@ Testing performed on Mac OS X 10.6.2 with git 1.6.4.2]]></content:encoded>
 <wp:comment_user_id>0</wp:comment_user_id>
 </wp:comment>
 <wp:comment>
-<wp:comment_id>3866</wp:comment_id>
-<wp:comment_author><![CDATA[???????????? ? ???]]></wp:comment_author>
-<wp:comment_author_email>ortga569geandde@gmail.com</wp:comment_author_email>
-<wp:comment_author_url>http://www.mortgageanddebt.com</wp:comment_author_url>
-<wp:comment_author_IP>192.168.1.142</wp:comment_author_IP>
-<wp:comment_date>2010-02-26 02:08:11</wp:comment_date>
-<wp:comment_date_gmt>2010-02-26 02:08:11</wp:comment_date_gmt>
-<wp:comment_content><![CDATA[How much money will I get back for selling a ps3 to gamestop?]]></wp:comment_content>
+<wp:comment_id>3878</wp:comment_id>
+<wp:comment_author><![CDATA[ygytusowyjil]]></wp:comment_author>
+<wp:comment_author_email></wp:comment_author_email>
+<wp:comment_author_url>http://%/ybetuzosul.com</wp:comment_author_url>
+<wp:comment_author_IP>59.95.201.139</wp:comment_author_IP>
+<wp:comment_date>2010-03-27 16:31:51</wp:comment_date>
+<wp:comment_date_gmt>2010-03-27 16:31:51</wp:comment_date_gmt>
+<wp:comment_content><![CDATA[<strong>ygytusowyjil...</strong>
+
+<a href="http://mp3my.biz/performer/albums/eh-factor/34275/1/" rel="nofollow">Download mp3 with Eh Factor</a>...]]></wp:comment_content>
+<wp:comment_approved>spam</wp:comment_approved>
+<wp:comment_type>trackback</wp:comment_type>
+<wp:comment_parent>0</wp:comment_parent>
+<wp:comment_user_id>0</wp:comment_user_id>
+</wp:comment>
+<wp:comment>
+<wp:comment_id>3879</wp:comment_id>
+<wp:comment_author><![CDATA[herbal erectile dysfunction]]></wp:comment_author>
+<wp:comment_author_email>kuchkonaru@gmail.com</wp:comment_author_email>
+<wp:comment_author_url>http://www.renewla.com/</wp:comment_author_url>
+<wp:comment_author_IP>201.116.23.36</wp:comment_author_IP>
+<wp:comment_date>2010-03-30 19:01:38</wp:comment_date>
+<wp:comment_date_gmt>2010-03-30 19:01:38</wp:comment_date_gmt>
+<wp:comment_content><![CDATA[Interesting and informative. But will you write about this one more?]]></wp:comment_content>
 <wp:comment_approved>spam</wp:comment_approved>
 <wp:comment_type></wp:comment_type>
 <wp:comment_parent>0</wp:comment_parent>
 <wp:comment_user_id>0</wp:comment_user_id>
 </wp:comment>
 <wp:comment>
-<wp:comment_id>3868</wp:comment_id>
-<wp:comment_author><![CDATA[cheapest generic cialis]]></wp:comment_author>
-<wp:comment_author_email>bromenaro@gmail.com</wp:comment_author_email>
-<wp:comment_author_url>http://www.southwestohiocrochetguild.net/buy-cialis.html</wp:comment_author_url>
-<wp:comment_author_IP>192.168.1.142</wp:comment_author_IP>
-<wp:comment_date>2010-02-27 09:14:34</wp:comment_date>
-<wp:comment_date_gmt>2010-02-27 09:14:34</wp:comment_date_gmt>
+<wp:comment_id>3877</wp:comment_id>
+<wp:comment_author><![CDATA[levitra generic]]></wp:comment_author>
+<wp:comment_author_email>kuchkonaru@gmail.com</wp:comment_author_email>
+<wp:comment_author_url>http://www.cojonesconsulting.com/buy-cheap-generic-levitra-online.html</wp:comment_author_url>
+<wp:comment_author_IP>69.118.178.216</wp:comment_author_IP>
+<wp:comment_date>2010-03-25 17:13:33</wp:comment_date>
+<wp:comment_date_gmt>2010-03-25 17:13:33</wp:comment_date_gmt>
 <wp:comment_content><![CDATA[I read blogs on a similar topic, but i never visited your blog. I added it to favorites and i'll be your constant reader.]]></wp:comment_content>
-<wp:comment_approved>spam</wp:comment_approved>
-<wp:comment_type></wp:comment_type>
-<wp:comment_parent>0</wp:comment_parent>
-<wp:comment_user_id>0</wp:comment_user_id>
-</wp:comment>
-<wp:comment>
-<wp:comment_id>3871</wp:comment_id>
-<wp:comment_author><![CDATA[CPA Network]]></wp:comment_author>
-<wp:comment_author_email>e11srdirec78ta@gmail.com</wp:comment_author_email>
-<wp:comment_author_url>http://www.offesrdirectads.com</wp:comment_author_url>
-<wp:comment_author_IP>192.168.1.142</wp:comment_author_IP>
-<wp:comment_date>2010-03-03 07:55:10</wp:comment_date>
-<wp:comment_date_gmt>2010-03-03 07:55:10</wp:comment_date_gmt>
-<wp:comment_content><![CDATA[Great article . Will definitely copy it to my blog.Thanks.]]></wp:comment_content>
 <wp:comment_approved>spam</wp:comment_approved>
 <wp:comment_type></wp:comment_type>
 <wp:comment_parent>0</wp:comment_parent>

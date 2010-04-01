@@ -61,3 +61,4 @@
 /2010/01/clone-git-repo-on-non-standard-port/	/technical/2010/01/clone-git-repo-on-non-standard-port/
 /2010/02/ipad-and-the-future-of-computing/	/technical/2010/02/ipad-and-the-future-of-computing/
 /2010/02/git-object-store-efficiency/	/technical/2010/02/git-object-store-efficiency/
+/2010/03/installing-debian-with-gpxe-and-netboot-me/	/technical/2010/03/installing-debian-with-gpxe-and-netboot-me/
