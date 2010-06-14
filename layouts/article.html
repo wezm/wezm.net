@@ -9,7 +9,6 @@
   </abbr>
 </div>
 <%= yield %>
-<% short = short_url("http://www.wezm.net#{@item.identifier}") %>
 <div id="respond">
   <h2>Got Something to Add?</h2>
   <p>Contact me by email or Twitter if you have a comment, correction or just want to get in touch.</p>
@@ -57,6 +56,6 @@
       </script>
       <script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
     </li>
-    <li>Short URL: <a href="<%= short %>"><%= short %></a></li>
+    <li>Short URL: <a href="<%= @item[:short_url] %>"><%= @item[:short_url] %></a></li>
   </ul>
 </div>
