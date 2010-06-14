@@ -9,7 +9,7 @@ var WezM = {
       onSelect: this._searchItemSelected,
       width: '400px'
     });
-    if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0) {
+    if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0) { // TODO: This is too generic (iPhone)
       $('#search input').css('paddingTop', 0);
     }
     // The following should be triggered onchange for the input as well
