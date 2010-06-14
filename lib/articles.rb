@@ -14,11 +14,11 @@ module WezM
 
       def article_to_json(article)
         {
-          :title => article[:title],
+          :title => RubyPants.new(article[:title]).to_html,
           :path => article.identifier,
           :date => Time.parse(article[:created_at]).rfc2822,
-          :text => article[:title],
-          :extra => article[:extra] || " "
+          :text => RubyPants.new(article[:title]).to_html,
+          :extra => RubyPants.new(article[:extra] || " ").to_html
         }
       end
 
