@@ -1,18 +1,37 @@
+Now
+---
+
 * Commits tagged #todo
 * Analytics
-* Rewrite if necessary for images, check/download image search details
-* Get published version of installing-debian-with-gpxe-and-netboot-me
+* Disqus
 * Fix search result keyboard navigation
-* Implement Linux version of monothumb
-* Layout More links on front page properly
 * Content for Contact page
-  * vcard microformat
+  * vcard microdata
 * Revise About page content
+  * Add a photo to the about page
+  * Get proper lens specs for About page
 * Add initial Project page content
-* Hook feeds up to feedburner
-* Add Email link to posts - Get Enkoder
-* Add a photo to the about page
-* Get proper lens specs for About page
-* Add page numbers to pagination controls
-* Find a JS smarty pants implementation
 * Fix Next/Prev when you go to an article then come back to a /page/#n page
+* Exclude/reformat Got Something to add from feeds
+* Add page numbers to pagination controls
+
+Content
+-------
+
+* Implement Linux version of monothumb
+* Write a jQuery smarty pants plugin
+  * Add it to the projects
+
+Deployment
+----------
+
+* Ensure index.xml is an index file
+* Add a rewrite map for old permalinks and images
+* Configure feed burner feeds to point at the right URLs
+* Check that entity is resolved in title in FeedBurner
+
+Future
+------
+
+* Make it possible to purchase the HTML
+* Make a Wordpress theme out of the site
