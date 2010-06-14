@@ -1,4 +1,4 @@
-require 'bitly'
+require 'rubypants'
 
 module WezM
   module Helpers
@@ -23,6 +23,7 @@ module WezM
       end
 
       def short_url(url)
+        require 'bitly'
         begin
           @bitly ||= Bitly.new('wezm', 'R_f2bfdace56c886671086eb0c8acb9ce7')
           @cache ||= {}
