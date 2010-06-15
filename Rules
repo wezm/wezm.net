@@ -7,10 +7,6 @@ compile '/' do
   filter :rubypants
 end
 
-compile '*/json/' do
-  filter :erb
-end
-
 compile %r{/(?:technical|personal|)articles/(page/|)} do
   filter :erb
   layout 'articles'
@@ -28,8 +24,12 @@ compile %r{.*/feed/} do
   filter :erb
 end
 
-compile %r{(?:/robots/|/sitemap)} do
+compile %r{^/(?:robots|sitemap)/$} do
   filter :erb
+end
+
+compile %r{^/(?:screen|mobile)/$} do
+  filter :sass
 end
 
 compile '*' do
@@ -38,12 +38,7 @@ compile '*' do
   filter :rubypants
 end
 
-route '*/json/' do
-  path = Pathname(item.identifier)
-  (path.dirname + 'articles.json').to_s
-end
-
-route %r{.*/feed/} do
+route %r{.*/feed/$} do
   item.identifier + 'index.xml'
 end
 
@@ -53,6 +48,17 @@ end
 
 route '/sitemap/' do
   '/sitemap.xml'
+end
+
+# route '*/json/' do
+#   path = Pathname(item.identifier)
+#   (path.dirname + 'articles.json').to_s
+# end
+
+route %r{^/(?:screen|mobile)/$} do
+  path = Pathname(item.identifier)
+  '/' + path.basename.to_s + '.css'
+  # (path.dirname + 'articles.json').to_s
 end
 
 route '*' do

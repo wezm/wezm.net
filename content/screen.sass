@@ -1,0 +1,399 @@
+--- 
+title: Stylesheet for displays
+is_hidden: true
+---
+
+body
+  font-family: Constantia, Georgia, "Bitstream Vera Serif", "Liberation Serif", serif
+  font-size: 16px
+  background: #fff
+  color: #223
+
+  &.home
+    min-width: 520px
+
+
+p, li, blockquote
+  line-height: 1.2
+
+
+p, pre
+  margin: 0 0 1em 0
+
+
+ul, ol
+  margin: 1em 0 1em 1em
+
+
+ul
+  list-style: disc
+
+
+ol
+  list-style: decimal
+
+
+li
+  margin-left: 1em
+
+
+dl
+  dt
+  dd
+    margin-left: 2em
+
+
+h1, h2, h3, h4, h5, h6
+  font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif
+  margin: 0.6em 0 0.5em 0
+  color: #111
+  font-weight: 200
+
+
+h1
+  font-size: 36px
+
+
+h2
+  font-size: 24px
+
+
+h3
+  font-size: 21px
+
+
+h4
+  font-size: 18px
+
+
+h5
+  font-size: 16px
+
+
+h6
+  font-size: 14px
+
+
+a
+  text-decoration: underline
+
+  &:link, &:visited
+    color: #36454F
+
+  &:hover
+
+h1 a
+  text-decoration: none
+
+
+body.home h1 > a:hover
+  border-bottom: 2px solid #111
+
+
+h1 a
+  &:link, &:visited
+    color: #111
+
+
+sup
+  vertical-align: super
+  font-size: 0.8em
+
+
+pre, code, tt
+  font-size: 13px
+  font-family: Consolas, "Andale Mono", "Liberation Mono", Menlo, Monaco, "Bitstream Vera Sans Mono", fixed
+
+
+pre
+  overflow-x: auto
+
+
+blockquote
+  border-left: 2px solid #999
+  padding-left: 1em
+  margin: 0 0 1em 0
+
+
+header
+  font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif
+  font-size: 18px
+  color: white
+  padding: 0.5em
+  background: #1C1C1C
+
+  a
+    &:link, &:visited
+      text-decoration: none
+      color: white
+
+    &:hover
+      border-bottom: 2px solid #fff
+
+
+#menu
+  float: right
+  padding-right: 0.25em
+
+  li
+    font-size: inherit
+
+
+#content
+  padding: 0 20px
+  clear: both
+  min-width: 600px
+  margin-right: 40%
+
+
+body.articles #content
+  min-width: auto
+  margin-right: 0
+
+
+footer
+  color: #999
+  border-top: 1px solid #999
+  margin: 1em
+  clear: both
+
+  .copyright
+    font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif
+    font-size: 14px
+    padding-top: 1em
+    display: block
+    font-weight: 200
+
+
+.pagination
+  display: none
+  text-align: center
+
+  .newer
+    visibility: hidden
+
+
+.column
+  float: left
+  width: 50%
+  margin: 0
+  min-width: 500px
+
+
+#personal div
+  padding-right: 2em
+
+
+.column div
+  padding: 0 0 0 2em
+
+
+ul.articles
+  list-style: none
+  margin: 0
+  clear: left
+
+  li
+    margin: 0
+    padding-top: 1em
+    height: 70px
+
+
+body.articles ul.articles li
+  height: auto
+  padding-top: 0
+
+
+ul.articles
+  li:first-child
+    border-top: none
+    padding-top: 1em
+
+  abbr
+    display: block
+    font-size: 12px
+    color: #aaa
+
+  strong
+    font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif
+    margin: 0
+    font-weight: 200
+    display: block
+    font-size: 18px
+
+
+a
+  &.more
+    display: block
+    margin: 1em 0 0 0
+
+  &.active
+    font-weight: bold
+
+  &.affiliate
+    background: url(/images/dollar.gif) no-repeat top right
+    padding-right: 4px
+
+
+.inline
+  list-style: none
+  margin: 0
+
+  li
+    display: inline
+
+    &:first-child
+      margin-left: 0
+
+
+#flickr
+  clear: both
+
+  li
+    float: left
+    overflow: hidden
+    margin: 20px 0 0 20px
+    display: block
+    position: relative
+    height: 75px
+    width: 75px
+
+    img
+      position: absolute
+      top: -75px
+
+      &:hover
+        top: 0
+
+
+ul.menu
+  padding-bottom: 1em
+
+
+#search
+  margin: 0
+  padding: 0
+  display: none
+  float: left
+  margin-right: 20px
+  background: #fff url(/images/srch_l.gif) 0 0 no-repeat
+  padding-left: 19px
+
+  fieldset
+    margin: 0
+    padding: 0
+    border: 0
+
+  label
+    color: #999
+    display: none
+
+  input
+    border: 0
+    margin: 0
+    outline: 0
+    vertical-align: middle
+    height: 19px
+    width: 180px
+    width: 132px
+    padding: 3px
+    background: #fff url(/images/srch_bg.gif) 0 0 repeat-x
+    float: left
+    font: 11px/13px "Lucida Grande", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif
+    color: #000
+
+  span.clear
+    background: #fff url(/images/srch_r.gif) 0 0 no-repeat
+    float: left
+    width: 19px
+    height: 19px
+    clear: none
+
+  .active
+    background-position: 0 -19px
+
+
+#respond
+  margin-top: 10px
+  padding: 10px
+  background-color: #ddd
+  clear: both
+
+  h2
+    padding-left: 42px
+    line-height: 32px
+    background: url(/images/comment32.png) no-repeat top left
+    margin-top: 0
+
+
+#content
+  .published
+    font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif
+    color: #999
+    padding-bottom: 10px
+    font-size: 14px
+
+  .alignleft
+    float: left
+    margin: 5px 10px 5px 0
+
+
+img.alignleft
+  float: left
+  margin: 5px 10px 5px 0
+
+
+#content .alignright, img.alignright
+  float: right
+  margin: 5px 0 5px 10px
+
+
+#content .aligncenter, div.aligncenter, img.aligncenter
+  text-align: center
+  display: block
+  margin: 10px auto
+
+
+#content
+  .clear
+    clear: both
+
+  hr
+    border: 0
+    border-top-width: 1px
+    border-style: solid
+    border-top-color: #999
+    width: 10em
+    margin: 0
+
+
+table
+  &.left_headers, &.top_headers
+    border: 1px solid #D8D8D8
+    border-collapse: collapse
+    margin: 1em 0
+
+  &.left_headers
+    td, th
+      border: 1px solid #D8D8D8
+      padding: 0.3em 0.7em 0.3em 0.7em
+
+  &.top_headers
+    td, th
+      border: 1px solid #D8D8D8
+      padding: 0.3em 0.7em 0.3em 0.7em
+
+  &.left_headers th
+    text-align: right
+
+  &.gallery
+    border-collapse: collapse
+    width: 100%
+
+    td
+      padding: 10px 0
+      text-align: center
+      vertical-align: middle
+
+    img a
+      border: none
