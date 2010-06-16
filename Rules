@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'pathname'
-
 compile '/' do
   layout 'home'
   filter :rubypants
@@ -56,9 +54,7 @@ end
 # end
 
 route %r{^/(?:screen|mobile)/$} do
-  path = Pathname(item.identifier)
-  '/' + path.basename.to_s + '.css'
-  # (path.dirname + 'articles.json').to_s
+  File.join("", "css", File.basename(item.identifier) + ".css")
 end
 
 route '*' do
