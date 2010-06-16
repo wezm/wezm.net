@@ -118,12 +118,14 @@ header
   background: #1C1C1C
 
   a
+    -webkit-transition: border-bottom-color 500ms
+    border-bottom: 2px solid rgba(255, 255, 255, 0.0)
     &:link, &:visited
       text-decoration: none
       color: white
 
     &:hover
-      border-bottom: 2px solid #fff
+      border-bottom-color: rgba(255, 255, 255, 1.0)
 
 
 #menu
@@ -392,3 +394,9 @@ table
 
     img a
       border: none
+
+img.feed-icon
+  opacity: 0.75
+
+  &:hover
+    opacity: 1.0
