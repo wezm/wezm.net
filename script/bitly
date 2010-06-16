@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+require 'pathname'
+$:.unshift (Pathname(__FILE__).parent.parent + 'lib').to_s
+
+require 'nanoc3'
+require 'articles'
+require 'bitly'
+
+include Nanoc3::Helpers::Blogging
+
+site = Nanoc3::Site.new(Pathname(__FILE__).parent.parent.to_s)
+
+Bitly.use_api_version_3
+bitly = Bitly.new('wezm', 'R_f2bfdace56c886671086eb0c8acb9ce7')
+
+site.load_data
+site.items.select { |item| item[:kind] == 'article' }.each do |article|
+  meta = YAML.load_file(article[:meta_filename]) || {}
+  url = site.config[:base_url] + article.path
+  unless meta['short_url']
+    begin
+      u = bitly.shorten(url)
+      meta['short_url'] = u.short_url
+    rescue BitlyError
+      puts "BitlyError"
+    end
+  end
+  
+  # Write the meta data back out
+  File.open(article[:meta_filename], 'w') do |file|
+    YAML.dump(meta, file)
+  end
+  puts "#{url} => #{meta['short_url']}"
+end
