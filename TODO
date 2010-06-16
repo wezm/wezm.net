@@ -1,9 +1,11 @@
 Now
 ---
 
+* Convert to HTML5
+* Implement searching on archives page
+
 * Commits tagged #todo
 * Analytics
-* Disqus
 * Fix search result keyboard navigation
 * Content for Contact page
   * vcard microdata
@@ -11,16 +13,12 @@ Now
   * Add a photo to the about page
   * Get proper lens specs for About page
 * Add initial Project page content
-* Fix Next/Prev when you go to an article then come back to a /page/#n page
 * Exclude/reformat Got Something to add from feeds
-* Add page numbers to pagination controls
 
 Content
 -------
 
 * Implement Linux version of monothumb
-* Write a jQuery smarty pants plugin
-  * Add it to the projects
 
 Deployment
 ----------
