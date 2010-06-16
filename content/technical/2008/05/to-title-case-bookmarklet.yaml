@@ -13,4 +13,5 @@ categories:
 - Internet
 - Miscellaneous
 status: publish
-extra: A bookmarklet made from David Gouch’s Javascript implementation of John Gruber’s Title Case Perl script.
+extra: "A bookmarklet made from David Gouch\xE2\x80\x99s Javascript implementation of John Gruber\xE2\x80\x99s Title Case Perl script."
+short_url: http://bit.ly/d3iJVM

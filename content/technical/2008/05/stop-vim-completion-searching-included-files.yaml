@@ -15,4 +15,5 @@ categories:
 - Tips
 - UNIX
 status: publish
-extra: "How to stop vim searching all included files when applying word completion."
+extra: How to stop vim searching all included files when applying word completion.
+short_url: http://bit.ly/93vmNx
