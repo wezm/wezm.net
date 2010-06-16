@@ -2,24 +2,36 @@
 <html>
 <head>
   <%= render '_head' %>
-  <link rel="stylesheet" href="/css/jsonSuggest.css" type="text/css" media="screen" charset="utf-8" />
   <script src="/js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/jquery.ba-bbq.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/js/jquery.jsonSuggest-dev.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/jquery.quicksand.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/mojo.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/liquidmetal.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/application.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">
-    WezM.loadArticles(function() {
-      jQuery(function() {
-        WezM.showJavascriptWidgets();
-        <% if @item.identifier =~ %r{/page/$} %>
-        $(window).bind('hashchange', function(e) {
-          WezM.hashChanged(e)
-        });
-        // Since the event is only triggered when the hash changes, we need to trigger
-        // the event now, to handle the hash the page may have loaded with.
-        $(window).trigger('hashchange');
-        <% end %>
+    jQuery(function() {
+      WezM.showJavascriptWidgets();
+      $('#search input').keypress(function(e) {
+        var input = $(this);
+        var q = (input.val() + String.fromCharCode(e.which)).toLowerCase();
+
+        var filtered_articles = $('#articles li').filter(function(i) {
+          var article = $(this);
+          var text = article.text().toLowerCase();
+          // var score = LiquidMetal.score(text,  q);
+          // article.attr("data-score", score);
+          // return score > 0;
+          return text.indexOf(q) >= 0;
+        })
+
+        // Sort results
+        // var sorted_articles = filtered_articles.get().sort(function(a, b) {
+        //   var valA = parseFloat($(a).attr("data-score"));
+        //   var valB = parseFloat($(b).attr("data-score"));
+        //   return (valA < valB) ? 1 : (valA > valB) ? -1 : 0;
+        // });
+
+        $("#articles").quicksand($(filtered_articles));
       });
     });
   </script>
@@ -45,7 +57,7 @@
         active = (@item.identifier.sub(%r{page/$}, '') == path)
       %>
       <li>
-        <a href="<%= feed %>"><img src="/images/black-feed-icon.png" width="12" height="12" alt="Black Feed Icon" /></a>
+        <a href="<%= feed %>"><img class="feed-icon" src="/images/black-feed-icon.png" width="12" height="12" alt="Black Feed Icon" /></a>
         <a href="<%= path %>"<%= %Q{class="active"} if active %>><%= label %></a> (<%= count %>)
       </li>
       <% end %>
@@ -58,7 +70,7 @@
       </li>
     </ul>
 
-    <ul class="articles">
+    <ul id="articles" class="articles">
       <%= yield %>
     </ul>
 

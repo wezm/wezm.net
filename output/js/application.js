@@ -3,28 +3,28 @@ var WezM = {
   _months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
   per_page: 10,
   showJavascriptWidgets: function() {
-    $('.pagination').show();
+    //$('.pagination').show();
     $('#search').show();
-    $('#search input').jsonSuggest(this.articles, {
-      onSelect: this._searchItemSelected,
-      width: '400px'
-    });
+    // $('#search input').jsonSuggest(this.articles, {
+    //   onSelect: this._searchItemSelected,
+    //   width: '400px'
+    // });
     if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0) { // TODO: This is too generic (iPhone)
       $('#search input').css('paddingTop', 0);
     }
     // The following should be triggered onchange for the input as well
     // (to handle things like Cut with the mouse)
-    $('#search input').keyup(function(e) {
-      var input = $(this);
-      var clear_search = $('#search .clear');
-      var value = input.attr('value');
-      if(value && (value != '')) {
-        clear_search.addClass('active');
-      }
-      else {
-        clear_search.removeClass('active');
-      }
-    });
+    // $('#search input').keyup(function(e) {
+    //   var input = $(this);
+    //   var clear_search = $('#search .clear');
+    //   var value = input.attr('value');
+    //   if(value && (value != '')) {
+    //     clear_search.addClass('active');
+    //   }
+    //   else {
+    //     clear_search.removeClass('active');
+    //   }
+    // });
     $('#search .clear.active').live('click', function() {
       $('#search input').attr('value', '').keyup(); // Simulate keypress to clear results
 
