@@ -51,11 +51,9 @@
       </script>
     </li>
     <li>
-      <script type="text/javascript">
-        tweetmeme_style = 'compact';
-      </script>
-      <script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+      <% short = @item[:short_url]; raise "#{item.identifier} does not have a short url" if short.nil? %>
+      <a href="http://twitter.com/home?status=<%= URI.encode("#{@item[:title]} - #{short} @wezm") %>" target="_blank">Tweet</a>
     </li>
-    <li>Short URL: <a href="<%= @item[:short_url] %>"><%= @item[:short_url] %></a></li>
+    <li class="short">Short URL: <a href="<%= short %>"><%= short %></a></li>
   </ul>
 </div>
