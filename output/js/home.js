@@ -6,7 +6,7 @@ jQuery(function () {
   };
 
   function populate_flickr(data, text_status) {
-    var ul = $("ul", "#flickr");
+    var ul = $("#flickr ul");
     ul.empty();
     jQuery.each($('photo', data), function(i, obj) {
       var photo = $(obj);
@@ -17,6 +17,7 @@ jQuery(function () {
       };
       var li = $(render_image(image));
       $('img', li).css({left: (i * -75) + 'px'});
+      li.css({"background-position-x": (i * -75) + 'px'});
       ul.append(li);
     });
     $("a[rel^='prettyPhoto']").prettyPhoto({theme: "facebook"});

@@ -2,7 +2,6 @@
 <html>
 <head>
   <%= render '_head' %>
-  <link rel="stylesheet" href="/css/thumbs.css" type="text/css" media="screen,projection" />
   <link rel="stylesheet" href="/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
   <script src="/js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
@@ -39,11 +38,12 @@
     </div>
   </div>
 
-  <div id="flickr">
-    <!-- <h1>Photos</h1> -->
-    <ul class="inline">
-    </ul>
-  </div>
+  <section id="flickr">
+    <header>
+      <h1>Photos</h1>
+    </header>
+    <ul class="inline"></ul>
+  </section>
   <%= render '_footer' %>
 </body>
 </html>

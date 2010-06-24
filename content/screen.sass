@@ -33,7 +33,6 @@ li
 
 
 dl
-  dt
   dd
     margin-left: 2em
 
@@ -75,8 +74,6 @@ a
   &:link, &:visited
     color: #36454F
 
-  &:hover
-
 h1 a
   text-decoration: none
 
@@ -110,7 +107,7 @@ blockquote
   margin: 0 0 1em 0
 
 
-header
+body > header
   font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif
   font-size: 18px
   color: white
@@ -246,21 +243,41 @@ a
 #flickr
   clear: both
 
+  header
+    margin-left: 2em
+
+  h1
+    margin: 0
+    padding: 0.6em 0 0 0
+
+  ul
+    display: block
+    // width: 5000px
+    height: 100px
+    overflow: hidden
+
   li
     float: left
     overflow: hidden
-    margin: 20px 0 0 20px
+    margin: 1em 0 0 1em
     display: block
     position: relative
     height: 75px
     width: 75px
+    border: 1px solid #ccc
+    background: url(/images/photos.jpg) no-repeat 0 0
+
+    &:first-child
+      margin-left: 2em
 
     img
+      -webkit-transition: opacity 500ms
       position: absolute
       top: -75px
 
       &:hover
-        top: 0
+        //top: 0
+        opacity: 0
 
 
 ul.menu
