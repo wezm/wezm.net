@@ -13,7 +13,6 @@ Now
   * Add a photo to the about page
   * Get proper lens specs for About page
 * Add initial Project page content
-* Exclude/reformat Got Something to add from feeds
 
 Content
 -------
@@ -23,7 +22,6 @@ Content
 Deployment
 ----------
 
-* Ensure index.xml is an index file
 * Add a rewrite map for old permalinks and images
 * Configure feed burner feeds to point at the right URLs
 * Check that entity is resolved in title in FeedBurner
