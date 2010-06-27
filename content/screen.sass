@@ -82,7 +82,7 @@ h1 a
 
 
 body.home h1 > a
-  -webkit-transition: border-bottom-color 500ms
+  -webkit-transition: border-bottom-color 500ms ease-out
   border-bottom: 2px solid rgba(17, 17, 17, 0.0)
 
   &:hover
@@ -117,7 +117,7 @@ body > header
   background: #1C1C1C
 
   a
-    -webkit-transition: border-bottom-color 500ms
+    -webkit-transition: border-bottom-color 500ms ease-out
     border-bottom: 2px solid rgba(255, 255, 255, 0.0)
     &:link, &:visited
       text-decoration: none
@@ -273,7 +273,7 @@ a
       margin-left: 2em
 
     img
-      -webkit-transition: opacity 500ms ease-in
+      -webkit-transition: opacity 500ms ease-out
       position: absolute
       top: -75px
 
@@ -362,7 +362,7 @@ img.alignleft
 
 
 img.feed-icon
-  -webkit-transition: opacity 500ms
+  -webkit-transition: opacity 500ms ease-out
   opacity: 0.5
 
   &:hover
