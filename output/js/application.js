@@ -115,3 +115,8 @@ var WezM = {
   }
 }
 
+jQuery(function() {
+  $('body > header span').click(function() {
+    $('#menu').slideToggle('normal');
+  })
+});
