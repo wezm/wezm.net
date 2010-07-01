@@ -1,105 +1,49 @@
-var WezM = {
-  articles: undefined,
-  _months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-  per_page: 10,
-  showJavascriptWidgets: function() {
-    //$('.pagination').show();
-    $('#search').show();
-    // $('#search input').jsonSuggest(this.articles, {
-    //   onSelect: this._searchItemSelected,
-    //   width: '400px'
-    // });
-    if(navigator.userAgent.toLowerCase().indexOf('webkit') >= 0) { // TODO: This is too generic (iPhone)
-      $('#search input').css('paddingTop', 0);
-    }
-  },
-  _searchItemSelected: function(article) {
-    document.location.href = article.path;
-  },
-  _renderArticle: function(o) {
-    return '<li>\n\
-      <abbr class="calender date" title="' + (Mojo.escape(Mojo.normalize(o.date))) + '">\n\
-        <span class="day">' + (Mojo.escape(Mojo.normalize(o.day))) + '</span>\n\
-        <span class="month">' + (Mojo.escape(Mojo.normalize(o.month))) + '</span>\n\
-        <span class="year">' + (Mojo.escape(Mojo.normalize(o.year))) + '</span>\n\
-      </abbr>\n\
-      <p>\n\
-        <strong><a href="' + (Mojo.escape(Mojo.normalize(o.path))) + '">' + (Mojo.escape(Mojo.normalize(o.title))) + '</a></strong>\n\
-        ' + (Mojo.normalize(o.summary)) + '\n\
-      </p>\n\
-    </li>';
-  },
-  _updatePaginationControls: function(page) {
-    var older = $('.pagination .older').attr('href', '#' + (page + 1));
-    var newer = $('.pagination .newer').attr('href', '#' + (page - 1));
-
-    // Hide if out of range
-    older.css('visibility', page * this.per_page >= this.articles.length ? 'hidden' : 'visible');
-    newer.css('visibility', page <= 1 ? 'hidden' : 'visible');
-  },
-  loadArticles: function(callback) {
-    if(!this.articles) {
-      var path = 'articles.json';
-      if(document.location.pathname.match(/page\/$/)) {
-        path = '../articles.json';
-      }
-      jQuery.getJSON(path, {}, function(data) {
-        WezM.articles = data;
-        if(callback) callback();
-      });
-    }
-    else if(callback) {
-      callback();
-    }
-  },
-  hashChanged: function(e) {
-    // Get the hash (fragment) as a string, with any leading # removed. Note that
-    // in jQuery 1.4, you should use e.fragment instead of $.param.fragment().
-    var page;
-    var matches;
-    var page_fragment = e.fragment;
-    if(!page_fragment) {
-      page_fragment = $.param.fragment();
-    }
-    if(matches = page_fragment.match(/(\d+)$/)) {
-      page = new Number(matches[1]);
-    }
-    else {
-      page = 1;
-    }
-
-    var container = $('ul.articles');
-    container.empty();
-
-    // Generate the items
-    var i = (page - 1) * this.per_page;
-    for(; i < page * this.per_page && i < this.articles.length; i++) {
-      var article = this.articles[i];
-      var date = new Date(Date.parse(article.date));
-      var article_view = {
-        date: article.date,
-        day: date.getDate(),
-        month: this._months[date.getMonth()],
-        year: date.getYear() + 1900,
-        path: article.path,
-        title: article.title,
-        summary: article.extra
-      };
-      var li = this._renderArticle(article_view);
-      container.append(li);
-    }
-
-    this._updatePaginationControls(page);
-    window.document.title = "All Articles - Page " + page; // TODO: Make this title better
-    // Scroll to top of page
-    if(window.scrollTo) {
-      window.scrollTo(0,0);
-    }
-  }
-}
-
 jQuery(function() {
   $('body > header span').click(function() {
     $('#menu').slideToggle('normal');
   })
+
+  /*** Article Search ***/
+  function reset_search() {
+    console.log("restoring items");
+    $('#articles li').css({height: 'auto', opacity: 1.0});
+  }
+
+  function refresh_search(e) {
+    var input = $(this);
+    var value = input.val() || "";
+
+    var q = value.toLowerCase();
+    //if (e.which == 32 || (65 <= e.which && e.which <= 65 + 25) || (97 <= e.which && e.which <= 97 + 25))
+    // if(e.which >= 32) {
+    //   q += String.fromCharCode(e.which).toLowerCase();
+    // }
+
+    console.log('q: ' + q);
+
+    if(q == "") {
+      reset_search();
+      return;
+    }
+
+    $('#articles li').filter(function(i) {
+      var article = $(this);
+      return article.text().toLowerCase().indexOf(q) < 0;
+    }).animate({height: 0, opacity: 0}, {queue: false, duration: 500});
+  }
+  $('#search').show();
+    //.keypress(refresh_search)
+  $('#search input')
+    .bind("search", refresh_search);
+    // .bind("click", refresh_search)
+    // .bind("cut", refresh_search)
+    // .bind("paste", refresh_search);
 });
+
+/* Setup search
+
+If onsearch is supported use that
+else if oninput is used then use that
+else setup a poller to poll the value of the search box while it has focus. Stop polling when the field loses focus
+
+*/

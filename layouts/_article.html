@@ -1,5 +1,5 @@
 <% post_date = WezM::Helpers.parse_post_date(@article) %>
-<li data-id="<%= @article.identifier %>">
+<li>
   <abbr class="calender date" title="<%= post_date.iso8601 %>">
     <span class="day"><%= post_date.day %></span>
     <span class="month"><%= post_date.strftime('%b') %></span>

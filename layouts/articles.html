@@ -2,24 +2,6 @@
 <html>
 <head>
   <%= render '_head' %>
-  <script src="/js/jquery.quicksand.min.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript" charset="utf-8">
-    jQuery(function() {
-      function search_handler(e) {
-        var input = $(this);
-        var value = input.val();
-        // var q = (value + String.fromCharCode(e.which)).toLowerCase();
-        var q = value.toLowerCase();
-
-        $('#articles li').filter(function(i) {
-          var article = $(this);
-          return article.text().toLowerCase().indexOf(q) < 0;
-        }).animate({height: 0, opacity: 0}, {queue: false, duration: 500});
-      }
-      $('#search').show();
-      $('#search input').keypress(search_handler).change(search_handler).focus();
-    });
-  </script>
 </head>
 <body class="articles">
   <%= render '_header' %>
@@ -49,7 +31,7 @@
       <li id="search">
         <fieldset>
           <label for="query">Search</label>
-          <input type="search" name="q" id="query" value="" />
+          <input id="query" type="search" incremental="" results="0" placeholder="Search Articles">
         </fieldset>
       </li>
     </nav>
