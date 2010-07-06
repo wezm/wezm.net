@@ -9,41 +9,49 @@ jQuery(function() {
     $('#articles li').css({height: 'auto', opacity: 1.0});
   }
 
-  function refresh_search(e) {
-    var input = $(this);
+  function refresh_search(elem) {
+    var input = elem || $(this); // Pass a jQuery object or use this
     var value = input.val() || "";
 
     var q = value.toLowerCase();
-    //if (e.which == 32 || (65 <= e.which && e.which <= 65 + 25) || (97 <= e.which && e.which <= 97 + 25))
-    // if(e.which >= 32) {
-    //   q += String.fromCharCode(e.which).toLowerCase();
-    // }
-
-    console.log('q: ' + q);
-
-    if(q == "") {
-      reset_search();
-      return;
-    }
-
-    $('#articles li').filter(function(i) {
+    $('#articles li').each(function(i) {
       var article = $(this);
-      return article.text().toLowerCase().indexOf(q) < 0;
-    }).animate({height: 0, opacity: 0}, {queue: false, duration: 500});
+      var style;
+      if(article.text().toLowerCase().indexOf(q) >= 0) {
+        style = {height: 'show', opacity: 1.0}
+      }
+      else {
+        style = {height: 'hide', opacity: 0}
+      }
+      if(article.css('opacity') != style.opacity) article.animate(style, {queue: false, duration: 500});
+    });
   }
   $('#search').show();
-    //.keypress(refresh_search)
-  $('#search input')
-    .bind("search", refresh_search);
-    // .bind("click", refresh_search)
-    // .bind("cut", refresh_search)
-    // .bind("paste", refresh_search);
+
+  var input = $('#search input');
+  if(input.length > 0) {
+    // Setup incremental search on Articles pages
+    if(!(input.attr("onsearch") === undefined)) {
+      console.log("Using search event for search");
+      input.bind("search", refresh_search);
+    }
+    else {
+      // Poll the field for its value while it has focus
+      console.log("Using poll mode for search");
+
+      var last_value;
+      input.focus(function() {
+        last_value = input.val();
+        input.everyTime('500ms', function() {
+          if(input.val() != last_value) {
+            refresh_search(input);
+            last_value = input.val();
+          }
+        });
+      }).blur(function() {
+        input.stopTime();
+      });
+    }
+  }
 });
 
-/* Setup search
-
-If onsearch is supported use that
-else if oninput is used then use that
-else setup a poller to poll the value of the search box while it has focus. Stop polling when the field loses focus
-
-*/
