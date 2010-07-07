@@ -26,13 +26,13 @@ jQuery(function() {
       if(article.css('opacity') != style.opacity) article.animate(style, {queue: false, duration: 500});
     });
   }
-  $('#search').show();
 
   var input = $('#search input');
   if(input.length > 0) {
     // Setup incremental search on Articles pages
-    if(!(input.attr("onsearch") === undefined)) {
+    if(input.get(0).hasOwnProperty('onsearch')) {
       console.log("Using search event for search");
+      $('#search label').hide();
       input.bind("search", refresh_search);
     }
     else {
@@ -52,6 +52,8 @@ jQuery(function() {
         input.stopTime();
       });
     }
+    input.val('');
   }
+  $('#search').show();
 });
 
