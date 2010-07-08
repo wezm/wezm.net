@@ -24,5 +24,5 @@ jQuery(function () {
   };
 
   // Populate Flickr
-  jQuery.get("/photos.xml", {dataType: 'xml'}, populate_flickr);
+  jQuery.get("/photos.xml", {}, populate_flickr);
 });
