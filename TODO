@@ -1,23 +1,28 @@
 Now
 ---
 
-* Convert to HTML5
-* Implement searching on archives page
+* Add CoRD link to mac-remote-desktop-connection-without-installer
 
-* Commits tagged #todo
 * Analytics
-* Fix search result keyboard navigation
+* Link to flickr photo feed on home
+* Commits tagged #todo
 * Content for Contact page
   * vcard microdata
 * Revise About page content
   * Add a photo to the about page
   * Get proper lens specs for About page
-* Add initial Project page content
+
+Later
+-----
+
+* Convert to HTML5
+* Add favicon
+* Disable pretty photo on iPhone
 
 Content
 -------
 
-* Implement Linux version of monothumb
+* Skip draft posts when building site
 
 Deployment
 ----------
