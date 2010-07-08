@@ -16,6 +16,12 @@
       ]
     %>
     <nav class="inline menu">
+      <li id="search">
+        <fieldset>
+          <label for="query">Search</label>
+          <input id="query" type="search" incremental="" results="0" placeholder="Search Articles">
+        </fieldset>
+      </li>
       <% menu.each do |menu_item|
         label, count = menu_item
         path = (label != "All" ? '/' + label.downcase : '') + "/articles/"
@@ -28,12 +34,6 @@
         <a href="<%= path %>"<%= %Q{class="active"} if active %>><%= label %></a> (<%= count %>)
       </li>
       <% end %>
-      <li id="search">
-        <fieldset>
-          <label for="query">Search</label>
-          <input id="query" type="search" incremental="" results="0" placeholder="Search Articles">
-        </fieldset>
-      </li>
     </nav>
 
     <ul id="articles" class="articles">
