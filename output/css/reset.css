@@ -34,9 +34,9 @@ q:before, q:after {
 }
 
 /* remember to define focus styles! */
-:focus {
-	outline: 0;
-}
+/*:focus {
+  outline: 0;
+}*/
 
 /* remember to highlight inserts somehow! */
 ins {
