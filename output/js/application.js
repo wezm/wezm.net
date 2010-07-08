@@ -10,7 +10,7 @@ jQuery(function() {
   }
 
   function refresh_search(elem) {
-    var input = elem || $(this); // Pass a jQuery object or use this
+    var input = $(elem);
     var value = input.val() || "";
 
     var q = value.toLowerCase();
@@ -33,7 +33,7 @@ jQuery(function() {
     if(input.get(0).hasOwnProperty('onsearch')) {
       console.log("Using search event for search");
       $('#search label').hide();
-      input.bind("search", refresh_search);
+      input.bind("search", function() { refresh_search(this) });
     }
     else {
       // Poll the field for its value while it has focus
