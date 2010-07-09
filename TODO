@@ -1,16 +1,19 @@
 Now
 ---
 
-* Add CoRD link to mac-remote-desktop-connection-without-installer
-
-* Analytics
-* Link to flickr photo feed on home
-* Commits tagged #todo
+* Add monothumb to GitHub
 * Content for Contact page
   * vcard microdata
 * Revise About page content
   * Add a photo to the about page
   * Get proper lens specs for About page
+
+Deployment
+----------
+
+* Add a rewrite map for old images if necessary
+* Configure feed burner feeds to point at the right URLs
+* Check that entity is resolved in title in FeedBurner
 
 Later
 -----
@@ -19,20 +22,25 @@ Later
 * Add favicon
 * Disable pretty photo on iPhone
 
-Content
--------
-
-* Skip draft posts when building site
-
-Deployment
-----------
-
-* Add a rewrite map for old permalinks and images
-* Configure feed burner feeds to point at the right URLs
-* Check that entity is resolved in title in FeedBurner
-
 Future
 ------
 
 * Make it possible to purchase the HTML
 * Make a Wordpress theme out of the site
+
+IE
+--
+
+Webpage error details
+
+User Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)
+Timestamp: Fri, 9 Jul 2010 03:36:59 UTC
+
+
+Message: Object doesn't support this property or method
+Line: 33
+Char: 5
+Code: 0
+URI: http://wezm.local/js/application.js
+
+
