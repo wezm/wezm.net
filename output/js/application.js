@@ -30,7 +30,7 @@ jQuery(function() {
   var input = $('#search input');
   if(input.length > 0) {
     // Setup incremental search on Articles pages
-    if(input.get(0).hasOwnProperty('onsearch')) {
+    if('onsearch' in input.get(0)) {
       console.log("Using search event for search");
       $('#search label').hide();
       input.bind("search", function() { refresh_search(this) });
