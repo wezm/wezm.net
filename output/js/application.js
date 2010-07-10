@@ -5,7 +5,6 @@ jQuery(function() {
 
   /*** Article Search ***/
   function reset_search() {
-    console.log("restoring items");
     $('#articles li').css({height: 'auto', opacity: 1.0});
   }
 
@@ -31,14 +30,11 @@ jQuery(function() {
   if(input.length > 0) {
     // Setup incremental search on Articles pages
     if('onsearch' in input.get(0)) {
-      console.log("Using search event for search");
       $('#search label').hide();
       input.bind("search", function() { refresh_search(this) });
     }
     else {
       // Poll the field for its value while it has focus
-      console.log("Using poll mode for search");
-
       var last_value;
       input.focus(function() {
         last_value = input.val();
