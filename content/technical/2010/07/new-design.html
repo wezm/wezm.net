@@ -1,0 +1,38 @@
+Welcome to the all new WezM.net. I've been working on this new version on and
+off for the past 8 months, I hope you like it. The new site is more than just a
+new design. I've also migrated away from [Wordpress][wp] to static HTML files,
+with content written in [Markdown][markdown]. That doesn't mean I have to
+manage everything by hand though. I use a [Ruby][ruby] tool, [nanoc][nanoc], to
+compile the content, ERB templates and [SASS][sass] CSS into the site you see.
+Some of the benefits of this arrangement are:
+
+* Pages are fast to load, cache headers are set automatically
+* No need for a database, cheap to host
+* No need to keep up with Wordpress and PHP security vulnerabilities
+* Content can be revision controlled (in [Git][git])
+* I can easily write and preview posts offline on the train
+
+[wp]: http://www.wordpress.org/
+[markdown]: http://daringfireball.net/projects/markdown/
+[nanoc]: http://nanoc.stoneship.org/
+[git]: http://www.kernel.org/pub/software/scm/git/
+[ruby]: http://ruby-lang.org/
+[sass]: http://haml-lang.com/
+
+The new site supports many of the features of the old one, with one exception:
+comments. The new site has no built-in commenting. I considered adding comments
+via [Disqus][disqus] but their commenting form feels very heavy and there was't
+a mobile optimised version at the time I checked. In place of comments I have a
+direct email and Twitter link at the end of each post.
+
+[disqus]: http://disqus.com/
+
+The aims for the new design were to provide more separation between the
+technical and personal posts that I write, whilst at the same time allowing
+them to co-exist on the same site. I also wanted a more minimal design with
+some attention to the typography used.
+
+The design is also partially fluid in that it will adapt to most screens,
+however the width of the posts is capped at a maximum to prevent the line
+becoming long and difficult to read. The design also adapts to the smaller
+screen when viewed on a mobile device.
