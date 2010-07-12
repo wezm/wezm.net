@@ -28,26 +28,19 @@ jQuery(function() {
 
   var input = $('#search input');
   if(input.length > 0) {
-    // Setup incremental search on Articles pages
-    if('onsearch' in input.get(0)) {
-      $('#search label').hide();
-      input.bind("search", function() { refresh_search(this) });
-    }
-    else {
-      // Poll the field for its value while it has focus
-      var last_value;
-      input.focus(function() {
-        last_value = input.val();
-        input.everyTime('500ms', function() {
-          if(input.val() != last_value) {
-            refresh_search(input);
-            last_value = input.val();
-          }
-        });
-      }).blur(function() {
-        input.stopTime();
+    // Poll the field for its value while it has focus
+    var last_value;
+    input.focus(function() {
+      last_value = input.val();
+      input.everyTime('500ms', function() {
+        if(input.val() != last_value) {
+          refresh_search(input);
+          last_value = input.val();
+        }
       });
-    }
+    }).blur(function() {
+      input.stopTime();
+    });
     input.val('');
   }
   $('#search').show();
