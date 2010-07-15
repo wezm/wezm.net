@@ -1,26 +1,25 @@
 Now
 ---
 
-* Add monothumb to GitHub
-* QA links on new design page
-* Short urls on new posts
-* Revise About page content
-  * Add a photo to the about page
-  * Get proper lens specs for About page
+* Setup monothumb on server
+  * Exclude photo and photos.xml from deploy:rsync
 
 Deployment
 ----------
 
-* Configure feed burner feeds to point at the right URLs
-* Check that entity is resolved in title in FeedBurner
 * Move Wordpress to old. and add robots.txt
 
 Later
 -----
 
+* Add monothumb to GitHub
+* Add google tracking to Something to add box
+* Revise About page content
+  * Get proper lens specs for About page
 * Fully convert to HTML5
   * Microdata on About/Contact pages
 * Add favicon
+* Add weights to sitemap
 
 Future
 ------
