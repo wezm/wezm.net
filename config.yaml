@@ -45,5 +45,5 @@ base_url: 'http://www.wezm.net'
 deploy:
   default:
     dst:     "wezm@www.wezm.net:www"
-    options: [ '-avz', '--exclude=".svn"' ]
+    options: [ '-avz', '--delete', '--exclude=".svn"' ]
 
