@@ -13,7 +13,7 @@ jQuery(function () {
       var image = {
         href: photo.attr('url_m'),
         src: '/images/photos.jpg',
-        alt: photo.attr('title'),
+        alt: photo.attr('title')
       };
       var li = $(render_image(image));
       $('img', li).css('left', (i * -75) + 'px');
