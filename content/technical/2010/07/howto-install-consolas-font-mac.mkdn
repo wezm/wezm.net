@@ -1,0 +1,44 @@
+I've [previously](/technical/2009/03/install-consolas-mac-osx/)
+[written](/technical/2009/03/consolas-on-mac-update/)
+[about](/technical/2009/09/font-smoothing-in-snow-leopard/) installing the
+Consolas font on Mac OS X. This post aims to bundle up those previous posts
+into a single concise reference.
+
+1. Download the Open XML File Format Converter for Mac from the
+   [Microsoft Mactopia download page][download].
+1. Double click the disk image if it wasn't automatically mounted. You will
+   see an Open XML File Format Converter meta package (.mpkg).
+1. Right click (or Ctrl-click) the meta package and choose "Show Package Contents".
+1. In the Finder window that open "Contents", then "Packages".
+1. Double click "OpenXML\_all\_fonts.pkg", which will run the installer.
+
+[download]: http://www.microsoft.com/mac/downloads.mspx
+
+At this point Consolas is now installed but depending on your font smoothing
+settings it may look a bit thing and ugly. This can be fixed by adjusting your
+font smoothing settings.
+
+For Mac OS X Snow Leopard its necessary to set the right value in the Terminal
+because Apple removed it from System Preferences:
+
+1. Open Terminal (Applications > Utilities > Terminal)
+1. Copy and paste the following at the terminal prompt and press Return:
+
+    defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+
+For the Terminal shy, this is what the command is doing: The
+[`defaults`][defaults] command manipulates the user defaults, also known as
+preferences. This particular use of it sets the AppleFontSmoothing setting at
+the global (I.e. all users or system) level to the integer 2, which corresponds
+to the Medium font smoothing setting in previous versions of Mac OS X. 
+
+[defaults]: http://developer.apple.com/DOCUMENTATION/DARWIN/Reference/ManPages/man1/defaults.1.html
+
+For Mac OS X Leopard or earlier its easier:
+
+1. Open System Preferences
+1. Click "Appearance"
+1. At the bottom, set Font smoothing to, "Medium (best for Flat Panel)"
+
+You will need to restart any running applications for them to pick up the new
+font smoothing settings.
