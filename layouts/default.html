@@ -6,7 +6,7 @@
 <body<%= %Q( class="#{@item[:body_class]}") if @item[:body_class] %>>
   <%= render '_header' %>
   <div id="content">
-    <h1><a href="<%= @item.reps.first.path %>"><%= @item[:title] %></a></h1>
+    <h1><a href="<%= @item.reps.first.path %>"><%=h @item[:title] %></a></h1>
     <%= yield %>
   </div>
   <%= render '_footer' %>

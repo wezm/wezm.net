@@ -6,7 +6,7 @@
 <body class="articles">
   <%= render '_header' %>
   <div id="content">
-    <h1>Archives</h1>
+    <h1><%= h(@item[:title] || 'Articles') %></h1>
 
     <%
       menu = [
