@@ -1,22 +1,45 @@
 I've [previously](/technical/2009/03/install-consolas-mac-osx/)
 [written](/technical/2009/03/consolas-on-mac-update/)
 [about](/technical/2009/09/font-smoothing-in-snow-leopard/) installing the
-Consolas font on Mac OS X. This post aims to bundle up those previous posts
-into a single concise reference.
+Consolas font on Mac OS X. This post bundles up those posts
+into a single reference.
+
+Installation
+------------
 
 1. Download the Open XML File Format Converter for Mac from the
    [Microsoft Mactopia download page][download].
-1. Double click the disk image if it wasn't automatically mounted. You will
+2. Double click the disk image if it wasn't automatically mounted. You will
    see an Open XML File Format Converter meta package (.mpkg).
-1. Right click (or Ctrl-click) the meta package and choose "Show Package Contents".
-1. In the Finder window that open "Contents", then "Packages".
-1. Double click "OpenXML\_all\_fonts.pkg", which will run the installer.
+3. Right click (or Control-click) the meta package and choose "Show Package Contents".
+4. In the Finder window that opens, click "Contents", then "Packages".
+5. Double click "OpenXML\_all\_fonts.pkg", which will run the installer.
 
 [download]: http://www.microsoft.com/mac/downloads.mspx
 
+<figure>
+  <a href="/images/2010/08/open-xml-converter-show-package-contents.png" rel="prettyPhoto[openxml]"><img src="/images/2010/08/open-xml-converter-show-package-contents-small.jpg" width="600" height="325" alt="Step 1: Show Package Contents" /></a>
+  <figcaption><span class="label">Step 3:</span> Show Package Contents</figcaption>
+<figure>
+
+<figure>
+  <a href="/images/2010/08/open-xml-converter-all-fonts.png" rel="prettyPhoto[openxml]"><img src="/images/2010/08/open-xml-converter-all-fonts-small.jpg" width="600" height="180" alt="Step 4: Navigating to the package" /></a>
+  <figcaption><span class="label">Step 4:</span> Navigating to the package</figcaption>
+</figure>
+
+<figure>
+  <a href="/images/2010/08/open-xml-converter-all-fonts-installer.png" rel="prettyPhoto[openxml]"><img src="/images/2010/08/open-xml-converter-all-fonts-installer-small.jpg" width="600" height="426" alt="Step 5: Running the OpenXML_all_fonts.pkg installer"></a>
+  <figcaption><span class="label">Step 5:</span> Running the OpenXML_all_fonts.pkg installer</figcaption>
+</figure>
+
+Fine Tuning
+-----------
+
 At this point Consolas is now installed but depending on your font smoothing
-settings it may look a bit thing and ugly. This can be fixed by adjusting your
+settings it [may look a bit thin and ugly][smoothing]. This can be fixed by adjusting your
 font smoothing settings.
+
+[smoothing]: /technical/2009/09/font-smoothing-in-snow-leopard/
 
 For Mac OS X Snow Leopard its necessary to set the right value in the Terminal
 because Apple removed it from System Preferences:
