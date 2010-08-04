@@ -9,7 +9,7 @@ body
 
 
 // HTML5 expectations - should go in reset perhaps
-header, footer, nav, article
+header, footer, nav, article, figure, figcaption
   display: block
 
 
@@ -112,6 +112,18 @@ blockquote
   border-left: 2px solid #999
   padding-left: 1em
   margin: 0 0 1em 0
+
+figure
+  margin: 1em 0
+
+figcaption
+  font-size: small
+  text-align: center
+  font-style: italic
+
+  .label
+    font-weight: bold
+
 
 
 body > header
@@ -356,7 +368,6 @@ img.feed-icon
   text-align: center
   display: block
   margin: 10px auto
-
 
 #content
   .clear

@@ -20,7 +20,6 @@ jQuery(function () {
       li.css("background-position", (i * -75) + 'px -75px');
       ul.append(li);
     });
-    $("a[rel^='prettyPhoto']").prettyPhoto({theme: "facebook"});
   };
 
   // Populate Flickr

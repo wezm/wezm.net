@@ -1,0 +1,67 @@
+I've [previously](/technical/2009/03/install-consolas-mac-osx/)
+[written](/technical/2009/03/consolas-on-mac-update/)
+[about](/technical/2009/09/font-smoothing-in-snow-leopard/) installing the
+Consolas font on Mac OS X. This post bundles up those posts
+into a single reference.
+
+Installation
+------------
+
+1. Download the Open XML File Format Converter for Mac from the
+   [Microsoft Mactopia download page][download].
+2. Double click the disk image if it wasn't automatically mounted. You will
+   see an Open XML File Format Converter meta package (.mpkg).
+3. Right click (or Control-click) the meta package and choose "Show Package Contents".
+4. In the Finder window that opens, click "Contents", then "Packages".
+5. Double click "OpenXML\_all\_fonts.pkg", which will run the installer.
+
+[download]: http://www.microsoft.com/mac/downloads.mspx
+
+<figure>
+  <a href="/images/2010/08/open-xml-converter-show-package-contents.png" rel="prettyPhoto[openxml]"><img src="/images/2010/08/open-xml-converter-show-package-contents-small.jpg" width="600" height="325" alt="Step 1: Show Package Contents" /></a>
+  <figcaption><span class="label">Step 3:</span> Show Package Contents</figcaption>
+<figure>
+
+<figure>
+  <a href="/images/2010/08/open-xml-converter-all-fonts.png" rel="prettyPhoto[openxml]"><img src="/images/2010/08/open-xml-converter-all-fonts-small.jpg" width="600" height="180" alt="Step 4: Navigating to the package" /></a>
+  <figcaption><span class="label">Step 4:</span> Navigating to the package</figcaption>
+</figure>
+
+<figure>
+  <a href="/images/2010/08/open-xml-converter-all-fonts-installer.png" rel="prettyPhoto[openxml]"><img src="/images/2010/08/open-xml-converter-all-fonts-installer-small.jpg" width="600" height="426" alt="Step 5: Running the OpenXML_all_fonts.pkg installer"></a>
+  <figcaption><span class="label">Step 5:</span> Running the OpenXML_all_fonts.pkg installer</figcaption>
+</figure>
+
+Fine Tuning
+-----------
+
+At this point Consolas is now installed, but depending on your font smoothing
+settings it [may look a bit thin and ugly][smoothing]. This can be fixed by
+adjusting these settings.
+
+[smoothing]: /technical/2009/09/font-smoothing-in-snow-leopard/
+
+For Mac OS X Snow Leopard its necessary to set the right value in the Terminal
+because Apple removed it from System Preferences:
+
+1. Open Terminal (Applications > Utilities > Terminal)
+1. Copy and paste the following at the terminal prompt and press Return:
+
+    `defaults -currentHost write -globalDomain AppleFontSmoothing -int 2`
+
+For the Terminal shy, this is what the command is doing: The
+[`defaults`][defaults] command manipulates the user defaults, also known as
+preferences. This particular use of it sets the AppleFontSmoothing setting at
+the global (I.e. all users or system) level to the integer 2, which corresponds
+to the Medium font smoothing setting in previous versions of Mac OS X. 
+
+[defaults]: http://developer.apple.com/DOCUMENTATION/DARWIN/Reference/ManPages/man1/defaults.1.html
+
+For Mac OS X Leopard or earlier its easier:
+
+1. Open System Preferences
+1. Click "Appearance"
+1. At the bottom, set Font smoothing to, "Medium (best for Flat Panel)"
+
+You will need to restart any running applications for them to pick up the new
+font smoothing settings.
