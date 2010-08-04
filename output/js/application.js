@@ -44,5 +44,7 @@ jQuery(function() {
     input.val('');
   }
   $('#search').show();
-});
 
+  // Enable light box
+  $("a[rel^='prettyPhoto']").prettyPhoto({theme: "facebook"});
+});
