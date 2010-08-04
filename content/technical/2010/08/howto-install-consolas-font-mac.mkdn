@@ -35,9 +35,9 @@ Installation
 Fine Tuning
 -----------
 
-At this point Consolas is now installed but depending on your font smoothing
-settings it [may look a bit thin and ugly][smoothing]. This can be fixed by adjusting your
-font smoothing settings.
+At this point Consolas is now installed, but depending on your font smoothing
+settings it [may look a bit thin and ugly][smoothing]. This can be fixed by
+adjusting these settings.
 
 [smoothing]: /technical/2009/09/font-smoothing-in-snow-leopard/
 
@@ -47,7 +47,7 @@ because Apple removed it from System Preferences:
 1. Open Terminal (Applications > Utilities > Terminal)
 1. Copy and paste the following at the terminal prompt and press Return:
 
-    defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+    `defaults -currentHost write -globalDomain AppleFontSmoothing -int 2`
 
 For the Terminal shy, this is what the command is doing: The
 [`defaults`][defaults] command manipulates the user defaults, also known as
