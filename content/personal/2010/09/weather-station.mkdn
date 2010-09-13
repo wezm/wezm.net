@@ -1,0 +1,66 @@
+For my 30th birthday a group of my friends bought me a [La Crosse
+WS2355][WS2355] weather station. Over the weekend I installed it.
+I mounted the wind speed
+(anemometer) and and direction sensors to the mast of our TV antenna.
+
+<figure>
+  <a href="/images/2010/09/_MG_9070.jpg" rel="prettyPhoto[weather]"><img src="/images/2010/09/_MG_9070-small.jpg" width="400" height="266" alt="Anemometer" /></a>
+  <figcaption>Anemometer</figcaption>
+</figure>
+
+The roof of the house seemed like the logical place for the rain gauge since
+there's trees overhead on most of the rest of our block. I bolted the rain
+gauge to a piece of aluminium that Dad had lying the around in his shed. I put
+a slight bend at the end to get the gauge level. I then pop-riveted the bracket
+to the roof.
+
+<figure>
+  <a href="/images/2010/09/_MG_9066.jpg" rel="prettyPhoto[weather]"><img src="/images/2010/09/_MG_9066-small.jpg" width="266" height="400" alt="Rain Gauge Mounting Bracket" /></a>
+  <figcaption>Rain Gauge Mounting Bracket</figcaption>
+</figure>
+
+<figure>
+  <a href="/images/2010/09/_MG_9067.jpg" rel="prettyPhoto[weather]"><img src="/images/2010/09/_MG_9067-small.jpg" width="400" height="266" alt="Rain Gauge Bolted to Mounting Bracket" /></a>
+  <figcaption>Rain Gauge Bolted to Mounting Bracket</figcaption>
+</figure>
+
+<figure>
+  <a href="/images/2010/09/_MG_9068.jpg" rel="prettyPhoto[weather]"><img src="/images/2010/09/_MG_9068-small.jpg" width="400" height="266" alt="Rain Gauge Pop-Riveted to Roof" /></a>
+  <figcaption>Rain Gauge Pop-Riveted to Roof</figcaption>
+</figure>
+
+<figure>
+  <a href="/images/2010/09/_MG_9069.jpg" rel="prettyPhoto[weather]"><img src="/images/2010/09/_MG_9069-small.jpg" width="400" height="266" alt="Finished Rain Gauge" /></a>
+  <figcaption>Finished Rain Gauge</figcaption>
+</figure>
+
+The thermomometer/hygrometer under the eave of the house, near the TV
+antenna. I bundled up the metres of extra cable between the
+thermomometer/hygrometer and the other two sensors with left over cable ties.
+The bundles hang on a cheap hook that I had in the shed. The end result is
+relatively tidy and tucked away from the elements.
+
+<figure>
+  <a href="/images/2010/09/_MG_9081.jpg" rel="prettyPhoto[weather]"><img src="/images/2010/09/_MG_9081-small.jpg" width="400" height="266" alt="Thermomometer/Hygrometer" /></a>
+  <figcaption>Thermomometer/Hygrometer</figcaption>
+</figure>
+
+I opted to have the sensors talk to the display via the 433Mhz wireless
+connection to save having to run wires in through the wall or roof. The
+downside of this is readings every ~130 seconds instead of every 8 seconds.
+This is mainly an issue for the wind speed/direction but the temperature is
+what I'm most interested in.
+
+<figure>
+  <a href="/images/2010/09/_IM_9078-9080.jpg" rel="prettyPhoto[weather]"><img src="/images/2010/09/_IM_9078-9080-small.jpg" width="266" height="400" alt="The Finished Installation" /></a>
+  <figcaption>The Finished Installation</figcaption>
+<figure>
+
+To log and upload the weather readings to [http://weather.wezm.net/][weather]
+I'm using the [wview][wview] weather station software. wview is running on the
+Mac mini connected to our TV. The site layout is pretty basic so I hope to come
+up with a cleaner design in the coming weeks.
+
+[WS2355]: http://www.lacrossetechnology.com.au/shop2/product_info.php?cPath=21&products_id=93
+[wview]: http://www.wviewweather.com/
+[weather]: http://weather.wezm.net/
