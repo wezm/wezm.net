@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render '_head' %>
+  <script src="/js/dygraph-combined.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/mojo.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/weather.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="weather">
+  <%= render '_header' %>
+  <div id="content">
+    <h1><a href="<%= @item.reps.first.path %>"><%=h @item[:title] %></a></h1>
+    <%= yield %>
+  </div>
+  <%= render '_footer' %>
+</body>
+</html>
