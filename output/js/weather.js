@@ -33,6 +33,41 @@ jQuery(function() {
       };
 
       jQuery.plot(self, data.history, options);
+
+
+      $("#year").click(function () {
+          $.plot(self, data.history, {
+            xaxis: {
+                mode: "time",
+                minTickSize: [1, "month"] //,
+                // min: (new Date("1990/01/01")).getTime(),
+                // max: (new Date()).getTime()
+            }
+            
+          });
+      });
+
+      $("#month").click(function () {
+          $.plot(self, data.history, {
+              xaxis: {
+                  mode: "time",
+                  min: (new Date("2010/08/21")).getTime(),
+                  max: (new Date()).getTime()
+              }
+          });
+      });
+
+      $("#day").click(function () {
+          $.plot(self, data.history, {
+              xaxis: {
+                  mode: "time",
+                  min: (new Date("2010/09/21 00:00")).getTime(),
+                  max: (new Date()).getTime()
+              }
+          });
+      });
+
     });
+    
   });
 });
