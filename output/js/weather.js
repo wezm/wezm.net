@@ -16,19 +16,12 @@ jQuery(function() {
 
     // Populate the current conditions
     var current_div = render_current(data.current);
-    // $(current_div).replace('.loading');
     $('.loading').replaceWith(current_div)
 
+    // Populate the charts
     $('.temperature.chart').each(function() {
       var self = this;
-      var g = new Dygraph(
-        self,
-        data.history,
-        {
-          labels: ['Date', 'Indoor Temperature', 'Outdoor Temperature'],
-          rollPeriod: 3,
-        }
-      );
+      jQuery.plot(self, data.history, {});
     });
   });
 });
