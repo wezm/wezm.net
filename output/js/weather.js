@@ -21,7 +21,18 @@ jQuery(function() {
     // Populate the charts
     $('.temperature.chart').each(function() {
       var self = this;
-      jQuery.plot(self, data.history, {});
+
+      var options = {
+        // series: {
+        //   lines: { show: true },
+        //   points: { show: true }
+        // }
+        xaxis: {
+          mode: "time"
+        }
+      };
+
+      jQuery.plot(self, data.history, options);
     });
   });
 });
