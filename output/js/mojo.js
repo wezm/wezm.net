@@ -6,7 +6,7 @@
     
     // --- Version
     
-    version: '0.2.0',
+    version: '0.3.0',
     
    /**
     * Escape HTML.
@@ -33,8 +33,11 @@
      * @api public
      */
 
-    normalize: function(object) {
-      return typeof object == 'function' ? object() : object
+    normalize: function(object, property) {
+      if(property === undefined)
+        return typeof object == 'function' ? object() : object
+      else
+        return typeof object[property] == 'function' ? object[property]() : object[property]
     },
 
     /**
