@@ -14,3 +14,25 @@ written in Lua. The Lua one is the one currently in use.
 
 [flickr]: http://www.flickr.com/photos/wezm/
 [github]: http://github.com/wezm
+
+Weather Station
+---------------
+
+I have a weather station at my home for keeping track of the local conditions.
+I added support for [SQLite][sqlite] logging to [my fork][open2300fork] of the
+[Open2300][open2300] project. The weather station is connected to our TV
+computer, which is a Mac mini. Periodically it logs the current conditions,
+uploads them to my server and invokes a [lua program][weather-tools] to generate
+a [JSON][json] file, which is used on the [Weather page][weather].
+
+[sqlite]: http://www.sqlite.org/
+[open2300]: http://www.lavrsen.dk/foswiki/bin/view/Open2300/WebHome
+[open2300fork]: http://github.com/wezm/open2300
+[weather]: http://weather.wezm.net/
+[json]: http://www.json.org/
+[weather-tools]: http://github.com/wezm/weather-tools
+
+See the following posts for more information on the weather station:
+
+* [Weather Station Install](/personal/2010/09/weather-station/)
+* [Weather Station Software Update](/technical/2010/09/weather-station-software/)

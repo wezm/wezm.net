@@ -2,3 +2,4 @@ output/*/*/*/*/*.html
 output/fonts/*
 tmp/*
 .*.swp
+output/weather.json

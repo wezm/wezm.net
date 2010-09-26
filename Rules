@@ -5,6 +5,11 @@ compile '/' do
   filter :rubypants
 end
 
+compile '/weather/' do
+  layout 'weather'
+  filter :erb
+end
+
 compile %r{/(?:technical|personal|)articles/(page/|)} do
   filter :erb
   layout 'articles'

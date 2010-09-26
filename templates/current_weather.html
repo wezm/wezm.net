@@ -1,0 +1,16 @@
+<div id="current">
+  <figure class="forecast">
+    <img src="/images/weather/{{forecast}}.png" width="48" height="48" alt="{{forecast}}" />
+    <figcaption>Forecast</figcaption>
+  </figure>
+
+  <div class="temperature">
+    <div class="current temperature">{{temperature}}&deg;C</div>
+    <div class="minmax">
+      Minimum <span class="min temperature">{{min_temp}}&deg;C</span> at
+      <time datetime="{{min_datetime}}">{{minDateString}}</time>
+      Maximum <span class="max temperature">{{max_temp}}&deg;C</span> at
+      <time datetime="{{max_datetime}}">{{maxDateString}}</time>
+    </div>
+  </div>
+</div>
