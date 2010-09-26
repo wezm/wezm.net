@@ -1,0 +1,37 @@
+Two weeks ago when I [installed my weather station][install] I setup the wview
+software to log the current conditions and generate and upload
+HTML and graphs to [http://weather.wezm.net/][weather]. wview seemed like the
+perfect tool for the job but unfortunately it proved unreliable, even with the
+built in process monitoring. After a few hours of running fine it appeared the
+HTML generation process would hang, preventing any further updates to the
+website.
+
+[install]: /personal/2010/09/weather-station/
+[weather]: http://weather.wezm.net/
+
+wview has a lot of functionality and thus a lot of code, which turned me
+off trying to track down the bug. I looked around for
+alternatives and found [Open2300][open2300], which is a core collection of
+functions for communicating with a LaCrosse WS-23xx weather station and a set
+of tools. wview logged its observations to an SQLite database, which seemed
+appropriate for this application. There were tools in Open2300 to log current
+conditions to MySQL and PostgreSQL databases but not SQLite. So last weekend
+I spend some of the afternoon learning enough of the SQLite C API to add
+such a tool. The result is in my 
+[git mirror of the Open2300 SVN repo][open2300git]. Once the SQLite tool is
+tidied up a bit more I'll submit it upstream.
+
+[open2300]: http://www.lavrsen.dk/foswiki/bin/view/Open2300/WebHome
+[open2300git]: http://github.com/wezm/open2300
+
+Now I had a database of observations I needed to replace the HTML pages
+that wview was previously generated. To do this I wrote a small
+[Lua tool][weather-tools]
+to query the database and output the results to a [JSON][json] file. The
+JSON is used on the new [weather page][weather], which is largely populated
+by Javascript and uses the [flot charting library][flot] to graph the
+temperature history.
+
+[json]: http://www.json.org/
+[flot]: http://code.google.com/p/flot/
+[weather-tools]: http://github.com/wezm/weather-tools
