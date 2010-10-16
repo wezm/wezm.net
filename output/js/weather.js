@@ -68,13 +68,11 @@ function timeString(date) {
   ].join(':')
 }
 
-jQuery(function() {
-  jQuery.getJSON("/weather.json", function(data, status) {
-    var count = data.history.length;
-    for(var i = 0; i < count; i++) {
-      data.history[i][0] = new Date(data.history[i][0]);
-    }
+//function newUTCDate()
 
+jQuery(function() {
+  var now = new Date();
+  jQuery.getJSON("/weather.json", function(data, status) {
     // Populate the current conditions
     var current = {
       temperature: data.current.temperature_out,
@@ -105,50 +103,56 @@ jQuery(function() {
     $('.loading').replaceWith(current_div)
 
     // Populate the charts
-    $('.temperature.chart .canvas').each(function() {
-      var self = this;
+    var count = data.history.length;
+    for(var i = 0; i < count; i++) {
+      data.history[i][0] = new Date(data.history[i][0] - (now.getTimezoneOffset() * 60 * 1000));
+    }
+    jQuery.plot('.temperature.chart', data.history, {
+      xaxis: {
+        mode: "time"
+      }
+    });
 
-      var options = {
-        xaxis: {
-          mode: "time"
+    // Rain
+    var total_rain_today = 0;
+    jQuery.each(data.rain.today, function(idx, reading) {
+      total_rain_today += reading[1];
+      reading[0] = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), reading[0]));
+    });
+    $("section.rain .total").html(Math.round(total_rain_today * 10) / 10)
+
+    jQuery.each(data.rain.history, function(idx, reading) {
+      var date = reading[0].split("-")
+      reading[0] = new Date(Date.UTC(date[0], date[1] - 1, date[2]));
+    });
+
+    jQuery.plot(".rainfall.today.chart", [data.rain.today], {
+      series: {
+        bars: {
+          show: true,
+          barWidth: 1000 * 60 * 60 // 1 hour
         }
-      };
+      },
+      xaxis: {
+        mode: "time",
+        min: new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate())),
+        max: new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 23, 59, 59)),
+      }
+    });
 
-      jQuery.plot(self, data.history, options);
-
-      /*
-      $("#year").click(function () {
-          $.plot(self, data.history, {
-            xaxis: {
-                mode: "time",
-                minTickSize: [1, "month"] //,
-                // min: (new Date("1990/01/01")).getTime(),
-                // max: (new Date()).getTime()
-            }
-
-          });
-      });
-
-      $("#month").click(function () {
-          $.plot(self, data.history, {
-              xaxis: {
-                  mode: "time",
-                  min: (new Date("2010/08/21")).getTime(),
-                  max: (new Date()).getTime()
-              }
-          });
-      });
-
-      $("#day").click(function () {
-          $.plot(self, data.history, {
-              xaxis: {
-                  mode: "time",
-                  min: (new Date("2010/09/21 00:00")).getTime(),
-                  max: (new Date()).getTime()
-              }
-          });
-      });
-      */
+    jQuery.plot(".rainfall.week.chart", [data.rain.history], {
+      series: {
+        bars: {
+          show: true,
+          barWidth: 1000 * 60 * 60 * 24 // 1 day
+        }
+      },
+      xaxis: {
+        // min: 0,
+        // max: 24
+        mode: "time",
+        minTickSize: [1, "day"]
+      }
     });
   });
 });
