@@ -1,0 +1,87 @@
+Most developers that work on a Mac are aware of the [MacPorts][macports]
+project that provides a build framework for open source software on Mac OS X.
+MacPorts is certainly not the only option for installing this type of software
+though. Other options include:
+
+[macports]: http://www.macports.org/
+
+* [Fink](http://www.finkproject.org/)
+* [Homebrew](http://mxcl.github.com/homebrew/)
+* [Rudix](http://rudix.org/)
+* [pkgsrc][pkgsrc]
+
+Each of these has its benefits. For my package management needs I use the
+lesser known [pkgsrc][pkgsrc]. pkgsrc is maintained by the [NetBSD][netbsd]
+project and aims to provide a cross platform framework for building open-source
+software. The supported platforms include *BSD, Solaris, Linux and Mac OS X.
+It contains over 8000 packages.
+
+[pkgsrc]: http://www.pkgsrc.org/
+[netbsd]: http://www.netbsd.org/
+
+For a user used to MacPorts or Homebrew pkgsrc might seem a bit clunky.
+Packages are built by changing into the directory for a project and issuing a
+make command. However if you can move past that it offers some benefits that I
+don't think the others do.
+
+## Security
+
+The first of the pkgsrc benefits is proper management of vulnerabilities in the
+managed software. The project maintains a database of vulnerabilities that is
+consulted whenever you attempt to install a package and won't let you install a
+vulnerable package without manual intervention. There is also a pkg_audit
+command that checks the currently installed packages against the
+vulnerabilities database. The recommended setup has the database updated and
+pkg_audit run daily via cron.
+
+Whilst tracking security vulnerabilities on a local dev machine may not be as
+important as doing so for a publicly accessible server I think its still good
+practice to ensure your third-party software isn't exposing you to unnecessary
+risks. Also if you were to use a Mac as a publicly accessible server I think
+this vulnerability tracking would be very important.
+
+## Quarterly Releases
+
+Most of the Mac OS X package managers just slowly tick along as the maintainers
+update their packages. Installing a set of packages one day may install
+different versions the next. For example if you have a team working on a
+project that requires libxml2, the version each of the team members will get is
+whatever was current at the time they installed it.
+
+This can be particularly problematic when the package changes enough that it
+breaks the usage in a project. Resulting in a situation where it works for most
+people except the poor person who just joined the project and it trying to get
+all the dependencies installed. Thus forcing the project members to all upgrade
+to the new version. (This actually happened to me)
+
+pkgsrc handles this by making quarterly stable releases. These releases are a
+snapshot of a stable set of packages that are only updated to apply security
+patches. A team all tracking a given pkgsrc stable release will therefore all
+get the same version of the software.
+
+The quarterly releases also have benefits to anyone deploying a Mac server as
+it allows known versions of the packages to be developed against and then
+deployed on the server no matter how much time elapses.
+
+## Bulk Builds
+
+The NetBSD project maintains a bunch of pkgsrc bulk build servers for various
+versions and architectures of NetBSD and other systems (sadly not Darwin
+though). These bulk build servers regularly build every package that pkgsrc
+tracks and report back on any failures. This continuous testing feeds into the
+stable releases and also helps to ensure that all the packages are compatible
+with each other. I have in the past has instances with MacPorts where updates
+to one package broke others. The [pkgsrc-bulk mailing list][pkgsrcbulk]
+receives the result of the bulk builds.
+
+[pkgsrcbulk]: http://mail-index.NetBSD.org/pkgsrc-bulk/
+
+## Conclusion
+
+In this post I've outlined some of the benefits that pkgsrc can bring to Mac
+users. Such as a large library of over 8000 packages, security vulnerability
+tracking and stable releases. Its these reasons why I choose to use pkgsrc on
+Mac OS X. If you're interested in installing pkgsrc checkout the [pkgsrc
+guide][guide].
+
+[guide]: http://www.netbsd.org/docs/pkgsrc/
