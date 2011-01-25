@@ -7,27 +7,44 @@ GEM
       httparty (>= 0.5.2)
       oauth2 (>= 0.1.1)
     builder (3.0.0)
+    configuration (1.2.0)
     crack (0.1.8)
     cri (1.0.1)
     faraday (0.5.4)
       addressable (~> 2.2.2)
       multipart-post (~> 1.1.0)
       rack (>= 1.1.0, < 2)
+    guard (0.3.0)
+      open_gem (~> 1.4.2)
+      thor (~> 0.14.6)
+    guard-nanoc (0.1.0)
+      guard (>= 0.2.1)
+      nanoc (>= 3.1.5)
     haml (3.0.25)
     httparty (0.7.2)
       crack (= 0.1.8)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
     mime-types (1.16)
     multi_json (0.0.5)
     multipart-post (1.1.0)
+    nanoc (3.1.6)
+      nanoc3 (>= 3.1.6)
     nanoc3 (3.1.6)
       cri (>= 1.0.0)
     nokogiri (1.4.4)
     oauth2 (0.1.1)
       faraday (~> 0.5.0)
       multi_json (~> 0.0.4)
+    open_gem (1.4.2)
+      launchy (~> 0.3.5)
     rack (1.2.1)
+    rake (0.8.7)
+    rb-fsevent (0.3.9)
     rdiscount (1.6.5)
     rubypants (0.2.0)
+    thor (0.14.6)
 
 PLATFORMS
   ruby
@@ -35,9 +52,12 @@ PLATFORMS
 DEPENDENCIES
   bitly
   builder
+  guard
+  guard-nanoc
   haml
   mime-types
-  nanoc3
+  nanoc
   nokogiri
+  rb-fsevent
   rdiscount
   rubypants
