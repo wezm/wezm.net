@@ -11,7 +11,7 @@ jQuery(function () {
     jQuery.each($('photo', data), function(i, obj) {
       var photo = $(obj);
       var image = {
-        href: photo.attr('url_m'),
+        href: photo.attr('url_z'),
         src: '/images/photos.jpg',
         alt: photo.attr('title')
       };
