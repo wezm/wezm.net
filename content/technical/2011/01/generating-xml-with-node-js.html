@@ -1,0 +1,34 @@
+For a [node.js][node] project I'm working on I wanted to generate a [Sphinx
+xmlpip2e][xmlpipe] data stream.  The options for generating XML with node.js
+seemed a bit limited. The main contender appeared to be [libmljs] but it
+segfaulted whenever I tried to use it. A browse of the issue tracker seemed to
+suggest the project was quite complex and crashing problems were not uncommon.
+
+[node]: http://nodejs.org/
+[xmlpipe]: http://sphinxsearch.com/docs/manual-1.10.html TODO
+[libmljs]: https://github.com/polotek/libxmljs
+
+So with previous experience using Tim Bray's Genx library I decieded to write
+bindings for node. The result is [node-genx], which is available via [npm].
+
+    npm install genx
+
+[node-genx]: https://github.com/wezm/node-genx
+[npm]: http://npmjs.org/
+
+Example Usage
+-------------
+
+### xmlpipe2
+
+In this example the first 10 Google search results for "node.js xml" are retrieved
+and converted into an xmlpipe2 stream, suitable for indexing with Sphinx.
+
+    
+
+### Atom Feed
+
+In this example, as in the former the first 10 Google search results for "node.js xml"
+are retrieved and converted into an Atom feed.
+
+
