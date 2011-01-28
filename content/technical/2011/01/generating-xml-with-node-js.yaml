@@ -1,6 +1,6 @@
 --- 
 title: Generating XML With node.js
-extra: Examples using my genx node module to generate XML in node.js.
+extra: Examples of using my genx node module to generate an Atom feed and Sphinx xmlpipe2 stream in node.js.
 kind: article
 section: technical
 created_at: 2011-01-28 06:18:00
