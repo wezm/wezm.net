@@ -1,34 +1,45 @@
 For a [node.js][node] project I'm working on I wanted to generate a [Sphinx
-xmlpip2e][xmlpipe] data stream.  The options for generating XML with node.js
+xmlpipe2][xmlpipe] data stream.  The options for generating XML with node.js
 seemed a bit limited. The main contender appeared to be [libmljs] but it
-segfaulted whenever I tried to use it. A browse of the issue tracker seemed to
-suggest the project was quite complex and crashing problems were not uncommon.
-
-[node]: http://nodejs.org/
-[xmlpipe]: http://sphinxsearch.com/docs/manual-1.10.html TODO
-[libmljs]: https://github.com/polotek/libxmljs
-
-So with previous experience using Tim Bray's Genx library I decieded to write
+segfaulted whenever I tried to use it. So with previous experience using Tim Bray's [Genx][genx] C library I decided to write
 bindings for node. The result is [node-genx], which is available via [npm].
 
     npm install genx
 
+[node]: http://nodejs.org/
+[xmlpipe]: http://sphinxsearch.com/docs/manual-1.10.html#xmlpipe2
+[libmljs]: https://github.com/polotek/libxmljs
 [node-genx]: https://github.com/wezm/node-genx
+[genx]: http://www.tbray.org/ongoing/When/200x/2004/02/20/GenxStatus
 [npm]: http://npmjs.org/
 
 Example Usage
 -------------
+
+Provided below are a couple of examples of using the genx module. To run them you will need the following modules, the version
+used at the time of writing is noted in brackets. The examples were developed
+against node.js v0.2.6.
+
+* jquery (1.4.4)
+* jsdom (0.1.20)
+* genx (0.8.0)
+* node-uuid (1.1.0)
+
+These packages can be installed via npm. Note that jsdom is omitted from the list because
+it is a dependency of jquery:
+
+    npm install jquery genx node-uuid
 
 ### xmlpipe2
 
 In this example the first 10 Google search results for "node.js xml" are retrieved
 and converted into an xmlpipe2 stream, suitable for indexing with Sphinx.
 
-    
+<script src="https://gist.github.com/800580.js?file=xmlpipe2.js"></script>
 
 ### Atom Feed
 
 In this example, as in the former the first 10 Google search results for "node.js xml"
 are retrieved and converted into an Atom feed.
 
-
+<script src="https://gist.github.com/796432.js?file=genx-atom.js"></script>
