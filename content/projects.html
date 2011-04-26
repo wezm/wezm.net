@@ -22,11 +22,9 @@ written in Lua. The Lua one is the one currently in use.
 node-genx
 ---------
 
-[node-genx] is a [node.js][node] binging to the [Genx][genx] XML generation
+[node-genx] is a [node.js][node] binding to the [Genx][genx] XML generation
 library.  It allows fast and correct XML generation from the Javascript based
-node.js environment.  Available for easy install on [npm] via:
-
-    npm install genx
+node.js environment.  Available for easy install via [npm].
 
 [node-genx]: https://github.com/wezm/node-genx
 [node]: http://nodejs.org/
@@ -44,15 +42,27 @@ Compiler][ragel] in the hope that it will help ensure fast and correct parsing.
 [mustache]: http://mustache.github.com/
 [ragel]: http://www.complang.org/ragel/
 
+Kyoto Client
+------------
+
+[kyoto-client][kyoto-client] is a [node.js][node] client library for the
+[Kyoto Tycoon][kyoto-tycoon] server. Kyoto Tycoon is the server component of
+the [Kyoto Cabinet][kyoto-cabinet] key-value store. kyoto-client is available
+for installation via [npm].
+
+[kyoto-client]: http://kyoto-client.org
+[kyoto-tycoon]: http://fallabs.com/kyototycoon/
+[kyoto-cabinet]: http://1978th.net/kyotocabinet/
+
 Weather Station
 ---------------
 
 I have a weather station at my home for keeping track of the local conditions.
 I added support for [SQLite][sqlite] logging to [my fork][open2300fork] of the
-[Open2300][open2300] project. The weather station is connected to our TV
-computer, which is a Mac mini. Periodically it logs the current conditions,
-uploads them to my server and invokes a [lua program][weather-tools] to generate
-a [JSON][json] file, which is used on the [Weather page][weather].
+[Open2300][open2300] project. The weather station is connected to my Mac.
+Every 5 minutes it logs the current conditions, uploads them to my server and
+invokes a [lua program][weather-tools] to generate a [JSON][json] file,
+which is used to produce the [Weather page][weather].
 
 [sqlite]: http://www.sqlite.org/
 [open2300]: http://www.lavrsen.dk/foswiki/bin/view/Open2300/WebHome
