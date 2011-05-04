@@ -5,7 +5,13 @@
 
   <div class="loading"><img src="/images/spinner.gif" width="64" height="64" alt="Loading" /> Loading</div>
 
-  <div class="temperature chart"></div>
+  <section class="extremes"></section>
+
+  <div class="temperature">
+    <h3>History</h3>
+    <button id="today">Today</button>
+    <div class="chart"></div>
+  </div>
 </section>
 
 <section class="rain">
@@ -23,3 +29,33 @@
 </section>
 
 <small>Forecast icons by <a href="http://lavana.deviantart.com/art/Flat-Weather-Icons-32021664">LavAna</a></small>
+<script id="current-template" type="text/x-handlebars-template">
+  <div id="current">
+    <figure class="forecast">
+      <img src="/images/weather/{{forecast}}.png" width="48" height="48" alt="{{forecast}}" />
+      <figcaption>Forecast</figcaption>
+    </figure>
+
+    <div class="temperature">
+      <div class="current temperature">{{temperature}}&deg;C</div>
+    </div>
+  </div>
+</script>
+<script id="extremes-template" type="text/x-handlebars-template">
+	<section class="extremes">
+  	<h3>Extremes</h3>
+    {{#extremes}}
+    <div class="extreme">
+      <time datetime="{{isoDate date}}" class="day">{{day date}}</time>
+      <div class="min">
+        Min <span class="temperature">{{min/temperature}}&deg;C</span> at
+        <time datetime="{{isoDate min/time}}">{{time min/time}}</time>
+      </div>
+      <div class="max">
+        Max <span class="temperature">{{max/temperature}}&deg;C</span> at
+        <time datetime="{{isoDate max/time}}">{{time max/time}}</time>
+      </div>
+    </div>
+    {{/extremes}}
+  </section>
+</script>

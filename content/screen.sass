@@ -442,8 +442,21 @@ body.weather
     width: 100%
     height: 320px
 
-  section.rain
+  section, section > .temperature
+    clear: both
     margin-top: 2em
+
+  .extreme
+    float: left
+    margin: 0 2em 2em 0
+
+    time.day
+      display: block
+      text-align: center
+
+    div, time
+      margin: 0.5em 0
+      font-family: $ans-serif
 
   small
     display: block
