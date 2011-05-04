@@ -2,7 +2,7 @@
 <html>
 <head>
   <%= render '_head' %>
-  <script src="/js/mojo.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/handlebars.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/home.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body class="home">
@@ -45,5 +45,11 @@
     <a href="http://www.flickr.com/photos/wezm/" class="more">More &raquo;</a>
   </section>
   <%= render '_footer' %>
+  <script id="image-template" type="text/x-handlebars-template">
+    <li>
+      <a href="{{href}}" rel="prettyPhoto[flickr]"><img src="{{src}}" alt="{{alt}}" /></a>
+    </li>
+  </script>
+
 </body>
 </html>

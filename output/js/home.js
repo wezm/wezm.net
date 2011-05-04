@@ -1,9 +1,5 @@
 jQuery(function () {
-  function render_image(o) {
-    return '<li>\n\
-  <a href="' + (Mojo.escape(Mojo.normalize(o.href))) + '" rel="prettyPhoto[flickr]"><img src="' + (Mojo.escape(Mojo.normalize(o.src))) + '" alt="' + (Mojo.escape(Mojo.normalize(o.alt))) + '" /></a>\n\
-</li>';
-  };
+  var image_template = Handlebars.compile($('#image-template').html());
 
   function populate_flickr(data, text_status) {
     var ul = $("#flickr ul");
@@ -15,7 +11,7 @@ jQuery(function () {
         src: '/images/photos.jpg',
         alt: photo.attr('title')
       };
-      var li = $(render_image(image));
+      var li = $(image_template(image));
       $('img', li).css('left', (i * -75) + 'px');
       li.css("background-position", (i * -75) + 'px -75px');
       ul.append(li);
