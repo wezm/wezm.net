@@ -42,8 +42,8 @@
   function datetimeString(date) {
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     return [
-      date.getUTCDate(),
-      months[date.getUTCMonth()],
+      date.getDate(),
+      months[date.getMonth()],
       timeString(date)
     ].join(' ')
   }
@@ -65,17 +65,10 @@
 
   // Register Handlebars date helpers
   var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-  Handlebars.registerHelper('day', function(date) {
-    return days[date.getDay()];
-  });
-
-  Handlebars.registerHelper('time', function(date) {
-    return timeString(date);
-  });
-
-  Handlebars.registerHelper('isoDate', function(date) {
-    return isoString(date);
-  });
+  Handlebars.registerHelper('day', function(date) { return days[date.getDay()] });
+  Handlebars.registerHelper('time', function(date) { return timeString(date) });
+  Handlebars.registerHelper('isoDate', function(date) { return isoString(date) });
+  Handlebars.registerHelper('datetime', function(date) { return datetimeString(date) });
 
   jQuery(function() {
     // Compile templates
@@ -87,10 +80,7 @@
       // Populate the current conditions
       var current = {
         temperature: data.current.temperature_out,
-        timestamp: function() {
-          var d = new Date(data.current.timestamp);
-          return datetimeString(d);
-        },
+        timestamp: new Date(data.current.timestamp),
         // min_temp: data.current.min.temperature,
         //       min_date: new Date(data.current.min.timestamp),
         //       min_datetime: function() {
