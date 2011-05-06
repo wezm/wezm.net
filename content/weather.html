@@ -1,17 +1,15 @@
-<p><strong>Note:</strong> The times on this page are currently wrong.</p>
-
 <section class="temperature">
   <h2>Temperature</h2>
 
   <div class="loading"><img src="/images/spinner.gif" width="64" height="64" alt="Loading" /> Loading</div>
-
-  <section class="extremes"></section>
 
   <div class="temperature">
     <h3>History</h3>
     <button id="today">Today</button>
     <div class="chart"></div>
   </div>
+
+  <section class="extremes"></section>
 </section>
 
 <section class="rain">
@@ -38,6 +36,7 @@
 
     <div class="temperature">
       <div class="current temperature">{{temperature}}&deg;C</div>
+      <time datetime="{{isoDate timestamp}}">{{datetime timestamp}}</time>
     </div>
   </div>
 </script>
