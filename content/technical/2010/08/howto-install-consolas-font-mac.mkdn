@@ -2,7 +2,10 @@ I've [previously](/technical/2009/03/install-consolas-mac-osx/)
 [written](/technical/2009/03/consolas-on-mac-update/)
 [about](/technical/2009/09/font-smoothing-in-snow-leopard/) installing the
 Consolas font on Mac OS X. This post bundles up those posts
-into a single reference.
+into a single handy reference. Following these instructions will allow you to
+use the following fonts: Calibri, Cambria, Candara, Consolas, Constantia and
+Corbel.
+
 
 Installation
 ------------
