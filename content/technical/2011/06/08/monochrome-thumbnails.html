@@ -1,0 +1,48 @@
+Ever since this version of my site went live I've been meaning to post about
+the generation of the monochrome thumbnails on the [front page](/). When I was
+building the site I wanted to include recent items from my Flickr photostream
+but didn't like the look of all the colour on a otherwise mostly monochrome
+page.
+
+The first thing I investigated was Javascript image processing libraries. The
+only main contender in that space was [xxx]. It worked but its cross browser
+support wasn't great at the time. So I moved on to writing a tool that I
+could run locally.
+
+[xxx]:
+
+I decided the tool should generate a single image with
+both the colour and monochrome versions in it (a technique known as spriting).
+Using a single image means only one HTTP request instead of forty. Being a
+programmer with an interest in Cocoa programming I created a small command line
+tool that used the Flickr API to get the details of the last twenty images in
+my photostream, fetch them and then use Core Image to convert them to
+monochrome, add both the colour and monochrome versions to the output image and
+save the result.
+
+This worked great, however when I stopped hosting my site on my Mac I thought I
+would need to run the process periodically on my Linux server, which ruled out
+Core Image. I took this as another opportunity to learn something new and 
+rewrote it in Lua using imlib2 bindings. I had to make some additions to the
+imlib bindings, which are [published on GitHub][luaimlib].
+
+[luaimlib]:
+
+I used the Lua version for some
+time but never bothered to set it up on the server since I wasn't uploading 
+photos all that frequently and it was simple enough to run locally and rsync 
+the result. I've recently switched back to the Mac version as it was simpler to
+get up and running on my new laptop.
+
+The [code is on GitHub][code] if anyone wants to do something similar. The 
+Cocoa version is on the master branch, the Lua version is on the 
+[lua branch].
+
+[code]: https://
+[lua-branch]:
+
+The current version of the processed thumbnails is shown below.
+
+<div style="overflow-x: auto;">
+  <img src="/images/photos.jpg"  />
+</div>
