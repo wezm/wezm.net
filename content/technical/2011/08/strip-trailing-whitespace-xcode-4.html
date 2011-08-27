@@ -1,0 +1,29 @@
+Xcode has a bad habit of adding trailing whitespace to code, which is a pet
+peeve of mine. It introduces irrelevant changes into diffs and is particularly
+glaring when commiting code with [GitX], which highlights it in red. In [TextMate]
+and now [Vico] I have bound the strip trailing whitespace in current document
+action to ⌃⌥⌘S (control-option-command-s). This makes it quick and easy.
+Xcode makes adding these types of actions a bit harder but I came up with a
+solution that uses the Behaviours functionality in Xcode 4. This is how I did
+it:
+
+[GitX]: http://gitx.frim.nl/
+[Vico]: http://www.vicoapp.com/
+[TextMate]: http://macromates.com/
+
+Create a shell script that invokes `sed` on each git tracked file that is
+modified. Since Xcode doesn't tell the script what the current file was and
+I didn't want to run sed over every file every time, processing tracked files
+with modifications was the best solution I could come up with. Note that the
+script also only prcocesses `.m` and `.h` files. I have my copy of the script
+in `~/Documents/strip.sh`, be sure to give it the execute permission.
+
+<script src="https://gist.github.com/1175182.js?file=strip.sh"></script>
+
+Next you need to add a behaviour to Xcode. Go to the Xcode preferences and
+click the Behaviours section, then click the + button. Name the behaviour and
+give it a keyboard shortcut. In the right pane check Run and choose the script
+you saved above. That's it. Now you can kill off that nasty whitespace with
+ease.
+
+<a href="/images/2011/08/xcode-behaviours-preferences.png" rel="prettyPhoto[xcode]"><img src="/images/2011/08/xcode-behaviours-preferences-small.png" width="600" height="423" alt="Xcode 4 Behaviours Preferences" /></a>
