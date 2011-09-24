@@ -1,0 +1,47 @@
+In my ongoing efforts to distance myself from Google I started using
+[DuckDuckGo][duck] as my default search engine. I tried the DDG Safari
+extension but didn't really like it, especially
+since it needed to add an entire new toolbar to the browser. Other
+suggestions for adding DDG to Safari involved [hacking the binary][hack]
+or other extensions, which I wasn't interested in.
+
+[duck]: http://duckduckgo.com/
+[hack]: http://hints.macworld.com/article.php?story=20030514035516436
+
+My solution to the problem was to hijack the Bing option in the default
+search box for use with DDG. **Note:** This solution assumes you will
+never want to go to the `www.bing.com` domain, not a problem for me. The
+steps to implement it are:
+
+Add an entry for `www.bing.com` to `/etc/hosts` that points the domain to
+your local machine:
+
+    127.0.0.1    www.bing.com
+
+Next configure an Apache virtual machine to respond to the `www.bing.com`
+domain and redirect the request to Duck Duck Go (or your search engine
+of choice). This works because DDG accepts the search query in the same
+query string parameter, `q`, as Bing and ignores the other Bing related
+params.
+
+`/etc/apache2/extra/httpd-vhosts.conf`:
+
+    <VirtualHost *:80>
+        ServerName www.bing.com
+        RewriteEngine On
+        RewriteRule ^/search(.*)$ http://duckduckgo.com/$1 [redirect,last]
+    </VirtualHost>
+
+For this to work you will need to have "Web Sharing" enabled in the Sharing
+preferences pane and have the the following line included in
+`/etc/apache2/httpd.conf`:
+
+    Include /private/etc/apache2/extra/httpd-vhosts.conf
+
+Restart Apache (`sudo apachectl graceful`) and set your search engine
+to Bing in Safari. Do a search and you should end up at the DDG
+results. One of the neat features of DDG is its [!bang syntax][bang],
+which allows you to search to 100s of sites directly. One of which is
+`!g` for those times when you need to fall back on Google.
+
+[bang]: http://duckduckgo.com/bang.html
