@@ -1,0 +1,59 @@
+At work we're currently having an iOS app that I'm working on styled
+by a designer. The second screen we were supplied was a pretty splash
+screen with a big logo on it. We responded saying that we didn't want to
+use Default.png like that. Our designer responded saying that was fine
+but most clients were after TODO so he does one by default. This is
+silly as it is not the intended use for the launch image.
+
+Justin Williams recently had the following to say on the topic of splash
+screens in his [On Magazines and the iPad][carpeaqua] article (emphasis
+from the article):
+
+> Remember, kids. The first rule of mobile development is that *no one
+> gives a fuck about your brand*. A splash screen with a giant logo
+> is something that makes editors and marketing directors feel good,
+> but to a user it just feels like a meaningless delay. You know that
+> feeling of frustration you get each time there’s a 15-second preroll
+> before a video on the web? That’s what a splash screen with logos and
+> advertisements is.
+
+[carpeaqua]: http://carpeaqua.com/2011/12/04/on-magazines-and-the-ipad/
+
+The Apple [iOS Human Interface Guidelines][MobileHIG] include the
+following suggestions:
+
+> Avoid taking space away from the content people care about. For
+> example, displaying a second, persistent bar at the top of the screen
+> that does nothing but display branding assets means that there’s less
+> room for content. Consider other, less intrusive ways to display
+> pervasive branding, such as subtly customizing the background of a
+> screen.
+
+> Display a launch image that closely resembles the first screen of the
+> application. This practice decreases the perceived launch time of your
+> application.
+
+> Avoid displaying an About window or a splash screen. In general, try
+> to avoid providing any type of startup experience that prevents people
+> from using your application immediately.
+
+> Supply a launch image to improve user experience.
+> 
+> Avoid using your launch image as an opportunity to provide:
+> 
+> * An "application entry experience," such as a splash screen
+> * An About window
+> * Branding elements, unless they are a static part of your
+>   application’s first screen
+>
+> Because users are likely to switch among applications frequently, you
+> should make every effort to cut launch time to a minimum, and you
+> should design a launch image that downplays the experience rather than
+> drawing attention to it.
+
+[MobileHIG]: http://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/MobileHIG.pdf
+
+The launch image is designed to make the percieved launch time of you app
+feel faster by showing something resembling the interface that will be loaded
+as quickly as possible. Displaying a logo does nothing but draw attention
+to how quickly your app loads and adds nothing to the user's experience.
