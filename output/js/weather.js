@@ -39,8 +39,9 @@
     ].join('')
   }
 
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   function datetimeString(date) {
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    if (!date) return '';
     return [
       date.getDate(),
       months[date.getMonth()],
@@ -49,6 +50,7 @@
   }
 
   function timeString(date) {
+    if (!date) return '';
     return [
       padNumber(date.getHours()),
       padNumber(date.getMinutes())
@@ -100,8 +102,13 @@
         forecast: data.current.forecast
       };
 
-      var current_div = currentTemplate(current);
-      $('.loading').replaceWith(current_div)
+      if (current.temperature === undefined) {
+        $('.loading').replaceWith($('<p>Unavailable</p>'));
+      }
+      else {
+        var current_div = currentTemplate(current);
+        $('.loading').replaceWith(current_div)
+      }
 
       // Populate the extremes
       var extremes = [];
