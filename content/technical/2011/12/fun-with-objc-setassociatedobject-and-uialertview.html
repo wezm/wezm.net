@@ -1,0 +1,45 @@
+When it comes time to present errors or other messages with UIAlertView
+it becomes immediately obvious that a more convienient interface would
+involve the use of blocks. A [search on GitHub][github-search] shows
+just about every developer has had a crack at it.
+
+[github-search]: TODO
+
+After reviewing the better options (I.e. those that actually had a
+README with more than a few lines of content) on GitHub it appeared
+that one of the challenges was how to handle memory. This stems from
+the wrapper becoming the delegate for the UIAlertView but not having a
+strong reference from the caller. I saw various solutions to this, most
+involving adding a extra retain call to keep everything around until the
+delegate methods were called.
+
+Since my project is using ARC I looked for a solution that
+didn't involve marking the wrapper file as non-ARC and
+invoking `retain`. The solution I came up with was to use
+[`objc_setAssociatedObject`][set-object]. This Objective-C runtime
+function allows one object to be associated with another using various
+memory management strategies. I used this to associate the UIAlertView
+blocks based wrapper with the UIAlertView.
+
+[set-object]: TODO
+
+In the `init` method:
+
+    objc_setAssociatedObject(alertView, _cmd, self, OBJC_ASSOCIATION_RETAIN);
+
+Note that I'm using the implicit second argument to the method, its
+selector, `_cmd` as the key for the associated object. This was
+suggested in a [tweet by Bill Bummager][bbum].
+
+[bbum]: http://twitter.com/bbum/status/3609098005
+
+Then in `alertView:didDismissWithButtonIndex:`, the assocation is
+removed, `dealloc` of the wrapper called and the `UIAlertView` also
+released.
+
+    SEL key = @selector(initWithTitle:message:);
+    objc_setAssociatedObject(self.alertView, key, nil, OBJC_ASSOCIATION_RETAIN);
+
+The [full (MIT licensed) code][gist] is available as a [gist] on GitHub.
+
+[gist]: https://gist.github.com/1392611
