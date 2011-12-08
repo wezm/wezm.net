@@ -1,9 +1,11 @@
-When it comes time to present errors or other messages with UIAlertView
-it becomes immediately obvious that a more convienient interface would
-involve the use of blocks. A [search on GitHub][github-search] shows
-just about every developer has had a crack at it.
+When it comes time to present errors or other messages in iOS
+with [UIAlertView] it becomes immediately obvious that a more
+convienient interface would involve the use of blocks. A [search on
+GitHub][github-search] shows just about every iOS developer has had a
+crack at it.
 
-[github-search]: TODO
+[UIAlertView]: TODO
+[github-search]: https://github.com/search?type=Repositories&language=&q=uialertview&repo=&langOverride=&x=14&y=17&start_value=1
 
 After reviewing the better options (I.e. those that actually had a
 README with more than a few lines of content) on GitHub it appeared
@@ -21,7 +23,7 @@ function allows one object to be associated with another using various
 memory management strategies. I used this to associate the UIAlertView
 blocks based wrapper with the UIAlertView.
 
-[set-object]: TODO
+[set-object]: http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Chapters/ocAssociativeReferences.html
 
 In the `init` method:
 
@@ -29,7 +31,7 @@ In the `init` method:
 
 Note that I'm using the implicit second argument to the method, its
 selector, `_cmd` as the key for the associated object. This was
-suggested in a [tweet by Bill Bummager][bbum].
+suggested in a [tweet by Bill Bummager][bbum]. TODO
 
 [bbum]: http://twitter.com/bbum/status/3609098005
 
@@ -40,6 +42,6 @@ released.
     SEL key = @selector(initWithTitle:message:);
     objc_setAssociatedObject(self.alertView, key, nil, OBJC_ASSOCIATION_RETAIN);
 
-The [full (MIT licensed) code][gist] is available as a [gist] on GitHub.
+The full [MIT licensed code][gist] is available as a [gist on GitHub][gist].
 
 [gist]: https://gist.github.com/1392611
