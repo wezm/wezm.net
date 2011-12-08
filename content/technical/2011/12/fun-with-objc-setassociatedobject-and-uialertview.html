@@ -1,6 +1,6 @@
 When it comes time to present errors or other messages in iOS
 with [UIAlertView] it becomes immediately obvious that a more
-convienient interface would involve the use of blocks. A [search on
+convenient interface would involve the use of blocks. A [search on
 GitHub][github-search] shows just about every iOS developer has had a
 crack at it.
 
@@ -35,7 +35,7 @@ suggested in a [tweet by Bill Bummager][bbum]. TODO
 
 [bbum]: http://twitter.com/bbum/status/3609098005
 
-Then in `alertView:didDismissWithButtonIndex:`, the assocation is
+Then in `alertView:didDismissWithButtonIndex:`, the association is
 removed, `dealloc` of the wrapper called and the `UIAlertView` also
 released.
 
