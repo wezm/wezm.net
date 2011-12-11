@@ -1,6 +1,6 @@
 --- 
 title: Fun With objc_setAssociatedObject and UIAlertView
-extra: Solving memory management issues with objc_setAssociatedObject in a blocks based wrapper around UIAlertView.
+extra: Using objc_setAssociatedObject in a blocks based UIAlertView wrapper.
 kind: article
 section: technical
 created_at: 2011-12-08 08:02:00
@@ -11,4 +11,4 @@ keywords:
 - objc_setAssociatedObject
 - arc
 - objective-c
-
+short_url: http://bit.ly/u9Ys9v
