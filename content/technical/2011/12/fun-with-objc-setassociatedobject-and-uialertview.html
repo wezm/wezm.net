@@ -1,10 +1,9 @@
-When it comes time to present errors or other messages in iOS
-with [UIAlertView] it becomes immediately obvious that a more
-convenient interface would involve the use of blocks. A [search on
-GitHub][github-search] shows just about every iOS developer has had a
-crack at it.
+When it comes time to present errors or other messages in iOS with
+[UIAlertView] it is immediately obvious that a more convenient interface
+would involve the use of blocks. A [search on GitHub][github-search]
+shows just about every iOS developer has had the same thought and had a crack at it.
 
-[UIAlertView]: TODO
+[UIAlertView]: http://developer.apple.com/library/ios/#documentation/uikit/reference/UIAlertView_Class/UIAlertView/UIAlertView.html
 [github-search]: https://github.com/search?type=Repositories&language=&q=uialertview&repo=&langOverride=&x=14&y=17&start_value=1
 
 After reviewing the better options (I.e. those that actually had a
@@ -25,19 +24,19 @@ blocks based wrapper with the UIAlertView.
 
 [set-object]: http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Chapters/ocAssociativeReferences.html
 
-In the `init` method:
+In the `init` method the wrapper instance is associated with its UIAlertView:
 
     objc_setAssociatedObject(alertView, _cmd, self, OBJC_ASSOCIATION_RETAIN);
 
 Note that I'm using the implicit second argument to the method, its
 selector, `_cmd` as the key for the associated object. This was
-suggested in a [tweet by Bill Bummager][bbum]. TODO
+suggested in a [tweet by Bill Bumgarner][bbum].
 
 [bbum]: http://twitter.com/bbum/status/3609098005
 
-Then in `alertView:didDismissWithButtonIndex:`, the association is
-removed, `dealloc` of the wrapper called and the `UIAlertView` also
-released.
+Then in `alertView:didDismissWithButtonIndex:`, the association
+is removed, `dealloc` of the wrapper called as a result and the
+`UIAlertView` also released.
 
     SEL key = @selector(initWithTitle:message:);
     objc_setAssociatedObject(self.alertView, key, nil, OBJC_ASSOCIATION_RETAIN);
