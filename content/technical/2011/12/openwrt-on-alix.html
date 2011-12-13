@@ -1,3 +1,87 @@
-A few months ago we were having a lot of trouble with reliable internet.
+A few months ago we were having a lot of trouble with reliable
+internet. The problem was that we had up to three computers and three
+iPhones on the network at once, and a 1.5Mbit ADSL connection that was
+very easy to saturate if one or more of those devices was uploading or
+downloading. Additionally our ADSL router would slow and eventually stop
+working after a day or so of BitTorrent traffic flowing through it.
 
-ALIX
+So there were a few problems that needed addressing. I needed a way
+to offload the routing from the modem, get some insight into what
+was using bandwidth and ideally set up some <abbr title="Quality of
+Service">QoS</abbr> so that some bandwidth was reserved for higher
+priority traffic like HTTP and SSH.
+
+My chosen solution was to drop some birthday money on an [ALIX single
+board computer from PC Engines][alix]. I ordered the alix2d13 version
+along with a nice silver case for it. Its a neat little board around the
+size of two CD cases stacked on top of each other. It has a 500Mhz AMD
+Geode (x86 compatible) CPU, 256Mb RAM, USB, 3 &times; 10/100 Ethernet
+ports and an on-board CompactFlash socket.
+
+[alix]: http://www.pcengines.ch/alix2d13.htm
+
+TODO(Add Photos)
+
+Whilst waiting for the board to arrive I checked out some open source
+router targetted operating systems such as [pfSense], [m0n0wall] and
+[IPFire][ipfire]. I decided to go with m0n0wall as it was based on
+a good foundation ([FreeBSD]), happily fit on an 8Mb CF card I had lying
+around and had out of the box support for the ALIX boards.
+
+[pfSense]: http://www.pfsense.org/
+[m0n0wall]: http://www.pfsense.org/
+[ipfire]: http://www.ipfire.org/
+[FreeBSD]: http://www.freebsd.org/
+
+m0n0wall was a breeze to get up an running. I basically inserted the CF
+card, powered the board up and it was working with separate WAN and LAN
+networks, with NAT and firewall between them. It was very easy to add QoS
+through the guided traffic shaper configuration as well.
+
+I ran the board like this for a while and it helped with our issues but
+did not eliminate them. We still had the problem of unknown network
+activity using up all the bandwidth. The next step was to find a compact
+OS that allowed additional software to be installed. I considered
+[Alpine Linux][alpine], but settled on [OpenWRT][openwrt]. OpenWRT fit
+the bill perfectly. It was designed for embedded systems so the base
+install was very small, was designed to run from CF, has a great little
+package manager for adding an removing software, a large selection of
+packages including an optional web UI and an easy to use build system
+for building custom images and packages.
+
+[alpine]: http://alpinelinux.org/
+[openwrt]: https://openwrt.org/
+
+The recommnded installation method for OpenWRT on ALIX boards was to
+build from source so that the ALIX specific configuration and kernel
+modules can be selected. It took some time to produce an image that
+I was happy with but after that it was a simple matter of writing the
+image to a CF card and booting the ALIX board from it.
+
+Out of the box OpenWRT was configured for separate WAN and LAN networks
+like m0n0wall. Along with the base system I added the neat Lua based
+[LuCI][luci] web UI, support for USB mass storage devices and iftop for
+watching traffic on network interfaces.
+
+[iftop]: http://www.ex-parrot.com/pdw/iftop/
+[luci]: http://luci.subsignal.org/
+
+The addition of iftop allowed the network traffic to be examined when
+our Internet connection appeared to be be flooded. I was able to determine
+that that in some cases the problem was Wi-Fi backup to iCloud on our
+iPhones.
+
+There was still some instability with the ADSL though. I decided to
+swap the modem I was using for another that allowed more control
+and turned off everything except the ADSL modem functionality,
+delegating all of that to the ALIX board including maintaining the <abbr
+title="">PPPoE</abbr> connection. Since this change everything has been
+running very smoothly.
+
+With OpenWRT's great build and packaging system I was also able to build
+a custom package for the weather logging software that communicates with
+my [weather station][weather]. With this package installed the ALIX
+board now does the logging instead of my Mac Pro, consuming vastly less
+power in the process.
+
+[weather]: /personal/2010/09/weather-station/
