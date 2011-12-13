@@ -61,6 +61,10 @@ I'm using the [wview][wview] weather station software. wview is running on the
 Mac mini connected to our TV. The site layout is pretty basic so I hope to come
 up with a cleaner design in the coming weeks.
 
+**Update:** I build a custom logging and charting solution. See the post,
+[Weather Station Software][software].
+
+[software]: /technical/2010/09/weather-station-software/
 [WS2355]: http://www.lacrossetechnology.com.au/shop2/product_info.php?cPath=21&products_id=93
 [wview]: http://www.wviewweather.com/
 [weather]: http://weather.wezm.net/
