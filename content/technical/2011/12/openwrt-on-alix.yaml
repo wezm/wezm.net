@@ -1,5 +1,5 @@
 --- 
-title: OpenWRT on ALIX
+title: Little Linux Home Server Appliance
 extra: TODO
 kind: article
 section: technical
@@ -9,3 +9,5 @@ keywords:
 - embedded
 - linux
 - openwrt
+- server
+- appliance
