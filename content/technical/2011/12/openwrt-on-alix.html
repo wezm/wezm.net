@@ -1,87 +1,85 @@
-A few months ago we were having a lot of trouble with reliable
-internet. The problem was that we had up to three computers and three
-iPhones on the network at once, and a 1.5Mbit ADSL connection that was
-very easy to saturate if one or more of those devices was uploading or
-downloading. Additionally our ADSL router would slow and eventually stop
-working after a day or so of BitTorrent traffic flowing through it.
+After ongoing issues with maintaining a reliable Internet connection at
+home I decided to add a router box to the network in charge of assigning
+IP addresses and sharing our Internet connection with the rest of the
+network.  I wanted something with at least two Ethernet ports so that
+all Internet traffic would flow through the device and allow bandwidth
+hogs to be identified at times when the connection appeared flooded.
 
-So there were a few problems that needed addressing. I needed a way
-to offload the routing from the modem, get some insight into what
-was using bandwidth and ideally set up some <abbr title="Quality of
-Service">QoS</abbr> so that some bandwidth was reserved for higher
-priority traffic like HTTP and SSH.
+After a bunch of research into appropriate hardware and software I
+decided on a [PC Engines ALIX][alix] single board computer (alix2d13). The
+ALIX is a small board about the size of a CD case with the following
+features:
 
-My chosen solution was to drop some birthday money on an [ALIX single
-board computer from PC Engines][alix]. I ordered the alix2d13 version
-along with a nice silver case for it. Its a neat little board around the
-size of two CD cases stacked on top of each other. It has a 500Mhz AMD
-Geode (x86 compatible) CPU, 256Mb RAM, USB, 3 &times; 10/100 Ethernet
-ports and an on-board CompactFlash socket.
+* 500Mhz AMD Geode (x86 compatible) CPU
+* 256Mb RAM
+* 2 &times; USB ports
+* 3 &times; 10/100 Ethernet ports
+* Mini-PCI socket (for WiFi if desired)
+* RS-232 serial port
+* CompactFlash socket
+
+Along with the board I ordered one of [PC Engines cases][case]
+(case1s2u) to go with it.
 
 [alix]: http://www.pcengines.ch/alix2d13.htm
+[case]: http://www.pcengines.ch/case1d2u.htm
 
-TODO(Add Photos)
+For the software I settled on [OpenWRT][openwrt]. I chose it for a number of
+reasons:
 
-Whilst waiting for the board to arrive I checked out some open source
-router targetted operating systems such as [pfSense], [m0n0wall] and
-[IPFire][ipfire]. I decided to go with m0n0wall as it was based on
-a good foundation ([FreeBSD]), happily fit on an 8Mb CF card I had lying
-around and had out of the box support for the ALIX boards.
+* Good support for ALIX boards.
+* Designed to run from Flash and read only file systems.
+* Great binary package manager that allows additional software to be
+  installed.
+* Lightweight [Lua] based Web UI available ([LuCI][luci]).
 
-[pfSense]: http://www.pfsense.org/
-[m0n0wall]: http://www.pfsense.org/
-[ipfire]: http://www.ipfire.org/
-[FreeBSD]: http://www.freebsd.org/
-
-m0n0wall was a breeze to get up an running. I basically inserted the CF
-card, powered the board up and it was working with separate WAN and LAN
-networks, with NAT and firewall between them. It was very easy to add QoS
-through the guided traffic shaper configuration as well.
-
-I ran the board like this for a while and it helped with our issues but
-did not eliminate them. We still had the problem of unknown network
-activity using up all the bandwidth. The next step was to find a compact
-OS that allowed additional software to be installed. I considered
-[Alpine Linux][alpine], but settled on [OpenWRT][openwrt]. OpenWRT fit
-the bill perfectly. It was designed for embedded systems so the base
-install was very small, was designed to run from CF, has a great little
-package manager for adding an removing software, a large selection of
-packages including an optional web UI and an easy to use build system
-for building custom images and packages.
-
-[alpine]: http://alpinelinux.org/
 [openwrt]: https://openwrt.org/
-
-The recommnded installation method for OpenWRT on ALIX boards was to
-build from source so that the ALIX specific configuration and kernel
-modules can be selected. It took some time to produce an image that
-I was happy with but after that it was a simple matter of writing the
-image to a CF card and booting the ALIX board from it.
-
-Out of the box OpenWRT was configured for separate WAN and LAN networks
-like m0n0wall. Along with the base system I added the neat Lua based
-[LuCI][luci] web UI, support for USB mass storage devices and iftop for
-watching traffic on network interfaces.
-
-[iftop]: http://www.ex-parrot.com/pdw/iftop/
 [luci]: http://luci.subsignal.org/
+[Lua]: http://www.lua.org/
 
-The addition of iftop allowed the network traffic to be examined when
-our Internet connection appeared to be be flooded. I was able to determine
-that that in some cases the problem was Wi-Fi backup to iCloud on our
-iPhones.
-
-There was still some instability with the ADSL though. I decided to
-swap the modem I was using for another that allowed more control
-and turned off everything except the ADSL modem functionality,
-delegating all of that to the ALIX board including maintaining the <abbr
-title="">PPPoE</abbr> connection. Since this change everything has been
-running very smoothly.
-
-With OpenWRT's great build and packaging system I was also able to build
-a custom package for the weather logging software that communicates with
-my [weather station][weather]. With this package installed the ALIX
-board now does the logging instead of my Mac Pro, consuming vastly less
-power in the process.
+After learning to use the excellent OpenWRT build system I was able to
+build a custom CompactFlash image for the board to run. I also created a
+package for my [weather logging software][weather-software] so that the
+ALIX can do all my [weather station][weather] logging.
 
 [weather]: /personal/2010/09/weather-station/
+[weather-software]: /technical/2010/09/weather-station-software/
+
+This setup has been extremely reliable. I've pushed all services on to
+it that my ADSL modem and AirPort base station used to be responsible
+for. Including maintaining the PPPoE connection to my ISP. I'd certainly
+recommend a set up like this to anyone who is looking for a small
+dedicated home router.
+
+If you don't like the prospect of building your own custom OS image I'd
+also highly recommend <tt>[m0n0wall]</tt>, which is a [FreeBSD] derived
+router system. I ran this on the ALIX initially and it was very easy
+to get up an running (write image to CF card, boot from card - default
+settings worked fine but can be changed via a web UI) and very reliable.
+
+[m0n0wall]: http://m0n0.ch/wall/
+[FreeBSD]: http://www.freebsd.org/
+
+<figure>
+  <img src="/images/2012/01/_MG_0562.jpg" width="600" height="258" alt="" />
+  <figcaption>Front with three LEDs. The behaviour of the LEDs can
+  be customised in OpenWRT. I have the left one indication power and
+  the middle one indicating activity on the WAN port. The other one is
+  currently unused.</figcaption>
+</figure>
+
+<figure>
+<img src="/images/2012/01/_MG_0569.jpg" width="600" height="600" alt="" />
+  <figcaption>Top of case, showing size in comparison to a CD case.</figcaption>
+</figure>
+
+<figure>
+<img src="/images/2012/01/_MG_0567.jpg" width="600" height="600" alt="" />
+  <figcaption>The ALIX board itself with the following connected: WAN
+  and LAN Ethernet, 8Gb [MosKeyto USB flash drive][moskeyto],
+  weather station USB cable and 32Mb CF card that the system runs
+  off.</figcaption>
+</figure>
+
+[moskeyto]: http://www.lacie.com/au/products/product.htm?id=10425
+
