@@ -1,5 +1,6 @@
 source :rubygems
 
+gem 'rake'
 gem 'mime-types'
 gem 'nanoc'
 gem 'bitly'
@@ -13,3 +14,4 @@ gem 'rb-fsevent'
 gem 'guard'
 gem 'guard-nanoc'
 gem 'growl'
+gem 'systemu'
