@@ -1,0 +1,100 @@
+---
+title: Speed Up Slow Downloads on iOS with a Proxy or CDN
+extra: How to speed up downloads on iOS.
+kind: article
+section: technical
+created_at: 2013-01-13 12:39:00
+keywords: 
+- ios
+- proxy
+- download
+- podcast
+- squid
+- launchd
+- cdn
+---
+
+Whilst developing the Radiopaedia iOS app I ran into the problem of very slow
+download speeds within the app. The app has packs of content avaiable for
+purchase. The download speed was fine in the simulator but on the device it
+was painfully slow. Profiling the code didn't reveal any issues either.
+
+Some searching revealed people compaining about YouTube videos downloading
+faster over 3G than Wi-Fi. There were a number of theories and proposed fixes
+for this including:
+
+  * YouTube was sending higher bitrate video when on Wi-Fi
+  * Checking Wi-Fi access point settings
+  * Set access point to 802.11b and it goes faster
+
+At the time I read something that I can no longer find that said that the
+iOS Wi-Fi stack has problems when it has a low latency Wi-Fi
+connection that is communicating to a comparatively high latency
+destination, for example YouTube servers in the US from AU (it
+appears there's YouTube end-points in AU these days). From memory I think the 
+article cited power management under these circumstance as the issue. Howver
+since I can't find the original article I might be making that up.
+
+With this in mind I tested hosting the content packs on an Australian server,
+instead of in Amazon S3. This showed a huge improvement in download speed. At
+the time Amazon's CloudFront CDN did not have an Australian presence so we
+switched to hosting the packs on RackSpace's CloudFiles, which uses the much
+more extensive Akamai CDN and ensured that users of the app would have the
+best possible download speeds.
+
+<div class="seperator"><hr class="left">✦<hr class="right"></div>
+
+Fast forward a year or so and I started managing podcasts on my phone instead of
+via iTunes. I noticed that some of the podcasts I was subscribed to were horrendously
+slow to download. A 100Mb file would take many hours to download, particularly
+ones hosted a long way away, such as in the UK or
+The Netherlands. I also noted that podcasts that used a CDN downloaded quickly.
+
+This seemed to be the same problem I had encountered with the Radiopaedia app.
+I wondered if telling the iPhone to use a proxy on the local
+network would work around the issue. since effectivly move
+the destination onto the local network as far as the phone
+is concerned (since it will just be talking to the proxy).
+
+So I set up [Squid][squid] on the Mac mini that's connected to my TV
+(using [Homebrew][homebrew])
+since it's always on and has a wired connection to my modem.
+I configured the iPhone to use the proxy an lo-and-behold the
+very same podcast downloads that were taking hours, now took
+minutes.
+
+[squid]: http://www.squid-cache.org/
+[homebrew]: http://mxcl.github.com/homebrew/
+
+To be sure I paused the download, changed the phone's settings
+to not use the proxy and restart the download, give it a few
+minutes and the estimate was hours.
+  * Turn the proxy back on and minutes.
+
+You can see this in action in the screenshots below. The first is not
+using the proxy. I have let it download a third of the file to be well
+clear [TCP's slow start][slow-start] and it is estimating 57 minutes to
+download the remaining 176.1 Mb (53 kb/sec). The second screenshot (only
+a minutes later) shows the result after I paused the download, changed
+the proxy settings and then again let the download warm up a little. The
+estimated time to complete the remaining 143.8 Mb is now only 5 mins
+(491 kb/sec) -- a huge improvment.
+
+[slow-start]: https://en.wikipedia.org/wiki/Slow-start
+
+<figure>
+  <img src="/images/2013/01/podcast-download-without-proxy.png" width="320" height="480" alt="Podcast download without proxy" />
+  <figcaption>Podcast download without proxy, 53 kb/sec</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/2013/01/podcast-download-with-proxy.png" width="320" height="480" alt="Podcast download with proxy" />
+  <figcaption>Podcast download with proxy, 491 kb/sec</figcaption>
+</figure>
+
+After the successful experiement I left the phone using the proxy and configured
+launchd to start squid on boot:
+
+<script src="https://gist.github.com/4521952.js"></script>
+
+

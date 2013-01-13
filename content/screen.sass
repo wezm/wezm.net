@@ -384,6 +384,37 @@ img.feed-icon
     width: 10em
     margin: 0
 
+  .seperator
+    text-align: center
+    color: #EEE
+    margin-bottom: 1em
+    font-size: smaller
+
+    hr
+      width: 33%
+      height: 1px
+      display: inline-block
+      border: none
+      background-color: #eeeeee
+      margin: 5px 0.5em
+
+      &.right
+        background-image: -webkit-gradient(linear, left center, right center, from(rgb(238, 238, 238)), to(rgb(255, 255, 255)))
+        background-image: -webkit-linear-gradient(left, rgb(238, 238, 238), rgb(255, 255, 255))
+        background-image: -moz-linear-gradient(left, rgb(238, 238, 238), rgb(255, 255, 255))
+        background-image: -o-linear-gradient(left, rgb(238, 238, 238), rgb(255, 255, 255))
+        background-image: -ms-linear-gradient(left, rgb(238, 238, 238), rgb(255, 255, 255))
+        background-image: linear-gradient(left, rgb(238, 238, 238), rgb(255, 255, 255))
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#eeeeee', EndColorStr='#ffffff')
+
+      &.left
+        background-image: -webkit-gradient(linear, right center, left center, from(rgb(238, 238, 238)), to(rgb(255, 255, 255)))
+        background-image: -webkit-linear-gradient(right, rgb(238, 238, 238), rgb(255, 255, 255))
+        background-image: -moz-linear-gradient(right, rgb(238, 238, 238), rgb(255, 255, 255))
+        background-image: -o-linear-gradient(right, rgb(238, 238, 238), rgb(255, 255, 255))
+        background-image: -ms-linear-gradient(right, rgb(238, 238, 238), rgb(255, 255, 255))
+        background-image: linear-gradient(right, rgb(238, 238, 238), rgb(255, 255, 255))
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#ffffff', EndColorStr='#eeeeee')
 
 table
   &.left_headers, &.top_headers
@@ -418,6 +449,8 @@ table
 
 .vcard .photo
   margin: 0 1em 1em 0
+
+
 
 
 // Weather
