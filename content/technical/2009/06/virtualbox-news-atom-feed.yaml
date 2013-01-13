@@ -1,16 +1,16 @@
---- 
+---
 slug: virtualbox-news-atom-feed
 permalink: http://www.wezm.net/2009/06/virtualbox-news-atom-feed/
 kind: article
 section: technical
-created_at: 2009-06-28 02:07:49
+created_at: 2009-06-28 12:07:49.000000000 +10:00
 title: VirtualBox News Atom Feed
 post_id: 154
-tags: 
+tags:
 - atom
 - ruby
 - virtualbox
-categories: 
+categories:
 - Code
 status: publish
 extra: Creating an Atom feed of VirtualBox updates with Ruby.

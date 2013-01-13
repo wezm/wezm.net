@@ -1,18 +1,18 @@
---- 
+---
 slug: installing-debian-with-gpxe-and-netboot-me
 permalink: http://www.wezm.net/2010/03/installing-debian-with-gpxe-and-netboot-me/
 kind: article
 section: technical
-created_at: 2010-03-11 02:16:17
+created_at: 2010-03-11 13:16:17.000000000 +11:00
 title: Installing Debian With gPXE and netboot.me
 post_id: 327
-tags: 
+tags:
 - debian
 - gpxe
 - itx
 - linux
 - netboot
-categories: 
+categories:
 - Technical
 status: publish
 extra: How to install Debian without an installation disk over the Internet.

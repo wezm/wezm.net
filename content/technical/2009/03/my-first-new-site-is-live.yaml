@@ -1,15 +1,15 @@
---- 
+---
 slug: my-first-new-site-is-live
 permalink: http://www.wezm.net/2009/03/my-first-new-site-is-live/
 kind: article
 section: technical
-created_at: 2009-03-01 22:00:02
+created_at: 2009-03-02 09:00:02.000000000 +11:00
 title: My First New Site is Live
 post_id: 88
-tags: 
+tags:
 - opensource
 - python
-categories: 
+categories:
 - Programming
 - Software
 status: publish

@@ -1,17 +1,17 @@
---- 
+---
 slug: scraping-nab-internet-banking-with-mechanize
 permalink: http://www.wezm.net/2009/07/scraping-nab-internet-banking-with-mechanize/
 kind: article
 section: technical
-created_at: 2009-07-18 13:43:13
+created_at: 2009-07-18 23:43:13.000000000 +10:00
 title: Scraping NAB Internet Banking with Mechanize
 post_id: 179
-tags: 
+tags:
 - mechanize
 - nab
 - ruby
 - scraping
-categories: 
+categories:
 - Code
 - Internet
 status: publish

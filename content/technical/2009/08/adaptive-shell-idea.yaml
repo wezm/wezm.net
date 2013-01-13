@@ -1,16 +1,16 @@
---- 
+---
 slug: adaptive-shell-idea
 permalink: http://www.wezm.net/2009/08/adaptive-shell-idea/
 kind: article
 section: technical
-created_at: 2009-08-16 22:00:06
-title: "Idea: Adaptive shell"
+created_at: 2009-08-17 08:00:06.000000000 +10:00
+title: ! 'Idea: Adaptive shell'
 post_id: 178
-tags: 
+tags:
 - adaptive
 - shell
 - unix
-categories: 
+categories:
 - UNIX
 status: publish
 extra: In idea for a shell that learns completion behaviour.

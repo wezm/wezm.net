@@ -1,12 +1,12 @@
---- 
+---
 slug: temperature-logger-project
 permalink: http://www.wezm.net/2009/08/temperature-logger-project/
 kind: article
 section: technical
-created_at: 2009-08-12 11:20:13
+created_at: 2009-08-12 21:20:13.000000000 +10:00
 title: Temperature Logger Project
 post_id: 198
-tags: 
+tags:
 - arduino
 - electronics
 - embedded
@@ -15,7 +15,7 @@ tags:
 - soldering
 - surface-mount
 - temperature
-categories: 
+categories:
 - Projects
 status: publish
 extra: Some details about an Arduino based temperature logger I'm building.

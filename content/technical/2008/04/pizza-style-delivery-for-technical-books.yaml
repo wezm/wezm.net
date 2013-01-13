@@ -1,18 +1,18 @@
---- 
+---
 slug: pizza-style-delivery-for-technical-books
 permalink: http://www.wezm.net/2008/04/pizza-style-delivery-for-technical-books/
 kind: article
 section: technical
-created_at: 2008-04-06 06:37:10
+created_at: 2008-04-06 16:37:10.000000000 +10:00
 title: Pizza Style Delivery for Technical Books
 post_id: 5
-tags: 
+tags:
 - awk
 - books
 - delivery
 - pocket-reference
 - sed
-categories: 
+categories:
 - UNIX
 status: publish
 extra: Why can't books be delivered with the same timliness as pizzas?

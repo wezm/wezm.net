@@ -1,12 +1,12 @@
---- 
+---
 slug: capturing-an-rtmp-video-stream-with-flv-recorder
 permalink: http://www.wezm.net/2009/04/capturing-an-rtmp-video-stream-with-flv-recorder/
 kind: article
 section: technical
-created_at: 2009-04-23 09:48:07
+created_at: 2009-04-23 19:48:07.000000000 +10:00
 title: Capturing an RTMP Video Stream with FLV Recorder
 post_id: 108
-tags: 
+tags:
 - capture
 - flash
 - flv
@@ -14,7 +14,7 @@ tags:
 - rtmp
 - video
 - windows
-categories: 
+categories:
 - Software
 status: publish
 extra: How to capture an RTMP, Flash video stream with FLV Recorder.

@@ -1,10 +1,11 @@
---- 
+---
 title: Little Linux Router Box
-extra: Solving my Internet connection issues with a PC Engines ALIX single board computer and OpenWRT.
+extra: Solving my Internet connection issues with a PC Engines ALIX single board computer
+  and OpenWRT.
 kind: article
 section: technical
-created_at: 2012-01-21 15:33:00
-keywords: 
+created_at: 2012-01-22 02:33:00.000000000 +11:00
+keywords:
 - alix
 - embedded
 - linux

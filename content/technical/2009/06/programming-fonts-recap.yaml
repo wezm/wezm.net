@@ -1,12 +1,12 @@
---- 
+---
 slug: programming-fonts-recap
 permalink: http://www.wezm.net/2009/06/programming-fonts-recap/
 kind: article
 section: technical
-created_at: 2009-06-28 22:00:57
+created_at: 2009-06-29 08:00:57.000000000 +10:00
 title: Programming Fonts Recap
 post_id: 143
-tags: 
+tags:
 - anonymous-pro
 - bitstream
 - consolas
@@ -17,7 +17,7 @@ tags:
 - snow-leopard
 - textmate
 - vera
-categories: 
+categories:
 - Development
 status: publish
 extra: A look the some of the favoured programming fonts available.

@@ -1,19 +1,19 @@
---- 
+---
 slug: mp3-decoder-libraries-compared
 permalink: http://www.wezm.net/2008/04/mp3-decoder-libraries-compared/
 kind: article
 section: technical
-created_at: 2008-04-16 12:22:49
+created_at: 2008-04-16 22:22:49.000000000 +10:00
 title: MP3 Decoder Libraries Compared
 post_id: 11
-tags: 
+tags:
 - benchmark
 - core-audio
 - decoder
 - mad
 - mp3
 - mpg123
-categories: 
+categories:
 - Linux
 - Mac OS X
 - Programming

@@ -1,14 +1,13 @@
---- 
+---
 slug: stop-vim-completion-searching-included-files
 permalink: http://www.wezm.net/2008/05/stop-vim-completion-searching-included-files/
 kind: article
 section: technical
-created_at: 2008-05-23 05:59:25
+created_at: 2008-05-23 15:59:25.000000000 +10:00
 title: Stop Vim Completion Searching Included Files
 post_id: 25
 tags: []
-
-categories: 
+categories:
 - Linux
 - Mac OS X
 - Programming

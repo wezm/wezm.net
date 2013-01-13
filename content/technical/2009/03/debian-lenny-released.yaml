@@ -1,17 +1,17 @@
---- 
+---
 slug: debian-lenny-released
 permalink: http://www.wezm.net/2009/03/debian-lenny-released/
 kind: article
 section: technical
-created_at: 2009-03-01 21:00:39
+created_at: 2009-03-02 08:00:39.000000000 +11:00
 title: Debian 5.0 'Lenny' Released
 post_id: 90
-tags: 
+tags:
 - debian
 - etch
 - lenny
 - upgrade
-categories: 
+categories:
 - Linux
 status: publish
 extra: Small post noting the release of Debian 5.0.

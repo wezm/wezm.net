@@ -1,20 +1,21 @@
---- 
+---
 slug: local-package-management-with-gnu-stow
 permalink: http://www.wezm.net/2009/08/local-package-management-with-gnu-stow/
 kind: article
 section: technical
-created_at: 2009-08-16 02:59:07
+created_at: 2009-08-16 12:59:07.000000000 +10:00
 title: Local Package Management with GNU Stow
 post_id: 147
-tags: 
+tags:
 - gnu
 - management
 - package
 - stow
-categories: 
+categories:
 - Linux
 - Tips
 - UNIX
 status: publish
-extra: How to manage custom built software without polluting the system directories with GNU stow.
+extra: How to manage custom built software without polluting the system directories
+  with GNU stow.
 short_url: http://bit.ly/dwE8EH

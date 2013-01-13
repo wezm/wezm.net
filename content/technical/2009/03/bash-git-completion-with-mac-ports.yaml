@@ -1,17 +1,17 @@
---- 
+---
 slug: bash-git-completion-with-mac-ports
 permalink: http://www.wezm.net/2009/03/bash-git-completion-with-mac-ports/
 kind: article
 section: technical
-created_at: 2009-03-30 10:13:49
+created_at: 2009-03-30 21:13:49.000000000 +11:00
 title: Bash Git Completion with Mac Ports
 post_id: 107
-tags: 
+tags:
 - bash
 - completion
 - git
 - macports
-categories: 
+categories:
 - Mac
 status: publish
 extra: Enabling bash completion for git with MacPorts.

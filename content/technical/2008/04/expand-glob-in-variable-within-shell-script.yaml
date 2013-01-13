@@ -1,19 +1,19 @@
---- 
+---
 slug: expand-glob-in-variable-within-shell-script
 permalink: http://www.wezm.net/2008/04/expand-glob-in-variable-within-shell-script/
 kind: article
 section: technical
-created_at: 2008-04-24 07:37:14
+created_at: 2008-04-24 17:37:14.000000000 +10:00
 title: Expand glob in variable within shell script
 post_id: 18
-tags: 
+tags:
 - bash
 - expand
 - glob
 - script
 - shell
 - variable
-categories: 
+categories:
 - Tips
 - UNIX
 status: publish

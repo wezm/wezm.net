@@ -1,17 +1,17 @@
---- 
+---
 slug: to-title-case-bookmarklet
 permalink: http://www.wezm.net/2008/05/to-title-case-bookmarklet/
 kind: article
 section: technical
-created_at: 2008-05-27 23:29:28
+created_at: 2008-05-28 09:29:28.000000000 +10:00
 title: To Title Case Bookmarklet
 post_id: 27
 tags: []
-
-categories: 
+categories:
 - Code
 - Internet
 - Miscellaneous
 status: publish
-extra: "A bookmarklet made from David Gouch\xE2\x80\x99s Javascript implementation of John Gruber\xE2\x80\x99s Title Case Perl script."
+extra: ! "A bookmarklet made from David Gouchâ\x80\x99s Javascript implementation
+  of John Gruberâ\x80\x99s Title Case Perl script."
 short_url: http://bit.ly/d3iJVM

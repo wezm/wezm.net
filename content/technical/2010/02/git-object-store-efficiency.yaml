@@ -1,15 +1,16 @@
---- 
+---
 slug: git-object-store-efficiency
 permalink: http://www.wezm.net/2010/02/git-object-store-efficiency/
 kind: article
 section: technical
-created_at: 2010-02-13 06:49:27
+created_at: 2010-02-13 17:49:27.000000000 +11:00
 title: git's Object Store Efficiency
 post_id: 305
-tags: 
+tags:
 - git
-categories: 
+categories:
 - Technical
 status: publish
-extra: Hubert Feyrer claims git's storage efficiency is much worse than CVS's. I attempt to show its not.
+extra: Hubert Feyrer claims git's storage efficiency is much worse than CVS's. I attempt
+  to show its not.
 short_url: http://bit.ly/bbQ05P
