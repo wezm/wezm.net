@@ -38,6 +38,7 @@ GEM
     rdiscount (1.6.8)
     rubypants (0.2.0)
     sass (3.2.1)
+    systemu (2.5.2)
 
 PLATFORMS
   ruby
@@ -54,3 +55,4 @@ DEPENDENCIES
   rdiscount
   rubypants
   sass
+  systemu
