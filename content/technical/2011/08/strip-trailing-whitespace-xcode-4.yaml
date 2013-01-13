@@ -1,0 +1,16 @@
+--- 
+title: Strip Trailing Whitespace in Xcode 4
+extra: How to create a behaviour in Xcode 4 to strip trailing whitespace from all git tracked files with changes.
+kind: article
+section: technical
+created_at: 2011-08-27 19:36:00
+keywords: 
+- xcode
+- strip
+- trailing
+- whitespace
+- text
+- editing
+- programming
+- apple
+short_url: http://bit.ly/nGeJrK

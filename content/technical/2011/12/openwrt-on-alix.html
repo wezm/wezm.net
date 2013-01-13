@@ -1,0 +1,85 @@
+After ongoing issues with maintaining a reliable Internet connection at
+home I decided to add a router box to the network in charge of assigning
+IP addresses and sharing our Internet connection with the rest of the
+network.  I wanted something with at least two Ethernet ports so that
+all Internet traffic would flow through the device and allow bandwidth
+hogs to be identified at times when the connection appeared flooded.
+
+After a bunch of research into appropriate hardware and software I
+decided on a [PC Engines ALIX][alix] single board computer (alix2d13). The
+ALIX is a small board about the size of a CD case with the following
+features:
+
+* 500Mhz AMD Geode (x86 compatible) CPU
+* 256Mb RAM
+* 2 &times; USB ports
+* 3 &times; 10/100 Ethernet ports
+* Mini-PCI socket (for WiFi if desired)
+* RS-232 serial port
+* CompactFlash socket
+
+Along with the board I ordered one of [PC Engines cases][case]
+(case1s2u) to go with it.
+
+[alix]: http://www.pcengines.ch/alix2d13.htm
+[case]: http://www.pcengines.ch/case1d2u.htm
+
+For the software I settled on [OpenWRT][openwrt]. I chose it for a number of
+reasons:
+
+* Good support for ALIX boards.
+* Designed to run from Flash and read only file systems.
+* Great binary package manager that allows additional software to be
+  installed.
+* Lightweight [Lua] based Web UI available ([LuCI][luci]).
+
+[openwrt]: https://openwrt.org/
+[luci]: http://luci.subsignal.org/
+[Lua]: http://www.lua.org/
+
+After learning to use the excellent OpenWRT build system I was able to
+build a custom CompactFlash image for the board to run. I also created a
+package for my [weather logging software][weather-software] so that the
+ALIX can do all my [weather station][weather] logging.
+
+[weather]: /personal/2010/09/weather-station/
+[weather-software]: /technical/2010/09/weather-station-software/
+
+This setup has been extremely reliable. I've pushed all services on to
+it that my ADSL modem and AirPort base station used to be responsible
+for. Including maintaining the PPPoE connection to my ISP. I'd certainly
+recommend a set up like this to anyone who is looking for a small
+dedicated home router.
+
+If you don't like the prospect of building your own custom OS image I'd
+also highly recommend <tt>[m0n0wall]</tt>, which is a [FreeBSD] derived
+router system. I ran this on the ALIX initially and it was very easy
+to get up an running (write image to CF card, boot from card - default
+settings worked fine but can be changed via a web UI) and very reliable.
+
+[m0n0wall]: http://m0n0.ch/wall/
+[FreeBSD]: http://www.freebsd.org/
+
+<figure>
+  <img src="/images/2012/01/_MG_0562.jpg" width="600" height="258" alt="Front view" />
+  <figcaption>Front with three LEDs. The behaviour of the LEDs can
+  be customised in OpenWRT. I have the left one indication power and
+  the middle one indicating activity on the WAN port. The other one is
+  currently unused.</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/2012/01/_MG_0569.jpg" width="600" height="600" alt="Top view with CD for size comparison" />
+  <figcaption>Top of case, showing size in comparison to a CD case.</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/2012/01/_MG_0567.jpg" width="600" height="600" alt="alix2d13 board" />
+  <figcaption>The ALIX board itself with the following connected: WAN
+  and LAN Ethernet, 8Gb [MosKeyto USB flash drive][moskeyto],
+  weather station USB cable and 32Mb CF card that the system runs
+  off.</figcaption>
+</figure>
+
+[moskeyto]: http://www.lacie.com/au/products/product.htm?id=10425
+

@@ -8,7 +8,7 @@ jQuery(function () {
       var photo = $(obj);
       var image = {
         href: photo.attr('url_z'),
-        src: '/images/photos.jpg',
+        src: '/images/photos.jpg?20120121',
         alt: photo.attr('title')
       };
       var li = $(image_template(image));
@@ -20,5 +20,5 @@ jQuery(function () {
   };
 
   // Populate Flickr
-  jQuery.get("/photos.xml", {}, populate_flickr);
+  jQuery.get("/photos.xml?20111208", {}, populate_flickr);
 });

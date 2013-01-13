@@ -1,0 +1,162 @@
+## Summary
+
+Here's the tl;dr version: I sold my Mac Pro to fund building a home
+NAS. The result is a HP MicroServer with 4Gb RAM and 3 &times; 2Tb hard
+drives running FreeBSD from the system drive and a ZFS pool across the
+three 2Tb drives. Total cost: AU$731.67.
+
+## Rationale
+
+Recently the Time Machine drive in my Mac Pro started to randomly
+disappear and Mac OS X would say that I had removed it improperly,
+which was not true given it was an internal drive still inside the
+machine.
+
+I've seen this behaviour before and in that case it resulted in the drive
+being replaced due to its inability to complete a short S.M.A.R.T.
+scan. This drive (also a Samsung) was suffering a similar problem except
+that initiating the S.M.A.R.T. scan would actually cause it to disappear
+from the SATA bus. A check on the Samsung site showed that the drive was
+out of warranty so I was up for a replacement.
+
+The Mac Pro wasn't getting used for much since I got a i7 powered Mac
+Book Pro. Its main duties involved storing my iTunes library, Aperture
+library and running my weather logger. It wasn't exactly a very energy
+efficient machine to run all the time. It would in fact keep the study
+warm overnight when the door was closed during winter.
+
+There was also a problem with replacing the failing drive: I couldn't afford
+to do so. So I decided to move the weather logging to my [ALIX board][alix]
+and sell the Mac Pro to fund building a home NAS. I was able to sell the
+Mac Pro very quickly on eBay for $1500 but gave myself a budget of $1000 for
+the NAS. I wanted the NAS to have reliable, redundant storage, which for me
+meant [ZFS]. This implied the new machine would need to run one of [Solaris],
+[illumos], [FreeBSD], [FreeNAS] or [SmartOS]. The requirement to run one of
+these OS's ruled out an off the shelf NAS appliance.
+
+[ZFS]: http://www.opensolaris.org/os/community/zfs/
+[alix]: /technical/2011/12/openwrt-on-alix/
+[Solaris]: http://oracle.com/solaris
+[illumos]: https://www.illumos.org/
+[FreeBSD]: http://www.FreeBSD.org/
+[SmartOS]: http://smartos.org/
+[FreeNAS]: https://www.illumos.org/
+
+I did a lot of research into different ways to build the machine and
+tried out all the OS options in virtual machines. I considered using
+basic PC hardware, MiniITX, HP MicroServer, etc. Each had its own
+pros and cons. The basic PC approach was possibly the cheapest but it
+was the largest. MiniITX was more expensive and choice of multi hard
+drive bay cases were limited. I ended up settling on the [HP Proliant
+MicroServer][microserver] running FreeBSD.
+
+[microserver]: http://h10010.www1.hp.com/wwpc/hk/en/sm/WF06b/15351-15351-4237916-4237917-4237917-4248009-5163345.html
+
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    var alt = $(document.createElement('img')).attr('src', '/images/2012/01/_MG_0581.jpg');
+    $('#inside-outside-view').toggle(function() {
+      $(this).attr('src', alt.attr('src'))
+    }, function() {
+      $(this).attr('src', '/images/2012/01/_MG_0582.jpg')
+    });
+  });
+</script>
+
+<figure>
+  <img id="inside-outside-view" src="/images/2012/01/_MG_0582.jpg" width="600" height="600" alt="Inside/outside view of HP MicroServer" />
+  <figcaption>The end result. Click/tap to toggle inside view.</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/2012/01/_MG_0583.jpg" width="600" height="600" alt="Fron of MicroServer with CD for size comparison" />
+  <figcaption>CD for size comparison.</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/2012/01/_MG_0584.jpg" width="600" height="600" alt="Oblique view of HP MicroServer" />
+  <figcaption>Oblique view (excuse the finger prints).</figcaption>
+</figure>
+
+
+## The Build
+
+The MicroServer is a neat little unit. It uses a low power dual core AMD
+Turion II CPU and comes with 2Gb ECC RAM and a 250Gb HD. I has 4 non-hot
+swappable hard drive bays all packaged up in a squat little box. I ordered
+mine with an extra 2Gb or RAM as ZFS likes to have plenty of RAM available
+to run well.
+
+During my research hard drive prices sky rocketed due to floods
+in Thailand, however I was able to get some at pre-flood prices from
+[ht.com.au][ht]. They have since put the price up ~$40 and placed order
+limits on them.
+
+For the drives I chose 2Tb Seagate Barracuda Green's. They feature SATA 3
+and a 64Mb cache and run at an atypical 5900RPM. These drives seemed to be
+a good balance across energy efficiency, noise, performance and price.
+
+[ht]: http://ht.com.au/
+
+The final parts list ended up being rather diminutive:
+
+* 1 &times; [HP MicroServer][microserver] (658553-371) + 2Gb extra RAM $336.82
+* 3 &times; [2Tb Seagate Barracuda Green Hard Drives][hard-drives] $394.85
+
+[hard-drives]: http://www.ht.com.au/cart/1/part/V0531-Seagate-Barracuda-Green-ST2000DL003-hard-drive-2-TB-SATA-600/detail.hts
+
+The total cost ended up being $731.67, healthily under budget.
+
+<figure>
+  <img src="/images/2012/01/IMG_0097.jpg" width="600" height="600" alt="Installing RAM into HP MicroServer" />
+  <figcaption>Installing the extra RAM.</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/2012/01/IMG_0098.jpg" width="600" height="600" alt="Installing hard drives into HP MicroServer" />
+  <figcaption>Installing the hard drives.</figcaption>
+</figure>
+
+## Software
+
+Installing FreeBSD and setting up the ZFS pool was very
+straightforward. I'm running the drives in a RAIDZ configuration,
+giving 3.6Tb of usable storage. I currently have two ZFS file systems
+on that. One in a normal configuration and the other for photos with
+`copies=2` set.
+
+The system all ran well for a few days however on the forth day one of
+the brand new drives failed and started making a terrible clicking, beeping
+noise. Fortunately HT replaced it very promptly and the replacement has
+been running fine since. During the time the failed drive was out for
+replacement the ZFS pool continued to run fine in its degraded state, with
+no data loss. Once the new drive was installed it was a simple matter of
+issuing `zfs replace ada1` and it began the process of resilvering the data
+onto the new drive and it has been running incident free since.
+
+    $ zpool status
+      pool: storage
+     state: ONLINE
+     scan: resilvered 1.07T in 9h32m with 0 errors on Tue Nov 29 07:13:29 2011
+    config:
+
+      NAME        STATE     READ WRITE CKSUM
+      storage     ONLINE       0     0     0
+        raidz1-0  ONLINE       0     0     0
+          ada1    ONLINE       0     0     0
+          ada2    ONLINE       0     0     0
+          ada3    ONLINE       0     0     0
+
+    errors: No known data errors
+
+After setting up the OS and file systems the only other thing I
+needed to so was make the storage available to other machines on the
+network. Since my house is all Macs I built [netatalk] via the FreeBSD
+ports collection to make the storage available via <abbr title="Apple
+Filing Protocol">AFP</abbr>.
+
+[netatalk]: http://netatalk.sourceforge.net/
+
+With that done it's the sever shows up in the Finder via Bonjour and
+copying/accessing data is dead simple.
+

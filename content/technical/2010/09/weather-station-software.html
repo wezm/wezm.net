@@ -16,7 +16,7 @@ functions for communicating with a LaCrosse WS-23xx weather station and a set
 of tools. wview logged its observations to an SQLite database, which seemed
 appropriate for this application. There were tools in Open2300 to log current
 conditions to MySQL and PostgreSQL databases but not SQLite. So last weekend
-I spend some of the afternoon learning enough of the SQLite C API to add
+I spent some of the afternoon learning enough of the SQLite C API to add
 such a tool. The result is in my 
 [git mirror of the Open2300 SVN repo][open2300git]. Once the SQLite tool is
 tidied up a bit more I'll submit it upstream.
@@ -29,9 +29,10 @@ that wview was previously generated. To do this I wrote a small
 [Lua tool][weather-tools]
 to query the database and output the results to a [JSON][json] file. The
 JSON is used on the new [weather page][weather], which is largely populated
-by Javascript and uses the [flot charting library][flot] to graph the
-temperature history.
+by Javascript and uses the [flot][flot] and [dygraphs][dygraphs] libraries
+visualise the weather data.
 
 [json]: http://www.json.org/
 [flot]: http://code.google.com/p/flot/
+[dygraphs]: http://dygraphs.com/
 [weather-tools]: http://github.com/wezm/weather-tools
