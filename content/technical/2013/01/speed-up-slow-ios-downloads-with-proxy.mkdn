@@ -57,21 +57,21 @@ This seemed to be the same problem I had encountered with the Radiopaedia app.
 I wondered if telling the iPhone to use a proxy on the local
 network would work around the issue.
 
-To test my theory I set up [Squid][squid]<sup>4</sup> on the Mac
-mini that's connected to my TV since it's always on and has a wired
-connection to my modem. I configured the iPhone to use the proxy and
-compared the speed with, and without the proxy in use.
+To test my theory I set up [Squid][squid]<sup>4</sup> on the Mac mini
+that's connected to my TV. I configured the iPhone to use the proxy and
+compared the speed with and without the proxy in use. You can see this
+in action in the screenshots below.
 
 [squid]: http://www.squid-cache.org/
 
-You can see this in action in the screenshots below. The first is not
-using the proxy. I have let it download a third of the file to be well
-clear of [TCP's slow start][slow-start] and it is estimating 57 minutes to
-download the remaining 176.1 Mb (53 kb/sec). The second screenshot (only
-a minute later) shows the result after I paused the download, changed
-the proxy settings and then again let the download warm up a little. The
-estimated time to complete the remaining 143.8 Mb is now only 5 mins
-(491 kb/sec) -- a huge improvement.
+In the first screenshot the phone isn't using the proxy. I have let
+it download a third of the file to be well clear of [TCP's slow
+start][slow-start] and it is estimating 57 minutes to download the
+remaining 176.1 Mb (53 kb/sec). The second screenshot (only a minute
+later) shows the result after I paused the download, changed the proxy
+settings and then again let the download warm up a little. The estimated
+time to complete the remaining 143.8 Mb is now only 5 mins (491 kb/sec)
+-- a huge improvement.
 
 [slow-start]: https://en.wikipedia.org/wiki/Slow-start
 
