@@ -1,0 +1,46 @@
+---
+title: Tarra Valley and Wilsons Promontory
+extra: Photos from a trip to The Tarra Valley and Wilsons Prom after Christmas 2012.
+kind: article
+section: personal
+created_at: 2013-01-13 16:21:00
+keywords: 
+- trip
+- photos
+- wilsons
+- promontory
+- tarra
+- valley
+---
+
+On Boxing Day 2012 I went on a road trip with a few friends to the Tarra
+Valley in Victoria's south east. We stayed at the [Tarra Valley Caravan
+Park][fernholme] "Fernholme" just outside the [Tarra-Bulga National Park][tarra-bulga].
+The area is very picturesque, with large portions of the national park
+covered by [temperate rainforest][rainforest]. During our stay we did
+several walks and a trip to [Woodside Beach][woodside].
+On the way home we spent a day at the equally as picturesque Wilsons Promontory.
+
+[fernholme]: http://www.tarra-valley.com/
+[tarra-bulga]: https://en.wikipedia.org/wiki/Tarra-Bulga_National_Park
+[woodside]: https://en.wikipedia.org/wiki/Woodside_Beach
+[rainforest]: https://en.wikipedia.org/wiki/Temperate_rainforest
+
+Below are some of my favourite photos from the trip.
+[View the full set on Flickr][flickr].
+
+[flickr]: http://www.flickr.com/photos/wezm/sets/72157632405621933/
+
+<figure><a href="http://www.flickr.com/photos/wezm/8335447321/" title="The Gang by wezm, on Flickr"><img src="http://farm9.staticflickr.com/8351/8335447321_f54cab5ac7.jpg" width="500" height="333" alt="The Gang"></a></figure>
+
+<figure><a href="http://www.flickr.com/photos/wezm/8335449191/" title="_MG_2560 by wezm, on Flickr"><img src="http://farm9.staticflickr.com/8219/8335449191_1864e2015b.jpg" width="333" height="500" alt="_MG_2560"></a></figure>
+
+<figure><a href="http://www.flickr.com/photos/wezm/8335468571/" title="Wet Leaf by wezm, on Flickr"><img src="http://farm9.staticflickr.com/8493/8335468571_65d445b2f0.jpg" width="500" height="333" alt="Wet Leaf"></a></figure>
+
+<figure><a href="http://www.flickr.com/photos/wezm/8336509904/" title="Corrigan Suspension Bridge by wezm, on Flickr"><img src="http://farm9.staticflickr.com/8221/8336509904_f91110bd7e.jpg" width="500" height="333" alt="Corrigan Suspension Bridge"></a></figure>
+
+<figure><a href="http://www.flickr.com/photos/wezm/8336530324/" title="_MG_2736 by wezm, on Flickr"><img src="http://farm9.staticflickr.com/8352/8336530324_9ea598a818.jpg" width="333" height="500" alt="_MG_2736"></a></figure>
+
+<figure><a href="http://www.flickr.com/photos/wezm/8335479675/" title="Tidal River by wezm, on Flickr"><img src="http://farm9.staticflickr.com/8211/8335479675_4f3fb4a105.jpg" width="500" height="375" alt="Tidal River"></a></figure>
+
+<figure><a href="http://www.flickr.com/photos/wezm/8335482115/" title="Squeaky Beach by wezm, on Flickr"><img src="http://farm9.staticflickr.com/8078/8335482115_04fbf1c43b.jpg" width="500" height="158" alt="Squeaky Beach"></a></figure>
