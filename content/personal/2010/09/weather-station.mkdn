@@ -54,14 +54,14 @@ what I'm most interested in.
 <figure>
   <a href="/images/2010/09/_IM_9078-9080.jpg" rel="prettyPhoto[weather]"><img src="/images/2010/09/_IM_9078-9080-small.jpg" width="266" height="400" alt="The Finished Installation" /></a>
   <figcaption>The Finished Installation</figcaption>
-<figure>
+</figure>
 
 To log and upload the weather readings to [http://weather.wezm.net/][weather]
 I'm using the [wview][wview] weather station software. wview is running on the
 Mac mini connected to our TV. The site layout is pretty basic so I hope to come
 up with a cleaner design in the coming weeks.
 
-**Update:** I build a custom logging and charting solution. See the post,
+**Update:** I built a custom logging and charting solution. See the post,
 [Weather Station Software][software].
 
 [software]: /technical/2010/09/weather-station-software/
