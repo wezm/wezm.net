@@ -14,7 +14,6 @@ site = Nanoc3::Site.new(Pathname(__FILE__).parent.parent.to_s)
 Bitly.use_api_version_3
 bitly = Bitly.new('wezm', 'R_f2bfdace56c886671086eb0c8acb9ce7')
 
-site.load_data
 site.items.select { |item| item[:kind] == 'article' }.each do |article|
   meta = YAML.load_file(article[:meta_filename]) || {}
   url = site.config[:base_url] + article.path
