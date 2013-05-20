@@ -23,7 +23,7 @@ Installation
 <figure>
   <a href="/images/2010/08/open-xml-converter-show-package-contents.png" rel="prettyPhoto[openxml]"><img src="/images/2010/08/open-xml-converter-show-package-contents-small.jpg" width="600" height="325" alt="Step 1: Show Package Contents" /></a>
   <figcaption><span class="label">Step 3:</span> Show Package Contents</figcaption>
-<figure>
+</figure>
 
 <figure>
   <a href="/images/2010/08/open-xml-converter-all-fonts.png" rel="prettyPhoto[openxml]"><img src="/images/2010/08/open-xml-converter-all-fonts-small.jpg" width="600" height="180" alt="Step 4: Navigating to the package" /></a>
