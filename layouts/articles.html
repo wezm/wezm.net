@@ -25,8 +25,11 @@
       <% menu.each do |menu_item|
         label, count = menu_item
         path = (label != "All" ? '/' + label.downcase : '') + "/articles/"
-        feed = 'http://feeds.feedburner.com/wezm'
-        feed += "-#{label.downcase}" if label != "All"
+        if label != "All"
+          feed = "/#{label.downcase}/feed/"
+        else
+          feed = '/feed/'
+        end
         active = (@item.identifier.sub(%r{page/$}, '') == path)
       %>
       <li>
