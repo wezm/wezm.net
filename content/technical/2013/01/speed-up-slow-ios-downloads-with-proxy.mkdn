@@ -58,13 +58,13 @@ time to complete the remaining 143.8 Mb is now only 5 mins (491 kb/sec)
 
 [slow-start]: https://en.wikipedia.org/wiki/Slow-start
 
-<figure>
-  <img src="/images/2013/01/podcast-download-without-proxy.png" width="320" height="480" alt="Podcast download without proxy" />
+<figure class="screenshot">
+  <img src="/images/2013/01/podcast-download-without-proxy.png" alt="Podcast download without proxy" />
   <figcaption>Podcast download without proxy, 53 kb/sec</figcaption>
 </figure>
 
-<figure>
-  <img src="/images/2013/01/podcast-download-with-proxy.png" width="320" height="480" alt="Podcast download with proxy" />
+<figure class="screenshot">
+  <img src="/images/2013/01/podcast-download-with-proxy.png" alt="Podcast download with proxy" />
   <figcaption>Podcast download with proxy, 491 kb/sec</figcaption>
 </figure>
 

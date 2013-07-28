@@ -1,13 +1,11 @@
-$ans-serif: "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif
+$ans-serif:  'CamingoWeb', "Helvetica Neue", Helvetica, "Liberation Sans", "Bitstream Vera Sans", Tahoma, Geneva, Arial, sans-serif
 
 body
-  font-family: Constantia, Georgia, "Bitstream Vera Serif", "Liberation Serif", serif
+  font-family: 'CamingoWeb', Constantia, Georgia, "Bitstream Vera Serif", "Liberation Serif", serif
   font-size: 16px
+  font-weight: 300
   background: #fff
   color: #223
-
-  &.home
-    min-width: 960px
 
 
 // HTML5 expectations - should go in reset perhaps
@@ -48,7 +46,7 @@ h1, h2, h3, h4, h5, h6
   font-family: $ans-serif
   margin: 0.6em 0 0.5em 0
   color: #111
-  font-weight: 200
+  font-weight: 500
 
 
 h1
@@ -102,12 +100,14 @@ sup
 
 
 pre, code, tt
-  font-family: Consolas, "Andale Mono", "Liberation Mono", Menlo, Monaco, "Bitstream Vera Sans Mono", monospace
+  font-family: 'SourceCodePro', Consolas, "Andale Mono", "Liberation Mono", Menlo, Monaco, "Bitstream Vera Sans Mono", monospace
 
+code, tt
+  font-size: smaller
 
 pre
-  font-size: 13px
   overflow-x: auto
+  padding-bottom: 0.25em
 
 
 blockquote
@@ -119,19 +119,26 @@ figure
   margin: 1em auto
   text-align: center
 
+  &.screenshot
+    img
+      max-width: 50%
+
 figcaption
-  font-size: small
+  font-size: smaller
   text-align: center
   font-style: italic
 
   .label
-    font-weight: bold
+    font-weight: 500
 
+img
+  max-width: 100%
 
 
 body > header
   font-family: $ans-serif
   font-size: 18px
+  font-weight: 400
   color: white
   padding: 0.5em
   background: #1C1C1C
@@ -159,21 +166,18 @@ body > header
 
 
 #content
-  padding: 0 20px
+  margin: 0 auto
   clear: both
-  min-width: 600px
-  margin-right: 40%
+  max-width: 728px
+  font-size: 18px
+  font-weight: 300
 
-
-body.articles #content, body.weather #content
-  min-width: 0
-  margin-right: 0
 
 
 footer
   color: #999
   border-top: 1px solid #999
-  margin: 1em
+  margin: 20px
   clear: both
 
   .copyright
@@ -228,10 +232,9 @@ ul.articles
   strong
     font-family: $ans-serif
     margin: 0
-    font-weight: 200
+    font-weight: 400
     display: block
     font-size: 18px
-
 
 a
   &.more
@@ -290,6 +293,7 @@ a
     img
       -webkit-transition: opacity 500ms ease-out
       position: absolute
+      max-width: none
 
       &:hover
         opacity: 0
@@ -456,12 +460,16 @@ table
 // Weather
 body.weather
 
+  #content
+    max-width: 100%
+    margin: 0 20px
+
   #current > .temperature
-  
+
     .temperature
       font-family: $ans-serif
       font-weight: 200
-    
+
     .current
       font-size: 36px
 
@@ -499,3 +507,92 @@ body.weather
     font-size: smaller
     margin-top: 1em
     color: #999
+
+@media screen and (max-width: 960px)
+
+  .column
+    float: none
+    width: auto
+    min-width: 0
+    max-width: 728px
+
+
+@media screen and (max-width: 768px)
+  body
+    font-size: 18px
+
+  #technical div, #personal div
+    padding: 0 1em
+
+  #content
+    margin: 0 20px
+
+
+@media screen and (max-width: 680px)
+
+  nav.search
+    li
+      display: list-item
+      margin: 1em 0 0 0
+      font-size: large
+
+  #search
+    float: none
+
+
+@media screen and (max-width: 515px)
+
+  body > header span
+    float: right
+    display: inline
+    cursor: pointer
+
+  #menu
+    display: none
+    float: none
+    padding: 0.5em 0 0 0
+    line-height: 2
+
+    li
+      margin: 0 1em 0 0
+
+  #content
+    min-width: 0
+    margin: 0 10px
+
+    h1
+      font-size: 30px
+
+  body.weather #content
+    margin: 0 10px
+
+  ul.articles li
+    margin: 0
+    padding-top: 0
+    height: auto
+
+  #flickr
+
+    header
+      margin-left: 1em
+
+    ul
+      height: auto
+
+    li, li:first-child
+      margin: 0 0 1em 1em
+
+  #respond
+    li.short
+      margin: 0.5em 0 0 0
+      float: none
+      display: block
+
+  footer
+    margin: 20px 10px
+
+@media screen and (max-width: 320px)
+  figure.screenshot
+    img
+      max-width: 100%
+
