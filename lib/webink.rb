@@ -69,16 +69,6 @@ class Webink
         :style  => :italic
         #:weight => 'normal',
       },
-      'D6A4893B-07F2-0B53-29D3-E16D016F5BB6' => {
-        :family => 'MonoCondensed',
-        #:style  => :italic
-        #:weight => 'normal',
-      },
-      'BE4B6AFF-B77A-F436-7983-AD9D47F266E3' => {
-        :family => 'MonoCondensed',
-        #:style  => :italic
-        :weight => '700',
-      },
       'C4C06B6C-3C52-04FA-05D8-0837158487C0' => {
         :family => 'SourceCodePro',
         #:style  => :italic
