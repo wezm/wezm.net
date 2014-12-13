@@ -12,7 +12,7 @@
 <%= yield %>
 <div id="respond">
   <h2>Something to Add?</h2>
-  <p>Contact me by email, App.net or Twitter if you have a comment, correction
+  <p>Contact me by email or Twitter if you have a comment, correction
   or just want to get in touch.</p>
   <ul class="inline">
     <li>
@@ -51,9 +51,6 @@
 
       //]]>
       </script>
-    </li>
-    <li>
-      <a href="https://alpha.app.net/intent/post?text=<%= URI.encode("#{@item[:title]} - #{short} @wezm") %>" target="_blank">Post on App.net</a>
     </li>
     <li>
       <a href="http://twitter.com/home?status=<%= URI.encode("#{@item[:title]} - #{short} @wezm") %>" target="_blank">Tweet</a>
