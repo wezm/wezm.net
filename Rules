@@ -23,6 +23,12 @@ compile %r(/\d{4}/.*) do
   filter :rubypants
 end
 
+compile %r(/about/.*) do
+  filter :rdiscount
+  layout 'topphoto'
+  filter :rubypants
+end
+
 compile %r{.*/feed/} do
   filter :erb
 end

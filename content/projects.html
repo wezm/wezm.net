@@ -3,6 +3,17 @@ more noteworthy projects are listed below.
 
 [github]: http://github.com/wezm
 
+OCMustache
+----------
+
+[OCMustache][ocmustache] brings the [Mustache templating language][mustache] to
+Objective-C. The parser is built using the [Ragel State Machine
+Compiler][ragel] in the hope that it will help ensure fast and correct parsing.
+
+[ocmustache]: https://github.com/wezm/OCMustache
+[mustache]: http://mustache.github.com/
+[ragel]: http://www.complang.org/ragel/
+
 Monothumb
 ---------
 
@@ -11,23 +22,10 @@ retrieves thumbnails of my [recent uploads to Flickr][flickr], converts them to
 greyscale and then generates a single output image with both the colour and
 monochrome versions of the thumbnail. There are two version of the tool. The
 original one, written in Objective-C that uses CoreImage and a second version
-written in Lua. The Lua one uses my [lua-imlib](#lua-imlib) fork.
+written in Lua. The Lua one uses my [lua-imlib2] fork.
 
 [flickr]: http://www.flickr.com/photos/wezm/
 [monothumb]: https://github.com/wezm/monothumb
-
-<a name="lua-imlib"></a>
-lua-imlib2
-----------
-
-[lua-imlib2] is a fork of the published lua-imlib library with additional
-functionality. This library allows image processing in Lua. Specifically I
-added:
-
-* Support for filters
-* Image blending
-
-[lua-imlib2]: https://github.com/wezm/lua-imlib2
 
 node-genx
 ---------
@@ -41,38 +39,16 @@ node.js environment.  Available for easy install via [npm].
 [genx]: http://www.tbray.org/ongoing/When/200x/2004/02/20/GenxStatus
 [npm]: http://npmjs.org/
 
-OCMustache
-----------
-
-[OCMustache][ocmustache] brings the [Mustache templating language][mustache] to
-Objective-C. The parser is built using the [Ragel State Machine
-Compiler][ragel] in the hope that it will help ensure fast and correct parsing.
-
-[ocmustache]: https://github.com/wezm/OCMustache
-[mustache]: http://mustache.github.com/
-[ragel]: http://www.complang.org/ragel/
-
-Kyoto Client
-------------
-
-[kyoto-client][kyoto-client] is a [node.js][node] client library for the
-[Kyoto Tycoon][kyoto-tycoon] server. Kyoto Tycoon is the server component of
-the [Kyoto Cabinet][kyoto-cabinet] key-value store. kyoto-client is available
-for installation via [npm].
-
-[kyoto-client]: http://kyoto-client.org
-[kyoto-tycoon]: http://fallabs.com/kyototycoon/
-[kyoto-cabinet]: http://1978th.net/kyotocabinet/
-
 Weather Station
 ---------------
 
-I have a weather station at my home for keeping track of the local conditions.
-I added support for [SQLite][sqlite] logging to [my fork][open2300fork] of the
-[Open2300][open2300] project. The weather station is connected to my Mac.
-Every 5 minutes it logs the current conditions, uploads them to my server and
-invokes a [lua program][weather-tools] to generate a [JSON][json] file,
-which is used to produce the [Weather page][weather].
+I previously had a weather station at my home for keeping track of the local
+conditions.  I added support for [SQLite][sqlite] logging to [my
+fork][open2300fork] of the [Open2300][open2300] project. The weather station
+was connected to a Mac for data logging.  Every 5 minutes it logged the current
+conditions, uploaded them to my server and invoked a [lua
+program][weather-tools] to generate a [JSON][json] file, which was used to
+produce the [Weather page][weather].
 
 [sqlite]: http://www.sqlite.org/
 [open2300]: http://www.lavrsen.dk/foswiki/bin/view/Open2300/WebHome

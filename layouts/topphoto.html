@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render '_head' %>
+  <script type="text/javascript">
+    jQuery(function() {
+      // Enable light box
+      $("a[rel^='prettyPhoto']").prettyPhoto({theme: "facebook"});
+    });
+  </script>
+</head>
+<body<%= %Q( class="#{@item[:body_class]}") if @item[:body_class] %>>
+  <%= render '_header' %>
+
+  <img src="<%= @item[:photo] %>" alt="<%= @item[:photo_alt] %>" class="cover-photo" />
+
+  <div id="content">
+    <h1><a href="<%= @item.reps.first.path %>"><%=h @item[:title] %></a></h1>
+    <%= yield %>
+  </div>
+  <%= render '_footer' %>
+</body>
+</html>
