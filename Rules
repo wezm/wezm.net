@@ -16,16 +16,16 @@ compile %r{/(?:technical|personal|)articles/(page/|)} do
   filter :rubypants
 end
 
+compile %r(/(?:about|nepal)/$) do
+  filter :rdiscount
+  layout 'topphoto'
+  filter :rubypants
+end
+
 compile %r(/\d{4}/.*) do
   filter :rdiscount
   layout 'article'
   layout 'default'
-  filter :rubypants
-end
-
-compile %r(/about/.*) do
-  filter :rdiscount
-  layout 'topphoto'
   filter :rubypants
 end
 
