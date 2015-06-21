@@ -1,17 +1,17 @@
 [Slack] has a couple of useful keyboard shortcuts for navigating between unread
 channels. Unfortunately these use an awkward combination of keys involving
 multiple modifiers and an arrow key (<span class="keyboard-shortcut">⌥⇧↓</span>
-and <span class="keyboard-shortcut">⌥⇧↑</span>). Additionally these shortcuts
-are not exposed in the menu bar, meaning they are not able to be modified with
-the [built-in support for such customisation in Mac OS X][custom-shortcuts].
+and <span class="keyboard-shortcut">⌥⇧↑</span>). Additionally, these shortcuts
+are not exposed in the menu bar. This means they can't be modified with the
+[built-in support for custom shorcuts in Mac OS X][custom-shortcuts].
 
 [Slack]: https://slack.com/
 [custom-shortcuts]: https://support.apple.com/kb/PH18418
 
-I have made a feature request for this to be addressed. Until the time that
-happens, if at all, the following [Karabiner] config can be used to change the
-next unread shortcut to something more sane. I chose
-<span class="keyboard-shortcut">⌘J</span>:
+I made a feature request for this to be addressed. Until that happens, if at
+all, the following [Karabiner] config can be used to change the next unread
+shortcut to something more sane. I chose <span
+class="keyboard-shortcut">⌘J</span>:
 
 <script src="https://gist.github.com/wezm/05210d76660e735944a7.js"></script>
 [View Code][code]
