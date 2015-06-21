@@ -44,6 +44,7 @@ data_sources:
 base_url: 'http://www.wezm.net'
 deploy:
   default:
+    kind: rsync
     dst:     "bitcaster.wezm.net:/var/www/www.wezm.net"
     #options: [ '-rlpgoDvz', '--delete', '--exclude=".svn"' ]
     options: [ '-avz', '--delete', '--exclude=".svn"' ]
