@@ -44,9 +44,7 @@ data_sources:
 base_url: 'http://www.wezm.net'
 deploy:
   default:
-    dst:     "mini.wezm.net:www/www.wezm.net"
-    #dst:     "wezm@crucial.wezm.net:www"
-    #dst:     "lightwave.wezm.net:www/www.wezm.net"
+    dst:     "bitcaster.wezm.net:/var/www/www.wezm.net"
     #options: [ '-rlpgoDvz', '--delete', '--exclude=".svn"' ]
     options: [ '-avz', '--delete', '--exclude=".svn"' ]
 
