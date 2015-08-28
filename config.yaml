@@ -47,5 +47,5 @@ deploy:
     kind: rsync
     dst:     "bitcaster.wezm.net:/var/www/www.wezm.net"
     #options: [ '-rlpgoDvz', '--delete', '--exclude=".svn"' ]
-    options: [ '-avz', '--delete', '--exclude=".svn"' ]
+    options: [ '-avz', '--omit-dir-times', '--delete', '--exclude=".svn"' ]
 
