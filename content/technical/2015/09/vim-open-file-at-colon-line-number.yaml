@@ -1,0 +1,13 @@
+---
+title: Open Paths With Line Numbers in Vim
+extra: A shell function to open path/to/file.txt123 style paths at the specified line
+  in vim.
+kind: article
+section: technical
+created_at: 2015-09-20 12:58:00.000000000 +10:00
+keywords:
+- vim
+- shell
+- zsh
+- productivity
+short_url: http://j.mp/1YpZeKP
