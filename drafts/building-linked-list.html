@@ -1,0 +1,139 @@
+Building Linked List -- an experiment in web design/architecture/application
+An Experiment in Performant Web Application Design
+
+I noticed that many of my collegues have a collection of snippets of knowledge that they store
+in software like Evernote, nvAlt, Simplenote or just a collection of text files. I referred to
+my own such collection to help a collegue out one day and it dawned on me that there was no
+reason I couldn't publish many of my notes for others to refer to.
+
+I have a blog (you're reading it now!) that I've published these type of notes
+to before but there's a certain barrier to entry to writing a full blog post.
+There's an implied need to include more explanation and sometimes that's enough
+to put me off posting, especially for small snippets. Additionally blogs tend
+to feel time based, the posts existing in a snapshot of time in which they
+were posted.
+
+Wikis are another alternative but to me they of often feel messy and ugly. Additionally
+there's that barrier to entry for writing posts: Login, create link to new page, write
+page, publish. All of which is generally done in a dinky text area and not a proper text
+editor.
+
+What I wanted was a system that made publishing a snippet as simple as editing a file
+and had a clean design. The end result was pkb and [linkedlist.org][Linked List].
+
+I built the core of the app in a weekend and refied it over the following weeks.
+The result is something of an experiment and playground for me. It has:
+
+* No database
+* Zero JavaScript (and by extension no analytics)
+* No images
+* No media queries
+* 5.9Kb of CSS (uncompressed)
+* Uses a CDN to deliver assets
+* Varnish caching
+* HTTPS everywhere
+* Freely available code
+
+It works as follows:
+
+I have a folder full of Markdown files on my computer. Each file is a page on
+Linked List, the filename minus the `.md` being its URL. New and updated files
+are syncronised to the server using Syncthing.
+
+### Syncing
+
+Origianlly I was going to use
+Dropbox but headless installations are not well supported and using the API
+felt like overkill. Syncthing works great on the server and is more flexible
+than Dropbox to boot (multiple synced folders the can sync from arbirary
+locations on the source and destingation machines).
+
+### Design
+
+Using ideas from http://bettermotherfuckingwebsite.com and its ispiration http://bettermotherfuckingwebsite.com I used just enough CSS to make the site clean and easy to read. There's not grid, no Bootstrap or similar as a result it's fluid and responsive by default.
+
+Fonts proved a chanllenged. Originally I used a font stack that preferred Hoefler Text but after
+upgading to OS X 10.11 "El Capitan", that [broke in Safari][hoefler-tweet]. I really didn't want
+to use web fonts as they bloat the page and cause undesired behaviour (flash of unstlyed content
+or invisible text) but with Hoefler text out of picture I decided to use [ET Book], self hosted.
+
+### NoJS
+
+Up until the need to consider web fonts there had been no need for JavaScript. Since...blah blah
+try to stick with no JS.
+
+### NoDB
+
+Wanted to use flat files as much as possible. Each file has YAML front-matter with metadata in
+it: E.g. [linkedlist.org/bulk-delete-from-s3](https://linkedlist.org/bulk-delete-from-s3):
+
+    ---
+    title: Delete in Bulk from S3
+    tags: [aws, s3, ruby]
+    ---
+
+    Given a list of objects to delete the following [Ruby](https://linkedlist.org/tags/ruby)
+    snippet will delete them in batches of 100:
+
+    # ruby
+    require 'shellwords'
+
+    ARGF.lines.each_slice(100) do |slice|
+      system "aws --profile bellroy s3 rm #{slice.map { |l| l.strip.shellescape }.join(' ')}"
+    end
+
+    ---
+
+    Input file looks like:
+
+    s3://files.bellroy.com/E1HJ4ISXVG05CA.2015-02-23-15.c074f93f.gz
+    s3://files.bellroy.com/E1HJ4ISXVG05CA.2015-02-23-15.d3d2a169.gz
+    s3://files.bellroy.com/E1HJ4ISXVG05CA.2015-02-23-21.02ed8e8d.gz
+
+## Blah
+
+Implemented the Rails app naievely: the page is rendered each time it's requested.
+The index page and tags pages itereate over all the files. Varnish takes care of
+making that efficient
+
+### Challenges
+
+DDG index
+
+### What's Next
+
+Automatic invalidation
+
+### TODO
+
+Goals: quick to build, easy to post to, clean design, good performance.
+
+With discussion about mobile web performance, content blockers, 
+
+http://www.quirksmode.org/blog/archives/2015/05/tools_dont_solv.html
+http://www.theverge.com/2015/7/20/9002721/the-mobile-web-sucks
+https://brooksreview.net/2015/09/content-blocker-test/
+
+https://instantarticles.fb.com/
+
+It's easy to reach for Bootstrap, Typekit, throw Google Analytics on a page and call it done
+but how large is the page? How much of Bootstrap are you using? Do you really those analytics
+and allow Google to track all your visitors?
+
+With a bunch of the reading I'd don't over the last few months in mind I decided to build Linked List
+in a way that followed these ideas and best practices.
+
+* Minimal CSS
+* No JS
+* Varnish
+* CDN
+* No framework, minimal, semantic markup
+* Clean readable design
+* No analytics
+* The debate about fonts
+* No or few images
+
+[Linked List]: https://linkedlist.org/
+[vim]: http://www.vim.org/
+[hoefler-tweet]: https://twitter.com/wezm/status/649716551956828160
+[ET Book]: https://github.com/edwardtufte/et-book

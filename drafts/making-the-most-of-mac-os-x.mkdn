@@ -1,0 +1,136 @@
+### Preface
+
+Keyboard shortcuts are referred to how they are shown in the menus:
+
+* <kbd>⌃</kbd> -- Control
+* <kbd>⌥</kbd> -- Option (Alt on PC keyboards)
+* <kbd>⌘</kbd> -- Command
+* <kbd>⇧</kbd> -- Shift
+
+### Text
+
+All standard text fields offer a number of features
+
+#### Text Transformations
+
+Text transformations such as making the selected text lowercase, uppercase or capitilised.
+
+#### Define word
+
+Look up the defintion of a word:
+
+* Right click: Lookup "word"
+* <kbd>⌃⌘D</kbd>
+* Three finger tap on word (with trackpad)
+
+#### Insert Special Characters
+
+<kbd>⌃⌘Space</kbd> to search for and insert special characters.
+
+(Character pallet and keyboard viewer)
+
+### Keyboard Shortcuts & Modifers
+
+(Safari: trikeapps.com)
+
+1. Open a menu and press a modifier to discover alternate menu commands.
+2. Command click to perform actions on background windows without changing focus.
+3. Shift scroll to scroll horizontally.
+4. Double Click Menu bar to Zoom Since They Broke the Zoom Button (Since: 10.10 (Yosemite))
+4. Hold Shift-Option when pressing the volume controls or brightness controls to adjust in finer increments.
+5.  Open URLs in Terminal/iTerm (gem --help)
+    * Terminal: Command double-click
+    * iTerm: Commmand click
+
+#### Emacs keys
+
+Standard OS X text fields support a number of shortcuts that will be familiar to emacs users:
+
+* <kbd>⌃a</kbd> -- Start of line
+* <kbd>⌃e</kbd> -- End of line
+* <kbd>⌃h</kbd> -- Backspace
+* <kbd>⌃d</kbd> -- Forward delete
+* <kbd>⌃k</kbd> -- Kill (cut from cursor forward)
+* <kbd>⌃y</kbd> -- Paste kill buffer (separate from system clipboard, pastes last <kbd>⌃k</kbd>)
+* More
+
+#### Customisation
+
+* Any menu item can have a keyboard shortcut added or changed in the Keyboard preferences.
+* List of all system/global shortcuts are in the same place.
+* Change modifier Keys -- handy for PC keyboards to swap <kbd>⌘</kbd> and <kbd>⌥</kbd>.
+
+### Services & Automator
+
+Services are automations supplied by apps or yourself. They can be given keyboard shortcuts using the Keyboard preferences.
+
+Automator can do some interesting things like processing images, renaming files and extracting URLs from webpages. It can also be used to build services.
+
+(Get image URLs from webpage)
+
+Perhaps slightly redundant when something like Alfred is used.
+
+### Screen Shots
+
+#### Without Shadow
+
+To take screenshot of a window without the drop shadow:
+
+1. <kbd>⌘⇧4</kbd>
+2. <kbd>Space</kbd>
+3. Click window while holding <kbd>⌥</kbd>
+
+#### Copy to Clipboard
+
+Add <kbd>⌃</kbd> when doing the normal shortcut. E.g. <kbd>⌃⌘⇧4</kbd>
+
+### Preview
+
+You can do basic and not so basic edits and annotations in Preview.
+
+* Photo adjustments
+* Magic alpha
+* Annotations
+
+#### Sign Documents
+
+Preview allows you to scan a picture of your signature with the camera built-in to your Mac and then use that to add your signaure to PDFs.
+
+### Finder & Files
+
+1. Put items into a folder, Right-click, "New Folder With Selection"
+1. Batch rename in Finder: Select multiple files and select, "Rename _n_ Items…"
+2. Proxy Icons for well bahaved "document" based applications:
+    * Click, pause, drag the icon on window to open that file in other applications, reveal in Finder or write path to terminal
+    * <kbd>⌘</kbd> click for path, select to open in Finder
+1. Drag file or proxy icon to open or save panel to go there
+1. Shortcuts for save panels (Cmd-Delete)
+1. Shortcuts for dialogs, first letter of button 
+1. Navigate to directory in open/save panel (~ or /)
+1. Navigate to folder in Finder: <kbd>⌘⇧G</kbd>
+
+#### Spotlight Search & Smart Folders
+
+(Images larger than 1Mb)
+
+### Screen Recordings in QuickTime
+
+QuickTime Player can do screen recordings.
+
+### Command Line Tools
+
+There are a number of command line tools that are are unique to OS X:
+
+* **open**
+    * open a file
+        * Using the default application or the named application if `-a` is specified.
+* **jsc** -- JaveScript runtime
+* **mdfind** -- finds files matching a given query
+    * The mdfind command consults the central metadata store [Spotlight] and returns a list of files that match the given metadata query. The query can be a string or a query expression.
+* **say** -- Convert text to audible speech
+    * This tool uses the Speech Synthesis manager to convert input text to audible speech and either play it through the sound output device chosen in System Preferences or save it to an AIFF file.
+* **sips** -- scriptable image processing system
+    * From the [man page][sips], "This tool is used to query or modify raster image files and ColorSync ICC profiles."
+* **textutil** -- 
+    * textutil can be used to manipulate text files of various formats, using the mechanisms provided by the Cocoa text system.
+
