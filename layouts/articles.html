@@ -33,7 +33,7 @@
         active = (@item.identifier.sub(%r{page/$}, '') == path)
       %>
       <li>
-        <a href="<%= feed %>"><img class="feed-icon" src="/images/black-feed-icon.png" width="12" height="12" alt="Black Feed Icon" /></a>
+        <a href="<%= feed %>"><img class="feed-icon" src="/images/feed-icon.svg" width="12" height="12" alt="Feed Icon" /></a>
         <a href="<%= path %>"<%= %Q{class="active"} if active %>><%= label %></a> (<%= count %>)
       </li>
       <% end %>
