@@ -19,7 +19,7 @@ nature. To make use of `ripgrep` within vim here are a few options:
 
 Set [grepprg](http://vimdoc.sourceforge.net/htmldoc/options.html#'grepprg'),
 which is used by [:grep][colon-grep] to search a project and add the matches
-the quickfix list:
+to the quickfix list:
 
     if executable("rg")
         set grepprg=rg\ --vimgrep\ --no-heading
