@@ -36,7 +36,7 @@ follows. Now when you run `:Ack` it will use `rg` instead:
 One of my favourite plugins, [fzf.vim](https://github.com/junegunn/fzf.vim) has
 built-in support for `ag`. I've created an [experimental fork][fork] that adds
 support for `rg` to it.  My fork adds the `:Rg` user command, which works the
-same was as the existing `:Ag` command.  To use my version of the plugin with
+same way as the existing `:Ag` command.  To use my version of the plugin with
 [vim-plug] add the following to your `.vimrc`:
 
     Plug 'wezm/fzf.vim', { 'branch': 'rg' }
