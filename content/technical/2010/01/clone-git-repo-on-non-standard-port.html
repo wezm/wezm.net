@@ -1,5 +1,8 @@
-I use an SSH tunnel to access my computer at work from home. On occasion I want to clone a git repo that is on the remote server. To do so its necessary to specify the port, which doesn't work with the conventional clone syntax.
+I use an SSH tunnel to access my computer at work from home. On occasion I want
+to clone a git repo that is on the remote server. To do so it's necessary to
+specify the port, which doesn't work with the conventional clone syntax.
 
-E.g. `git clone hostname:path/to/repo`. The solution is to be a little more specific:
+E.g. `git clone hostname:path/to/repo`. The solution is to be a little more
+specific:
 
     git clone ssh://localhost:2222/~username/path/to/repo

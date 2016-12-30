@@ -11,8 +11,8 @@ any issues either.
 Some searching revealed people complaining about YouTube videos
 downloading faster over 3G than Wi-Fi. There were a number of theories
 and proposed fixes, including [people seeing faster rates when
-downgrading their access point to 802.11b][80211b]<sup>2</sup> but I
-found one particular article (that I can no longer find) that said the
+downgrading their access point to 802.11b][80211b]<sup>2</sup>. I
+read one particular article (that I can no longer find) that said the
 power management in the iOS Wi-Fi stack interfered with download speeds
 when communicating to a high latency destination over a high speed Wi-Fi
 connection. For example YouTube servers in the US from AU<sup>3</sup>.

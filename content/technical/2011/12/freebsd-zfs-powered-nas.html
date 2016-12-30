@@ -105,7 +105,7 @@ The final parts list ended up being rather diminutive:
 
 [hard-drives]: http://www.ht.com.au/cart/1/part/V0531-Seagate-Barracuda-Green-ST2000DL003-hard-drive-2-TB-SATA-600/detail.hts
 
-The total cost ended up being $731.67, healthily under budget.
+The total cost was $731.67, healthily under budget.
 
 <figure>
   <img src="/images/2012/01/IMG_0097.jpg" alt="Installing RAM into HP MicroServer" />
@@ -119,20 +119,20 @@ The total cost ended up being $731.67, healthily under budget.
 
 ## Software
 
-Installing FreeBSD and setting up the ZFS pool was very
-straightforward. I'm running the drives in a RAIDZ configuration,
-giving 3.6Tb of usable storage. I currently have two ZFS file systems
-on that. One in a normal configuration and the other for photos with
-`copies=2` set.
+Installing FreeBSD and setting up the ZFS pool was straightforward. I'm running
+the drives in a RAIDZ configuration, giving 3.6Tb of usable storage. I
+currently have two ZFS file systems on that. One in a normal configuration and
+the other for photos with `copies=2` set.
 
-The system all ran well for a few days however on the forth day one of
-the brand new drives failed and started making a terrible clicking, beeping
-noise. Fortunately HT replaced it very promptly and the replacement has
-been running fine since. During the time the failed drive was out for
-replacement the ZFS pool continued to run fine in its degraded state, with
-no data loss. Once the new drive was installed it was a simple matter of
-issuing `zfs replace ada1` and it began the process of resilvering the data
-onto the new drive and it has been running incident free since.
+The system ran well for a few days however on the forth day one of the brand
+new drives failed and started making a terrible clicking, beeping noise.
+Fortunately HT replaced it promptly.
+
+During the time the failed drive was out for replacement the ZFS pool continued
+to run fine in its degraded state, with no data loss. Once the new drive was
+installed it was a simple matter of issuing `zfs replace ada1` and it began the
+process of resilvering the data onto the new drive and it has been running
+incident free since (still running as of 30 Dec 2016).
 
     $ zpool status
       pool: storage
@@ -157,6 +157,5 @@ Filing Protocol">AFP</abbr>.
 
 [netatalk]: http://netatalk.sourceforge.net/
 
-With that done it's the sever shows up in the Finder via Bonjour and
+With that done the sever shows up in the Finder via Bonjour and
 copying/accessing data is dead simple.
-
