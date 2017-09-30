@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Great Rust Tools</title>
+
+    <!-- CSS WebSlides -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+    <!-- FAVICONS -->
+    <!-- <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png"> -->
+    <!-- <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png"> -->
+    <!-- <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png"> -->
+    <!-- <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png"> -->
+    <!-- <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png"> -->
+    <!-- <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png"> -->
+    <!-- <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png"> -->
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+
+    <style type="text/css">
+      body {
+        font-family: 'Roboto', 'San Francisco', helvetica, arial, sans-serif;
+        font-family: 'Interface', 'TeX Gyre Heros', sans-serif;
+      }
+      pre,
+      code {
+        font-family: 'PragmataPro Mono', monospace;
+      }
+      .bullets {
+        margin-top: 1em;
+      }
+      .bullets li {
+        font-size: 4rem;
+        line-height: 1.25em;
+        margin-bottom: 0.75em;
+      }
+      .text-intro {
+        font-size: 4rem;
+      }
+      h1 {
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <main role="main">
+      <article id="webslides">
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+        <section>
+          <div class="aligncenter">
+            <h1 class="text-landing">Supporting Rust by using Rust</h1>
+            <p class="text-intro">An exploration of great command line tools</p>
+
+            <p>Melbourne Rust Meetup<br> Tue 26 Sep 2017</p>
+          </div>
+          <footer>
+            <div class="wrap">
+              <p>
+                <span class="alignleft">
+                Wesley Moore
+                </span>
+                <span class="alignright">
+                  <a href="#" title="Twitter">
+                    <svg class="fa-twitter" viewBox="0 0 512 512">
+                      <path d="m481 117c-13 18-28 34-46 47 0 3 0 7 0 12 0 25-3 50-11 74-7 25-18 49-33 71-14 23-32 43-52 61-21 17-45 31-74 41-29 11-60 16-92 16-52 0-99-14-142-42 7 1 14 2 22 2 43 0 81-14 115-40-20 0-38-6-54-18-16-12-27-27-33-46 7 1 13 2 18 2 8 0 16-1 24-4-21-4-39-15-53-31-14-17-21-37-21-59l0-1c13 7 27 11 42 11-13-8-23-19-30-32-8-14-11-29-11-44 0-17 4-33 12-47 23 28 51 51 84 68 33 17 69 27 107 29-2-8-3-15-3-22 0-25 9-47 27-65 18-18 40-27 66-27 26 0 49 10 67 29 21-4 40-11 59-22-7 22-21 39-41 51 18-2 35-7 53-14z"></path>
+    </svg>
+                    @wezm
+                  </a>
+                </span>
+              </p>
+            </div>
+          </footer>
+        </section>
+
+        <!--
+        <section>
+          <div class="wrap ">
+            <h1><strong>Outline</strong></h1>
+            <p class="text-intro">WebSlides makes HTML presentations easy.<br>
+              Just the essentials and using lovely CSS.
+            </p>
+            <ul>
+              <li>Spreading Rust by using Rust</li>
+              <li>
+                Tools
+                <ul>
+                  <li>watchexec</li>
+                  <li>fd</li>
+                  <li>fe</li>
+                  <li>exa</li>
+                  <li>ripgrep</li>
+                  <li>alt</li>
+                  <li>tac</li>
+                  <li>dot</li>
+                  <li>titlecase</li>
+                  <li>ion</li>
+                </ul>
+              </li>
+              <li>How you can help</li>
+            </ul>
+          </div>
+        </section>
+        -->
+
+        <section>
+          <div class="wrap aligncenter">
+            <h1><strong>Rust is great</strong></h1>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter">
+            <h1><strong>What is a Rust tool?</strong></h1>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap ">
+            <h1><strong>Why Rust tools are great</strong></h1>
+
+            <ul class="flexblock features">
+              <li>
+                <div>
+                  <h2>
+                    <svg class="fa-bolt">
+                      <use xlink:href="#fa-bolt"></use>
+                    </svg>
+                    Performance
+                  </h2>
+                  Fast and efficient with resources
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <svg class="fa-minus-circle">
+                      <use xlink:href="#fa-minus-circle"></use>
+                    </svg>
+                    No runtime
+                  </h2>
+                  Few runtime dependencies
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <svg class="fa-laptop">
+                      <use xlink:href="#fa-laptop"></use>
+                    </svg>
+                    Cross Platform
+                  </h2>
+                  Supports all major platforms
+                </div>
+              </li>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap ">
+            <h1><strong>Why Rust tools are great</strong></h1>
+
+            <ul class="flexblock features">
+              <li>
+                <div>
+                  <h2>
+                    <svg class="fa-terminal">
+                      <use xlink:href="#fa-terminal"></use>
+                    </svg>
+                    Easy to install
+                  </h2>
+                  Package manager or <code>cargo install</code>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <svg class="fa-user">
+                      <use xlink:href="#fa-user"></use>
+                    </svg>
+                    Usable
+                  </h2>
+                  Provide a nice interface
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>Demos</strong></h1>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>watchexec</strong></h1>
+            <p class="text-intro">Executes commands in response to file modifications</p>
+            <p class="text-intro"><a href="https://github.com/mattgreen/watchexec">https://github.com/mattgreen/watchexec</a></p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>fd</strong></h1>
+            <p class="text-intro">A simple, fast and user-friendly alternative to <code>find</code></p>
+            <p class="text-intro"><a href="https://github.com/sharkdp/fd">https://github.com/sharkdp/fd</a></p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>fe</strong></h1>
+            <p class="text-intro">A super-fast and easy to use command line fuzzy file searcher</p>
+            <p class="text-intro"><a href="https://github.com/btipling/fe">https://github.com/btipling/fe</a></p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>exa</strong></h1>
+            <p class="text-intro">A modern replacement for <code>ls</code></p>
+            <p class="text-intro"><a href="https://the.exa.website/">https://the.exa.website/</a></p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>ripgrep</strong></h1>
+            <p class="text-intro">The usability of The Silver Searcher with the raw speed of [GNU] <code>grep</code>.</p>
+            <p class="text-intro"><a href="https://github.com/BurntSushi/ripgrep/">https://github.com/BurntSushi/ripgrep/</a></p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>alt</strong></h1>
+            <p class="text-intro">Command line tool to find alternate files</p>
+            <p class="text-intro"><a href="https://github.com/uptech/alt">https://github.com/uptech/alt</a></p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>tac</strong></h1>
+            <p class="text-intro">A high-performance, cross-platform file reverse utility</p>
+            <p class="text-intro"><a href="https://github.com/neosmart/tac">https://github.com/neosmart/tac</a></p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>dot</strong></h1>
+            <p class="text-intro">Dot file management</p>
+            <p class="text-intro"><a href="https://github.com/ubnt-intrepid/dot">https://github.com/ubnt-intrepid/dot</a></p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>titlecase</strong></h1>
+            <p class="text-intro">Capitalise text according to a style guide</p>
+            <p class="text-intro"><a href="https://github.com/wezm/titlecase">https://github.com/wezm/titlecase</a></p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>ion</strong></h1>
+            <p class="text-intro">A shell written in Rust for Redox and Linux</p>
+            <p class="text-intro"><a href="https://github.com/redox-os/ion">https://github.com/redox-os/ion</a></p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap ">
+            <h1><strong>You can build tools too!</strong></h1>
+            <ul class="bullets">
+              <li>If you use a tool that is frustrating to install due to runtime
+                requirements or dependency issues, perhaps it's a candidate for a Rust
+                version.
+              </li>
+              <li>Maybe you use a tool that is error prone or could benefit from fearless
+                concurrency.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap ">
+            <h1><strong>Conclusion</strong></h1>
+            <ul class="bullets">
+              <li>You can help spread Rust by using tools written in Rust</li>
+              <li>There's already a stack of great tools out there</li>
+              <li>Lots of opportunity to write your own tools</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter ">
+            <h1><strong>Questions?</strong></h1>
+
+            <br>
+            <p class="text-intro">
+              Slides will be available at:<br>
+              <a href="http://wezm.net/talks/rust-tools">http://wezm.net/talks/rust-tools</a>
+            </p>
+          </div>
+
+          <footer>
+            <div class="wrap">
+              <p>
+                <span class="alignleft">
+                Wesley Moore
+                </span>
+                <span class="alignright">
+                  <a href="#" title="Twitter">
+                    <svg class="fa-twitter" viewBox="0 0 512 512">
+                      <path d="m481 117c-13 18-28 34-46 47 0 3 0 7 0 12 0 25-3 50-11 74-7 25-18 49-33 71-14 23-32 43-52 61-21 17-45 31-74 41-29 11-60 16-92 16-52 0-99-14-142-42 7 1 14 2 22 2 43 0 81-14 115-40-20 0-38-6-54-18-16-12-27-27-33-46 7 1 13 2 18 2 8 0 16-1 24-4-21-4-39-15-53-31-14-17-21-37-21-59l0-1c13 7 27 11 42 11-13-8-23-19-30-32-8-14-11-29-11-44 0-17 4-33 12-47 23 28 51 51 84 68 33 17 69 27 107 29-2-8-3-15-3-22 0-25 9-47 27-65 18-18 40-27 66-27 26 0 49 10 67 29 21-4 40-11 59-22-7 22-21 39-41 51 18-2 35-7 53-14z"></path>
+    </svg>
+                    @wezm
+                  </a>
+                </span>
+              </p>
+            </div>
+          </footer>
+        </section>
+
+      </article>
+      <!-- end article -->
+    </main>
+    <!-- end main -->
+
+   <!-- A global footer
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+      </div>
+    </footer>  -->
+
+    <!-- Required -->
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="static/js/svg-icons.js"></script>
+
+  </body>
+</html>
