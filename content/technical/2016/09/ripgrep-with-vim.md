@@ -43,5 +43,17 @@ same way as the existing `:Ag` command.  To use my version of the plugin with
 
 The line will be similar in Vundle or pathogen.
 
+**Update 30 Sep 2017:** You can now use `rg` with `fzf.vim` by defining a new
+command and then mapping it to the shortcut of your choice:
+
+    command! -bang -nargs=* Rg
+          \ call fzf#vim#grep(
+          \   'rg --column --line-number --no-heading --color=always --ignore-case '.shellescape(<q-args>), 1,
+          \   <bang>0 ? fzf#vim#with_preview('up:60%')
+          \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+          \   <bang>0)
+
+    nnoremap <C-p>a :Rg 
+
 [fork]: https://github.com/wezm/fzf.vim/tree/rg
 [vim-plug]: https://github.com/junegunn/vim-plug
