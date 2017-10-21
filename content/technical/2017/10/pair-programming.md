@@ -1,5 +1,3 @@
-# Pair Programming
-
 > All code to be sent into production is created by two people working together
 > at a single computer.
 
