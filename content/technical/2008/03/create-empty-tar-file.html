@@ -1,4 +1,6 @@
-Strangely enough I had the need to determine if it was possible to create a valid but empty tar file. Turns out it is. The method varies slightly depending on your flavour of tar program, here's how to do it on three of the big ones:
+Strangely enough I had the need to determine if it was possible to create a
+valid but empty tar file. Turns out it is. The method varies slightly depending
+on your flavour of tar program, here's how to do it on three of the big ones:
 
 <strong>BSD</strong>
 <code>tar cvf empty.tar --from-file /dev/null</code>
@@ -9,4 +11,15 @@ Strangely enough I had the need to determine if it was possible to create a vali
 <strong>Solaris</strong>
 <code>tar cvf empty.tar -I /dev/null</code>
 
-Now if you wondering why I would want this, here's the explanation. I work on a batch processing system that processes files delivered from other systems. In some cases its necessary to wait for a file to arrive but give up after some time. In order to give up we copy an empty file (automatically) so that the processing proceeds normally. Ordinarily this is an empty plain text file but for the system I'm working on I'm expecting a tar file, hence the need for an empty one.
+<strong>MinGW / MSYS</strong>
+<code>tar cvf empty.tar --files-from NUL</code>
+
+Thanks to Paul Bußmann for the MSYS suggestion.
+
+Now if you wondering why I would want this, here's the explanation. I work on a
+batch processing system that processes files delivered from other systems. In
+some cases its necessary to wait for a file to arrive but give up after some
+time. In order to give up we copy an empty file (automatically) so that the
+processing proceeds normally. Ordinarily this is an empty plain text file but
+for the system I'm working on I'm expecting a tar file, hence the need for an
+empty one.
