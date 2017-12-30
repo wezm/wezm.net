@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    adsf (1.4.0)
+      rack (>= 1.0.0, < 3.0.0)
     bitly (1.1.0)
       httparty (>= 0.7.6)
       multi_json (~> 1.3)
@@ -86,6 +88,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  adsf
   bitly
   builder
   fssm
