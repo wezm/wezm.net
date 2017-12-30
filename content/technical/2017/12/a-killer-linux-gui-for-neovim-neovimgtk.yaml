@@ -1,0 +1,14 @@
+---
+title: 'A Killer Linux GUI For Neovim: NeovimGtk'
+extra: 'Inspired by a post about the macOS Neovim GUI, VimR, I describe the one I
+  use on Linux: NeovimGtk.'
+kind: article
+section: technical
+created_at: 2017-10-31 10:41:00.000000000 +11:00
+keywords:
+- vim
+- neovim
+- linux
+- gtk
+- ligatures
+short_url: http://j.mp/2DASGTC
