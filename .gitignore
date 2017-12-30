@@ -1,5 +1,17 @@
 output/*/*/*/*/*.html
 output/fonts/*
+output/about/
+output/articles/
+output/css/screen.css
+output/feed/
+output/index.html
+output/personal/
+output/projects/
+output/robots.txt
+output/sitemap.xml
+output/technical/articles/
+output/technical/feed/
+output/weather/
 tmp/*
 .*.swp
 output/weather.json
