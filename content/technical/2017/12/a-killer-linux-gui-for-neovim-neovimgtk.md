@@ -2,10 +2,12 @@ Back in October Kade Killary wrote, [A Killer GUI For Neovim: VimR][kade-vimr].
 [VimR] is an excellent Neovim GUI on macOS but ever since reading the article
 I've been meaning the write about the Neovim GUI I use on Linux: [NeovimGtk].
 
-NeovimGtk doesn't have quite as many bells and whistles as VimR (yet) but it does
-have a few. Like VimR, it's a native application (no Electron, etc.). It's
+NeovimGtk doesn't have quite as many bells and whistles as VimR (yet) but it
+does have a few. Like VimR, it's a native application (no Electron, etc.). It's
 developed in [Rust], and as the name implies uses the GTK toolkit to feel right
-at home on a GNOME desktop.
+at home on a [GNOME] desktop. NeovimGtk is not limited to Linux though. The
+project explicitly supports Windows as well and should build anywhere where
+Rust and GTK are available. 
 
 I am a huge fan of the [PragmataPro] font, and one of NeovimGtk's killer
 features for me is support for font [ligatures]. This means it renders text
@@ -60,9 +62,15 @@ Native controls are used for the tab bar and pop-up menus.
   <figcaption>Native tabs.</figcaption>
 </figure>
 
-So if you're a Neovim user on Linux I can certainly recommend you check out NeovimGtk. Installation
-currently requires building from source. However for Arch Linux users I have created an [AUR
-package] for easy installation.
+So if you're a Neovim user on Linux I can certainly recommend you check out
+NeovimGtk. Installation currently requires building from source. However for
+Arch Linux users I have created an [AUR package] for easy installation.
+
+**Update 1 Jan 2018:** It was pointed out on Reddit that NeovimGtk runs on
+Windows too, so I changed the title of this post from, "A Killer Linux GUI For
+Neovim: NeovimGtk", to "A Cross Platform GUI For Neovim: NeovimGtk"
+
+[Comments on Reddit][reddit]
 
 [kade-vimr]: https://medium.com/@kadek/a-killer-gui-for-neovim-vimr-ce68e4fa1a3b
 [NeovimGtk]: https://github.com/daa84/neovim-gtk
@@ -75,3 +83,5 @@ package] for easy installation.
 [AUR package]: https://aur.archlinux.org/packages/neovim-gtk-git
 [devicons]: https://github.com/ryanoasis/vim-devicons
 [Neomake]: https://github.com/neomake/neomake
+[reddit]: https://www.reddit.com/r/neovim/comments/7n56ju/a_killer_linux_gui_for_neovim_neovimgtk/
+[GNOME]: https://www.gnome.org/
