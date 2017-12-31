@@ -1,4 +1,4 @@
-Back in October Kade Killary wrote, [A Killer GUI For Neovim: VimR][vimr].
+Back in October Kade Killary wrote, [A Killer GUI For Neovim: VimR][kade-vimr].
 [VimR] is an excellent Neovim GUI on macOS but ever since reading the article
 I've been meaning the write about the Neovim GUI I use on Linux: [NeovimGtk].
 
@@ -64,7 +64,7 @@ So if you're a Neovim user on Linux I can certainly recommend you check out Neov
 currently requires building from source. However for Arch Linux users I have created an [AUR
 package] for easy installation.
 
-[vimr]: https://medium.com/@kadek/a-killer-gui-for-neovim-vimr-ce68e4fa1a3b
+[kade-vimr]: https://medium.com/@kadek/a-killer-gui-for-neovim-vimr-ce68e4fa1a3b
 [NeovimGtk]: https://github.com/daa84/neovim-gtk
 [Rust]: https://www.rust-lang.org/
 [PragmataPro]: https://www.fsd.it/shop/fonts/pragmatapro/
