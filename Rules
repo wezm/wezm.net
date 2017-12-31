@@ -10,6 +10,13 @@ compile '/weather/' do
   filter :erb
 end
 
+compile %r{/personal/2017/11/cumquat-infused-vodka/} do
+  filter :rdiscount
+  layout 'article'
+  layout 'topphoto'
+  filter :rubypants
+end
+
 compile %r{/(?:technical|personal|)articles/(page/|)} do
   filter :erb
   layout 'articles'
