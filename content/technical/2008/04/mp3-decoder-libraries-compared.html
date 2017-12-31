@@ -8,7 +8,7 @@ I did some searching and came up with two other libraries that seemed well suite
 
 I built the two additional libraries with the default configuration options, except for libmad, which I added the <code>--enable-speed</code> option. With the help of example code I made programs out of each that were comparable to the first version for Core Audio. I.e. MP3 file in, 16-bit Linear PCM audio samples out.
 
-To provide a benchmark I wrote a script that would run each of the three programs against a source MP3 file. Each program reported the elapsed time (via <a href="http://developer.apple.com/documentation/Darwin/Reference/ManPages/man3/time.3.html">time(3)</a>) and the processor time (via <a href="http://developer.apple.com/documentation/Darwin/Reference/ManPages/man3/clock.3.html">clock(3)</a>) when it finished decoding. The programs were run one after another on the source file 10 times. Their PCM output was written to a new file for each invocation.
+To provide a benchmark I wrote a script that would run each of the three programs against a source MP3 file. Each program reported the elapsed time (via <a href="https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man3/time.3.html">time(3)</a>) and the processor time (via <a href="https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man3/clock.3.html">clock(3)</a>) when it finished decoding. The programs were run one after another on the source file 10 times. Their PCM output was written to a new file for each invocation.
 
 <!--more-->
 <h3>Environment</h3>
