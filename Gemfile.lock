@@ -70,6 +70,8 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rb-kqueue (0.2.5)
+      ffi (>= 0.5.0)
     rdiscount (2.2.0.1)
     ruby_dep (1.5.0)
     rubypants (0.6.0)
@@ -99,10 +101,11 @@ DEPENDENCIES
   nanoc (~> 3.0)
   nokogiri
   rake
+  rb-kqueue (>= 0.2)
   rdiscount
   rubypants
   sass
   systemu
 
 BUNDLED WITH
-   1.15.4
+   1.16.0

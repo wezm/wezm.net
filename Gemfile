@@ -1,3 +1,5 @@
+require 'rbconfig'
+
 source 'https://rubygems.org'
 
 gem 'rake'
@@ -15,3 +17,7 @@ gem 'systemu'
 gem 'listen'
 gem 'guard-nanoc'
 gem 'adsf'
+
+if RbConfig::CONFIG['target_os'] =~ /(?i-mx:bsd|dragonfly)/
+  gem 'rb-kqueue', '>= 0.2'
+end
