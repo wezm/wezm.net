@@ -17,7 +17,7 @@ with wonderful typographic beauty.
 </figure>
 
 Ligature support was what initially drew me to NeovimGtk but since I've started
-using it, it's creator, [daa84], and a handful of contributors have added
+using it, its creator, [daa84], and a handful of contributors have added
 several more features.
 
 There is a file/project picker to open recent files and projects (directories).
