@@ -3,7 +3,7 @@ operating systems I was aware that my software spending would reduce as most
 software I use these days is provided without financial cost. I decided early
 in the year to try to make a point to redirect these savings towards some of
 the projects I was now benefiting from as well as to some people that were
-doing interesting work. In addition I wanted to ramp up my own open source
+doing interesting work. In addition, I wanted to ramp up my own open source
 contributions.
 
 I acknowledge that I'm very lucky to be in the privileged position to have the
@@ -151,6 +151,11 @@ elementary use detailed above I also posted these bounties:
 **Contribution:** $35
 
 ## Open Source Contributions
+
+<figure>
+  <img src="/images/2018/github-contributions.png" alt="Public GitHub activity at the end of 2017" />
+  <figcaption>Public GitHub activity at the end of 2017.</figcaption>
+</figure>
 
 In addition to financial contributions, in 2017 I also tried to make more open
 source contributions, both to projects and by releasing my own work.  Some of
