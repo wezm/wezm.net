@@ -6,8 +6,8 @@ NeovimGtk doesn't have quite as many bells and whistles as VimR (yet) but it
 does have a few. Like VimR, it's a native application (no Electron, etc.). It's
 developed in [Rust], and as the name implies uses the GTK toolkit to feel right
 at home on a [GNOME] desktop. NeovimGtk is not limited to Linux though. The
-project explicitly supports Windows as well and should build anywhere where
-Rust and GTK are available. 
+project explicitly supports Windows as well, and should build anywhere where
+Rust and GTK are available. I was able to build it successfully on OpenBSD.
 
 I am a huge fan of the [PragmataPro] font, and one of NeovimGtk's killer
 features for me is support for font [ligatures]. This means it renders text
