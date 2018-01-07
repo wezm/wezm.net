@@ -155,7 +155,7 @@ Here's to another successful year of Rust ahead!
 [arch-rust]: https://www.archlinux.org/packages/community/x86_64/rust/
 [rust-ports]: https://www.freshports.org/search.php?stype=depends_all&method=match&query=lang%2Frust&num=100&orderby=category&orderbyupdown=asc&search=Search&format=html&branch=head
 [rust2018]: https://blog.rust-lang.org/2018/01/03/new-years-rust-a-call-for-community-blogposts.html
-[#Rust2018]: https://twitter.com/hashtag/Rust2018?src=hash
+[#Rust2018]: https://twitter.com/search?f=tweets&vertical=default&q=%23Rust2018&src=typd
 [rust-roadmap]: https://blog.rust-lang.org/2017/02/06/roadmap.html
 [rustfmt]: https://github.com/rust-lang-nursery/rustfmt
 [racer]: https://github.com/phildawes/racer
