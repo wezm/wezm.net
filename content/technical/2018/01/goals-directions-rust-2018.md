@@ -6,44 +6,47 @@ Rust][rust2018] in 2017 and proposing goals and directions for 2018. See also
 year][rust-roadmap] and followed it quite closely. It was a pleasure to see the
 outcomes of the 2017 survey systematically addressed in the roadmap.
 
-Over the course of the year we saw some software outside of Firefox and developer tools (such
-as [rustfmt], [racer], [rustup]) gain wider use and  make it into OS package archives.
-At the time of writing there are [17 ports dependant on rust in the FreeBSD ports tree][rust-ports], and [20 packages in the Arch Linux package repos][arch-rust] including:
+Over the course of the year we saw some software outside of Firefox and
+developer tools (such as [rustfmt], [racer], [rustup]) gain wider use and make
+it into OS package archives. At the time of writing there are [17 ports
+dependent on rust in the FreeBSD ports tree][rust-ports], and [20 packages in
+the Arch Linux package repos][arch-rust] including:
 
 - [bingrep](https://github.com/m4b/bingrep) --- grep for binaries (executables)
 - [pijul](https://pijul.org/) --- distributed version control system
 - [tokei](https://github.com/Aaronepower/tokei) --- count lines of code, quickly
 - [xi-core](https://github.com/google/xi-editor) --- a text editor
-- [librespot](https://github.com/plietar/librespot) --- Open source Spotify client library
+- [librespot](https://github.com/plietar/librespot) --- open source Spotify client library
 - [exa](https://the.exa.website/) --- a more user friendly replacement for `ls`
 - [fd](https://github.com/sharkdp/fd) --- a more user friendly alternative to `find`
 - [flowgger](https://github.com/jedisct1/flowgger) --- a fast log data collector
 - [ripgrep](https://github.com/BurntSushi/ripgrep/) --- a faster alternative to grep and ack
-- [xsv](https://github.com/BurntSushi/xsv) --- A toolkit for manipulating and extracting data from CSV
+- [xsv](https://github.com/BurntSushi/xsv) --- a toolkit for manipulating and extracting data from CSV
 - [alacritty](https://github.com/jwilm/alacritty) --- A cross-platform, GPU-accelerated terminal emulator
 
-As I spoke about at the [September Melbourne Rust Meetup][rust-talk], I
-think adoption of tools written in Rust, outside the Rust community helps
-increase adoption of the language as whole. It means [packaging systems are
-updated to support Rust][uses-cargo], tools are exposed to more diverse environments,
-and people are more likely to raise bugs or contribute fixes and improvements and maybe
-learn Rust in the process.
+As I spoke about at the [September Melbourne Rust Meetup][rust-talk], I think
+adoption of tools written in Rust outside the Rust community helps increase
+adoption of the language as whole. It means [packaging systems are updated to
+support Rust][uses-cargo], tools are exposed to more diverse environments, and
+people are more likely to raise bugs or contribute fixes and improvements. They
+may even learn some Rust in the process.
 
 We also saw the initial release of Futures and [Tokio] --- the initial answer
 to how Rust will support asynchronous I/O. I think these components will be
 essential in making Rust a viable option for people wanting to build network
 daemons and HTTP micro-services that can compete with the likes of
-[Node.js][node] and [Go]. I found the fact that they were able to be built in a
-way that upholds the, [abstraction without overhead][zero-cost] (zero-cost
+[Node.js][node] and [Go]. I found the fact that Futures were architected in a
+way that upholds the [abstraction without overhead][zero-cost] (zero-cost
 abstractions) goal of Rust to be particularly impressive.
 
 ## 2018
 
-Four areas that I would like to see Rust improve on in 2018 are:
+With most of 2018 ahead there are four areas that I would like to see Rust
+improve on this year:
 
-1. Become a viable alternative to Go and node for building network daemons and HTTP
+1. Become a better option for building network daemons and HTTP
    micro-services.
-1. Continue to improve the discoverability and approacability of crates and
+1. Continue to improve the discoverability and approachability of crates and
    Rust's web presence in general.
 1. Gain wider, more diverse tier-1 platform support (especially on servers).
 1. Start delivering on the prospect of safer system components, with fewer
@@ -51,9 +54,19 @@ Four areas that I would like to see Rust improve on in 2018 are:
 
 ### Network Services
 
-Stabilise async/await. I feel that a lot of folks turn to Go these days when building network daemons
-and micro services. To me it feels that the primary thing preventing Rust from parity in this space
-is a stable networking, especially HTTP (inluding HTTP2) server.
+There's a [lot of interest these days in HTTP micro-services][microservices-trend],
+often running in containers on clusters. This is an area that Go does quite well at.
+Its minimal runtime, language level async support, core http library, and easy
+cross compilation make it well suited to this task. Node.js too can work well for
+these types of services. On the face of it Rust should be as good or better than
+Go and Node at these types of services with its even smaller runtime footprint,
+sophisticated type system and extra guarantees. However, until Tokio matures it's
+not really in the running.
+
+I would like to see work continue on stabilising [async/await][async-await],
+stabilisation of [Hyper] and support for [HTTP/2][hyper-http2]. So that when
+a decision is being made about which technology to use for these types of services
+Rust is one of the contenders.
 
 ### Improve Rust's Web Presence
 
@@ -68,10 +81,10 @@ makes it easier for visitors to find what they're looking for and adds signals
 of credibility, attention to detail, and production readiness to the project.
 It would be wonderful to see the proposal above picked and completed.
 
-The large amount of rust code that already exists is not particularly visible
+The large amount of Rust code that already exists is not particularly visible
 unless you know to look on crates.io or GitHub. Crates and Rust libraries
 should be more discoverable through traditional search engines. [Aside from the
-static documentation no pages on crates.io show up as search results on
+static documentation, no pages on crates.io show up as search results on
 DuckDuckGo][ddg-results]. They do show up in Google but the titles and
 descriptions shown often aren't super useful.
 
@@ -97,36 +110,45 @@ crates.io][crate-categories].
 ### Platform Support
 
 Currently there are three [OSes with tier 1 support][platform-support]: Linux,
-macOS, and Windows.  These are the big three at the moment and it's great that
-they're all supported. I would love to see more OSes gain tier 1 support.
-Platform diversity makes Rust a viable option for more projects and can also
-[help find bugs][llvm-linker-bug].
+macOS, and Windows. These are the three most popular OSes and it's great that
+they're all supported. However, it would be great to see more OSes gain tier 1
+support. Platform diversity makes Rust a viable option for more projects and
+can also [help find bugs][llvm-linker-bug].
 
 Personally I would like to see [FreeBSD] promoted to tier 1 support. This would
 be difficult at first as CI infrastructure would need to be built, contributors
 would need to learn to address issues that would [break the build on
-FreeBSD][freebsd-nightly-broken], etc. but in the end it make it easier to add
+FreeBSD][freebsd-nightly-broken], etc. but in the end it would be easier to add
 more platforms in the future and the ecosystem would be more robust for it.
 
-### System Components
+### System Components and Increased Safety
 
-- One of Rust strengths is memory safety
-  - Jokes about, "Rewrite it Rust", and the [Rust Evangelism Strike Force][resf] aside there has
-    been a lot of talk about the possibility for Rust to prevent some common causes of vulnerabilites
-    in C and C++ code. It would be nice to see some of this talk turn into action. I'm not talking
-    about rewiting LInux or cURL in Rust but:
-  - Build replacements for high value system components
-    - Replace parts of C libraries
-      - Like librsvg
-    - Make an API compatible version of a C library
-    - Get it to the point where a motivated user could build an Arch, Gentoo
-      system with these components instead of the original to start testing. 
-      Kind of like the way you can run Wayland
+One of Rust's strengths is memory safety. Jokes about, "Rewrite it Rust", and
+the [Rust Evangelism Strike Force][resf] aside there has been a lot of talk
+about the possibility for Rust to prevent some common causes of vulnerabilities
+in C and C++ code. It would be nice to see some of this talk turn into action.
+I'm not talking about rewiting Linux or [cURL] in Rust but start with replacing
+some high value parts of existing C libraries like what Federico Mena-Quintero
+has done with [librsvg].
 
-This one is perhaps less of a goal for the Rust project and more of one for the Rust
-community. However there are parts of it that relate to the project, such as [improving
-the ability for Rust projects to integrate with existing build systems][rust-bulid-systems].
+Maybe these start as forks/experimental branches that can be used as drop in
+substitutes for the original so that adventurous users on bleeding edge systems
+like Arch, FreeBSD, or Gentoo could test them out.
 
+While this is perhaps less of a goal for the Rust project and more of one for
+the Rust community there are parts of it that relate to the project. For
+example building these hybrid libraries would surely exercise and provide
+feedback for the ongoing task to [improve the ability for Rust projects to
+integrate with existing build systems][rust-build-systems].
+
+## Conclusion
+
+So they are my hopes and dreams for Rust in 2018. I feel that in some ways I'm
+just sitting back telling other people about all the hard work they should do.
+On the other hand I feel like I am contributing as well by writing and
+publishing Rust code, doing talks, and providing bug reports and pull requests.
+
+Here's to another successful year of Rust ahead!
 
 [mgattozzi]: https://mgattozzi.com/rust-wasm
 [resf]: https://twitter.com/rustevangelism
@@ -155,3 +177,9 @@ the ability for Rust projects to integrate with existing build systems][rust-bul
 [llvm-linker-bug]: https://twitter.com/wezm/status/931124516054491137
 [freebsd-nightly-broken]: https://github.com/rust-lang/rust/issues/43427
 [FreeBSD]: https://www.freebsd.org/
+[cURL]: https://curl.haxx.se/
+[librsvg]: https://people.gnome.org/~federico/news-2016-10.html#25
+[microservices-trend]: https://trends.google.com/trends/explore?date=today%205-y&q=microservices
+[Hyper]: https://hyper.rs/
+[async-await]: https://github.com/rust-lang/rfcs/issues/1081
+[hyper-http2]: https://github.com/hyperium/hyper/issues/304
