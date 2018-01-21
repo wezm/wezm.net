@@ -1,4 +1,4 @@
-A couple of weeks ago I gave an introduction to Rust talk at our techa all
+A couple of weeks ago I gave an introduction to Rust talk at our tech all
 hands meeting. The talk was a quick 30 minute introduction to the language that
 covered:
 
