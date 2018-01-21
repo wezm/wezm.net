@@ -16,3 +16,4 @@ tmp/*
 .*.swp
 output/weather.json
 .sass-cache
+crash.log
