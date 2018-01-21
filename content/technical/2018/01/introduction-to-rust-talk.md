@@ -20,6 +20,6 @@ You can watch a recording of the talk below, or:
 </figure>
 
 [Watch on YouTube]: https://youtu.be/dRXePp1T9ZM
-[Download]: /images/2018/01/introduction-to-rust-talk.mp4
+[Download]: /images/2018/introduction-to-rust-talk.mp4
 [slides]: /technical/2018/01/introduction-to-rust-talk/slides/
 [slides-source]: https://github.com/wezm/rust-intro-talk
