@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Rust</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
+
+      body {
+        font-family: 'Lato', serif;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code {
+        font-family: 'PragmataPro';
+        font-size: 32px;
+      }
+      .remark-slide-content {
+        color: #eee;
+        background-color: #1d1f21;
+        font-size: 32px;
+      }
+      .remark-slide-content h1,
+      .remark-slide-content h2,
+      .remark-slide-content h3 {
+        font-size: 70px;
+        margin: 0.25em 0 0.5em;
+      }
+      .bigger h1 {
+        font-size: 125px;
+      }
+      .remark-slide-content li {
+        margin: 0.5em 0;
+        list-style: disc;
+      }
+      blockquote {
+        border-left: 0.2em solid currentColor;
+        padding-left: 1em;
+        margin-left: 0.5em;
+      }
+      blockquote + p {
+        margin-left: 0.5em;
+      }
+      a {
+        color: lightblue;
+      }
+      img {
+        max-width: 100%;
+      }
+      .ferris {
+        background-color: #232323;
+      }
+      .ferris img {
+        position: absolute;
+        bottom: -164px;
+        left: 335px;
+      }
+      .ferris h1,
+      .ferris h2,
+      .ferris h3 {
+        z-index: 1;
+      }
+      .segfaults img {
+        display: block;
+        max-width: 95%;
+        margin: 0 auto;
+      }
+      .crates img {
+        display: block;
+        max-width: 85%;
+        margin: 0 auto;
+      }
+      .invert {
+        background-color: #eee;
+        color: #1d1f21;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+    </textarea>
+    <script src="remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+        ratio: '16:9',
+        sourceUrl: 'slides.md',
+        navigation: {
+          scroll: false
+        },
+        highlightStyle: 'tomorrow-night',
+        countIncrementalSlides: false,
+      });
+    </script>
+  </body>
+</html>

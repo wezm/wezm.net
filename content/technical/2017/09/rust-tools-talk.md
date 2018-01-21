@@ -6,7 +6,7 @@ that brings and how using and promoting these tools can help
 with the wider adoption of Rust in the development community. I demonstrated
 a selection of such tools.
 
-A video of the talk will be made available, but it's not ready yet.
+A [video of the talk is on YouTube](https://www.youtube.com/watch?v=4-H6Hn_i4PQ).
 
 The [slides are available online][slides]. The presenter notes I wrote for
 myself are included below.
