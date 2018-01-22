@@ -1,6 +1,6 @@
 _This is my response to the [call for community blog posts reflecting on
 Rust][rust2018] in 2017 and proposing goals and directions for 2018. See also
-[#Rust2018 on Twitter][#Rust2018]._
+[readrust.net][readrust], where I've collected all the #Rust2018 posts._
 
 2017 saw some great progress in the Rust space. The project had a [clear roadmap for the
 year][rust-roadmap] and followed it quite closely. It was a pleasure to see the
@@ -150,36 +150,39 @@ publishing Rust code, doing talks, and providing bug reports and pull requests.
 
 Here's to another successful year of Rust ahead!
 
-[mgattozzi]: https://mgattozzi.com/rust-wasm
-[resf]: https://twitter.com/rustevangelism
-[arch-rust]: https://www.archlinux.org/packages/community/x86_64/rust/
-[rust-ports]: https://www.freshports.org/search.php?stype=depends_all&method=match&query=lang%2Frust&num=100&orderby=category&orderbyupdown=asc&search=Search&format=html&branch=head
-[rust2018]: https://blog.rust-lang.org/2018/01/03/new-years-rust-a-call-for-community-blogposts.html
+_For more great #Rust2018 posts check out [readrust.net][readrust]._
+
 [#Rust2018]: https://twitter.com/search?f=tweets&vertical=default&q=%23Rust2018&src=typd
-[rust-roadmap]: https://blog.rust-lang.org/2017/02/06/roadmap.html
-[rustfmt]: https://github.com/rust-lang-nursery/rustfmt
-[racer]: https://github.com/phildawes/racer
-[rustup]: https://github.com/rust-lang-nursery/rustup.rs
-[rust-talk]: /technical/2017/09/rust-tools-talk/
-[Tokio]: https://tokio.rs/
-[node]: https://nodejs.org/
-[Go]: https://golang.org/
-[uses-cargo]: https://www.freebsd.org/news/status/report-2017-04-2017-06.html#A-New-USES-Macro-for-Porting-Cargo-Based-Rust-Applications
-[zero-cost]: http://blog.rust-lang.org/2015/05/11/traits.html
-[rust-build-systems]: https://blog.rust-lang.org/2017/12/21/rust-in-2017.html#rust-should-integrate-easily-into-large-build-systems
-[rust-servers]: https://blog.rust-lang.org/2017/12/21/rust-in-2017.html#rust-should-be-well-equipped-for-writing-robust-servers
-[rust-crates]: https://blog.rust-lang.org/2017/12/21/rust-in-2017.html#rust-should-provide-easy-access-to-high-quality-crates
-[rust-reach]: https://blog.rust-lang.org/2017/06/27/Increasing-Rusts-Reach.html
-[rust-cookbook]: https://rust-lang-nursery.github.io/rust-cookbook/
+[arch-rust]: https://www.archlinux.org/packages/community/x86_64/rust/
+[async-await]: https://github.com/rust-lang/rfcs/issues/1081
 [crate-categories]: https://crates.io/categories
+[cURL]: https://curl.haxx.se/
 [ddg-results]: https://duckduckgo.com/?q=site%3Acrates.io&t=ffab&ia=web
-[platform-support]: https://forge.rust-lang.org/platform-support.html
-[llvm-linker-bug]: https://twitter.com/wezm/status/931124516054491137
 [freebsd-nightly-broken]: https://github.com/rust-lang/rust/issues/43427
 [FreeBSD]: https://www.freebsd.org/
-[cURL]: https://curl.haxx.se/
-[librsvg]: https://people.gnome.org/~federico/news-2016-10.html#25
-[microservices-trend]: https://trends.google.com/trends/explore?date=today%205-y&q=microservices
-[Hyper]: https://hyper.rs/
-[async-await]: https://github.com/rust-lang/rfcs/issues/1081
+[Go]: https://golang.org/
 [hyper-http2]: https://github.com/hyperium/hyper/issues/304
+[Hyper]: https://hyper.rs/
+[librsvg]: https://people.gnome.org/~federico/news-2016-10.html#25
+[llvm-linker-bug]: https://twitter.com/wezm/status/931124516054491137
+[mgattozzi]: https://mgattozzi.com/rust-wasm
+[microservices-trend]: https://trends.google.com/trends/explore?date=today%205-y&q=microservices
+[node]: https://nodejs.org/
+[platform-support]: https://forge.rust-lang.org/platform-support.html
+[racer]: https://github.com/phildawes/racer
+[readrust]: http://readrust.net/rust2018/
+[resf]: https://twitter.com/rustevangelism
+[rust-build-systems]: https://blog.rust-lang.org/2017/12/21/rust-in-2017.html#rust-should-integrate-easily-into-large-build-systems
+[rust-cookbook]: https://rust-lang-nursery.github.io/rust-cookbook/
+[rust-crates]: https://blog.rust-lang.org/2017/12/21/rust-in-2017.html#rust-should-provide-easy-access-to-high-quality-crates
+[rust-ports]: https://www.freshports.org/search.php?stype=depends_all&method=match&query=lang%2Frust&num=100&orderby=category&orderbyupdown=asc&search=Search&format=html&branch=head
+[rust-reach]: https://blog.rust-lang.org/2017/06/27/Increasing-Rusts-Reach.html
+[rust-roadmap]: https://blog.rust-lang.org/2017/02/06/roadmap.html
+[rust-servers]: https://blog.rust-lang.org/2017/12/21/rust-in-2017.html#rust-should-be-well-equipped-for-writing-robust-servers
+[rust-talk]: /technical/2017/09/rust-tools-talk/
+[rust2018]: https://blog.rust-lang.org/2018/01/03/new-years-rust-a-call-for-community-blogposts.html
+[rustfmt]: https://github.com/rust-lang-nursery/rustfmt
+[rustup]: https://github.com/rust-lang-nursery/rustup.rs
+[Tokio]: https://tokio.rs/
+[uses-cargo]: https://www.freebsd.org/news/status/report-2017-04-2017-06.html#A-New-USES-Macro-for-Porting-Cargo-Based-Rust-Applications
+[zero-cost]: http://blog.rust-lang.org/2015/05/11/traits.html
