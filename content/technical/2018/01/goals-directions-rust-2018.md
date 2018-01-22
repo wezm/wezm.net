@@ -79,7 +79,7 @@ proposal in the [Increasing Rust's Reach][rust-reach] program.
 Having a consistent, approachable, discoverable, and well designed web presence
 makes it easier for visitors to find what they're looking for and adds signals
 of credibility, attention to detail, and production readiness to the project.
-It would be wonderful to see the proposal above picked and completed.
+It would be wonderful to see the proposal above picked up and completed.
 
 The large amount of Rust code that already exists is not particularly visible
 unless you know to look on crates.io or GitHub. Crates and Rust libraries
