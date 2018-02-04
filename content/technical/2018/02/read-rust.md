@@ -78,7 +78,7 @@ I've been able to work around this when needed:
   information I need to add a new post. Given the target audience is likely to
   have a GitHub account this seems like a reasonable choice.
 * For site search I have a little search form that performs a search on
-  [DuckDuckGo], limited to readrust.com.
+  [DuckDuckGo], limited to readrust.net.
 * In order to have the Read Rust Twitter account automatically tweet new posts
   I was able to leverage the RSS feed and [IFTTT] to tweet each new entry in
   the feed.
