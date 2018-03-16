@@ -170,7 +170,7 @@ _For more great #Rust2018 posts check out [readrust.net][readrust]._
 [node]: https://nodejs.org/
 [platform-support]: https://forge.rust-lang.org/platform-support.html
 [racer]: https://github.com/phildawes/racer
-[readrust]: http://readrust.net/rust2018/
+[readrust]: https://readrust.net/rust-2018/
 [resf]: https://twitter.com/rustevangelism
 [rust-build-systems]: https://blog.rust-lang.org/2017/12/21/rust-in-2017.html#rust-should-integrate-easily-into-large-build-systems
 [rust-cookbook]: https://rust-lang-nursery.github.io/rust-cookbook/

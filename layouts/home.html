@@ -2,54 +2,67 @@
 <html>
 <head>
   <%= render '_head' %>
-  <script src="/js/handlebars.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/js/home.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body class="home">
   <%= render '_header' %>
-  <section id="technical" class="column">
-    <div>
-      <h1><a href="/technical/articles/">Technical</a>
-        <sup><a href="/technical/feed/"><img src="/images/feed-icon.svg" class="feed-icon" width="12" height="12" alt="Feed Icon" /></a></sup>
-      </h1>
-      <ul class="articles">
-      <% technical_articles[0..4].each do |article| %>
-        <%= render '_article', :article => article %>
-      <% end %>
-      </ul>
-      <a href="/technical/articles/" class="more">More &raquo;</a>
-    </div>
-  </section>
 
-  <section id="personal" class="column">
-    <div>
-      <h1><a href="/personal/articles/">Personal</a>
-        <sup><a href="/personal/feed/"><img src="/images/feed-icon.svg" class="feed-icon" width="12" height="12" alt="Feed Icon" /></a></sup>
+  <main>
+    <section id="posts" class="column">
+      <h1>
+        <a href="/technical/articles/">Recent Posts</a>
+        <a href="/technical/feed/"><img src="/images/feed-icon.svg" class="feed-icon feed-icon-sup" width="12" height="12" alt="Feed Icon" /></a>
       </h1>
-      <ul class="articles">
-      <% personal_articles[0..4].each do |article| %>
-        <%= render '_article', :article => article %>
-      <% end %>
-      </ul>
-      <a href="/personal/articles/" class="more">More &raquo;</a>
-    </div>
-  </section>
 
-  <section id="flickr">
-    <header>
-      <h1><a href="http://www.flickr.com/photos/wezm/">Recent Photos</a>
-        <sup><a href="http://api.flickr.com/services/feeds/photos_public.gne?id=40215689@N00&lang=en-us&format=atom"><img src="/images/feed-icon.svg" class="feed-icon" width="12" height="12" alt="Feed Icon" /></a></sup>
-      </h1>
-    </header>
-    <ul class="inline"></ul>
-    <a href="http://www.flickr.com/photos/wezm/" class="more">More &raquo;</a>
-  </section>
+      <ul class="articles">
+        <% sorted_articles[0..4].each do |article| %>
+        <%= render '_article', :article => article %>
+        <% end %>
+      </ul>
+      <a href="/articles/" class="more">More &raquo;</a>
+    </section>
+
+    <section id="projects" class="column">
+      <h1><a href="/projects/">Projects</a></h1>
+      <ul class="projects">
+        <li>
+          <a href="https://readrust.net/">
+            <img src="/images/read-rust.svg" >Read Rust
+          </a>
+          <p>Curated posts from the Rust community.</p>
+        </li>
+        <li>
+          <a href="http://bsd-ci.com/">
+            <img src="/images/bsd-ci.svg" >BSD CI
+          </a>
+          <p>Continuous integration on BSD operating systems.</p>
+        </li>
+        <li>
+          <a href="https://binarytrance.com/apps/symbolmate">
+            <img src="/images/symbolmate.png" >SymbolMate
+          </a>
+          <p>iPhone and iPad app for finding symbols and emoji.</p>
+        </li>
+        <li>
+          <a href="http://bitcannon.net/">
+            <svg id="bookmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="#85144b">
+              <path d="M6 2 L26 2 L26 30 L16 24 L6 30 Z"></path>
+            </svg>Bit Cannon
+          </a>
+          <p>A blog about operating system exploration.</p>
+        </li>
+        <li>
+          <a href="https://linkedlist.org/">
+            <svg id="i-link" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M18 8 C18 8 24 2 27 5 30 8 29 12 24 16 19 20 16 21 14 17 M14 24 C14 24 8 30 5 27 2 24 3 20 8 16 13 12 16 11 18 15" />
+            </svg>Linked List
+          </a>
+          <p>A personal knowledge base.</p>
+        </li>
+      </ul>
+      <a href="/projects/" class="more text-right">More &raquo;</a>
+    </section>
+  </main>
+
   <%= render '_footer' %>
-  <script id="image-template" type="text/x-handlebars-template">
-    <li>
-      <a href="{{href}}" rel="prettyPhoto[flickr]"><img src="{{src}}" alt="{{alt}}" /></a>
-    </li>
-  </script>
-
 </body>
 </html>

@@ -15,16 +15,16 @@ January as a more general Rust content aggregator.
 Yesterday I launched the update. A number of new categories join the initial
 Rust 2018 category, bringing the list to:
 
-* [All Posts](http://readrust.net/all/)
-* [Computer Science](http://readrust.net/computer-science/)
-* [Crates](http://readrust.net/crates/)
-* [Embedded](http://readrust.net/embedded/)
-* [Games and Graphics](http://readrust.net/games-and-graphics/)
-* [Operating Systems](http://readrust.net/operating-systems/)
-* [Performance](http://readrust.net/performance/)
-* [Rust 2018](http://readrust.net/rust-2018/)
-* [Tools and Applications](http://readrust.net/tools-and-applications/)
-* [Web and Network Services](http://readrust.net/web-and-network-services/)
+* [All Posts](https://readrust.net/all/)
+* [Computer Science](https://readrust.net/computer-science/)
+* [Crates](https://readrust.net/crates/)
+* [Embedded](https://readrust.net/embedded/)
+* [Games and Graphics](https://readrust.net/games-and-graphics/)
+* [Operating Systems](https://readrust.net/operating-systems/)
+* [Performance](https://readrust.net/performance/)
+* [Rust 2018](https://readrust.net/rust-2018/)
+* [Tools and Applications](https://readrust.net/tools-and-applications/)
+* [Web and Network Services](https://readrust.net/web-and-network-services/)
 
 Each category has its own page and RSS feed in case readers are only interested
 in that category. I also set up a Twitter account, [@read_rust], that tweets
@@ -109,6 +109,8 @@ Page load times (fully loaded) reported by [WebPagetest] are:
 * 0.948s for Paris, France
 * 2.130s for Rose Hill, Mauritius
 
+**Update:** Read Rust is now hosted on AWS and delivered via CloudFront.
+
 ## Conclusion
 
 So that is the process that led to making Read Rust the way it is and how the
@@ -125,7 +127,7 @@ to [submit it][submit]!
 [issue-template]: https://github.com/wezm/read-rust/blob/master/.github/ISSUE_TEMPLATE/missing_post.md
 [JSON Feed]: https://jsonfeed.org/
 [Nunito Sans]: https://www.fontsquirrel.com/fonts/nunito-sans
-[Read Rust]: http://readrust.net/
+[Read Rust]: https://readrust.net/
 [readrust-github]: https://github.com/wezm/read-rust
 [roadmap]: https://github.com/aturon/rfcs/blob/roadmap-2018/text/0000-roadmap-2018.md
 [submit]: https://github.com/wezm/read-rust/issues/new?labels=missing-post&title=Add+post&template=missing_post.md

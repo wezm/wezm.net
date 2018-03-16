@@ -1,0 +1,23 @@
+<svg width="32" height="32" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>logo</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-72 0)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 72 0L 104 0L 104 32L 72 32L 72 0Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="logo" clip-path="url(#clip-0)">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(93.551 7)" fill="#FFBB20"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(82.7755 7)" fill="#F26711"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(72 7)" fill="#990000"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 8.35918 0L 0 0L 2.0898 8.5L 0 17L 8.35918 17L 10.449 8.5L 8.35918 0Z"/>
+</defs>
+</svg>

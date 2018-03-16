@@ -85,15 +85,6 @@ h1 a
     color: #111
 
 
-body.home h1 > a
-  -webkit-transition: border-bottom-color 500ms ease-out
-  transition: border-bottom-color 500ms ease-out
-  border-bottom: 2px solid rgba(17, 17, 17, 0.0)
-
-  &:hover
-    border-bottom-color: rgba(17, 17, 17, 1.0)
-
-
 sup
   vertical-align: super
   font-size: 0.8em
@@ -186,22 +177,50 @@ footer
     padding-top: 1em
     display: block
 
-.column
-  float: left
-  width: 50%
-  margin: 0
-  min-width: 480px
-
 .align-top
   vertical-align: top
 
-#personal div
-  padding-right: 2em
 
+.home
+  h1 > a:first-child
+    -webkit-transition: border-bottom-color 500ms ease-out
+    transition: border-bottom-color 500ms ease-out
+    border-bottom: 2px solid rgba(17, 17, 17, 0.0)
 
-.column div
-  padding: 0 0 0 2em
+    &:hover
+      border-bottom-color: rgba(17, 17, 17, 1.0)
 
+  main
+    display: flex
+    margin: 0 20px
+    margin: 0 auto
+    padding: 0 20px
+    max-width: 1200px
+    min-height: 85vh
+
+#posts
+  width: 100%
+
+#projects
+  width: 250px
+  flex-shrink: 0
+  margin-left: 2em
+
+ul.projects
+  list-style: none
+  margin: 0
+  padding-top: 1em
+
+  li
+    margin: 1em 0
+
+  img, svg
+    width: 32px
+    vertical-align: middle
+    margin-right: 0.5em
+
+  p
+    margin-left: calc(32px + 0.5em)
 
 ul.articles
   list-style: none
@@ -260,50 +279,6 @@ a
       margin-left: 0
 
 
-#flickr
-  clear: both
-
-  header
-    margin-left: 2em
-
-  h1
-    margin: 0
-    padding: 0.6em 0 0 0
-
-  ul
-    display: block
-    height: 75px
-    overflow: hidden
-    margin-top: 1em
-
-  li
-    float: left
-    overflow: hidden
-    margin: 0 0 0 1em
-    display: block
-    position: relative
-    height: 75px
-    width: 75px
-    border: 1px solid #ccc
-    background: url(/images/photos.jpg?20120121) no-repeat 0 -75px
-
-    &:first-child
-      margin-left: 2em
-
-    img
-      -webkit-transition: opacity 500ms ease-out
-      transition: opacity 500ms ease-out
-      position: absolute
-      max-width: none
-
-      &:hover
-        opacity: 0
-
-  a.more
-    float: right
-    margin: 1em 2em 1em 0
-
-
 body.articles #content nav
   padding-bottom: 1em
 
@@ -360,13 +335,16 @@ img.alignleft
   margin: 5px 10px 5px 0
 
 
-img.feed-icon
+.feed-icon
   -webkit-transition: opacity 500ms ease-out
   transition: opacity 500ms ease-out
   opacity: 1.0
 
   &:hover
     opacity: 0.75
+
+.feed-icon-sup
+  vertical-align: super
 
 img.comment
   padding-top: 1px
@@ -512,19 +490,7 @@ body.weather
     margin-top: 1em
     color: #999
 
-@media screen and (max-width: 960px)
-
-  .column
-    float: none
-    width: auto
-    min-width: 0
-    max-width: 728px
-
-
 @media screen and (max-width: 768px)
-  #technical div, #personal div
-    padding: 0 1em
-
   #content
     margin: 0 20px
     font-size: 20px
@@ -540,6 +506,16 @@ body.weather
   #search
     float: none
 
+  .home main
+    flex-direction: column
+
+  #projects
+    width: auto
+    margin-left: 0
+    margin-top: 2em
+
+  ul.projects
+    padding-top: 0
 
 @media screen and (max-width: 515px)
 
