@@ -129,6 +129,6 @@ to [submit it][submit]!
 [Nunito Sans]: https://www.fontsquirrel.com/fonts/nunito-sans
 [Read Rust]: https://readrust.net/
 [readrust-github]: https://github.com/wezm/read-rust
-[roadmap]: https://github.com/aturon/rfcs/blob/roadmap-2018/text/0000-roadmap-2018.md
+[roadmap]: https://github.com/rust-lang/rfcs/blob/master/text/2314-roadmap-2018.md
 [submit]: https://github.com/wezm/read-rust/issues/new?labels=missing-post&title=Add+post&template=missing_post.md
 [WebPagetest]: http://www.webpagetest.org/
