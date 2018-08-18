@@ -1,0 +1,9 @@
+---
+title: Writing a Great Rust Blog Post
+extra: Some tips for writing a blog post that is readable by humans and machines alike.
+kind: article
+section: technical
+created_at: 2018-08-18 16:17:00.000000000 +10:00
+keywords:
+- rust
+short_url:
