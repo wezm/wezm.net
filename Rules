@@ -21,6 +21,7 @@ compile %r(/\d{4}/.*) do
   layout 'article'
   layout 'default'
   filter :rubypants
+  filter :colorize_syntax, default_colorizer: :rouge
 end
 
 compile %r(/about/.*) do
@@ -39,6 +40,10 @@ end
 
 compile %r{^/(?:screen|mobile)/$} do
   filter :sass
+end
+
+compile %r{/rouge/$} do
+  filter :erb
 end
 
 compile '*' do
@@ -64,7 +69,7 @@ end
 #   (path.dirname + 'articles.json').to_s
 # end
 
-route %r{^/(?:screen|mobile)/$} do
+route %r{^/(?:screen|mobile|rouge)/$} do
   File.join("", "css", File.basename(item.identifier) + ".css")
 end
 
