@@ -3,8 +3,8 @@
 
 require 'json'
 
-include Nanoc3::Helpers::Rendering
-include Nanoc3::Helpers::Blogging
-include Nanoc3::Helpers::XMLSitemap
-include Nanoc3::Helpers::HTMLEscape
+include Nanoc::Helpers::Rendering
+include Nanoc::Helpers::Blogging
+include Nanoc::Helpers::XMLSitemap
+include Nanoc::Helpers::HTMLEscape
 include WezM::Helpers::Articles

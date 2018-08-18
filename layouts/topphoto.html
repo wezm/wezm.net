@@ -15,7 +15,7 @@
   <img src="<%= @item[:photo] %>" alt="<%= @item[:photo_alt] %>" class="cover-photo" />
 
   <div id="content">
-    <h1><a href="<%= @item.reps.first.path %>"><%=h @item[:title] %></a></h1>
+    <h1><a href="<%= @item.reps[:default].path %>"><%=h @item[:title] %></a></h1>
     <%= yield %>
   </div>
   <%= render '_footer' %>

@@ -1,5 +1,5 @@
 require 'nokogiri'
-require 'nanoc3'
+require 'nanoc'
 require 'uri'
 
 module Importer
@@ -9,7 +9,7 @@ module Importer
     def initialize(wordpress_export_path, nanoc_site_path, rewrite_map_path)
       @export_file = File.open(wordpress_export_path)
       @export = Nokogiri::XML(@export_file)
-      @site = Nanoc3::Site.new(nanoc_site_path)
+      @site = Nanoc::Site.new(nanoc_site_path)
       @rewrite_map = []
       @rewrite_map_path = rewrite_map_path
 

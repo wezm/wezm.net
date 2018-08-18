@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'rake'
 gem 'mime-types'
-gem 'nanoc', '~> 3.0'
+gem 'nanoc', '~> 4.0'
 gem 'bitly'
 gem 'haml'
 gem 'sass'

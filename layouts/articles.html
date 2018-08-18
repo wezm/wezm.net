@@ -30,7 +30,7 @@
         else
           feed = '/feed/'
         end
-        active = (@item.identifier.sub(%r{page/$}, '') == path)
+        active = (@item.identifier.to_s.sub(%r{page/$}, '') == path)
       %>
       <li>
         <a href="<%= feed %>"><img class="feed-icon" src="/images/feed-icon.svg" width="12" height="12" alt="Feed Icon" /></a>

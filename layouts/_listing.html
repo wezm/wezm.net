@@ -28,7 +28,7 @@
             <span class="year"><%= post_date.year %></span>
           </abbr>
           <p>
-            <strong><a href="<%= article.reps.first.path %>"><%= article[:title] %></a></strong>
+            <strong><a href="<%= article.reps[:default].path %>"><%= article[:title] %></a></strong>
             A one sentence summary of this post would go here this one is longer then the other one.
           </p>
         </li>
@@ -63,7 +63,7 @@
             <span class="year"><%= post_date.year %></span>
           </abbr>
           <p>
-            <strong><a href="<%= article.reps.first.path %>"><%= article[:title] %></a></strong>
+            <strong><a href="<%= article.reps[:default].path %>"><%= article[:title] %></a></strong>
             A one sentence summary of this post would go here.</p>
         </li>
       <% end %>
