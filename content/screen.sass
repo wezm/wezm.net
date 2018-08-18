@@ -1,4 +1,5 @@
 $ans-serif:  Carlito, Calibri, sans-serif
+$header-colour: #242424
 
 body
   font-family: $ans-serif
@@ -134,7 +135,7 @@ body > header
   font-size: 18px
   color: white
   padding: 0.5em
-  background: #1C1C1C
+  background-color: $header-colour
 
   a
     -webkit-transition: border-bottom-color 500ms ease-out
@@ -147,16 +148,16 @@ body > header
     &:hover
       border-bottom-color: rgba(255, 255, 255, 1.0)
 
-  span
-    display: none
-
 
 #menu
   float: right
   padding-right: 0.25em
 
   li
-    font-size: inherit
+    font-size: 14px
+    font-weight: bold
+    text-transform: uppercase
+    letter-spacing: 0.5px
 
 
 #content
@@ -303,16 +304,11 @@ body.articles #content nav
 
 
 #respond
-  margin-top: 10px
-  padding: 10px
-  background-color: #ddd
+  margin: 3em 0
   clear: both
 
   h2
     margin-top: 0
-
-  .short
-    font-size: smaller
 
 #content
   .published
@@ -521,13 +517,10 @@ body.weather
   body
     font-size: 20px
 
-  body > header span
-    float: right
-    display: inline
-    cursor: pointer
+  body > header
+    text-align: center
 
   #menu
-    display: none
     float: none
     padding: 0.5em 0 0 0
     line-height: 2

@@ -12,7 +12,6 @@
 <body<%= %Q( class="#{@item[:body_class]}") if @item[:body_class] %>>
   <%= render '_header' %>
   <div id="content">
-    <h1><a href="<%= @item.reps[:default].path %>"><%=h @item[:title] %></a></h1>
     <%= yield %>
   </div>
   <%= render '_footer' %>

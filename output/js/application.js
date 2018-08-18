@@ -1,8 +1,4 @@
 jQuery(function() {
-  $('body > header span').click(function() {
-    $('#menu').slideToggle('normal');
-  })
-
   /*** Article Search ***/
   function reset_search() {
     $('#articles li').css({height: 'auto', opacity: 1.0});

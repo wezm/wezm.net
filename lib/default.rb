@@ -2,6 +2,7 @@
 # before nanoc starts compiling.
 
 require 'json'
+require 'rouge'
 
 include Nanoc::Helpers::Rendering
 include Nanoc::Helpers::Blogging

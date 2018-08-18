@@ -48,6 +48,7 @@ end
 
 compile '*' do
   filter :rdiscount
+  layout 'page'
   layout 'default'
   filter :rubypants
 end
