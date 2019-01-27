@@ -1,5 +1,5 @@
 ---
-title: My Rust Powered linux.conf.au E-Paper Badge
+title: My Rust Powered linux.conf.au e-Paper Badge
 extra: For linux.conf.au 2019 I built a digital conference badge using a Raspberry Pi Zero, tri color e-Paper display and a custom Rust program.
 kind: article
 section: technical
