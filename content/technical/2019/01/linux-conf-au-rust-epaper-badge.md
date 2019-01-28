@@ -1,5 +1,5 @@
 This week I attended [linux.conf.au] (for the first time) in Christchurch, New
-Zealand. It's a week long conference covering Linux, open open source software
+Zealand. It's a week long conference covering Linux, open source software
 and hardware, privacy, security and much more. The theme this year was [IoT].
 In line with the theme I built a digital conference badge to take to the
 conference. It used a tri-colour e-Paper display and was powered by a Rust
@@ -193,7 +193,7 @@ concluded that 300 requests per second was was probably going to be fine. `;-)`
 
 ### Mounting
 
-When I started the project I imagined it would hang it around my neck like a
+When I started the project I imagined it would hang around my neck like a
 conference lanyard. By the time departure day arrived I still hadn't worked out
 how this would work in practice (power delivery being a major concern). In the
 end I settled on attaching it to the strap on my backpack. My bag has lots of
@@ -229,11 +229,11 @@ the last light so I suspect there wasn't much juice left.
 </figure>
 
 On day 2 I had had several people suggest that I needed a QR code for the URL.
-Turns out entering an IP address on a phone keyboard is tedious. So after talks
+Turns out entering an IP address on a phone keyboard is tedious. So
 that evening I added a QR code to the display. It's dynamically generated and
 contains the same URL that is shown on the display. There were several good crates
 to choose from. Ultimately I picked one that didn't have any image
-dependencies, which allowed my to convert the data into embedded-graphics
+dependencies, which allowed me to convert the data into embedded-graphics
 pixels. The change was a success, most people scanned the QR code from this
 point on.
 
@@ -267,8 +267,9 @@ plush [Ferris]. I spoke about [Read Rust].
 By the end of the conference the badge showed a count of 12. It had worked
 flawlessly over the five days.
 
-Small projects with a fairly hard deadline are a good way to ensure it's seen
-through to completion. Also a great motivator to publish some open source code.
+Small projects with a fairly hard deadline are a good way to ensure they're
+seen through to completion. They're also a great motivator to publish some open
+source code.
 
 I think I greatly overestimated the number of people that would interact with
 the badge. Of those that did, I think most tapped the button to increase the
