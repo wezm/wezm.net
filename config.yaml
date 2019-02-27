@@ -47,7 +47,7 @@ base_url: 'http://www.wezm.net'
 deploy:
   default:
     kind: rsync
-    dst:     "eforce.binarytrance.com:/usr/local/www/www.wezm.net"
+    dst:     "hardforze.binarytrance.com:infrastructure/volumes/www/wezm.net"
     #options: [ '-rlpgoDvz', '--delete', '--exclude=".svn"' ]
     options: [ '-avz', '--omit-dir-times', '--delete', '--exclude=".svn"' ]
 
