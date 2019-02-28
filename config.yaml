@@ -49,5 +49,5 @@ deploy:
     kind: rsync
     dst:     "hardforze.binarytrance.com:infrastructure/volumes/www/wezm.net"
     #options: [ '-rlpgoDvz', '--delete', '--exclude=".svn"' ]
-    options: [ '-avz', '--omit-dir-times', '--delete', '--exclude=".svn"' ]
+    options: [ '-avz', '--delete' ]
 
