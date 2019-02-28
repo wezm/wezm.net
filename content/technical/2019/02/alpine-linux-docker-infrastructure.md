@@ -14,15 +14,15 @@ prescriptive._
 
 Before the rebuild this is what my infrastructure looked like:
 
-- FreeBSD 11 server in [DigitalOcean] hosting:
+- FreeBSD 11 server in [DigitalOcean][DigitalOcean] (New York) hosting:
   - [PostgreSQL] 9
   - [nginx]
   - [Varnish]
   - 2 [Rails] apps
   - Static sites
-- Debian 9 server in DigitalOcean hosting:
+- Debian 9 server in DigitalOcean (New York) hosting:
   - Wizards [Mattermost] instance
-- FreeBSD 12 server in [Vultr] hosting:
+- FreeBSD 12 server in [Vultr][Vultr] (Sydney) hosting:
   - [rust.melbourne] Mattermost instance
   - PostgreSQL 11
 
