@@ -1,0 +1,19 @@
+digraph G {
+  node[shape=box];
+  edge[headport=n];
+
+  subgraph cluster {
+    hitch
+    "acme.sh"
+  }
+  hitch -> varnish;
+  varnish -> nginx;
+  varnish -> pkb;
+  varnish -> binary_trance;
+  varnish -> wizards;
+  varnish -> rust_melbourne;
+  pkb -> syncthing;
+  binary_trance -> postgresql:nw;
+  wizards -> postgresql;
+  rust_melbourne -> postgresql:ne;
+}

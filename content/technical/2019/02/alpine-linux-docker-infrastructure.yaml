@@ -1,0 +1,9 @@
+---
+title: Rebuilding My Personal Infrastructure With Alpine Linux and Docker
+extra: My story of replacing three servers, across two countries, running two operating systems with a single server running Alpine Linux and Docker.
+kind: article
+section: technical
+created_at: 2019-02-28 09:45:00.000000000 +11:00
+keywords:
+  - linux
+short_url:
