@@ -365,7 +365,7 @@ live on the edge a little and enable [Varnish's experimental HTTP/2
 support][varnish-http2]. Retrieving the site over HTTP/2 did in fact reduce the
 TLS negotiations to one.
 
-Thanks for reading, I hope the bits didn't take to long to get from Australia
+Thanks for reading, I hope the bits didn't take too long to get from Australia
 to wherever you are. Happy computing!
 
 [acme.sh]: https://github.com/Neilpang/acme.sh
