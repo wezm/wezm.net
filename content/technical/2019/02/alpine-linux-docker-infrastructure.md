@@ -7,13 +7,10 @@ for a long time I have finally come around to it recently and decided to
 rebuild on [Docker]. This post aims to describe some of the choices made, and
 why I made them.
 
-_Before we start I'd like to take a moment to acknowledge a few things. This
-infrastructure is mine and is built to my values in a way that works for me.
-You might make different choices and that's ok. You may think some parts are
-overly complex or that I jumped through too many hoops just to avoid some
-dependency. That's fine, you're free to build systems however you like.
-This post is my story and is not intended to tell you what to do, but to
-share how and why I built my systems the way I did._
+_Before we start I'd like to take a moment to acknowledge this infrastructure
+is built to my values in a way that works for me. You might make different
+choices and that's ok. I hope you find this post interesting but not
+prescriptive._
 
 Before the rebuild this is what my infrastructure looked like:
 
