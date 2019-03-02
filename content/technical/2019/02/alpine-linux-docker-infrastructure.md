@@ -129,9 +129,25 @@ decided early on that these weren't really for me:
 - I wasn't a huge fan of pulling random Docker images from the Internet, even
   if they were official images.
 
-In the end I only need to trust one image from [Docker Hub]: The 5Mb [Alpine
+~~In the end I only need to trust one image from [Docker Hub]: The 5Mb [Alpine
 image][alpine-docker-image]. All of my images are built on top of this one
-image.
+image.~~
+
+**Update 2 Mar 2019:** I am no longer depending on any Docker Hub images. After
+the [Alpine Linux 3.9.1 release][alpine-3.9.1] I noticed the official Docker
+images had not been updated so I built my own. Turns out it's quite simple.
+Download the miniroot tarball from the Alpine website and then add it to a
+Docker image:
+
+```language-docker
+FROM scratch
+
+ENV ALPINE_ARCH x86_64
+ENV ALPINE_VERSION 3.9.1
+
+ADD alpine-minirootfs-${ALPINE_VERSION}-${ALPINE_ARCH}.tar.gz /
+CMD ["/bin/sh"]
+```
 
 An aspect of Docker that I don't really like is that inside the container you
 are root by default. When building my images I made a point of making the
@@ -370,6 +386,7 @@ to wherever you are. Happy computing!
 
 [acme.sh]: https://github.com/Neilpang/acme.sh
 [Alpine Linux]: https://alpinelinux.org/
+[alpine-3.9.1]: https://alpinelinux.org/posts/Alpine-3.9.1-released.html
 [alpine-docker-image]: https://hub.docker.com/_/alpine
 [Ansible]: https://www.ansible.com/
 [busybox]: https://www.busybox.net/
@@ -387,7 +404,10 @@ to wherever you are. Happy computing!
 [LuaDNS]: https://luadns.com/
 [Mattermost]: https://mattermost.com/
 [musl-libc]: http://www.musl-libc.org/
+[nginx]: http://nginx.org/
 [OpenRC]: https://wiki.gentoo.org/wiki/Project:OpenRC
+[PostgreSQL]: https://www.postgresql.org/
+[Rails]: https://rubyonrails.org/
 [rust.melbourne]: https://rust.melbourne/
 [Sourcehut]: https://sourcehut.org/
 [sr.ht-announce]: https://lists.sr.ht/~sircmpwn/sr.ht-announce/%3C20190117003837.GA6037%40homura.localdomain%3E
@@ -396,10 +416,7 @@ to wherever you are. Happy computing!
 [systemd-tragedy]: https://youtu.be/o_AIw9bGogo
 [systemd]: https://freedesktop.org/wiki/Software/systemd/
 [Ubuntu]: https://www.ubuntu.com/
+[varnish-http2]: https://info.varnish-software.com/blog/varnish-cache-5-http2-support
+[Varnish]: https://varnish-cache.org/
 [Vultr]: https://www.vultr.com/?ref=7903263
 [WebPageTest]: https://www.webpagetest.org/
-[Varnish]: https://varnish-cache.org/
-[varnish-http2]: https://info.varnish-software.com/blog/varnish-cache-5-http2-support
-[nginx]: http://nginx.org/
-[PostgreSQL]: https://www.postgresql.org/
-[Rails]: https://rubyonrails.org/

@@ -10,3 +10,10 @@ Site Structure
       /personal
         /category
     /about
+
+Tips
+----
+
+Set updated_at on a post in vim:
+
+    :r! ruby -rtime -e "puts File.mtime('%:r.md').xmlschema"
