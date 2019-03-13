@@ -124,7 +124,7 @@ decided early on that these weren't really for me:
 
 - A lot of them build the package from source instead of just installing the
   Alpine package.
-- The Docker build was more complicated that I needed as it was trying to be
+- The Docker build was more complicated than I needed as it was trying to be
   a generic image that anyone could pull and use.
 - I wasn't a huge fan of pulling random Docker images from the Internet, even
   if they were official images.
@@ -383,6 +383,11 @@ TLS negotiations to one.
 
 Thanks for reading, I hope the bits didn't take too long to get from Australia
 to wherever you are. Happy computing!
+
+<div class="seperator"><hr class="left">✦<hr class="right"></div>
+
+Previous Post: [My Rust Powered linux.conf.au e-Paper Badge](/technical/2019/01/linux-conf-au-rust-epaper-badge/)  
+Next Post: [A Coding Retreat and Getting Embedded Rust Running on a SensorTag](/technical/2019/03/sensortag-embedded-rust-coding-retreat/)
 
 [acme.sh]: https://github.com/Neilpang/acme.sh
 [Alpine Linux]: https://alpinelinux.org/

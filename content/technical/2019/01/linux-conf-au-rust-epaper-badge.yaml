@@ -4,7 +4,7 @@ extra: For linux.conf.au 2019 I built a digital conference badge using a Raspber
 kind: article
 section: technical
 created_at: 2019-01-27 11:00:00.000000000 +11:00
-updated_at: 2019-01-28T20:08:26+11:00
+updated_at: 2019-03-13T20:39:51+11:00
 keywords:
   - rust
   - linux

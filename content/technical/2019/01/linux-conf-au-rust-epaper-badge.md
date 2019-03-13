@@ -296,6 +296,10 @@ them something at the same time.
 All in all it was a fun project and excellent conference. If you're interested,
 [the Rust source for the badge is on GitHub][source].
 
+<div class="seperator"><hr class="left">✦<hr class="right"></div>
+
+Next Post: [Rebuilding My Personal Infrastructure With Alpine Linux and Docker](/technical/2019/02/alpine-linux-docker-infrastructure/)
+
 [BADGEr]: https://wyolum.com/projects/badger/
 [edunham-talk]: https://youtu.be/uCnnhMleoKA?t=530
 [edunham]: http://edunham.net/
