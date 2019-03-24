@@ -42,8 +42,8 @@ microcontroller the SensorTag also add a bunch of sensors, including:
 temperature, humidity, barometer, accelerometer, gyroscope, and light.
 
 <figure>
-  <img src="/images/2019/sensortag.jpg" width="400" alt="Two SensorTags. One with  it's rubberised case removed and debugger board attached" />
-  <figcaption>Two SensorTags. One with  it's rubberised case removed and
+  <img src="/images/2019/sensortag.jpg" width="400" alt="Two SensorTags. One with it's rubberised case removed and debugger board attached" />
+  <figcaption>Two SensorTags. One with it's rubberised case removed and
   debugger board attached.</figcaption>
 </figure>
 
@@ -229,7 +229,8 @@ next year.
 
 <div class="seperator"><hr class="left">✦<hr class="right"></div>
 
-Previous Post: [Rebuilding My Personal Infrastructure With Alpine Linux and Docker](/technical/2019/02/alpine-linux-docker-infrastructure/)
+Previous Post: [Rebuilding My Personal Infrastructure With Alpine Linux and Docker](/technical/2019/02/alpine-linux-docker-infrastructure/)  
+Next Post: [My First 3 Weeks of Professional Rust](/technical/2019/03/first-3-weeks-of-professional-rust/)
 
 [cargo-binutils]: https://crates.io/crates/cargo-binutils
 [carmack]: https://www.facebook.com/permalink.php?story_fbid=2110408722526967&id=100006735798590
