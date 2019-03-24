@@ -1,5 +1,5 @@
-For the last 15 years as professional programmer I have worked mostly with
-dynamic languages. First [Perl], then [Python], and for the last 10 years or so
+For the last 15 years as a professional programmer I have worked mostly with
+dynamic languages. First [Perl], then [Python], and for the last 10 years or so,
 [Ruby]. I've also been writing [Rust] on the side for personal projects for
 nearly four years. Recently I started a new job and for the first time I'm
 writing Rust professionally. Rust represents quite a shift in language
@@ -16,7 +16,7 @@ Rust][lifetimes]. I was reasonably confident with them conceptually and their
 simple application but our code has some interesting type driven zero-copy
 parsing code that tested my knowledge. When encountering some compiler errors I
 was fortunate to have experienced colleagues to ask for help. It's been nice to
-be extending my knowledge and learning as I go.
+extend my knowledge and learn as I go.
 
 Interestingly I had mostly been building things without advanced lifetime
 knowledge up until this point. I think that sometimes the community puts too
@@ -29,7 +29,7 @@ trying to build.
 
 In my second week I implemented a change to make a certain pattern more
 ergonomic. It was refreshing to be able to build the initial functionality and
-then make a project wide change, confident that given it compiled after the
+then make a project-wide change, confident that given it compiled after the
 change I _probably_ hadn't broken anything. I don't think I would have had the
 confidence to make such a change as early on in the Ruby projects I've worked
 on previously.
@@ -42,9 +42,10 @@ language do eliminate whole classes of bugs that you'd need to test for in a
 dynamic language but that doesn't mean tests aren't needed.
 
 Rust has great built in support for testing and I've enjoyed being able to
-write tests focussed solely on the behaviour and logic of my code. Instead of
-behaviour and logic in addition to ensuring there are no syntax errors, or that
-`nil` is handled safely, etc.
+write tests focussed solely on the behaviour and logic of my code. Compared to
+Ruby where I have to write tests that ensure there are no syntax errors, `nil`
+is handled safely, arguments are correct, in addition to the behaviour and
+logic.
 
 ## Editor and Tooling
 
@@ -69,7 +70,7 @@ could just click the paths in the error messages.
 
 It's perhaps the combination of working on a foreign codebase and also trying
 to maximise efficiency when working with others that pushed me to seek out
-better tooling for work use. There is a ongoing to work to improve the RLS so I
+better tooling for work use. There is ongoing to work to improve the RLS so I
 may still come back to Neovim and I continue to use it for personal
 projects.
 
@@ -94,7 +95,7 @@ is harder with Rust. `println!` or `dbg!` based debugging can get you a
 surprisingly long way and had served me well for most of my personal projects.
 
 When building some parsing code I quickly felt the need to use a real
-debugger in order to step through, and examine execution of a failing test.
+debugger in order to step through and examine execution of a failing test.
 It's possible to do this on the command line with the `rust-gdb` or `rust-lldb`
 wrappers that come with Rust. However, I find them fiddly to use
 and verbose to operate.
