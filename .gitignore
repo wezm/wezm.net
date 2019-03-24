@@ -3,6 +3,7 @@ output/fonts/*
 output/about/
 output/articles/
 output/css/screen.css
+output/css/rouge.css
 output/feed/
 output/index.html
 output/personal/
