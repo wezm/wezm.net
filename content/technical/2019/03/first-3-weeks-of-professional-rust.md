@@ -114,6 +114,8 @@ the frequency of bugs encountered in production, their type (such as panic or
 incorrect logic), their source, and ease of resolution. I look forward to
 writing more about our work in the future.
 
+<img src="/images/lobsters.png" alt="" width="16" class="lobsters"> [Discuss on Lobsters](https://lobste.rs/s/7op1vm/my_first_3_weeks_professional_rust)
+
 <div class="seperator"><hr class="left">✦<hr class="right"></div>
 
 Previous Post: [A Coding Retreat and Getting Embedded Rust Running on a SensorTag](/technical/2019/03/sensortag-embedded-rust-coding-retreat/)  
