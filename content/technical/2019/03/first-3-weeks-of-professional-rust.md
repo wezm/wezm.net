@@ -116,8 +116,8 @@ writing more about our work in the future.
 
 <div class="seperator"><hr class="left">✦<hr class="right"></div>
 
-Previous Post: [A Coding Retreat and Getting Embedded Rust Running on a SensorTag](/technical/2019/03/sensortag-embedded-rust-coding-retreat/)
-
+Previous Post: [A Coding Retreat and Getting Embedded Rust Running on a SensorTag](/technical/2019/03/sensortag-embedded-rust-coding-retreat/)  
+Next Post: [Cross Compiling Rust for FreeBSD With Docker](/technical/2019/03/cross-compile-freebsd-rust-binary-with-docker/)
 
 [:make]: https://neovim.io/doc/user/quickfix.html#:make
 [CLion]: https://www.jetbrains.com/clion/
