@@ -5,6 +5,12 @@ binaries from a Docker container, without using (slow) emulation/virtual
 machines.  This post describes how it works and how to add it to your own Rust
 project.
 
+**Update 27 March 2019:** Stephan Jaekel pointed out [on Twitter][cross-twitter]
+that [cross] supports a variety of OSes including FreeBSD, NetBSD, Solaris, and
+more. I have used cross for embedded projects but didn't think to use it for
+non-embedded ones. Nonetheless the process described in this post was still
+educational for me but I would recommend using cross instead.
+
 I started with [Sandvine's freebsd-cross-build][freebsd-cross-upstream] repo. Which builds
 a Docker image with a cross-compiler that targets FreeBSD. I made a few updates
 and improvements to it:
@@ -133,3 +139,5 @@ Previous Post: [My First 3 Weeks of Professional Rust](/technical/2019/03/first-
 
 [freebsd-cross-upstream]: https://github.com/sandvine/freebsd-cross-build
 [user namespaces]: https://docs.docker.com/engine/security/userns-remap/
+[cross-twitter]: https://twitter.com/stephrdev/status/1110270815927500801
+[cross]: https://github.com/rust-embedded/cross
