@@ -134,8 +134,8 @@ Once again, the code is at: <https://github.com/wezm/freebsd-cross-build>.
 
 <div class="seperator"><hr class="left">✦<hr class="right"></div>
 
-Previous Post: [My First 3 Weeks of Professional Rust](/technical/2019/03/first-3-weeks-of-professional-rust/)
-
+Previous Post: [My First 3 Weeks of Professional Rust](/technical/2019/03/first-3-weeks-of-professional-rust/)  
+Next Post: [What I Learnt Building a Lobsters TUI in Rust](/technical/2019/04/lobsters-tui/)
 
 [freebsd-cross-upstream]: https://github.com/sandvine/freebsd-cross-build
 [user namespaces]: https://docs.docker.com/engine/security/userns-remap/

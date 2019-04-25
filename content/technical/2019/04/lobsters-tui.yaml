@@ -1,0 +1,14 @@
+---
+title: What I Learnt Building a Lobsters TUI in Rust
+extra: As a learning and practice exercise I built a crate and TUI for interacting with the Lobsters programming community website.
+kind: article
+section: technical
+created_at: 2019-04-25 16:00:00.000000000 +11:00
+#updated_at: 2019-03-30T10:02:56+11:00
+keywords:
+  - rust
+  - lobsters
+  - async
+  - tokio
+  - tui
+short_url:
