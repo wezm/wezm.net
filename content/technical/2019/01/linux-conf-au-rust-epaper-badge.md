@@ -118,7 +118,7 @@ uptime, free RAM). The plain text version of the page looked like this:
 
        Email: wes@wezm.net
       GitHub: https://github.com/wezm
-    Mastodon: https://mastodon.social/@wezm
+    Mastodon: https://decentralised.social/wezm
      Twitter: https://twitter.com/wezm
      Website: http://www.wezm.net/
 
