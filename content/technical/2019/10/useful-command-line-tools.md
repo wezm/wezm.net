@@ -145,7 +145,7 @@ readable.
 <a class="action-button action-button-ghost" href="https://github.com/sharkdp/hexyl">Homepage</a>
 
 <a name="jq"></a>
-### jq ![Language: Go](https://img.shields.io/badge/language-Go-%2300ADD8)
+### jq ![Language: C](https://img.shields.io/badge/language-C-%23444444)
 
 `jq` is kind of like `awk` for JSON. It lets you transform and extract information from JSON
 documents.
@@ -315,7 +315,8 @@ partial name.
 
 <a class="action-button action-button-ghost" href="https://www.getzola.org/">Homepage</a>
 
-<!-- <img src="/images/lobsters.png" alt="" width="16" class="lobsters"> [Discuss on Lobsters](https://lobste.rs/s/7op1vm/my_first_3_weeks_professional_rust) -->
+<img src="/images/lobsters.png" alt="" width="16" class="lobsters"> [Discuss on Lobsters](https://lobste.rs/s/pven1z/illustrated_guide_some_useful_command)  
+[Discuss on Hacker News](https://news.ycombinator.com/item?id=21363121)  
 
 <div class="seperator"><hr class="left">✦<hr class="right"></div>
 
