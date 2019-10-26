@@ -95,12 +95,12 @@ In addition to async and TUI I also learned more about:
 Whilst the library and UI aren't especially useful the exercise was worth it. I got
 to practice a bunch of things and learn some new ones at the same time.
 
-<!-- <img src="/images/lobsters.png" alt="" width="16" class="lobsters"> [Discuss on Lobsters](https://lobste.rs/s/7op1vm/my_first_3_weeks_professional_rust) -->
+<img src="/images/lobsters.png" alt="" width="16" class="lobsters"> [Comments on Lobsters](https://lobste.rs/s/nono6k/what_i_learnt_building_lobsters_tui_rust)
 
 <div class="seperator"><hr class="left">✦<hr class="right"></div>
 
 Previous Post: [Cross Compiling Rust for FreeBSD With Docker](/technical/2019/03/cross-compile-freebsd-rust-binary-with-docker/)  
-<!-- Next Post:  -->
+Next Post: [An Illustrated Guide to Useful Command Line Tools](/technical/2019/10/useful-command-line-tools/)
 
 [repo]: https://git.sr.ht/~wezm/lobsters
 [ansi_term]: https://crates.io/crates/ansi_term

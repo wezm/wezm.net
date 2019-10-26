@@ -1,5 +1,5 @@
 <% post_date = WezM::Helpers.parse_post_date(@item) %>
-<article>
+<article<%= %Q( class="#{@item[:article_class]}") if @item[:article_class] %>>
   <header>
     <h1><a href="<%= @item.reps[:default].path %>"><%=h @item[:title] %></a></h1>
     <div class="published">
