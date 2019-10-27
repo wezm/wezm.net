@@ -25,6 +25,7 @@ to date software many are available via the system package repository.
 * [exa](#exa)
 * [fd](#fd)
 * [hexyl](#hexyl)
+* [hyperfine](#hyperfine)
 * [jq](#jq)
 * [mdcat](#mdcat)
 * [pass](#pass)
@@ -144,6 +145,16 @@ readable.
 
 <a class="action-button action-button-ghost" href="https://github.com/sharkdp/hexyl">Homepage</a>
 
+<a name="hyperfine"></a>
+### hyperfine ![Language: Rust](https://img.shields.io/badge/language-rust-%23dea584)
+
+`hyperfine` command line benchmarking tool. It allows you to benchmark commands
+with warmup and statistical analysis.
+
+![hyperfine screenshot](/images/cli/hyperfine.png)
+
+<a class="action-button action-button-ghost" href="https://github.com/sharkdp/hyperfine">Homepage</a>
+
 <a name="jq"></a>
 ### jq ![Language: C](https://img.shields.io/badge/language-C-%23444444)
 
@@ -259,7 +270,7 @@ history and diffs.
 ### titlecase ![Language: Rust](https://img.shields.io/badge/language-rust-%23dea584)
 
 `titlecase` is a little tool I wrote to format text using a [title case format
-described by John Gruber][df-titlecase]. It correctly handles puctuation, and words like
+described by John Gruber][df-titlecase]. It correctly handles punctuation, and words like
 iPhone. I use it to obtain consistent titles on all my blog posts.
 
     $ echo 'an illustrated guide to useful command line tools' | titlecase
