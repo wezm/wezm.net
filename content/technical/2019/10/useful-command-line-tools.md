@@ -55,7 +55,7 @@ in all the screenshots on this page.
 ### alt ![Language: Rust](https://img.shields.io/badge/language-rust-%23dea584)
 
 `alt` is a tool for finding the alternate to a file. E.g. the header for an
-implementation or the test for an implementation. I use it paired with Neovim
+implementation or the test for an implementation. [I use it paired with Neovim][nvim-alt]
 to easily toggle between tests and implementation.
 
     $ alt app/models/page.rb
@@ -220,7 +220,7 @@ All the screenshots in this post were taken with it. It pairs well with
 ### skim ![Language: Rust](https://img.shields.io/badge/language-rust-%23dea584)
 
 `skim` is a fuzzy finder. It can be used to fuzzy match input fed to it. I use it
-with Neovim and zsh for fuzzy matching file names.
+with [Neovim] and zsh for fuzzy matching file names.
 
 ![skim screenshot](/images/cli/skim.png)
 
@@ -265,7 +265,7 @@ iPhone. I use it to obtain consistent titles on all my blog posts.
     $ echo 'an illustrated guide to useful command line tools' | titlecase
     An Illustrated Guide to Useful Command Line Tools
 
-I typically use it from within Neovim where selected text is piped through it in-place.
+I typically use it from within [Neovim] where selected text is piped through it in-place.
 This is done by creating a visual selection and then typing: `:!titlecase`.
 
 <a class="action-button action-button-ghost" href="https://github.com/wezm/titlecase">Homepage</a>
@@ -332,3 +332,5 @@ Previous Post: [What I Learnt Building a Lobsters TUI in Rust](/technical/2019/0
 [zsh]: https://www.zsh.org/
 [passff]: https://github.com/passff/passff
 [Pass for iOS]: https://github.com/mssun/passforios
+[nvim-alt]: https://github.com/wezm/dotfiles/blob/ad7863bcf10873c386d9ff97e4a9edaa725a15f0/vimrc#L525-L536
+[Neovim]: https://neovim.io/
