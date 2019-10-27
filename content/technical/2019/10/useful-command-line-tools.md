@@ -284,8 +284,8 @@ navigate to the definition of symbols in files.
 <a name="watchexec"></a>
 ### watchexec ![Language: Rust](https://img.shields.io/badge/language-rust-%23dea584)
 
-`watchexec` is a file a directory watcher that can run commands in response to
-file system changes. Handy for auto running tests or restarting a development
+`watchexec` is a file and directory watcher that can run commands in response to
+file-system changes. Handy for auto running tests or restarting a development
 web server when source files change.
 
     # run command on file change
