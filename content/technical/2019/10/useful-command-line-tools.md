@@ -187,7 +187,7 @@ browser) and images are rendered.
 
 ![pass screenshot](/images/cli/pass.png)
 
-<a class="action-button action-button-ghost" href="https://github.com/lunaryorn/mdcat">Homepage</a>
+<a class="action-button action-button-ghost" href="https://www.passwordstore.org/">Homepage</a>
 
 <a name="podman"></a>
 ### Podman ![Language: Go](https://img.shields.io/badge/language-Go-%2300ADD8)
