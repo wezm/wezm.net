@@ -81,7 +81,7 @@ terminal. It supports syntax highlighting and git integration.
 <a name="bb"></a>
 ### bb ![Language: Rust](https://img.shields.io/badge/language-rust-%23dea584)
 
-`bb` is system monitor for Linux like `top`. It shows overall CPU and memory usage as well as
+`bb` is system monitor like `top`. It shows overall CPU and memory usage as well as
 detailed information per process.
 
 ![bb screenshot](/images/cli/bb.png)
