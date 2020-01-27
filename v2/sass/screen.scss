@@ -1,0 +1,410 @@
+$heading-margin: 0.25em 0 0.5em 0;
+$heading-family: "Manrope VF", sans-serif;
+$link-color: hsl(204, 50.8%, 26.1%);
+
+@font-face {
+  font-family: "Manrope VF";
+  src: url("ManropeGX.ttf") format("truetype-variations");
+  font-style: normal;
+  font-weight: 200 800;
+}
+
+html {
+  background-color: #fcfcfc;
+  min-height: 100%;
+}
+body {
+  margin:40px auto;
+  max-width: 800px;
+  line-height:1.6;
+  font-family: "Manrope VF", sans-serif;
+  font-size:18px;
+  color:#444;
+  padding:0 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+body.home {
+  max-width: 1000px;
+}
+pre, code {
+  font-family: "Pragmata Pro", "Pragmata Pro Mono", "JetBrains Mono", "Iosevka", "Consolas", monospace;
+  font-size: 16px;
+}
+code {
+  background-color: #ffedf0;
+  padding: 0.1em 0.2em;
+  border-radius: 3px;
+}
+pre {
+  padding: 0.5em 1em;
+}
+h1,h2,h3,h4 {
+  font-family: $heading-family;
+  margin: $heading-margin;
+  line-height: 1.2;
+}
+h1,h2 {
+  font-weight: 300;
+}
+h3 {
+  font-weight: 400;
+}
+main img {
+  max-width: 100%;
+}
+main.home {
+  h1 {
+    text-align: center;
+    font-size: 5em;
+    font-weight: 200;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: 800;
+  }
+  h3 {
+    font-weight: 300;
+  }
+  article {
+    h3 {
+      font-size: 1.5em;
+    }
+    .post-metadata {
+      font-size: smaller;
+      color: #666;
+    }
+    .date-icon {
+      width: 20px;
+    }
+  }
+  section h2 {
+    margin-bottom: 1em;
+  }
+}
+
+a {
+  text-decoration: underline;
+}
+a:link, a:visited {
+  color: $link-color;
+}
+.hover-underline:hover {
+  border-bottom: 1px solid currentColor;
+}
+nav a:link, nav a:visited {
+  color: #666;
+}
+.intro {
+  max-width: 800px;
+  margin: 0 auto 3em;
+}
+.post-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 500;
+  color: #555;
+
+  em {
+    color: #7a7a7a;
+    font-style: oblique 10deg;
+
+    .updated {
+      margin-right: 0.5em;
+    }
+  }
+}
+article {
+  margin-bottom: 3em;
+
+  h2,h3 {
+    a:link, a:visited {
+      color: currentColor;
+      text-decoration: none;
+      border-bottom: 2px solid currentColor;
+    }
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  h4 {
+    font-size: 1.25em;
+    font-weight: 400;
+  }
+  blockquote {
+    border-left: 3px solid skyblue;
+    font-style: oblique 10deg;
+    background-color: hsl(197.4, 23.4%, 97.5%);
+    padding: 1px 1em;
+    margin: 1em 0;
+    clear: both;
+  }
+  aside {
+    padding: 1em 1em 0;
+    box-sizing: border-box;
+    border: 1px solid #eaeae1;
+    background-color: rgba(255, 255, 246, 0.3);
+    border-radius: 5px;
+    font-size: smaller;
+    width: 240px;
+
+    .emoji {
+      margin-bottom: 0.5em;
+    }
+  }
+  aside.float-right {
+    margin: 0 0 1em 1em;
+  }
+}
+img, canvas, iframe, video, svg {
+  max-width: 100%;
+  margin: 0 auto;
+}
+figure {
+  margin: 0 auto 1.5em;
+}
+figcaption {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+footer {
+  color: #888;
+  font-size: 14px;
+  border-top: 1px solid #AAA;
+  margin: 1em 0px 2em;
+  clear: both;
+}
+footer .copyright {
+  margin-top: 1em;
+}
+
+.no-border {
+  border: none;
+  text-decoration: none;
+}
+.text-center {
+  text-align: center;
+}
+.text-smaller {
+  font-size: 0.5em;
+}
+.flex {
+  display: flex;
+}
+
+.logo {
+  font-size: 1.75em;
+  a {
+    color: #555;
+  }
+}
+
+.breadcrumb-sep {
+  color: #999;
+}
+
+.tagline {
+  line-height: 2;
+  font-weight: 300;
+  font-size: 2em;
+  margin: $heading-margin;
+  font-family: $heading-family;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.action-button {
+  background-color: $link-color;
+  border-radius: 0.25em;
+  border: 2px solid $link-color;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 750;
+  margin: 0.75em 0;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.action-button-ghost {
+  background-color: initial;
+  color: $link-color;
+}
+.action-button-ghost:hover {
+  background-color: $link-color;
+  color: white;
+}
+
+.posts-section {
+  width: 100%;
+}
+.projects-section {
+  width: 300px;
+  flex-shrink: 0;
+  margin-left: 2em;
+}
+ul.projects {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    margin: 1em 0;
+  }
+  img, svg {
+    width: 32px;
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+  p {
+    margin-left: calc(32px + 0.5em);
+    font-size: smaller;
+    margin-top: 0;
+  }
+}
+
+#zola-continue-reading {
+  margin: 0;
+}
+
+.post-body h3 {
+  margin-top: 1.5em;
+}
+
+.footnote-definition {
+  font-size: smaller;
+}
+.footnote-definition-label {
+  float: left;
+  margin-right: 0.5em;
+}
+
+.date-icon {
+  width: 24px;
+  vertical-align: top;
+  margin-right: 9px;
+}
+.ornament {
+  display: inline-block;
+  margin: 0 auto;
+  width: 33px;
+  text-align: center;
+}
+.screenshot img {
+  border: 1px solid #666;
+}
+.image-right {
+  float: right;
+  margin: 0.5em 0 1em 1em;
+}
+.float-right {
+  float: right;
+}
+
+.small-caps {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.three-columns {
+  columns: 3;
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.socials {
+  margin-top: 1em;
+
+  a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #888;
+    padding: 0 0.5em;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .tagline {
+    display: initial;
+  }
+  .emoji-pair {
+    text-align: center;
+  }
+  .home .flex {
+    flex-direction: column
+  }
+  .projects-section {
+    margin: 0;
+    width: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  article {
+    h2 {
+      a:link, a:visited {
+        border-bottom: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  main.home {
+    h1 {
+      font-size: 4em;
+    }
+  }
+  article {
+    aside {
+      width: auto;
+
+      &.float-right, &.float-left {
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+  footer {
+    font-size: 16px;
+  }
+  .tagline {
+    font-size: 1.75em;
+  }
+  .date-published {
+    margin-top: 0.75em;
+  }
+  .ornament {
+    visibility: hidden;
+  }
+  .date-updated {
+    margin-top: 0.5em;
+    position: relative;
+    left: -33px;
+  }
+  .socials {
+    text-align: center;
+
+    a {
+      font-size: 14px;
+      line-height: 3;
+      padding: 0 1em;
+    }
+  }
+}

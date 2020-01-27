@@ -1,0 +1,60 @@
++++
+title = "About"
+date = 2020-01-27T08:38:24+11:00
+
+[extra]
+show_date = false
++++
+
+![Photo of me in Nepal](../images/Photo%20of%20Wesley%20Moore.jpg)
+
+I'm a software developer from Melbourne, Australia. I like open-source and warm
+weather (Melbourne is not in the warm part of Australia unfortunately). I enjoy
+tinkering with computers, ranging from small microcontrollers up to large
+servers and the operating systems that run upon them.
+
+I run [Arch Linux] on [my desktop computer][my desktop] and [Void
+Linux (musl)][Void Linux] on [my laptop], with the [Awesome] window manager.
+The [server hosting this website][my server] runs [Alpine Linux].
+You can read more about my OS adventures on [bitcannon.net].
+
+[{{ float_image(image="../static/images/keyboards.jpg", float="right", width=128, alt="Photo of my keyboards") }}](../images/keyboards.jpg)
+I enjoy typing on mechanical keyboards. I have a small collection in a range of
+sizes. All are fully programmable. My current favourite is a Filco Majestouch
+Ninja 2, which has had the factory controller replaced with a programmable one.
+
+[Rust] is my programming language of choice. I am fairly active in the Rust
+community and curate [Read Rust], a website that collects interesting posts
+from the Rust community.
+
+I work at [YesLogic] on the [Prince] HTML to PDF converter. Prince is a very
+interesting product to work on as it is essentially a web-browser that outputs
+well typeset PDFs. It is largely implemented in the [Mercury] logic programming
+language, with portions now in [Rust] as well.
+
+I am fine with either he/him or they/them pronouns.
+
+[Alpine Linux]: https://alpinelinux.org/
+[Arch Linux]: https://www.archlinux.org/
+[Awesome]: https://awesomewm.org/
+[bitcannon.net]: https://bitcannon.net/
+[Mercury]: http://www.mercurylang.org/
+[my desktop]: https://bitcannon.net/page/ryzen9-pc/
+[my laptop]: https://bitcannon.net/post/huawei-matebook-x-pro-void-linux/
+[my server]: https://www.wezm.net/technical/2019/02/alpine-linux-docker-infrastructure/
+[Prince]: https://www.princexml.com/
+[Read Rust]: https://readrust.net/
+[Rust]: https://www.rust-lang.org/
+[Void Linux]: https://voidlinux.org/
+[YesLogic]: https://yeslogic.com/
+
+## Contact
+
+See the footer for my email and social media links.
+
+## Credits
+
+This website would not be possible without the generous work of others:
+
+* [Zola](https://www.getzola.org/) static site compiler.
+* [Manrope](https://manropefont.com/) font.
