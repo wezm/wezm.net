@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block title %}{{ config.title }}{% endblock %}
+
+{% block body %}
+<main class="home">
+  <h1>{{ section.title }}</h1>
+
+  <div class="intro">
+    <div class="tagline">
+      <div class="emoji-pair">👨‍💻 Software Developer</div>
+      <div class="emoji-pair">🌏 Melbourne, Australia</div>
+    </div>
+
+    {{ section.content | safe }}
+  </div>
+
+  <div class="flex">
+    <section class="posts-section">
+      <h2>Recent Posts</h2>
+
+      {% set section = get_section(path="posts/_index.md") %}
+      {% for sub in section.subsections %}
+        {% set section = get_section(path=sub) %}
+        {% for page in section.pages %}
+          {% include "article.html" %}
+        {% endfor %}
+      {% endfor %}
+    </section>
+
+    <section class="projects-section">
+      <h2>Projects</h2>
+
+      <ul class="projects">
+        <li>
+          <a href="https://readrust.net/">
+            <img src="images/read-rust.svg">Read Rust
+          </a>
+          <p>Curated posts from the Rust community.</p>
+        </li>
+        <li>
+          <a href="https://desktop.institute/">
+            <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" x="0px" y="0px"><g data-name="Browser"><path d="M2,2V62H62V2ZM60,4v6H4V4ZM4,60V12H60V60Z"></path><rect x="6" y="6" width="2" height="2"></rect><rect x="10" y="6" width="2" height="2"></rect><rect x="14" y="6" width="2" height="2"></rect><rect x="56" y="6" width="2" height="2"></rect><path d="M8,56H32V16H8Zm2-38H30V54H10Z"></path><path d="M36,34H56V16H36Zm2-16H54V32H38Z"></path><path d="M36,56H56V38H36Zm2-16H54V54H38Z"></path></g></svg>Desktop Institute
+          </a>
+          <p>Documenting the search for the perfect desktop environment.</p>
+        </li>
+        <li>
+          <a href="https://bitcannon.net/">
+            <svg id="bookmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="#85144b">
+              <path d="M6 2 L26 2 L26 30 L16 24 L6 30 Z"></path>
+            </svg>Bit Cannon
+          </a>
+          <p>A blog about operating system exploration.</p>
+        </li>
+        <li>
+          <a href="https://linkedlist.org/">
+            <svg id="i-link" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M18 8 C18 8 24 2 27 5 30 8 29 12 24 16 19 20 16 21 14 17 M14 24 C14 24 8 30 5 27 2 24 3 20 8 16 13 12 16 11 18 15"></path>
+            </svg>Linked List
+          </a>
+          <p>A personal knowledge base.</p>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+</main>
+{% endblock %}

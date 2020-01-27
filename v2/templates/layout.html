@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ config.base_url }}/screen.css" type="text/css" charset="utf-8" />
+  <link rel="alternate" type="application/rss+xml" href="{{ config.base_url }}/rss.xml" title="Wesley Moore" />
+</head>
+<body class="{{ section.extra.body_class | default(value="") }}">
+  {% block body %}{% endblock %}
+  <footer class="text-center">
+    <div class="socials">
+      <a href="{{ config.base_url }}/about/">About</a>
+      <a href="{{ config.base_url }}/posts/">Archives</a>
+      &bullet;
+      <a href="{{ config.base_url }}/rss.xml">RSS</a>
+      <a href="mailto:{{ config.extra.email }}">Email</a>
+      <a href="https://twitter.com/wezm">Twitter</a>
+      <a href="https://decentralised.social/wezm">Fediverse</a>
+      <a href="https://github.com/wezm">GitHub</a>
+      <a href="https://patreon.com/wezm">Patreon</a>
+    </div>
+    <div class="copyright">
+      Copyright © 2003 &ndash; {{ now() | date(format="%Y") }} {{ config.extra.author }} &mdash;
+      <a href="https://github.com/wezm/wezm.net">Source on GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
+
