@@ -3,7 +3,7 @@ base_url = "https://files.wezm.net/v2"
 
 title = "Wesley Moore"
 
-description = "TODO"
+description = "Posts by Wesley Moore"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
