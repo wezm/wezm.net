@@ -1,9 +1,5 @@
 +++
 title = "About"
-date = 2020-01-27T08:38:24+11:00
-
-[extra]
-show_date = false
 +++
 
 ![Photo of me in Nepal](../images/Photo%20of%20Wesley%20Moore.jpg)
