@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://files.wezm.net/v2"
+base_url = "https://www.wezm.net/v2"
 
 title = "Wesley Moore"
 
