@@ -2,7 +2,7 @@
 title = "About"
 +++
 
-![Photo of me in Nepal](../images/Photo%20of%20Wesley%20Moore.jpg)
+{{ resize_image(image="../static/images/Photo of Wesley Moore.jpg", width=1600, quality=60, alt="Photo of me against a Boab tree in Broome, WA") }}
 
 I'm a software developer from Melbourne, Australia. I like open-source and warm
 weather (Melbourne is not in the warm part of Australia unfortunately). I enjoy
