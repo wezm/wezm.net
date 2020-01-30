@@ -11,6 +11,7 @@
 </head>
 <body<%= %Q( class="#{@item[:body_class]}") if @item[:body_class] %>>
   <%= render '_header' %>
+  <div class=" archive-banner">This is an old version of my website with posts from 2003–2019. For newer posts <a href="/v2/">visit the new version</a>.</div>
 
   <img src="<%= @item[:photo] %>" alt="<%= @item[:photo_alt] %>" class="cover-photo" />
 
