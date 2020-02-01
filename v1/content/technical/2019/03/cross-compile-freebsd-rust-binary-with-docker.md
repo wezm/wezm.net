@@ -11,6 +11,9 @@ more. I have used cross for embedded projects but didn't think to use it for
 non-embedded ones. Nonetheless the process described in this post was still
 educational for me but I would recommend using cross instead.
 
+**Update 2 February 2020:** [Support for FreeBSD was removed from `cross` in May
+2019][cross-freebsd-removal]. So the approach described here may well still be useful.
+
 I started with [Sandvine's freebsd-cross-build][freebsd-cross-upstream] repo. Which builds
 a Docker image with a cross-compiler that targets FreeBSD. I made a few updates
 and improvements to it:
@@ -138,6 +141,7 @@ Previous Post: [My First 3 Weeks of Professional Rust](/technical/2019/03/first-
 Next Post: [What I Learnt Building a Lobsters TUI in Rust](/technical/2019/04/lobsters-tui/)
 
 [freebsd-cross-upstream]: https://github.com/sandvine/freebsd-cross-build
+[cross-freebsd-removal]: https://github.com/rust-embedded/cross/issues/274
 [user namespaces]: https://docs.docker.com/engine/security/userns-remap/
 [cross-twitter]: https://twitter.com/stephrdev/status/1110270815927500801
 [cross]: https://github.com/rust-embedded/cross
