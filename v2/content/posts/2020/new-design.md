@@ -7,7 +7,7 @@ date = 2020-01-27T15:42:29+11:00
 +++
 
 It's been more than 10 years since I started working on [the previous design]
-for this website 😅. This feels like a good point to come up with a one!
+for this website 😅. This feels like a good point to come up with a new one!
 
 <!-- more -->
 
