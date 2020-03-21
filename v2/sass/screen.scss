@@ -30,15 +30,17 @@ body.home {
 }
 pre, code {
   font-family: "Pragmata Pro", "Pragmata Pro Mono", "JetBrains Mono", "Iosevka", "Consolas", monospace;
-  font-size: 16px;
 }
 code {
   background-color: #ffedf0;
   padding: 0.1em 0.2em;
+  font-size: 16px;
   border-radius: 3px;
 }
 pre {
   padding: 0.5em 1em;
+  overflow-y: auto;
+  font-size: 14px;
 }
 h1,h2,h3,h4 {
   font-family: $heading-family;
