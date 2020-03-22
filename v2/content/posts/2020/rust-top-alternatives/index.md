@@ -3,14 +3,14 @@ title = "Comparing Alternatives to top Written in Rust"
 date = 2020-03-21T10:45:00+11:00
 
 [extra]
-updated = 2020-03-22T12:52:23+11:00
+updated = 2020-03-23T08:50:54+11:00
 +++
 
 Recently I aliased `top` to [ytop]. Then I became aware of [bottom], and
 [zenith]. These are all terminal based system monitoring tools that you might
 use instead of `top`. In this post I set out to compare them.
 
-{{ figure(image="posts/2020/rust-top-alternatives/ytop-btm-zenith-screenshot.png", link="ytop-btm-zenith-screenshot.png", width=1600, quality=60, alt="Screenshot of ytop, bottom, and zenith while building some Rust code", caption="Left to right: ytop, bottom, and zenith.") }}
+{{ figure(image="posts/2020/rust-top-alternatives/ytop-btm-zenith-screenshot.png", link="posts/2020/rust-top-alternatives/ytop-btm-zenith-screenshot.png", alt="Screenshot of ytop, bottom, and zenith while building some Rust code", caption="Left to right: ytop, bottom, and zenith.") }}
 
 <!-- more -->
 

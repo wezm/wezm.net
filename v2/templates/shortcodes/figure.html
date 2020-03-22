@@ -1,4 +1,8 @@
 <figure>
-  <a href="{{ link }}"><img src="{{ resize_image(path=image, width=width, op="fit_width", quality=quality | default(value=75)) }}" alt="{{ alt }}" /></a>
+  {% if width %}
+  <a href="{{ config.base_url }}/{{ link }}"><img src="{{ resize_image(path=image, width=width, op="fit_width", quality=quality | default(value=75)) }}" alt="{{ alt }}" /></a>
+  {% else %}
+  <a href="{{ config.base_url }}/{{ link }}"><img src="{{ config.base_url }}/{{ image }}" alt="{{ alt }}" /></a>
+  {% endif %}
   <figcaption>{{ caption }}</figcaption>
 </figure>
