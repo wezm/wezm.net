@@ -1,9 +1,9 @@
 +++
 title = "Comparing Alternatives to top Written in Rust"
-date = 2020-02-21T10:45:00+11:00
+date = 2020-03-21T10:45:00+11:00
 
-# [extra]
-# updated = 2019-07-01T22:40:53+10:00
+[extra]
+updated = 2020-03-22T12:52:23+11:00
 +++
 
 Recently I aliased `top` to [ytop]. Then I became aware of [bottom], and
@@ -32,7 +32,7 @@ from the Arch Linux system, which is a [12 core AMD Ryzen desktop PC][ryzen-pc].
 
 `ytop` and `bottom` use a layout that appears to be inspired by [gotop]. In
 fact, `ytop` is written by the same person as `gotop`. `zenith` uses a layout
-that's a bit more like traditional `top` with and histograms above the process
+that's a bit more like traditional `top` with histograms above the process
 list.
 
 I typically use `top` to:
