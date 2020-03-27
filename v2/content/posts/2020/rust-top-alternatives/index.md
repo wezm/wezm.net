@@ -3,7 +3,7 @@ title = "Comparing Alternatives to top Written in Rust"
 date = 2020-03-21T10:45:00+11:00
 
 [extra]
-updated = 2020-03-23T08:50:54+11:00
+updated = 2020-03-27T21:53:53+11:00
 +++
 
 Recently I aliased `top` to [ytop]. Then I became aware of [bottom], and
@@ -45,10 +45,12 @@ I typically use `top` to:
 I find the `zenith` layout more information dense, with less space taken up
 with graphs. I also like the header row with info and help. The main feature
 that it is missing compared to the others is temperatures — but that's in the
-list of planned features. There is one issue with `zenith`: it doesn't show my
+list of planned features. ~~There is one issue with `zenith`: it doesn't show my
 ZFS pool. My system has an NVMe system disk and a ZFS pool of 3 SSDs that is
 mounted as `/home`, which is absent in the disk summary. I've raised [an issue
-on GitHub][zenith-zfs].
+on GitHub][zenith-zfs].~~
+
+**Update 27 March 2020:** Zenith 0.7.7 now shows ZFS pools.
 
 The individual lines for each CPU in `bottom` makes the display quite noisy. I
 prefer the aggregated line that `ytop` shows. `ytop` has a handy `-m` option
