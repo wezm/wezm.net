@@ -4,10 +4,11 @@ title = "About"
 
 {{ resize_image(image="../static/images/Photo of Wesley Moore.jpg", width=1600, quality=60, alt="Photo of me against a Boab tree in Broome, WA") }}
 
-I'm a software developer from Melbourne, Australia. I like open-source and warm
-weather (Melbourne is not in the warm part of Australia unfortunately). I enjoy
-tinkering with computers, ranging from small microcontrollers up to large
-servers and the operating systems that run upon them.
+I'm a software developer from Melbourne, Australia. I like open-source software
+and warm weather (Melbourne is not in the warm part of Australia
+unfortunately). I enjoy tinkering with computers, ranging from small
+microcontrollers up to large servers and the operating systems that run upon
+them.
 
 I run [Arch Linux] on [my desktop computer][my desktop] and [Void
 Linux (musl)][Void Linux] on [my laptop], with the [Awesome] window manager.
@@ -15,7 +16,7 @@ The [server hosting this website][my server] runs [Alpine Linux].
 You can read more about my OS adventures on [bitcannon.net].
 
 [{{ float_image(image="../static/images/keyboards.jpg", float="right", width=128, alt="Photo of my keyboards") }}](../images/keyboards.jpg)
-I enjoy typing on mechanical keyboards. I have a small collection in a range of
+I prefer typing on mechanical keyboards. I have a small collection in a range of
 sizes. All are fully programmable. My current favourite is a Filco Majestouch
 Ninja 2, which has had the factory controller replaced with a programmable one.
 
