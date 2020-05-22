@@ -40,5 +40,19 @@
   <div class="post-body">
     {{ page.content | safe }}
   </div>
+  <div class="respond">
+    <h3>
+      <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+        <title>Comment</title>
+        <defs></defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M2,3 L29,3 L29,20 L24,20 L16,28 L16,20 L2,20 L2,3 Z" id="comment" stroke="#484848" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        </g>
+      </svg>
+      Stay in touch!
+    </h3>
+    <p> Follow me on <a href="https://twitter.com/wezm">Twitter</a> or the <a href="https://decentralised.social/wezm">Fediverse</a>, <a href="{{ config.base_url }}/rss.xml">subscribe to the feed</a>, or <a href="mailto:wes@wezm.net">send me an email</a>.
+    </p>
+  </div>
 </article>
 {% endblock %}
