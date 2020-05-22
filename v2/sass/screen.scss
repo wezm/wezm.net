@@ -41,6 +41,7 @@ pre {
   padding: 0.5em 1em;
   overflow-y: auto;
   font-size: 14px;
+  color: #fcfcfc;
 }
 h1,h2,h3,h4 {
   font-family: $heading-family;
@@ -121,8 +122,6 @@ nav a:link, nav a:visited {
   }
 }
 article {
-  margin-bottom: 3em;
-
   h2,h3 {
     a:link, a:visited {
       color: currentColor;
@@ -165,6 +164,13 @@ article {
   }
   aside.float-right {
     margin: 0 0 1em 1em;
+  }
+}
+.respond {
+  margin: 4em 0 0.5em 0;
+
+  svg {
+    vertical-align: middle;
   }
 }
 img, canvas, iframe, video, svg {
@@ -250,6 +256,10 @@ footer .copyright {
 
 .posts-section {
   width: 100%;
+
+  article {
+    margin-bottom: 3em;
+  }
 }
 .projects-section {
   width: 300px;
@@ -331,7 +341,7 @@ ul.projects {
 }
 
 .socials {
-  margin-top: 1em;
+  margin-top: 2em;
 
   a {
     text-transform: uppercase;
