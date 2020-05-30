@@ -2,8 +2,8 @@
 title = "Setting the amdgpu HDMI Pixel Format on Linux"
 date = 2020-05-30T08:48:30+10:00
 
-#[extra]
-#updated = 2020-03-27T21:53:53+11:00
+[extra]
+updated = 2020-05-30T11:21:30+10:00
 +++
 
 This week I discovered some details of digital display technology that I was
@@ -41,8 +41,8 @@ get 4K 60Hz on the newly HDMI connected display I immediately noticed lag. I
 even captured it in a slow motion video on my phone to prove I wasn't going
 crazy. Despite `xrandr` reporting a 60Hz connection it seemed as though it was
 updating at less than that. This led me to compare the menus of the two
-displays. It was here I noticed that good one reported an input colour format
-of RGB, than the other [YPbPr].
+displays. It was here I noticed that the good one reported an input colour
+format of RGB, the other [YPbPr].
 
 This led to more reading about pixel formats in digital displays — a thing I
 was not previously aware of. Turns out that ports like HDMI support multiple
@@ -58,11 +58,12 @@ support changing it][amdgpu-bug].
 
 In trying various suggestions in that bug report I rebooted a few times and the
 lag mysteriously went away but the pixel format remained the same. At this
-point I noticed the display had a grey cast to it especially on areas of white.
-This had been present on the other display when it was connected via HDMI too
-but I just put it down to being a couple of years older. With my new pixel
-format knowledge in hand I knew this was was the source of lack of brightness.
-So, I was still determined to find a way to force the HDMI output to RGB.
+point I noticed the display had a grey cast to it, especially on areas of
+white. This had been present on the other display when it was connected via
+HDMI too but I just put it down to being a couple of years older than the other
+one. With my new pixel format knowledge in hand I knew this was was the source
+of lack of brightness. So, I was still determined to find a way to force the
+HDMI output to RGB.
 
 ### The Fix
 
