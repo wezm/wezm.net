@@ -11,7 +11,7 @@ previously unaware of: pixel formats. I have two [Dell P2415Q displays][P2415Q]
 connected to [my computer][ryzen9-pc]. One via DisplayPort, the other via HDMI.
 The HDMI connected one was misbehaving and showing a dull picture. It turned
 out I needed to force the HDMI port of my RX560 graphics card to use RGB output
-instead of YcBCr. However, the `amdgpu` driver does not expose a means to do
+instead of YCbCr. However, the `amdgpu` driver does not expose a means to do
 this. So, I used an EDID hack to make it look like the display only supported
 RGB.
 
