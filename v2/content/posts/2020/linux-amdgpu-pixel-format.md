@@ -15,6 +15,8 @@ instead of YcBCr. However, the `amdgpu` driver does not expose a means to do
 this. So, I used an EDID hack to make it look like the display only supported
 RGB.
 
+<!-- more -->
+
 **tl;dr** You can't easily configure the pixel format of the Linux `amdgpu`
 driver but you can hack the EDID of your display so the driver chooses RGB.
 [Jump to the instructions](#the-fix).
