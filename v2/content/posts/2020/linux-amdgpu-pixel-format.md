@@ -3,7 +3,7 @@ title = "Setting the amdgpu HDMI Pixel Format on Linux"
 date = 2020-05-30T08:48:30+10:00
 
 [extra]
-updated = 2020-05-30T11:21:30+10:00
+updated = 2020-06-02T08:15:44+10:00
 +++
 
 This week I discovered some details of digital display technology that I was
@@ -67,12 +67,13 @@ HDMI output to RGB.
 
 ### The Fix
 
-It was at this point I found [this Reddit post][reddit-pixel-format] with a
-fairly terrible hack: Copy the [EDID] of the display and modify it to make it
-seem like the display only supports RGB. The `amdgpu` driver then chooses that
-format instead.  Amazingly enough it worked! I also haven't experienced the
-screen blanking issue since swapping cables. I can't say for sure if that is
-fixed but the HDMI cable is now further away from interference from my Wi-Fi
+It was at this point I found [this Reddit post][reddit-pixel-format] describing
+a terrible hack, originally described by Parker Reed in [this YouTube
+video][edid-edit-video]: Copy the [EDID] of the display and modify it to make
+it seem like the display only supports RGB. The `amdgpu` driver then chooses
+that format instead.  Amazingly enough it worked! I also haven't experienced
+the screen blanking issue since swapping cables. I can't say for sure if that
+is fixed but the HDMI cable is now further away from interference from my Wi-Fi
 router, so perhaps that helped.
 
 The following are the steps I took on Arch Linux to use a modified EDID:
@@ -115,3 +116,4 @@ looking much brighter! 🤞 the display blanking issue remains fixed as well.
 [EDID]: https://en.wikipedia.org/wiki/Extended_Display_Identification_Data
 [wxEDID]: https://aur.archlinux.org/packages/wxedid
 [systemd-boot]: https://wiki.archlinux.org/index.php/Systemd-boot
+[edid-edit-video]: https://www.youtube.com/watch?v=tYYMiX7dlak
