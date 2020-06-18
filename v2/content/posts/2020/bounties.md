@@ -3,7 +3,7 @@ title = "Software Bounties"
 date = 2020-05-22T20:07:43+10:00
 
 [extra]
-updated = 2020-05-30T08:46:14+10:00
+updated = 2020-06-19T09:30:00+10:00
 +++
 
 I don't have time to build all the things I'd like to build, so I'm offering
@@ -25,6 +25,28 @@ bounties on the following work.
   does all the work and you just nudge it over the line the other person is
   the intended recipient.
 * If in doubt contact me.
+
+### Cairo user-font With Colour Bitmap Always Comes Out Black
+
+The [Evince] PDF viewer uses [Poppler] to render PDFs, which in turn uses
+[Cairo].  Emoji embedded in a PDF using a PDF Type 3 font always come out as a
+black silhouette instead of the colour image when viewed in Evince do to a
+limitation in Cairo's user-font functionality.
+
+**Issues:**
+
+* <https://gitlab.freedesktop.org/cairo/cairo/-/issues/389>,
+* <https://gitlab.freedesktop.org/poppler/poppler/-/issues/729>
+
+**Criteria:** Implement support for colour user-fonts in Cairo, resulting in
+the Cairo issue being closed as completed.  
+**Language:** C  
+**Amount:** AU$500  
+**Expires:** 2021-01-01T00:00:00Z  
+
+[Evince]: https://wiki.gnome.org/Apps/Evince
+[Poppler]: https://gitlab.freedesktop.org/poppler/poppler
+[Cairo]: https://www.cairographics.org/
 
 ### Emoji Reactions in Fractal
 
