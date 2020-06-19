@@ -20,7 +20,7 @@ post I explain how I worked around this.
 
 The solution is simple: make GitHub think you're using a Mac or Windows PC.
 There are various ways to change the User-Agent string of Firefox. The easiest
-is via `about:config` bit I didn't want it to be a global change — I
+is via `about:config` but I didn't want it to be a global change — I
 want sites to know that I'm using Linux in logs/privacy respecting analytics (I
 block most trackers).
 
