@@ -1,0 +1,8 @@
+{% set tweets = load_data(path="content/posts/2020/100-rust-binaries/tweets.json", format="json") %}
+<ol>
+  {% for tweet in tweets %}
+  <li>
+    {{ tweet.html | safe }}
+  </li>
+  {% endfor %}
+</ol>
