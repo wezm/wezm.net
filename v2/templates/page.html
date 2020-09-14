@@ -2,6 +2,16 @@
 
 {% block title %}{{ page.title }} - {{ config.title }}{% endblock %}
 
+{% block metadata %}
+    <meta property="og:url" content="{{ page.permalink }}" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page.summary | default(value="") | striptags }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_AU" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="{{ config.extra.twitter_name }}" />
+{% endblock %}
+
 {% block body %}
 <h1 class="logo"><a href="{{ config.base_url }}/" class="no-border hover-underline">👨‍💻 {{ config.title }}</a></h1>
 

@@ -21,3 +21,4 @@ build_search_index = false
 [extra]
 author = "Wesley Moore"
 email = "wes@wezm.net"
+twitter_name = "@wezm"
