@@ -1106,7 +1106,7 @@
     "url": "https://twitter.com/wezm/status/1314883373278654466",
     "author_name": "Wesley Moore",
     "author_url": "https://twitter.com/wezm",
-    "html": "<blockquote class=\"twitter-tweet\" data-lang=\"en\" data-dnt=\"true\"><p lang=\"en\" dir=\"ltr\">serial-monitor by Dave Hylands is a command line program which will connect to, and allow you to interact with devices which are connected to your host computer via USB serial adapters. Here it is pictured connected to my LED cube. <a href=\"https://t.co/PkjeNAbivF\">https://t.co/PkjeNAbivF</a> <a href=\"https://t.co/m085puI4Pu\">pic.twitter.com/m085puI4Pu</a></p>&mdash; Wesley Moore (@wezm) <a href=\"https://twitter.com/wezm/status/1314883373278654466?ref_src=twsrc%5Etfw\">October 10, 2020</a></blockquote>\n",
+    "html": "<blockquote class=\"twitter-tweet\" data-lang=\"en\" data-dnt=\"true\"><p lang=\"en\" dir=\"ltr\">serial-monitor by Dave Hylands is a command line program which will connect to, and allow you to interact with devices which are connected to your host computer via USB serial adapters. Here it is pictured connected to my LED cube. <a href=\"https://github.com/dhylands/serial-monitor\">https://github.com/dhylands/serial-monitor</a></p>&mdash; Wesley Moore (@wezm) <a href=\"https://twitter.com/wezm/status/1314883373278654466?ref_src=twsrc%5Etfw\">October 10, 2020</a></blockquote>\n",
     "width": 1600,
     "height": 506,
     "type": "rich",
@@ -1386,7 +1386,7 @@
     "url": "https://twitter.com/wezm/status/1322493522432282625",
     "author_name": "Wesley Moore",
     "author_url": "https://twitter.com/wezm",
-    "html": "<blockquote class=\"twitter-tweet\" data-lang=\"en\" data-dnt=\"true\"><p lang=\"en\" dir=\"ltr\">Day 99 of <a href=\"https://twitter.com/hashtag/100binaries?src=hash&amp;ref_src=twsrc%5Etfw\">#100binaries</a><br><br>pueue by Arne Beer is a command-line task management tool for sequential and parallel execution of long-running tasks. <a href=\"https://t.co/QOXw1yGGSO\">https://t.co/QOXw1yGGSO</a> <a href=\"https://t.co/6ajyeY7JC2\">pic.twitter.com/6ajyeY7JC2</a></p>&mdash; Wesley Moore (@wezm) <a href=\"https://twitter.com/wezm/status/1322493522432282625?ref_src=twsrc%5Etfw\">October 31, 2020</a></blockquote>\n",
+    "html": "<blockquote class=\"twitter-tweet\" data-lang=\"en\" data-dnt=\"true\"><p lang=\"en\" dir=\"ltr\">Day 99 of <a href=\"https://twitter.com/hashtag/100binaries?src=hash&amp;ref_src=twsrc%5Etfw\">#100binaries</a><br><br>pueue by Arne Beer is a command-line task management tool for sequential and parallel execution of long-running tasks. <a href=\"https://github.com/Nukesor/pueue\">https://github.com/Nukesor/pueue</a></p>&mdash; Wesley Moore (@wezm) <a href=\"https://twitter.com/wezm/status/1322493522432282625?ref_src=twsrc%5Etfw\">October 31, 2020</a></blockquote>\n",
     "width": 828,
     "height": 612,
     "type": "rich",
@@ -1395,6 +1395,21 @@
     "provider_url": "https://twitter.com",
     "media": "pueue.mp4",
     "media_source": "https://github.com/Nukesor/images/blob/72c983b374ea32b64e5997477693030001bdd7a6/pueue.gif",
+    "version": "1.0"
+  },
+  {
+    "url": "https://twitter.com/wezm/status/1322855912076386304",
+    "author_name": "Wesley Moore",
+    "author_url": "https://twitter.com/wezm",
+    "html": "<blockquote class=\"twitter-tweet\" data-lang=\"en\" data-dnt=\"true\"><p lang=\"en\" dir=\"ltr\">Day 100 of <a href=\"https://twitter.com/hashtag/100binaries?src=hash&amp;ref_src=twsrc%5Etfw\">#100binaries</a><br><br>Today I&#39;m featuring the Rust compiler — the binary that made the previous 99 fast, efficient, user-friendly, easy-to-build, and reliable binaries possible.<br><br>Thanks to all the people that have worked on it past, present, and future. <a href=\"https://github.com/rust-lang/rust\">https://github.com/rust-lang/rust</a></p>&mdash; Wesley Moore (@wezm) <a href=\"https://twitter.com/wezm/status/1322855912076386304?ref_src=twsrc%5Etfw\">November 1, 2020</a></blockquote>\n",
+    "width": 1600,
+    "height": 900,
+    "type": "rich",
+    "cache_age": "3153600000",
+    "provider_name": "Twitter",
+    "provider_url": "https://twitter.com",
+    "media": "rustc.png",
+    "media_source": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png",
     "version": "1.0"
   }
 ]
