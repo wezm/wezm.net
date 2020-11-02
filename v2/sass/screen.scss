@@ -316,6 +316,11 @@ ul.projects {
 .screenshot img {
   border: 1px solid #666;
 }
+.media-source {
+  font-size: 12px;
+  display: block;
+}
+
 .image-right {
   float: right;
   margin: 0.5em 0 1em 1em;
@@ -338,6 +343,11 @@ ul.projects {
     margin-top: 0;
     margin-bottom: 0;
   }
+}
+
+.tweet-list li {
+  padding-left: 1em;
+  margin-bottom: 3em;
 }
 
 .socials {

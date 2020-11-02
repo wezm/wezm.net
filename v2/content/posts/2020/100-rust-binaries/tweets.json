@@ -11,7 +11,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "hexyl.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1287024806769168384",
@@ -25,7 +26,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "exa.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1287379644661010433",
@@ -39,7 +41,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "alacritty.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1287742032975257600",
@@ -53,7 +56,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "amp.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1288104420052553728",
@@ -67,7 +71,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "tokei.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1288466808991817730",
@@ -81,7 +86,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "silicon.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1288829195754172422",
@@ -94,7 +100,8 @@
     "cache_age": "3153600000",
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1289191583573737475",
@@ -108,7 +115,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "broot.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1289553972655620096",
@@ -122,7 +130,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "skim.mp4",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1289916361339092994",
@@ -136,7 +145,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "nu.mp4",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1290278748223201280",
@@ -150,7 +160,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "viu.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1290641136638480384",
@@ -164,7 +175,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "gitui.mp4",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1291003525712019459",
@@ -178,7 +190,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "fd.mp4",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1291365913548079109",
@@ -192,7 +205,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "emulsion.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1291728300960669696",
@@ -206,7 +220,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "rusty-man.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1292090686917967873",
@@ -221,7 +236,8 @@
     "provider_url": "https://twitter.com",
     "media": "diskonaut.mp4",
     "media_source": "https://github.com/imsnif/diskonaut/blob/2cf5c7bd061f42443288e538ae75fedf7a846d76/demo.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1292453074410192897",
@@ -236,7 +252,8 @@
     "provider_url": "https://twitter.com",
     "media": "spotify-tui.mp4",
     "media_source": "https://user-images.githubusercontent.com/12150276/75177190-91d4ab00-572d-11ea-80bd-c5e28c7b17ad.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1292815462242357249",
@@ -250,7 +267,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "dijo.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1293177850233667595",
@@ -264,7 +282,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "pastel.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1293540239802281985",
@@ -278,7 +297,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "dwfv.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1293902626904354822",
@@ -292,7 +312,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "zenith.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1294265015541760006",
@@ -306,7 +327,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "dtool.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1294627402069315585",
@@ -320,7 +342,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "castor.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1294989789918375937",
@@ -334,7 +357,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "watchexec.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1295352178400526336",
@@ -349,7 +373,8 @@
     "provider_url": "https://twitter.com",
     "media": "meli.png",
     "media_source": "https://meli.delivery/images/screenshots/threads.webp",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1295714567197270022",
@@ -363,7 +388,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "delta.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1296076954622406663",
@@ -377,7 +403,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "sharewifi.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1296439340898426881",
@@ -391,7 +418,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "eva.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1296801728927539202",
@@ -405,7 +433,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "bat.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1297164116788994048",
@@ -418,7 +447,8 @@
     "cache_age": "3153600000",
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1297526505304666115",
@@ -432,7 +462,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "dust.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1297888893715361795",
@@ -446,7 +477,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "shotgun.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1298251282352873478",
@@ -460,7 +492,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "ripgrep.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1298613669538996226",
@@ -474,7 +507,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "ion.mp4",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1298976057538871297",
@@ -488,7 +522,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "mdcat.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1299338443990982656",
@@ -501,7 +536,8 @@
     "cache_age": "3153600000",
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1299700831755931649",
@@ -514,7 +550,8 @@
     "cache_age": "3153600000",
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1300063221005447169",
@@ -528,7 +565,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "espanso.mp4",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1300425609156333568",
@@ -542,7 +580,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "hyperfine.mp4",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1300787997592432642",
@@ -556,7 +595,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "verco.mp4",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1301150386217074690",
@@ -571,7 +611,8 @@
     "provider_url": "https://twitter.com",
     "media": "oha.mp4",
     "media_source": "https://github.com/hatoo/oha/blob/10b1dc0103c11e8144f3a61cbb481092d24a2062/demo.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1301512772879110146",
@@ -586,7 +627,8 @@
     "provider_url": "https://twitter.com",
     "media": "starship.mp4",
     "media_source": "https://starship.rs/demo.webm",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1301875160211955712",
@@ -601,7 +643,8 @@
     "provider_url": "https://twitter.com",
     "media": "git-trim.mp4",
     "media_source": "https://raw.githubusercontent.com/foriequal0/git-trim/master/screencast.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1302237547221807104",
@@ -616,7 +659,8 @@
     "provider_url": "https://twitter.com",
     "media": "bandwhich.mp4",
     "media_source": "https://github.com/imsnif/bandwhich/blob/fde53ddb3bcb769bc3474ba3d739d268619bf138/demo.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1302599936366833664",
@@ -630,7 +674,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "xsv.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1302962322516840448",
@@ -645,7 +690,8 @@
     "provider_url": "https://twitter.com",
     "media": "shellcaster.png",
     "media_source": "https://github.com/jeff-hughes/shellcaster/blob/f6cb4c55c4a6765483d7810a2b6d08a928e799e1/img/screenshot.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1303324711720488961",
@@ -658,7 +704,8 @@
     "cache_age": "3153600000",
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1303687100437590020",
@@ -672,7 +719,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "yj.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1304049488693047298",
@@ -685,7 +733,8 @@
     "cache_age": "3153600000",
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1304411875426406400",
@@ -699,7 +748,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "tealdeer.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1304774262616514560",
@@ -712,7 +762,8 @@
     "cache_age": "3153600000",
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1305136649706205185",
@@ -726,7 +777,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "fclones.mp4",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1305499038490537984",
@@ -740,7 +792,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "zoxide.mp4",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1305861427014627332",
@@ -754,7 +807,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "color_blinder.jpg",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1306223815228350466",
@@ -769,7 +823,8 @@
     "provider_url": "https://twitter.com",
     "media": "bookmark.mp4",
     "media_source": "https://github.com/Szymongib/bookmark/blob/f46e5361878de972b7f0d11565fbecdb6a66bad9/assets/bookmark-demo.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1306552499210338304",
@@ -783,7 +838,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "artichoke.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1306910845641908233",
@@ -798,7 +854,8 @@
     "provider_url": "https://twitter.com",
     "media": "csview.png",
     "media_source": "https://github.com/wfxr/i/blob/e04314806087faf8715a753e70f1a77f10b189d2/csview-screenshot.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1307273233759043584",
@@ -813,7 +870,8 @@
     "provider_url": "https://twitter.com",
     "media": "pipe-rename.mp4",
     "media_source": "https://github.com/marcusbuffett/pipe-rename/blob/b734616bab4b4ca4f31de0902479202f33bda545/renamer.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1307646659556384768",
@@ -828,7 +886,8 @@
     "provider_url": "https://twitter.com",
     "media": "cogsy.png",
     "media_source": "https://github.com/cartoon-raccoon/cogsy/blob/8111b15243398cfe9cec990b88ed19f6155f8b37/images/screenshots/cogsy_main.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1307997508874854401",
@@ -841,7 +900,8 @@
     "cache_age": "3153600000",
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1308355154433814536",
@@ -855,7 +915,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "tiny.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1308737887463235586",
@@ -870,7 +931,8 @@
     "provider_url": "https://twitter.com",
     "media": "ptail.mp4",
     "media_source": "https://github.com/orf/ptail/blob/b26b089816cf3f495dae26ae0316c91f724667ce/images/readme.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1309100270475972608",
@@ -884,7 +946,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "procs.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1309462656005275648",
@@ -898,7 +961,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "rsmixer.mp4",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1309825048551669762",
@@ -913,7 +977,8 @@
     "provider_url": "https://twitter.com",
     "media": "vopono.png",
     "media_source": "https://github.com/jamesmcm/vopono/blob/ef9653b80aea5f1695f9ca02b06e2ff340f1fae0/screenshot.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1310187431681949696",
@@ -928,7 +993,8 @@
     "provider_url": "https://twitter.com",
     "media": "tickrs.mp4",
     "media_source": "https://github.com/tarkah/tickrs/blob/a5bc18a470999b5c18c98a7188a477c8e305652b/assets/demo.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1310549822408200193",
@@ -943,7 +1009,8 @@
     "provider_url": "https://twitter.com",
     "media": "git-workspace.mp4",
     "media_source": "https://github.com/orf/git-workspace/blob/8403c57edd172e925b682ee6220653db37dd616c/images/readme-example.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1310912211557085184",
@@ -958,7 +1025,8 @@
     "provider_url": "https://twitter.com",
     "media": "code-minimap.mp4",
     "media_source": "https://github.com/wfxr/i/blob/e04314806087faf8715a753e70f1a77f10b189d2/minimap-vim.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1311274602337722373",
@@ -971,7 +1039,8 @@
     "cache_age": "3153600000",
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1311636986730512387",
@@ -985,7 +1054,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "kmon.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1311999372113186819",
@@ -1000,7 +1070,8 @@
     "provider_url": "https://twitter.com",
     "media": "so.mp4",
     "media_source": "https://github.com/samtay/so/blob/93c13cdbf3fecaf23f21237ecee42d62f62905e0/assets/demo.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1312361757780987904",
@@ -1014,7 +1085,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "lipl.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1312709046621798402",
@@ -1028,7 +1100,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "cicero.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1313071434009391107",
@@ -1042,7 +1115,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "battop.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1313433821946273792",
@@ -1057,7 +1131,8 @@
     "provider_url": "https://twitter.com",
     "media": "xxv.png",
     "media_source": "https://chrisvest.github.io/xxv/screenshot.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1313796212223475712",
@@ -1071,7 +1146,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "indexa.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1314158604128149505",
@@ -1086,7 +1162,8 @@
     "provider_url": "https://twitter.com",
     "media": "shy.jpg",
     "media_source": "https://github.com/xvxx/shy/blob/21555eb5259fd498d1d8fb4a4c39cf90a502f443/img/screen1.jpeg",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1314520987556175872",
@@ -1100,7 +1177,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "frawk.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1314883373278654466",
@@ -1114,7 +1192,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "serial-monitor.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1315245763358715906",
@@ -1128,7 +1207,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "gfold.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1315608150398050305",
@@ -1142,7 +1222,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "fselect.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1315970537907085312",
@@ -1156,7 +1237,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "lfs.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1316332930998956032",
@@ -1170,7 +1252,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "dotenv-linter.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1316695319493644289",
@@ -1183,7 +1266,8 @@
     "cache_age": "3153600000",
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1317420089914871813",
@@ -1197,7 +1281,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "bottom.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1317782477860229120",
@@ -1211,7 +1296,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "huniq.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1318153750918221825",
@@ -1225,7 +1311,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "cargo-wipe.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1318507257072635908",
@@ -1239,7 +1326,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "terminal-typeracer.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1318869641859600384",
@@ -1254,7 +1342,8 @@
     "provider_url": "https://twitter.com",
     "media": "audiobench.png",
     "media_source": "https://joshua-maros.github.io/audiobench/book/images/default_patch.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1319232031524487169",
@@ -1268,7 +1357,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "t-rec.gif",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": false
   },
   {
     "url": "https://twitter.com/wezm/status/1319594423592779777",
@@ -1282,7 +1372,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "fhc.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1319956805615865857",
@@ -1296,7 +1387,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "desed.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1320319194940882945",
@@ -1310,7 +1402,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "silver.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1320681581716099074",
@@ -1324,7 +1417,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "fnm.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1321043967891312640",
@@ -1338,7 +1432,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "waitfor.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1321406361989689345",
@@ -1352,7 +1447,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "rusty-tags.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1321768747015786496",
@@ -1366,7 +1462,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "songrec.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1322131138668802048",
@@ -1380,7 +1477,8 @@
     "provider_name": "Twitter",
     "provider_url": "https://twitter.com",
     "media": "ddh.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   },
   {
     "url": "https://twitter.com/wezm/status/1322493522432282625",
@@ -1389,6 +1487,7 @@
     "html": "<blockquote class=\"twitter-tweet\" data-lang=\"en\" data-dnt=\"true\"><p lang=\"en\" dir=\"ltr\">Day 99 of <a href=\"https://twitter.com/hashtag/100binaries?src=hash&amp;ref_src=twsrc%5Etfw\">#100binaries</a><br><br>pueue by Arne Beer is a command-line task management tool for sequential and parallel execution of long-running tasks. <a href=\"https://github.com/Nukesor/pueue\">https://github.com/Nukesor/pueue</a></p>&mdash; Wesley Moore (@wezm) <a href=\"https://twitter.com/wezm/status/1322493522432282625?ref_src=twsrc%5Etfw\">October 31, 2020</a></blockquote>\n",
     "width": 828,
     "height": 612,
+    "hidpi": false,
     "type": "rich",
     "cache_age": "3153600000",
     "provider_name": "Twitter",
@@ -1410,6 +1509,7 @@
     "provider_url": "https://twitter.com",
     "media": "rustc.png",
     "media_source": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png",
-    "version": "1.0"
+    "version": "1.0",
+    "hidpi": true
   }
 ]

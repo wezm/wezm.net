@@ -1,8 +1,43 @@
 {% set tweets = load_data(path="content/posts/2020/100-rust-binaries/tweets.json", format="json") %}
-<ol>
-  {% for tweet in tweets %}
+{% set start = offset | default(value=0) %}
+{% set limit = limit | default(value=50) %}
+{% set media_prefix = media_prefix | default(value="") %}
+{% if start + limit > tweets | length %}
+  {% set end = tweets | length %}
+{% else %}
+  {% set end = start + limit %}
+{% endif %}
+{% if start == 0 %}
+<ol class="tweet-list">
+{% else %}
+<ol class="tweet-list" start="{{ start + 1 }}">
+{% endif %}
+  {% for tweet in tweets | slice(start=start, end=end) %}
   <li>
     {{ tweet.html | safe }}
+    {% if tweet.media %}
+      {% if tweet.hidpi %}
+        {% set width = tweet.width / 2 %}
+        {% set height = tweet.height / 2 %}
+      {% else %}
+        {% set width = tweet.width %}
+        {% set height = tweet.height %}
+      {% endif %}
+
+      {% if tweet.media is ending_with(".mp4") %}
+      <video controls muted preload="none" src="{{ media_prefix }}{{ tweet.media }}" poster="{{ media_prefix }}{{ tweet.media }}.jpg" style="max-height: {{ height }}px"></video>
+      {% else %}
+        <span class="screenshot">
+          <img src="{{ media_prefix }}{{ tweet.media }}" loading="lazy" style="max-height: {{ height }}px; min-height: {{ 167 }}px">
+        </span>
+      {% endif %}
+      {% if tweet.media_source %}
+        <span class="media-source">
+          <b>Source:</b>
+          <a href="{{ tweet.media_source }}">{{ tweet.media_source }}</a>
+        </span>
+      {% endif %}
+    {% endif %}
   </li>
   {% endfor %}
 </ol>
