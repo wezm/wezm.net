@@ -28,7 +28,7 @@
       <video controls muted preload="none" src="{{ media_prefix }}{{ tweet.media }}" poster="{{ media_prefix }}{{ tweet.media }}.jpg" style="max-height: {{ height }}px"></video>
       {% else %}
         <span class="screenshot">
-          <img src="{{ media_prefix }}{{ tweet.media }}" loading="lazy" style="max-height: {{ height }}px; min-height: {{ 167 }}px">
+          <img src="{{ media_prefix }}{{ tweet.media }}" loading="lazy" style="max-height: {{ height }}px; min-height: {{ 167 }}px" alt="{{ tweet.media_description }}">
         </span>
       {% endif %}
       {% if tweet.media_source %}
