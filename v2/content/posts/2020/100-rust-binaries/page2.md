@@ -11,6 +11,6 @@ This is page two of my [#100binaries] list containing binaries 51–100.
 
 {{ tweet_list(offset=50, media_prefix="../") }}
 
-[« Back to page 1](@/posts/2020/100-rust-binaries/page2.md)
+[« Back to page 1](@/posts/2020/100-rust-binaries/index.md)
 
 [#100binaries]: https://twitter.com/search?q=%23100binaries%20from%3A%40wezm&src=typed_query&f=live
