@@ -31,7 +31,7 @@ body.home {
 pre, code {
   font-family: "Pragmata Pro", "Pragmata Pro Mono", "JetBrains Mono", "Iosevka", "Consolas", monospace;
 }
-code {
+:not(pre) > code {
   background-color: #ffedf0;
   padding: 0.1em 0.2em;
   font-size: 16px;
