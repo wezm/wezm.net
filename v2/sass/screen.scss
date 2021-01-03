@@ -224,7 +224,7 @@ footer .copyright {
 .tagline {
   line-height: 2;
   font-weight: 300;
-  font-size: 2em;
+  font-size: 1.85em;
   margin: $heading-margin;
   font-family: $heading-family;
   display: flex;
@@ -278,6 +278,10 @@ ul.projects {
     width: 32px;
     vertical-align: middle;
     margin-right: 0.5em;
+  }
+  .emoji-img {
+    font-size: 32px;
+    margin-right: 0.5rem;
   }
   p {
     margin-left: calc(32px + 0.5em);
