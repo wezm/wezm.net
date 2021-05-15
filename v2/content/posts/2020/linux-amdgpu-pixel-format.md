@@ -3,7 +3,7 @@ title = "Setting the amdgpu HDMI Pixel Format on Linux"
 date = 2020-05-30T08:48:30+10:00
 
 [extra]
-updated = 2020-06-02T08:15:44+10:00
+updated = 2021-05-15T10:15:08+10:00
 +++
 
 This week I discovered some details of digital display technology that I was
@@ -93,19 +93,34 @@ Now we need to get the kernel to use the modified file:
 
 1. `sudo mkdir /lib/firmware/edid`
 1. `sudo mv edid.bin /lib/firmware/edid/edid.bin`
-1. Edit the kernel command line. I use [systemd-boot], so I edited `/boot/loader/entries/arch.conf` and added `drm_kms_helper.edid_firmware=edid/edid.bin` to the command line, making the full file look like this:
+1. Edit the kernel command line. I use [systemd-boot], so I edited
+   `/boot/loader/entries/arch.conf` and added
+   `drm.edid_firmware=HDMI-A-1:edid/edid.bin` to the command line, making the
+   full file look like this:
 
         title   Arch Linux
         linux   /vmlinuz-linux
         initrd  /amd-ucode.img
         initrd  /initramfs-linux.img
-        options root=PARTUUID=2f693946-c278-ed44-8ba2-67b07c3b6074 resume=UUID=524c0604-c307-4106-97e4-1b9799baa7d5 resume_offset=4564992 drm_kms_helper.edid_firmware=edid/edid.bin rw
+        options root=PARTUUID=2f693946-c278-ed44-8ba2-67b07c3b6074 resume=UUID=524c0604-c307-4106-97e4-1b9799baa7d5 resume_offset=4564992 drm.edid_firmware=HDMI-A-1:edid/edid.bin rw
+
+    **Note 1:** `HDMI-A-1` is the connector to apply the EDID firmware to. It
+    was determined from the `/sys` path above:<br>
+    <code>/sys/devices/pci0000:00/0000:00:03.1/0000:09:00.0/drm/card0/card0-<b>HDMI-A-1</b>/edid</code>
+
+    **Note 2:** Older kernels (before 4.15 I think) used
+    `drm_kms_helper.edid_firmware` as the command line argument instead of
+    `drm.edid_firmware`.
 
 1. Regenerate the initial RAM disk: `sudo mkinitcpio -p linux`
 1. Reboot
 
 After rebooting the display confirmed it was now using RGB and visually it was
-looking much brighter! 🤞 the display blanking issue remains fixed as well.
+looking much brighter! 🤞 the display blanking issue remains fixed as well. You
+can also check the that kernel applied the firmware by looking at the kernel
+log (`dmesg`) for a line like:
+
+    [    4.956349] [drm] Got external EDID base block and 1 extension from "edid/edid.bin" for connector "HDMI-A-1"
 
 [P2415Q]: https://www.dell.com/en-au/shop/dell-24-ultra-hd-4k-monitor-p2415q/apd/210-anfp/monitors-monitor-accessories
 [ryzen9-pc]: https://bitcannon.net/page/ryzen9-pc/
