@@ -5,7 +5,7 @@
     <link>{{ config.base_url }}</link>
     <description>{{ config.description }}</description>
     <generator>Zola</generator>
-    <language>{{ config.default_language }}</language>
+    <language>{{ lang }}</language>
     <managingEditor>{{ config.extra.email }} ({{ config.extra.author }})</managingEditor>
     <webMaster>{{ config.extra.email }} ({{ config.extra.author }})</webMaster>
     <atom:link href="{{ feed_url }}" rel="self" type="application/rss+xml"/>

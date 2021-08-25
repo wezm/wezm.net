@@ -1,1 +1,2 @@
-<img src="{{ resize_image(path=image, width=width * 2, op="fit_width") }}" width="{{ width }}" alt="{{ alt }}" class="image-{{ float }}" />
+{% set image = resize_image(path=image, width=width * 2, op="fit_width") %}
+<img src="{{ image.url }}" width="{{ width }}" alt="{{ alt }}" class="image-{{ float }}" />

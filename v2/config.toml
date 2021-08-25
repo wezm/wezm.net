@@ -11,12 +11,14 @@ compile_sass = true
 generate_feed = true
 feed_filename = "rss.xml"
 
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
-
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
+smart_punctuation = true
 
 [extra]
 author = "Wesley Moore"
