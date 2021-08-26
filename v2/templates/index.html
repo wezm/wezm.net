@@ -19,7 +19,8 @@
       <h2>Recent Posts</h2>
 
       {% set section = get_section(path="posts/_index.md") %}
-      {% for sub in section.subsections %}
+      {% set subsections = section.subsections | reverse %}
+      {% for sub in subsections %}
         {% set section = get_section(path=sub) %}
         {% for page in section.pages %}
           {% include "article.html" %}

@@ -1,5 +1,6 @@
 +++
 title = "Wesley Moore"
+
 [extra]
 body_class = "home"
 +++
