@@ -6,15 +6,18 @@ date = 2021-08-26T09:10:54+10:00
 #updated = 2021-05-15T10:15:08+10:00
 +++
 
-On 24 August I received an email from Vultr saying that my server had used 78% of its 3Tb
-bandwidth allocation for the month. This was surprising as last time I looked I only used
-a small fraction of this allocation across the various [things I host][alpine-docker].
+On 24 August I received an email from Vultr saying that my server had used 78%
+of its 3Tb bandwidth allocation for the month. This was surprising as last time
+I looked I only used a small fraction of this allocation across the various
+[things I host][alpine-docker].
 
 After some investigation I noticed that the [Nitter] instance I [set up six
 months ago][nitter-instance] at `nitter.decentralised.social` seemed to be
 getting a lot of traffic. In particular it seemed that there were several
 crawlers including Googlebot and bingbot attempting to index the whole site and
 all its media.
+
+<!-- more -->
 
 Nitter is an alternate UI for Twitter that is simpler, faster, and free of
 tracking. I mainly set it up so that I could share Twitter links with my
@@ -40,13 +43,14 @@ the usage graphs.
 
 {{ figure(image="posts/2021/nitter-bandwidth/cpu-usage.png", link="posts/2021/nitter-bandwidth/cpu-usage.png", alt="Chart showing CPU usage for the last week with a significant drop in the last two days", caption="CPU usage, last 7 days") }}
 
-After letting the changes sit overnight I was still seeing a lot of requests from user-agents
-that appear to be Chinese bots of some sort. They almost exactly matched the user-agents
-in this blog post:
-[Blocking aggressive Chinese crawlers/scrapers/bots](https://www.johnlarge.co.uk/blocking-aggressive-chinese-crawlers-scrapers-bots/).
+After letting the changes sit overnight I was still seeing a lot of requests
+from user-agents that appear to be Chinese bots of some sort. They almost
+exactly matched the user-agents in this blog post: [Blocking aggressive Chinese
+crawlers/scrapers/bots](https://www.johnlarge.co.uk/blocking-aggressive-chinese-crawlers-scrapers-bots/).
 
-As a result I added some additional configuration to Varnish to block requests from these
-user-agents, as they were clearly not honouring the `robots.txt` I added:
+As a result I added some additional configuration to Varnish to block requests
+from these user-agents, as they were clearly not honouring the `robots.txt` I
+added:
 
 ```c
 sub vcl_recv {
@@ -60,10 +64,11 @@ sub vcl_recv {
 
 ### What Now?
 
-I liked having the Nitter instance for sharing links but now I'm not sure how to run it in
-a way that only proxies the things I'm sharing. I don't really want to be responsible for
-all of the content posted to Twitter flowing through my server. Perhaps there's a project
-idea lurking there, or perhaps I just make my peace with linking to Twitter.
+I liked having the Nitter instance for sharing links but now I'm not sure how
+to run it in a way that only proxies the things I'm sharing. I don't really
+want to be responsible for all of the content posted to Twitter flowing through
+my server. Perhaps there's a project idea lurking there, or perhaps I just make
+my peace with linking to Twitter.
 
 [alpine-docker]: https://www.wezm.net/technical/2019/02/alpine-linux-docker-infrastructure/
 [Nitter]: https://github.com/zedeus/nitter
