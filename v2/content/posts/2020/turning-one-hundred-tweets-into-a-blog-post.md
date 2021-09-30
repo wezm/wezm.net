@@ -3,20 +3,19 @@ title = "Turning One Hundred Tweets Into a Blog Post"
 date = 2020-11-03T11:40:00+11:00
 
 [extra]
-#updated = 2020-06-19T09:30:00+10:00
+updated = 2021-09-30T09:14:36+10:00
 +++
 
 Near the conclusion of my [#100binaries] Twitter series I started working on
 [the blog post that contained all the tweets](@/posts/2020/100-rust-binaries/index.md).
 It ended up posing a number of interesting challenges and design decisions, as
-well as a couple of Rust binaries. Whilst I don't think the process was
-necessary optimal I thought I'd share the process to show my approach to
-solving the problem. Perhaps the tools used and approach taken is
-interesting to others.
+well as a couple of Rust binaries. Whilst I don't think the process was optimal
+I thought I'd share the process to show my approach to solving the problem.
+Perhaps the tools used and approach taken is interesting to others.
 
 <!-- more -->
 
-My initial plan was to use Twitter embeds. Given a tweet URL it's relatively
+My initial plan was to use Twitter embeds. Given a tweet URL it's fairly
 easy to turn it into some HTML markup. By including Twitter's embed JavaScript
 on the page the markup turns into rich Twitter embed. However there were a few
 things I didn't like about this option:
@@ -29,7 +28,7 @@ things I didn't like about this option:
 
 So I decided I'd render the content myself. I also decided that I'd host the
 original screenshots and videos instead of saving them from the tweets. This
-was relatively time consuming as they were across a couple of computers and
+was a little time consuming as they were across a couple of computers and
 not named well but I found them all in the end.
 
 To ensure the page wasn't enormous I used the [`loading="lazy"`][lazy-loading]
@@ -60,10 +59,11 @@ copy(tweets.join("\n"))
 
 and pasted the result into [tweets.txt] in Neovim.
 
-When all pages had be processed I turned the nitter.net URLs in to twitter.com URLs:
-`:%s/nitter\.net/twitter.com/`.
+When all pages had be processed I turned the nitter.net URLs back in to
+twitter.com URLs: `:%s/nitter\.net/twitter.com/`.
 
-This tells Neovim: for every line (`%`) substitute (`s`) `nitter.net` with `twitter.com`.
+This tells Neovim: for every line (`%`) substitute (`s`) `nitter.net` with
+`twitter.com`.
 
 ### Turning Tweet URLs Into Tweet Content
 
@@ -73,7 +73,7 @@ this (possibly via [twurl]) but that is not what I did. Onwards!
 
 I used the unauthenticated [oEmbed API][oembed] to get some markup for each
 tweet. `xargs` was used to take a line from `tweets.txt` and make the API
-(HTTP) request with `curl`]
+(HTTP) request with `curl`:
 
 ```
 xargs -I '{url}' -a tweets.txt -n 1 curl https://api.twitter.com/1/statuses/oembed.json\?omit_script\=true\&dnt\=true\&lang\=en\&url\=\{url\} > tweets.json
