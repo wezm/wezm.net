@@ -3,7 +3,7 @@ title = "Slowing Down Read Rust Posting"
 date = 2020-09-07T10:00:00+10:00
 
 [extra]
-#updated = 2020-06-19T09:30:00+10:00
+updated = 2021-10-01T10:44:43+10:00
 +++
 
 After nearly 3 years and more than 3200 posts I'm going to slow down the
@@ -39,7 +39,7 @@ It's been fun to build, and rebuild the website and surrounding tooling over
 the years. Read Rust was initially just an RSS feed but after requests for an
 actual web-page I built a small site with the [Cobalt static site
 compiler][cobalt]. In late 2019 in an effort to streamline the sharing of posts
-I rebuilt the site as dynamic web app. In early 2020 I added full test search.
+I rebuilt the site as dynamic web app. In early 2020 I added full text search.
 
 As mentioned in the introduction, from here I plan to share [#rust2021] posts and
 after that posting will be much less frequent. Thanks for reading, and happy
