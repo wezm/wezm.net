@@ -1,0 +1,10 @@
+default:
+    @just --list
+
+# rsync to production
+deploy: build
+    rsync -avzhP --delete public/ hardforze.binarytrance.com:infrastructure/volumes/www/wezm.net/v2/
+
+# build with zola
+build:
+    zola build
