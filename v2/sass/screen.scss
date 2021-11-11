@@ -280,8 +280,11 @@ ul.projects {
     margin-right: 0.5em;
   }
   .emoji-img {
-    font-size: 32px;
-    margin-right: 0.5rem;
+    display: inline-block;
+    width: 32px;
+    font-size: 24px;
+    margin-right: 0.25rem;
+    text-align: center;
   }
   p {
     margin-left: calc(32px + 0.5em);
