@@ -198,6 +198,11 @@ use the DNS validation method (`certbot` can do this too). This requires a DNS
 provider that has an API so the client can dynamically manipulate the records.
 I looked through the large list of supported providers and settled on [LuaDNS].
 
+**Update 11 May 2020:** I contributed support for LuaDNS to [lego] and replaced
+`acme.sh` with it. The motivation was that I never got auto-renewal working
+with `acme.sh`. Turns out it was nothing to do with `acme.sh` but the exercise
+in moving to `lego` made me discover and fix the problem.
+
 LuaDNS has a nice git based workflow where you define the DNS zones with small
 Lua scripts and the records are published when you push to the repo. They also
 have the requisite API for `acme.sh`. You can see my DNS repo at:
@@ -425,3 +430,4 @@ Next Post: [A Coding Retreat and Getting Embedded Rust Running on a SensorTag](/
 [Varnish]: https://varnish-cache.org/
 [Vultr]: https://www.vultr.com/?ref=7903263
 [WebPageTest]: https://www.webpagetest.org/
+[lego]: https://github.com/go-acme/lego

@@ -21,3 +21,16 @@ Set updated_at on a post in vim:
 Trim CLI screenshots:
 
     convert *.png -set filename:name '%t' -background white -splice 0x1 -background white -splice 0x1 -trim +repage -chop 0x1 '%[filename:name].png'
+
+Setup
+-----
+
+    frum install (then cd ..; cd -)
+    gem install bundler --no-doc --version '~> 1'
+    bundle install
+
+Building and Deployment
+-----------------------
+
+* Build with: `nanoc co`
+* Deploy with: `nanoc deploy`
