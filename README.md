@@ -17,7 +17,7 @@ is built with [Nanoc].
 
 ---
 
-Copyright © 2003 – 2020 Wesley Moore. All rights reserved
+Copyright © 2003 – 2022 Wesley Moore. All rights reserved
 
 [Nanoc]: https://nanoc.ws/
 [Zola]: https://www.getzola.org/
