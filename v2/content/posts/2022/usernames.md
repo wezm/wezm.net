@@ -3,7 +3,7 @@ title = "ASCII-centric Usernames"
 date = 2022-01-27T18:38:25+10:00
 
 [extra]
-#updated = 2020-06-19T09:30:00+10:00
+updated = 2022-01-27T21:07:32+10:00
 +++
 
 I'm working on a web-based side project in my spare time. The great thing about
@@ -13,8 +13,8 @@ about usernames—specifically the characters that they may be comprised of.
 
 <!-- more -->
 
-I poked around at a few sites to see what they did: Twitter, GitHub, Discourse
-all restrict your username to a mostly ASCII numeric character set perhaps
+I poked around a few sites to see what they did: Twitter, GitHub, Discourse
+all restrict your username to a mostly ASCII alphanumeric character set, perhaps
 with `-`, `_`, and `.` thrown in.
 
 It struck me that this is fine for me, an English speaker, but must suck for
@@ -40,10 +40,10 @@ Now this is all very biased by my monolingual, English speaking, Western viewpoi
 Perhaps it is more common to permit native language usernames in applications that
 target non-English markets?
 
-I did find a couple examples that were more permissive with usernames.
+I did find a couple of examples that were more permissive with usernames.
 Discord happily let me set my username to "🦊 こんにちは". Slack rejected the
-emoji with a cute message "Of course you want a name with an emoji. Sadly, it
-is not to be. Try letters?" but was otherwise happy with "こんにちは". In both
+emoji with a cute message, "Of course you want a name with an emoji. Sadly, it
+is not to be. Try letters?", but was otherwise happy with "こんにちは". In both
 cases @ mentioning the user appears to require typing their name, although you
 could also find them in the people directory first.
 
