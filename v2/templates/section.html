@@ -22,11 +22,8 @@
 
   {{ section.content | safe }}
 
-  {% for sub in section.subsections %}
-    {% set section = get_section(path=sub) %}
-    {% for page in section.pages %}
-      {% include "article.html" %}
-    {% endfor %}
+  {% for page in section.pages %}
+    {% include "article.html" %}
   {% endfor %}
 
   {% for page in paginator.pages %}

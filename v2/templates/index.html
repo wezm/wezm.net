@@ -21,13 +21,11 @@
       </h2>
 
       {% set section = get_section(path="posts/_index.md") %}
-      {% set subsections = section.subsections | reverse %}
-      {% for sub in subsections %}
-        {% set section = get_section(path=sub) %}
-        {% for page in section.pages %}
-          {% include "article.html" %}
-        {% endfor %}
+      {% for page in section.pages | sort(attribute="date") | reverse | slice(end=10) %}
+        {% include "article.html" %}
       {% endfor %}
+
+      <a href="{{ config.base_url }}/posts/">View more posts →</a>
     </section>
 
     <section class="projects-section">
