@@ -7,6 +7,9 @@ for a long time I have finally come around to it recently and decided to
 rebuild on [Docker]. This post aims to describe some of the choices made, and
 why I made them.
 
+**See the three year follow-up:**
+[Alpine Linux and Docker Infrastructure Three Years Later](https://www.wezm.net/v2/posts/2022/alpine-linux-docker-infrastructure-three-years/)
+
 _Before we start I'd like to take a moment to acknowledge this infrastructure
 is built to my values in a way that works for me. You might make different
 choices and that's ok. I hope you find this post interesting but not
@@ -388,6 +391,9 @@ TLS negotiations to one.
 
 Thanks for reading, I hope the bits didn't take too long to get from Australia
 to wherever you are. Happy computing!
+
+**See the three year follow-up:**
+[Alpine Linux and Docker Infrastructure Three Years Later](https://www.wezm.net/v2/posts/2022/alpine-linux-docker-infrastructure-three-years/)
 
 <div class="seperator"><hr class="left">✦<hr class="right"></div>
 
