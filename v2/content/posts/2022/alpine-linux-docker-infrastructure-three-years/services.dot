@@ -1,0 +1,24 @@
+digraph G {
+  node[shape=box];
+  edge[headport=n];
+
+  subgraph cluster {
+    hitch
+    lego
+  }
+  hitch -> varnish;
+  varnish -> nginx;
+  varnish -> pkb;
+  varnish -> wizards;
+  varnish -> rust_melbourne;
+  varnish -> pleroma;
+  varnish -> read_rust;
+  varnish -> read_rust_leaf;
+  varnish -> quotes;
+  varnish -> dewpoint;
+  pkb -> syncthing;
+  read_rust -> postgresql:ne;
+  wizards -> postgresql;
+  rust_melbourne -> postgresql:ne;
+  pleroma -> postgresql:ne;
+}
