@@ -1,7 +1,7 @@
 default:
     @just --list
 
-# rsync to production
+# build and rsync to production
 deploy: build
     rsync -avzhP --delete public/ hardforze.binarytrance.com:infrastructure/volumes/www/wezm.net/v2/
 
