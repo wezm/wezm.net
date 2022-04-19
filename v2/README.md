@@ -16,4 +16,9 @@ Resize:
 
     xdotool windowsize $(xdotool selectwindow) 1600 1200
 
+## Video poster images
+
+    for m in *.m4v; do ffmpeg -i $m -vf "select=1" -vframes 1 $m.png; done
+    for f in *.m4v.png; do convert "$f" -quality 60 ${f%.png}.jpg ; done
+
 [Zola]: https://www.getzola.org/

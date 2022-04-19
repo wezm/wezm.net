@@ -180,6 +180,9 @@ img, canvas, iframe, video, svg {
 figure {
   margin: 0 auto 1.5em;
 }
+.figure-border img {
+  border: 1px solid #AAA;
+}
 figcaption {
   font-size: 16px;
   font-weight: 500;
@@ -437,5 +440,16 @@ ul.projects {
       line-height: 3;
       padding: 0 1em;
     }
+  }
+}
+
+@media print {
+  html {
+    background-color: white;
+  }
+  body {
+    color: black;
+    // margin: 0;
+    // max-width: auto;
   }
 }
