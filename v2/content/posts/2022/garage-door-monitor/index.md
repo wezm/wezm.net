@@ -3,13 +3,13 @@ title = "Monitoring My Garage Door With a Raspberry Pi, Rust, and a 13Mb Linux S
 date = 2022-04-20T06:38:27+10:00
 
 [extra]
-#updated = 2022-01-27T21:07:32+10:00
+updated = 2022-04-21T09:07:57+10:00
 +++
 
 I've accidentally left our garage door open a few times. To combat this I built
 a monitor that sends an alert via Mattermost when the door has been left open
 for more than 5 minutes. This turned out to be a super fun project. I used
-parts on had as much as possible, implemented the monitoring application in
+parts on hand as much as possible, implemented the monitoring application in
 Rust, and then built a stripped down Linux image to run it.
 
 <!-- more -->
@@ -171,6 +171,7 @@ initial RAM disk into memory from the SD card, then hands over to the kernel.
 The final image includes the following:
 
 - Linux kernel
+- musl libc
 - [Busybox](https://busybox.net/)
 - Raspberry Pi Firmware
 - [OpenNTPD] — for syncing the clock
