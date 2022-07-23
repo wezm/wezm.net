@@ -3,7 +3,7 @@ title = "Generating RSS Feeds From Web Pages With RSS Please"
 date = 2022-07-04T09:54:29+10:00
 
 [extra]
-#updated = 2022-01-27T21:07:32+10:00
+updated = 2022-07-24T09:28:15+10:00
 +++
 
 Sometimes I come across a web page that I'd like to revisit when there's
@@ -19,7 +19,8 @@ background on the tool and how I'm running it in my Docker infrastructure.
 
 Sometimes an RSS feed isn't available on a website. If the site is open source
 I will often try to [open a PR to add or enable one][rss-pr]. That's not always
-possible though. Other time the page may be one that would naturally think to provide a feed for, but one would still be useful.
+possible though. Other times the page may be one that the author wouldn't
+naturally think to provide a feed for, but one would still be useful.
 
 As an example, when we were looking to buy a house I noticed that listings
 would often go live on agent's websites several days or more before they were
@@ -28,8 +29,7 @@ regularly visiting all the real estate agent websites to run my search, and
 check for new listings. At the time I used [Feedfry] to create RSS feeds from
 the search results. I could then subscribe to them in [Feedbin]. Paired with
 the [Feedbin Notifier app][notifier] I received a notification on my phone
-whenever there was a new listing matching my search criteria from any of the
-agents.
+whenever there was a new listing matching my search criteria.
 
 Feedfry is free with ads or paid subscription. I paid while house shopping but
 let that lapse afterwards. I don't begrudge them funding the service with ads or
