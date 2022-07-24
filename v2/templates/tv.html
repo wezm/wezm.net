@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ section.title }} - {{ config.title }}{% endblock %}
+
+{% block body %}
+<h1 class="logo"><a href="{{ config.base_url }}/" class="no-border hover-underline">👨‍💻 {{ config.title }}</a></h1>
+
+<p>Custom TV section template</p>
+
+<nav>
+  {% for ancestor in section.ancestors %}
+    {% set section = get_section(path=ancestor) %}
+    {% if section.path == "/" %}
+      <a href="{{ config.base_url }}{{ section.path }}" class="no-border hover-underline">Home</a>
+    {% else %}
+      <span class="breadcrumb-sep">/</span>
+      <a href="{{ config.base_url }}/{{ section.path }}" class="no-border hover-underline">{{ section.title }}</a>
+    {% endif %}
+  {% endfor %}
+</nav>
+
+<main class="{{ section.extra.main_class | default(value="") }}">
+  <h2>{{ section.title }}</h2>
+
+  {{ section.content | safe }}
+
+  {# {% for page in section.pages %} #}
+  {#   {% include "article.html" %} #}
+  {# {% endfor %} #}
+
+  <h2>Recent Videos</h2>
+
+  {% for page in paginator.pages %}
+    {% include "video.html" %}
+  {% endfor %}
+</main>
+{% endblock %}
