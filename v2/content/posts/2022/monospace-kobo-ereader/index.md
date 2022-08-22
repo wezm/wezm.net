@@ -2,8 +2,8 @@
 title = "Fixing Monospace Text in Kobo eReaders"
 date = 2022-04-10T09:14:50+10:00
 
-# [extra]
-# updated = 2022-01-27T21:07:32+10:00
+[extra]
+updated = 2022-08-22T14:10:50+10:00
 +++
 
 After verifying with friends that eBook readers do a decent job of rendering
@@ -13,6 +13,11 @@ and started reading… but something was off. Sure enough, after verifying the
 text with CSS rules like `font-family: monospace` in a monospace font.
 
 <!-- more -->
+
+**Update Aug 2022:** I was told and have confirmed myself that the workaround
+described in this post no longer works with the latest firmware. I tested
+version 4.33.19759. If anyone knows how to restore the behaviour please get in
+touch.
 
 [Skip to Instructions ⮷](#instructions)
 
