@@ -301,7 +301,7 @@ happens.
 All the code, hardware designs, and Buildroot configuration/overlay is
 available in [the git repository][repo] if you're interested.
 
-[See part two](@posts/2022/garage-door-monitor-update/index.md) for a couple of new
+[See part two](@/posts/2022/garage-door-monitor-update/index.md) for a couple of new
 features I added a few months later.
 
 [app]: https://github.com/wezm/garage-door-monitor/tree/main/app

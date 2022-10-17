@@ -7,10 +7,10 @@ date = 2022-10-17T15:04:44+10:00
 +++
 
 
-[The garage door monitor that I built earlier in the
-year](@posts/2022/garage-door-monitor/index.md) has by all accounts been
-running perfectly since I installed it. Recently I implemented a couple of new
-features that I've wished for over the last few months.
+[The garage door monitor that I built earlier in the year](@/posts/2022/garage-door-monitor/index.md)
+has by all accounts been running perfectly since I installed it. Recently I
+implemented a couple of new features that I've wished for over the last few
+months.
 
 <!-- more -->
 
