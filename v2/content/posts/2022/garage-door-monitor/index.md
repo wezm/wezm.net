@@ -3,7 +3,7 @@ title = "Monitoring My Garage Door With a Raspberry Pi, Rust, and a 13Mb Linux S
 date = 2022-04-20T06:38:27+10:00
 
 [extra]
-updated = 2022-04-21T09:07:57+10:00
+updated = 2022-10-17T15:51:20+10:00
 +++
 
 I've accidentally left our garage door open a few times. To combat this I built
@@ -300,6 +300,9 @@ happens.
 
 All the code, hardware designs, and Buildroot configuration/overlay is
 available in [the git repository][repo] if you're interested.
+
+[See part two](@posts/2022/garage-door-monitor-update/index.md) for a couple of new
+features I added a few months later.
 
 [app]: https://github.com/wezm/garage-door-monitor/tree/main/app
 [Awesome]: https://github.com/awesomeWM/awesome
