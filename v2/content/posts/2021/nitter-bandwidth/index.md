@@ -6,7 +6,7 @@ date = 2021-08-26T09:10:54+10:00
 #updated = 2021-05-15T10:15:08+10:00
 +++
 
-On 24 August I received an email from Vultr saying that my server had used 78%
+On 24 August I received an email from [Vultr] saying that my server had used 78%
 of its 3Tb bandwidth allocation for the month. This was surprising as last time
 I looked I only used a small fraction of this allocation across the various
 [things I host][alpine-docker].
@@ -75,3 +75,4 @@ my peace with linking to Twitter.
 [nitter-instance]: https://decentralised.social/notice/A41E2cjuM14UYFAF7o
 [robots.txt]: https://github.com/wezm/nitter/commit/4e7bd7b8853bf36008a3d1e79ee97deaa68743da
 [Varnish]: https://varnish-cache.org/
+[Vultr]: https://www.vultr.com/?ref=7903263
