@@ -2,8 +2,8 @@
 title = "divmod, Rust, x86, and Optimisation"
 date = 2023-01-11T19:48:09+10:00
 
-#[extra]
-#updated = 2022-04-21T09:07:57+10:00
+[extra]
+updated = 2023-01-11T21:11:28+10:00
 +++
 
 While reviewing some Rust code that did something like this:
@@ -86,8 +86,21 @@ instruction sequence that uses 32-bit registers. According to [the testing done
 in this report][timing] 32-bit `div` has lower latency—particularly on older
 models.
 
-I wasn't able to work out why each implementation zeros `edx`. If you know,
-send me a message and I'll update the post.
+~~I wasn't able to work out why each implementation zeros `edx`. If you know,
+send me a message and I'll update the post.~~
+
+**Update:** [Brion Vibber on the Fediverse][edx] provided this explanation as to why `edx`
+is being zeroed:
+
+> iirc rdx / edx is the top word for the x86 division operation, which takes a double-word numerator -- the inverse of multiplication producing a double-word output.
+
+This makes sense and looking back at [the docs][div] it does say that:
+
+> 32-bit: Unsigned divide EDX:EAX by r/m32, with result stored in EAX := Quotient, EDX := Remainder.
+
+> 64-bit: Unsigned divide RDX:RAX by r/m64, with result stored in RAX := Quotient, RDX := Remainder.
+
+
 
 [View the Example on Compiler Explorer](https://rust.godbolt.org/z/hj9rb4Txa)
 
@@ -96,3 +109,4 @@ send me a message and I'll update the post.
 [div]: https://www.felixcloutier.com/x86/div
 [compiler-explorer]: https://rust.godbolt.org/
 [timing]: https://gmplib.org/~tege/x86-timing.pdf
+[edx]: https://bikeshed.vibber.net/@brion/109670222269686433
