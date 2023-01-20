@@ -360,6 +360,20 @@ ul.projects {
   margin-bottom: 3em;
 }
 
+.no-overlay {
+  position: relative;
+}
+.no-overlay::after {
+  content: '🚫';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 96pt;
+  z-index: 1;
+}
+
 .socials {
   margin-top: 2em;
 

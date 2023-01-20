@@ -1,0 +1,26 @@
+{% if border %}
+<figure class="text-center figure-border no-overlay">
+{% else %}
+<figure class="text-center no-overlay">
+{% endif %}
+  {% if resize_width %}
+    {% set image = resize_image(path=image, width=resize_width, op="fit_width", quality=quality | default(value=75)) %}
+    {% if width %}
+      <img src="{{ image.url }}" width="{{ width }}" alt="{{ alt }}" />
+    {% else %}
+      <img src="{{ image.url }}" alt="{{ alt }}" />
+    {% endif %}
+  {% elif resize_height %}
+    {% set image = resize_image(path=image, height=resize_height, op="fit_height", quality=quality | default(value=75)) %}
+    {% if height %}
+      <img src="{{ image.url }}" style="max-height: {{ height }}px" alt="{{ alt }}" />
+    {% else %}
+      <img src="{{ image.url }}" alt="{{ alt }}" />
+    {% endif %}
+  {% elif width %}
+    <img src="{{ config.base_url }}/{{ image }}" width="{{ width }}" alt="{{ alt }}" />
+  {% else %}
+    <img src="{{ config.base_url }}/{{ image }}" alt="{{ alt }}" />
+  {% endif %}
+  <figcaption>{{ caption }}</figcaption>
+</figure>
