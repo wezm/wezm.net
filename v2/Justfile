@@ -8,3 +8,7 @@ deploy: build
 # build with zola
 build:
     zola build
+
+# start zola dev server
+serve:
+    zola serve
