@@ -114,7 +114,7 @@ from.
 * [Jeremy Soller] is creating [Redox OS], an MIT licensed OS written in Rust.
   $60
 * [Gargron] is creating the [Mastodon] federated social network. You can find
-  me at <https://decentralised.social/wezm>. $40
+  me at <https://mastodon.decentralised.social/@wezm>. $40
 * [Jorge Aparicio] is doing fantastic work building Rust tooling and pushing
   the state of the art of [Rust on microcontrollers][embedded-rust]. $35
 * [Steve Wills] does a stack of work on [FreeBSD ports/packages][swills-ports].
