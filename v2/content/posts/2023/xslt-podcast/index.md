@@ -2,13 +2,13 @@
 title = "Creating a Podcast From a Mastodon Account With XSLT"
 date = 2023-03-01T18:33:33+10:00
 
-#[extra]
-#updated = 2023-01-11T21:11:28+10:00
+[extra]
+updated = 2023-03-01T21:54:06+10:00
 +++
 
 {% aside(title="Just want the feed?", float="right") %}
 Here you go:<br>
-[ATPrewind podcast feed](https://files.wezm.net/aptrewind.rss)
+[ATPrewind podcast feed](https://files.wezm.net/atprewind.rss)
 {% end %}
 
 I recently discovered the [ATPrewind account on Mastodon][ATPrewind]. It's an account
@@ -154,7 +154,7 @@ one more container is very little effort. I've written previously about [my
 Alpine Linux server][server] if you'd like to read more.
 
 Once I pushed the Docker image the podcast was live. The URL is:<br>
-<https://files.wezm.net/aptrewind.rss> if you'd like to subscribe.
+<https://files.wezm.net/atprewind.rss> if you'd like to subscribe.
 
 ### Future Work
 
