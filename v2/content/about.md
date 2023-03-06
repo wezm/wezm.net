@@ -22,11 +22,6 @@ Ninja 2, which has had the factory controller replaced with a programmable one.
 community and curate [Read Rust], a website that collects interesting posts
 from the Rust community.
 
-I work at [YesLogic] on the [Prince] HTML to PDF converter. Prince is a very
-interesting product to work on as it is essentially a web-browser that outputs
-well typeset PDFs. It is largely implemented in the [Mercury] logic programming
-language, with portions now in [Rust] as well.
-
 I am fine with either he/him or they/them pronouns.
 
 [Alpine Linux]: https://alpinelinux.org/
@@ -37,7 +32,6 @@ I am fine with either he/him or they/them pronouns.
 [my desktop]: https://bitcannon.net/page/ryzen9-pc/
 [my laptop]: https://bitcannon.net/post/huawei-matebook-x-pro-void-linux/
 [my server]: https://www.wezm.net/technical/2019/02/alpine-linux-docker-infrastructure/
-[Prince]: https://www.princexml.com/
 [Read Rust]: https://readrust.net/
 [Rust]: https://www.rust-lang.org/
 [Void Linux]: https://voidlinux.org/
