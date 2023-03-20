@@ -1,4 +1,13 @@
+{% if poster %}
+{% else %}
+  {% set poster = "jpg" %}
+{% endif %}
+{% if preload %}
+{% else %}
+  {% set preload = "none" %}
+{% endif %}
+
 <figure class="text-center">
-  <video controls preload="none" src="{{ config.base_url }}/{{ video }}" poster="{{ config.base_url }}/{{ video }}.jpg" style="max-height: {{ height }}px"></video>
+  <video controls preload="{{ preload }}" src="{{ config.base_url }}/{{ video }}" poster="{{ config.base_url }}/{{ video }}.{{ poster }}" style="max-height: {{ height }}px"></video>
   <figcaption>{{ caption }}</figcaption>
 </figure>
