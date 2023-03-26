@@ -2,8 +2,8 @@
 title = "Trying to Run Rust on Classic Mac OS"
 date = 2023-02-27T10:06:28+10:00
 
-#[extra]
-#updated = 2023-01-11T21:11:28+10:00
+[extra]
+updated = 2023-03-26T14:27:05+10:00
 +++
 
 I recently acquired a Power Macintosh 9500/150 and after cleaning it up and
@@ -366,7 +366,7 @@ my `.a`, and it worked:
 ```
 docker run --rm -it -v $(pwd):/src debian:testing
 apt update
-apt install powerpc-linux-gnu-binutils
+apt install binutils-powerpc-linux-gnu
 powerpc-linux-gnu-objcopy -O aixcoff-rs6000 /src/target/powerpc-apple-macos/release/libclassic_mac_rust.a /src/target/powerpc-apple-macos/release/libclassic_mac_rust.obj
 ```
 
