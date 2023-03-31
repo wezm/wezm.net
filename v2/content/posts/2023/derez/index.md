@@ -22,7 +22,7 @@ the source code. In this post I describe how I did this with `DeRez`.
 To build the temperature converter I started with the [Dialog sample] from
 [Retro68], which looks like this:
 
-{{ figure(image="posts/2023/derez/Dialog.png", link="posts/2023/derez/Dialog.png", pixelated=true, alt="TODO", caption="Dialog Sample") }}
+{{ figure(image="posts/2023/derez/Dialog.png", link="posts/2023/derez/Dialog.png", pixelated=true, alt="Screenshot of the Dialog sample from Retro68. It has a static text item, edit text item, check box, two radio buttons, and a Quit button.", caption="Dialog Sample") }}
 
 I opened it up in ResEdit and edited the `DITL` (Dialog Template) resource to
 add the icon and temperature fields. I also added a new `ICON` resource and
@@ -119,7 +119,7 @@ DeRez -i 'Macintosh HD:MPW-GM:Interfaces&Libraries:Interfaces:RIncludes:' "Macin
 that file for resource descriptions. Running the command I was now rewarded
 with textual resources:
 
-{{ figure(image="posts/2023/derez/MPW.png", link="posts/2023/derez/MPW.png", pixelated=true, alt="TODO", caption="DeRez output in MPW") }}
+{{ figure(image="posts/2023/derez/MPW.png", link="posts/2023/derez/MPW.png", pixelated=true, alt="Screenshot of an MPW worksheet on Mac OS 8 showing the output of running DeRez on an application.", caption="DeRez output in MPW") }}
 
 To get the text out of the VM I copied and pasted it into a new document in
 [BBEdit] (version 5.0) and saved it with Unix line endings to the Unix folder

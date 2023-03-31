@@ -390,6 +390,9 @@ ul.projects {
     text-decoration: none;
   }
 }
+.mastodon-embed {
+  display: block;
+}
 
 @media screen and (max-width: 800px) {
   .tagline {
