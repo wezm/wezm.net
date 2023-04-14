@@ -3,7 +3,7 @@ title = "Australian and New Zealand Makers on YouTube"
 date = 2023-04-11T10:04:27+10:00
 
 [extra]
-updated = 2023-04-14T10:50:03+10:00
+updated = 2023-04-14T12:16:17+10:00
 +++
 
 I decided I wanted to add some more local folks into my YouTube subscriptions.
@@ -33,6 +33,7 @@ others are looking for new channels to check out.
 * [SuperHouseTV](https://www.youtube.com/@SuperHouseTV)
 * [Unexpected Maker](https://www.youtube.com/@UnexpectedMaker)
 
-That's the list for now. If you have other suggestions please let me know.
+That's the list for now. If you have other suggestions (especially if they can
+mix up the diversity of the list a bit) please let me know.
 
 [toot]: https://mastodon.decentralised.social/@wezm/110165869937514088
