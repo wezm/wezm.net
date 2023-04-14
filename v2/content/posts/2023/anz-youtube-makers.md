@@ -2,8 +2,8 @@
 title = "Australian and New Zealand Makers on YouTube"
 date = 2023-04-11T10:04:27+10:00
 
-#[extra]
-#updated = 2023-01-11T21:11:28+10:00
+[extra]
+updated = 2023-04-14T10:50:03+10:00
 +++
 
 I decided I wanted to add some more local folks into my YouTube subscriptions.
@@ -29,6 +29,7 @@ others are looking for new channels to check out.
 * [MooreTech](https://www.youtube.com/@MooreTech) -- It's me!
 * [Pask Makes](https://www.youtube.com/@PaskMakes)
 * [Primitive Technology](https://www.youtube.com/@primitivetechnology9550)
+* [Psivewri](https://www.youtube.com/@psivewri)
 * [SuperHouseTV](https://www.youtube.com/@SuperHouseTV)
 * [Unexpected Maker](https://www.youtube.com/@UnexpectedMaker)
 
