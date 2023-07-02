@@ -43,7 +43,7 @@ data_sources:
     # same as the items root, but applies to layouts rather than items.
     layouts_root: /
 
-base_url: 'http://www.wezm.net'
+base_url: 'https://www.wezm.net'
 deploy:
   default:
     kind: rsync
