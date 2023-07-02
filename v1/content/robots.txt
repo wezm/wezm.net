@@ -1,3 +1,4 @@
 User-Agent: *
 Disallow: 
 Sitemap: <%= @config[:base_url] %>/sitemap.xml
+Sitemap: <%= @config[:base_url] %>/v2/sitemap.xml
