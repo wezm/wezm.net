@@ -2,14 +2,14 @@
 title = "Fixing OpenBSD panic dc_atapi_start: not ready in KVM"
 date = 2023-09-17T12:13:24+10:00
 
-#[extra]
-#updated = 2023-01-11T21:11:28+10:00
+[extra]
+updated = 2023-09-22T11:56:57+10:00
 +++
 
 I tried creating an OpenBSD 7.3 virtual machine on my new computer (Arch Linux
-host) and the installed kept crashing with the error:
+host) and the installer kept crashing with the error:
 
-{{ figure(image="posts/2023/openbsd-db-atapi-start-not-ready/openbsd_panic_dc_atapi_start_not_ready.png", link="posts/2023/openbsd-db-atapi-start-not-ready/openbsd_panic_dc_atapi_start_not_ready.png", alt="Screenshot of Overcast showing the podcast 'episodes'.", caption="Screenshot of Overcast showing the 'episodes'.") }}
+{{ figure(image="posts/2023/openbsd-db-atapi-start-not-ready/openbsd_panic_dc_atapi_start_not_ready.png", link="posts/2023/openbsd-db-atapi-start-not-ready/openbsd_panic_dc_atapi_start_not_ready.png", alt="Screenshot of the installer crash.", caption="Screenshot of the installer crash.") }}
 
 ```
 dc_atapi_start: not ready, st = 50
