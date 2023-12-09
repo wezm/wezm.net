@@ -198,7 +198,7 @@ which were resulting in termination.
 
 The fix was simple enough: I removed `@resources` from the deny list, rebuilt
 the package, and then re-enabled the `docuum` service (I'd previously disabled
-it do to the constant crashes). I was pleased to see it start successfully and
+it due to the constant crashes). I was pleased to see it start successfully and
 begin vacuuming up a few months of Docker image detritus.
 
 ### Conclusion
