@@ -404,7 +404,7 @@ scripts:
 As you can see this not super pretty and the "pre-install" & "pre-upgrade" scripts are
 duplicated.
 
-Enter `systemd-sysusers`. Now the `chrony` package just includes a file
+Enter `systemd-sysusers`. Now the `chrony` package includes a file
 `sysusers.conf`, which is installed into `/usr/lib/sysusers.d/chrony.conf` when the package
 is installed:
 
@@ -426,7 +426,7 @@ trigger is run whenever `/usr/lib/syusers.d` or `/usr/lib/tmpfiles.d` changes
 (`systemd-tmpfiles` is a story for another day).
 
 As far as the `systemd-sysusers` part of the trigger script is concerned it
-just runs `/usr/bin/systemd-sysusers`, which uses the declarative contents of
+runs `/usr/bin/systemd-sysusers`, which uses the declarative contents of
 `/usr/lib/syusers.d` to determine what system users and groups should exist and
 be active, then makes changes as needed.
 
