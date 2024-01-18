@@ -465,7 +465,7 @@ scripts:
 
     /usr/bin/systemd-tmpfiles $TMPFILES_ARGS || :
 triggers: # 2 items
-  - /usr/lib/syusers.d
+  - /usr/lib/sysusers.d
   - /usr/lib/tmpfiles.d
 
 ```
