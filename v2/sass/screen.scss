@@ -39,9 +39,10 @@ pre, code {
 }
 pre {
   padding: 0.5em 1em;
-  overflow-y: auto;
+  overflow: auto;
   font-size: 14px;
   color: #fcfcfc;
+  max-height: 800px;
 }
 h1,h2,h3,h4 {
   font-family: $heading-family;
