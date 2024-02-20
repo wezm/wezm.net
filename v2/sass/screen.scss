@@ -43,6 +43,80 @@ pre {
   font-size: 14px;
   color: #fcfcfc;
   max-height: 800px;
+  position: relative;
+}
+.language-asm::after,
+.language-bash::after,
+.language-c::after,
+.language-css::after,
+.language-dockerfile::after,
+.language-gleam::after,
+.language-ini::after,
+.language-javascript::after,
+.language-json::after,
+.language-rust::after,
+.language-sh::after,
+.language-tcl::after,
+.language-toml::after,
+.language-vim::after,
+.language-xml::after,
+.language-yaml::after
+{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: black;
+  background-color: #FFFA;
+  padding: 0 0.5em 1px 0.5em;
+  border-bottom-left-radius: 8px;
+}
+.language-asm::after {
+  content: 'Assembly';
+  }
+.language-bash::after {
+  content: 'Bash';
+  }
+.language-c::after {
+  content: 'C';
+  }
+.language-css::after {
+  content: 'CSS';
+  }
+.language-dockerfile::after {
+  content: 'Dockerfile';
+  }
+.language-gleam::after {
+  content: 'Gleam';
+  }
+.language-ini::after {
+  content: 'INI';
+  }
+.language-javascript::after {
+  content: 'JavaScript';
+  }
+.language-json::after {
+  content: 'JSON';
+  }
+.language-rust::after {
+  content: 'Rust';
+  }
+.language-sh::after {
+  content: 'Shell';
+  }
+.language-tcl::after {
+  content: 'Tcl';
+  }
+.language-toml::after {
+  content: 'TOML';
+  }
+.language-vim::after {
+  content: 'Vim';
+  }
+.language-xml::after {
+  content: 'XML';
+  }
+.language-yaml::after {
+  content: 'YAML';
 }
 h1,h2,h3,h4 {
   font-family: $heading-family;

@@ -408,7 +408,7 @@ Enter `systemd-sysusers`. Now the `chrony` package includes a file
 `sysusers.conf`, which is installed into `/usr/lib/sysusers.d/chrony.conf` when the package
 is installed:
 
-```tcl
+```
 # Create chrony system user
 
 u _chrony - "chrony user" /var/lib/chrony /usr/bin/nologin
