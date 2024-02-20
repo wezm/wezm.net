@@ -2,8 +2,8 @@
 title = "Building a Hybrid Native Application With Gleam and Tauri"
 date = 2024-02-19T09:56:49+10:00
 
-#[extra]
-#updated = 2023-01-11T21:11:28+10:00
+[extra]
+updated = 2024-02-20T11:12:06+10:00
 +++
 
 I took a few hours this weekend to experiment with building a hybrid
@@ -167,7 +167,7 @@ a copy of Chromium in every application, instead relying on the system web view
 on the host operating system.
 
 You implement your application logic in Rust and communicate with the UI
-by emitting and listing to events. The end result is a cross-platform desktop
+by emitting and listening to events. The end result is a cross-platform desktop
 app that is a lot smaller than if it were built with Electron.
 
 This weekend I decided to try combining these things to see how feasible it
@@ -207,7 +207,7 @@ fn greet(name: &str) -> String {
 
 I then needed to be able to use [the `invoke` function][invoke] from the
 [@tauri-apps/api npm package][tauri-apps/api]. Following the pattern I observed
-in other Gleam packages. I created a JavaScript file to act as a bridge between
+in other Gleam packages I created a JavaScript file to act as a bridge between
 Gleam and `@tauri-apps/api`:
 
 ```javascript
@@ -234,12 +234,12 @@ I could then define the external function in the Gleam code and call it:
 pub fn greet(name: String) -> Promise(Result(String, String))
 ```
 
-The challenge was `greet` is an async function, so it returns a promise, which
-does not integrate into a [lustre.simple] application well. Fortunately there
-the less simple [lustre.application] that adds effects. After looking at some
-existing code I was finally about to come up with a working solution. The full
-Gleam code is shown below. `get_greeting` and `do_get_greeting` being the main
-parts of interest.
+The next challenge was `greet` is an async function, so it returns a promise,
+which does not integrate into a [lustre.simple] application well. Fortunately
+there is the less simple [lustre.application] that adds effects. After looking
+at some existing code I was finally able to come up with a working solution.
+The full Gleam code is shown below. `get_greeting` and `do_get_greeting` being
+the main parts of interest.
 
 ```gleam
 // src/demo.gleam
@@ -341,13 +341,13 @@ fn view(model: Model) -> Element(Msg) {
 }
 ```
 
-I added a `Greet` message for when the "Greet" button is clicked. In the `update`
+I added a `Greet` message for when the "Greet" button is clicked. The `update`
 function that doesn't update the model but calls `get_greeting` as its
 side-effect. That builds an `Effect` from `do_get_greeting`, which calls the
 FFI function and maps the `Result` to a `GotGreeting` message containing the
 greeting or an error message.
 
-`update` then handles the `GotGreeting` message by updating the model, which in
+`update` handles the `GotGreeting` message by updating the model, which in
 turn updates the UI. I'm skipping over the `Model`, `view`, `update`
 architecture of this Lustre application since it's basically the [Elm
 architecture]. A similar pattern is seen in Reason React, ReScript, and [React
@@ -397,7 +397,7 @@ fn main() {
 
 In a production application you'd want a mechanism for cleanly shutting the
 thread down but for experimentation purposes I skipped that. Now I needed to
-listen for the `tick` event on the UI. I added another glue function to the FFI
+listen for the `tick` event in the UI. I added another glue function to the FFI
 file:
 
 ```gleam
@@ -624,8 +624,8 @@ Some unanswered questions I have from this experiment are:
 2. What is the right way to import `gleam.mjs` from JavaScript code?
 3. What is the structure of the Gleam `build` directory?
    * I see `dev` and `prod` sub-directories.
-   * Is the `prod` on used when targeting JavaScript (I can't see any
-     equivalent of Cargo's `--release` in the `gleam` CLI help).
+   * Is the `prod` on used when targeting JavaScript
+     * I can't see any equivalent of Cargo's `--release` in the `gleam` CLI help.
 
 The full project code is available here:
 
