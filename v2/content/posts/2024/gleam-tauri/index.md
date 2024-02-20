@@ -3,7 +3,7 @@ title = "Building a Hybrid Native Application With Gleam and Tauri"
 date = 2024-02-19T09:56:49+10:00
 
 [extra]
-updated = 2024-02-20T11:12:06+10:00
+updated = 2024-02-20T22:57:15+10:00
 +++
 
 I took a few hours this weekend to experiment with building a hybrid
@@ -47,8 +47,8 @@ pub type Temperature {
   C(Float)
 }
 
-pub type Celcius {
-  Celcius(Float)
+pub type Celsius {
+  Celsius(Float)
 }
 
 pub fn main() {
@@ -56,29 +56,29 @@ pub fn main() {
   io.debug(avg(temps))
 }
 
-pub fn avg(measurements: List(Temperature)) -> Celcius {
+pub fn avg(measurements: List(Temperature)) -> Celsius {
   let sum =
     list.fold(measurements, 0.0, fn(sum, val) {
-      let Celcius(c) = to_c(val)
+      let Celsius(c) = to_c(val)
       sum +. c
     })
   let length =
     list.length(measurements)
     |> int.to_float
-  Celcius(sum /. length)
+  Celsius(sum /. length)
 }
 
-fn to_c(temp: Temperature) -> Celcius {
+fn to_c(temp: Temperature) -> Celsius {
   case temp {
-    C(c) -> Celcius(c)
-    F(f) -> Celcius({ f -. 32.0 } /. 1.8)
+    C(c) -> Celsius(c)
+    F(f) -> Celsius({ f -. 32.0 } /. 1.8)
   }
 }
 ```
 
 When run it outputs:
 
-    Celcius(1.8444444444444443)
+    Celsius(1.8444444444444443)
 
 The generated JavaScript (as of Gleam v1.0.0-rc2) is shown below. While it's
 certainly longer than what you might naively write in JavaScript directly it's
