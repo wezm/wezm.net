@@ -1,0 +1,3 @@
+[submodule "v2/syntaxes/gleam"]
+	path = v2/syntaxes/gleam
+	url = https://github.com/digitalcora/sublime-text-gleam.git

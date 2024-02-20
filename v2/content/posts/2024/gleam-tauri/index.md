@@ -35,10 +35,46 @@ maintained Elm without the restrictions on interop with existing JavaScript
 code.
 
 To get started here's some Gleam code that demonstrates a decent chunk of the
-language. My blog doesn't highlight Gleam code at the moment so what's shown
-below is a picture. See [example.gleam](example.gleam) for the source file:
+language:
 
-<img src="gleam-example.png" width="378" alt="">
+```gleam
+import gleam/io
+import gleam/list
+import gleam/int
+
+pub type Temperature {
+  F(Float)
+  C(Float)
+}
+
+pub type Celcius {
+  Celcius(Float)
+}
+
+pub fn main() {
+  let temps = [C(22.0), C(-5.0), F(0.0), C(0.0), F(32.0)]
+  io.debug(avg(temps))
+}
+
+pub fn avg(measurements: List(Temperature)) -> Celcius {
+  let sum =
+    list.fold(measurements, 0.0, fn(sum, val) {
+      let Celcius(c) = to_c(val)
+      sum +. c
+    })
+  let length =
+    list.length(measurements)
+    |> int.to_float
+  Celcius(sum /. length)
+}
+
+fn to_c(temp: Temperature) -> Celcius {
+  case temp {
+    C(c) -> Celcius(c)
+    F(f) -> Celcius({ f -. 32.0 } /. 1.8)
+  }
+}
+```
 
 When run it outputs:
 
