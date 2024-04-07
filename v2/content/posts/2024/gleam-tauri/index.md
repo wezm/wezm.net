@@ -3,7 +3,7 @@ title = "Building a Hybrid Native Application With Gleam and Tauri"
 date = 2024-02-19T09:56:49+10:00
 
 [extra]
-updated = 2024-02-20T22:57:15+10:00
+updated = 2024-02-21T10:05:19+10:00
 +++
 
 I took a few hours this weekend to experiment with building a hybrid
@@ -400,7 +400,7 @@ thread down but for experimentation purposes I skipped that. Now I needed to
 listen for the `tick` event in the UI. I added another glue function to the FFI
 file:
 
-```gleam
+```javascript
 // src/ffi/commands.js
 
 export async function listenForTick(handler) {
@@ -433,7 +433,7 @@ parse the timestamp into a JavaScript Date and render the stringified version
 of it. Surprisingly the [gleam_javascript] package doesn't have Date bindings
 yet so I created some for what I needed:
 
-```gleam
+```javascript
 // src/ffi/js_extra.js
 
 export function from_unix(timestamp) {
