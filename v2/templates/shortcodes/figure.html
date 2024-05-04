@@ -6,7 +6,11 @@
   {% set figure_class = figure_class | concat(with="figure-pixelated") %}
 {% endif %}
 <figure class="{{ figure_class | join(sep=" ") }}">
+  {% if link is matching("^https?:") %}
+  <a href="{{ link }}">
+  {% else %}
   <a href="{{ config.base_url }}/{{ link }}">
+  {% endif %}
   {% if resize_width %}
     {% set image = resize_image(path=image, width=resize_width, op="fit_width", quality=quality | default(value=75)) %}
     {% if width %}
