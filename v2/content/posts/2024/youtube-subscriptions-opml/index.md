@@ -268,6 +268,13 @@ plugin](https://docs.invidious.io/redirector/), although that would require set
 up on each of the computers and OS installs I use so I prefer the former
 option.
 
+### Comments
+
+* [Fediverse](https://mastodon.decentralised.social/@wezm/112391817575822540)
+* [Lobsters](https://lobste.rs/s/n3dnfa/exporting_youtube_subscriptions_opml)
+<!-- * [Hacker News](https://news.ycombinator.com/item?id=36742534) -->
+
+
 [url-shortener]: https://www.youtube.com/watch?v=d-tsfUVg4II
 [Invidious]: https://invidious.io/
 [Feedbin]: https://feedbin.com/

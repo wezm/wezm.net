@@ -27,7 +27,7 @@ born.
 
 So far I've published four projects to it, all of which are open-source.
 
-## Titlecase
+### Titlecase
 
 [Titlecase] is one of the earliest Rust crates I wrote. The first commit was in
 2017. It converts text into title case. Specifically it uses [a style described
@@ -48,7 +48,7 @@ I have compiled it to WebAssembly so that it can be [used online][Titlecase].
 
 {{ figure(image="posts/2024/7bit-projects/Convert%20Text%20to%20Titlecase%20-%207bit.org.png", link="https://7bit.org/titlecase/", border=1, width="739", alt='Screenshot of the Titlecase web page showing the result of converting the text ‘an iPhone review: "our take in 10 minutes"’ to title case with the tool. The resulting text is ‘An iPhone Review: "Our Take in 10 Minutes"’.', caption="Screenshot of the Titlecase web page") }}
 
-## RSS Please
+### RSS Please
 
 [RSS Please] is a tool to generate RSS feeds from web pages. It uses
 CSS selectors to extract parts of the page to generate the feed from.
@@ -56,7 +56,7 @@ It's implemented as a command line tool in Rust.
 
 {{ figure(image="posts/2024/7bit-projects/RSS%20Please.png", link="https://rsspls.7bit.org/", alt="Screenshot of the RSS Please website. It has a teal backgound and features a screenshot of the tool running in a terminal. There is an orange RSS logo in the top left and download button in the bottom left.", caption="Screenshot of the RSS Please website") }}
 
-## Dew Point Forecast
+### Dew Point Forecast
 
 [Dew Point Forecast] provides weather forecasts that include the dew point. The
 dew point relates to how humid it feels. It's a better measure than relative
@@ -69,7 +69,7 @@ web framework.
 
 {{ figure(image="posts/2024/7bit-projects/Dew%20Point%20-%20Forecast%20for%20Brisbane%20City.png", link="https://dewpoint.7bit.org/", border=1, width="739", alt="Screenshot of the dew point forecast for Brisbane, Australia. There are boxes for current conditions, Sat 4 May, Sun 5 May, and Mon 6 May. Each box contains values for temperature, dew point, sunrise, sunset, UV index, and relative humidity.", caption="Dewpoint forecast for Brisbane") }}
 
-## MacBinary
+### MacBinary
 
 [MacBinary] allows inspection and downloading of individual components in
 MacBinary encoded files that were used by the classic Mac OS. It's available as
@@ -79,6 +79,10 @@ post](@/posts/2023/rust-classic-mac-os-app/index.md#macbinary).
 
 
 {{ figure(image="posts/2024/7bit-projects/Decode%20MacBinary%20Online%20-%207bit.org.png", link="https://7bit.org/macbinary/", border=1, width="739", alt="Screenshot of the MacBinary webpage. It is showing the parsed information from a file called 'bbedit_lite_612.smi_.bin'. Several resources are lists such as 'BNDL', and 'CODE'.", caption="Screenshot of the MacBinary web page") }}
+
+### Comments
+
+* [Fediverse](https://mastodon.decentralised.social/@wezm/112391817575822540)
 
 [RSS Please]: https://rsspls.7bit.org/
 [Dew Point Forecast]: https://dewpoint.7bit.org/
