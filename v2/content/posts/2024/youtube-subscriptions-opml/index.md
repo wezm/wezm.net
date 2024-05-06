@@ -211,7 +211,7 @@ OPML file has this structure:
 </opml>
 ```
 
-I does the following:
+It does the following:
 
 - Generates the top level OPML structure.
 - For each JSON file, read and parse the JSON and then use that to generate an `outline` entry for that channel.
@@ -238,7 +238,7 @@ watch it:
 
 {{ figure(image="posts/2024/youtube-subscriptions-opml/feedme.png", link="posts/2024/youtube-subscriptions-opml/feedme.png", alt='Screenshot of FeedMe viewing a video item. In the top left there is a NewPipe button, which when tapped opens the video in NewPipe.', caption="Screenshot of FeedMe viewing a video item") }}
 
-### Closing Thoughts
+### Closing Thoughts & Future Work
 
 Could I have done all the processing to generate the OPML file with a single
 Python file? Yes, but I rarely write Python so I preferred to just cobble
@@ -247,6 +247,11 @@ things together from tools I already knew.
 Should I ever become a YouTube Premium subscriber again I can continue to
 use this workflow and watch the videos from the YouTube embeds that
 Feedbin generates, or open the item in the YouTube app instead of NewPipe.
+
+At some point I'd like to work out how to get Feedbin to filter out YouTube
+Shorts. It has the ability to automatically filter items matching any of the
+supported [search syntax][feedbin-search] but I'm not sure if Shorts are
+easily identifiable.
 
 Lastly, what about desktop usage? When I'm on a real computer I read my RSS via
 the Feedbin web app. It supports [custom sharing
@@ -287,3 +292,4 @@ option.
 [FeedMe]: https://play.google.com/store/apps/details?id=com.seazon.feedme
 [feedbin-sharing]: https://feedbin.com/help/sharing-read-it-later-services/
 [OpenGraph]: https://ogp.me/
+[feedbin-search]: https://feedbin.com/help/search-syntax/
