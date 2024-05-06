@@ -218,7 +218,7 @@ It does the following:
 - Indent the OPML document.
 - Write it to stdout using a Unicode encoding with an XML declaration (`<?xml version='1.0' encoding='utf-8'?>`).
 
-Whew that was a lot! With the OMPL file generated I was finally able to import
+Whew that was a lot! With the OPML file generated I was finally able to import
 all my subscriptions into Feedbin.
 
 All the code is available in [this
