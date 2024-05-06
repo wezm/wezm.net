@@ -2,8 +2,8 @@
 title = "Exporting YouTube Subscriptions to OPML and Watching via RSS"
 date = 2024-05-06T10:38:22+10:00
 
-#[extra]
-#updated = 2024-02-21T10:05:19+10:00
+[extra]
+updated = 2024-05-06T20:24:23+10:00
 +++
 
 This post describes how I exported my 500+ YouTube subscriptions to an OPML
@@ -77,7 +77,7 @@ which means I needed to determine the channel id for each page. To do that
 without futzing around with Google API keys and APIs I needed to download the
 HTML of each channel page.
 
-To do that I generated a config file for `curl` from the JSON file:
+First I generated a config file for `curl` from the JSON file:
 
     jaq --raw-output '.[] | (split("/") | last) as $name | "url \(.)\noutput \($name).html"' subscriptions.json > subscriptions.curl
 
@@ -144,6 +144,12 @@ Let's break that down:
 - A function to escape strings destined for JSON is defined. This makes use of `jaq`.
 - `TITLE`, `XML_URL`, and `URL` are escaped.
 - Finally we generate a JSON object with the title, URL, and RSS URL and write it into a `json` directory under the name of the channel.
+
+**Update:** [Stephen pointed out on Mastodon][sedmonds] that the HTML contains the usual
+`<link rel="alternate"` tag for RSS auto-discovery. I did check for that initially but
+I think the Firefox dev tools where having a bad time with the large size of the YouTube
+pages and didn't show me any matches at the time. Anyway, that could have been used to
+find the feed URL directly instead of building it from the `og:url`.
 
 Ok, almost there. That script had to be run for each of the channel URLs.
 First I generated a file with just a plain text list of the channel URLs:
@@ -293,3 +299,4 @@ option.
 [feedbin-sharing]: https://feedbin.com/help/sharing-read-it-later-services/
 [OpenGraph]: https://ogp.me/
 [feedbin-search]: https://feedbin.com/help/search-syntax/
+[sedmonds]: https://aus.social/@popcorncx/112392881683597817
