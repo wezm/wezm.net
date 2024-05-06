@@ -94,7 +94,7 @@ to `subscriptions.curl`:
     url https://www.youtube.com/@mooretech
     output @mooretech.html
 
-Curl was then run against this file to download all the pages:
+I then ran `curl` against this file to download all the pages:
 
     curl --location --output-dir html --create-dirs --rate 1/s --config subscriptions.curl
 
