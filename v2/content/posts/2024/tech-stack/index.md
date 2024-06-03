@@ -2,8 +2,8 @@
 title = "Tech Stack 2024"
 date = 2024-06-01T10:13:48+10:00
 
-#[extra]
-#updated = 2024-02-21T10:05:19+10:00
+[extra]
+updated = 2024-06-04T07:49:36+10:00
 +++
 
 Inspired by Alex Chan's [Tools of the trade][achan] post I thought I'd note
@@ -135,7 +135,7 @@ visit.
 ##### Stylus
 
 I don't use a lot of browser extensions but [Stylus] is a great one. It lets me
-apply custom styles websites (or all sites). This lets do things like fix poor
+apply custom styles to websites (or all sites). This enables me to fix poor
 font choices or hide that annoying Sign-In With Google across all websites.
 
 #### Shotwell
@@ -160,7 +160,7 @@ Clipboard history is an essential part of any desktop computing environment and
 
 #### Rust
 
-Pretty much all software I write these days in done with [Rust]. Also I use a
+Pretty much all software I write these days in done with [Rust]. I also use a
 lot of software written in Rust as it tends to be efficient with resources,
 reliable, and easy for me to delve into the code if needed.
 
@@ -173,7 +173,7 @@ Linking is slow, I do a lot of linking working on personal and work projects.
 
 For building web applications my go-to is [Rocket]. It's not quite as batteries
 included as something like [Rails] but it includes a lot of stuff that's
-missing from other options.
+missing from other Rust options.
 
 #### Zola
 
@@ -182,7 +182,7 @@ and super fast.
 
 #### Gleam
 
-On occasions I need to write code targeting JavaScript that is non-trivial
+On occasions I need to write code targeting JavaScript. When that is non-trivial
 I've been reaching for [Gleam]. It's kinda of like Elm but actively maintained
 and with fewer restrictions.
 
@@ -192,11 +192,11 @@ and with fewer restrictions.
 
 My computer is a desktop machine that I assembled myself in 2023:
 
-- AMD Ryzen 9 7950X 16-Core Processor
+- AMD Ryzen 9 7950X 16-Core/32-Thread Processor
 - 64 Gb DDR5 6000 MT/s RAM
 - Storage:
   - Root disk: Crucial T700 1TB PCIe Gen5 NVMe M.2 SSD
-  - /home: 2x WD_BLACK 2TB SN850X NVMe in ZFS mirror
+  - /home: 2x WD_BLACK 2TB SN850X PCIe Gen4 NVMe in ZFS mirror
 - AMD Radeon RX 6700 XT GPU with 12Gb VRAM
 - 2x Dell 24&quot; 4K displays, one in portrait orientation
 - Razer Kiyo web cam
@@ -207,14 +207,14 @@ My computer is a desktop machine that I assembled myself in 2023:
 All of this is packed into a monstrous [Fractal Design Torrent case][torrent]
 with a lot of slow, quiet fans to try to keep all the hot things under control.
 This build was optimised for my development activities (both work and personal)
-with occasional gaming. For future comparisons it does a clean Prince build[^1]
+with occasional gaming. For future comparisons it does a clean [Prince] build[^1]
 in 1m50s and scores 2966/20174 in Geekbench 6.
 
 In early 2024 I started having trouble with pain in my hands from mousing. For
 nearly 20 odd years I've alternated mouse hands to load balance the wear on my
 hands. However this was an issue in both. That led me to try a vertical mouse,
 which didn't initially help. I then tried a wrist rest but it was super hard
-and the pain remained. I got different softer one and now the vertical mouse is
+and the pain remained. I got a different softer one and now the vertical mouse is
 comfortable and my hands have stopped complaining.
 
 #### Laptop
@@ -232,34 +232,36 @@ hardware catches up.
 
 [^1]: `time ./bin/build prince` with `mold` as linker.
 
-[achan]: https://www.alexchantastic.com/tools-of-the-trade
-[Prince]: https://www.princexml.com/
-[zsh]: https://www.zsh.org/
-[Gleam]: https://gleam.run/
-[Rust Rover]: https://www.jetbrains.com/rust/
-[Zed]: https://zed.dev/
-[Neovim]: https://neovim.io/
-[Arch Linux]: https://archlinux.org/
-[Chimera Linux]: https://chimera-linux.org/
-[Awesome]: https://awesomewm.org/
-[COSMIC]: https://blog.system76.com/tags/COSMIC%20DE
-[Alacritty]: https://alacritty.org/
-[Espanso]: https://espanso.org/
-[Obsidian]: https://obsidian.md/
-[ZFS]: https://openzfs.org/
-[zfs-autosnap]: https://github.com/wezm/zfs-autosnap
 [1Password]: https://1password.com/
-[Firefox]: https://getfirefox.com/
-[firefox-containers]: https://support.mozilla.org/en-US/kb/containers
-[Sylus]: https://github.com/openstyles/stylus
-[Shotwell]: https://wiki.gnome.org/Apps/Shotwell
+[achan]: https://www.alexchantastic.com/tools-of-the-trade
+[Alacritty]: https://alacritty.org/
 [Aperture]: https://web.archive.org/web/20150407001931/http://www.apple.com/aperture/
-[keyd]: https://github.com/rvaiya/keyd
+[Arch Linux]: https://archlinux.org/
+[Awesome]: https://awesomewm.org/
+[Chimera Linux]: https://chimera-linux.org/
 [CopyQ]: https://hluk.github.io/CopyQ/
-[Rocket]: https://rocket.rs/
+[COSMIC]: https://blog.system76.com/tags/COSMIC%20DE
+[Espanso]: https://espanso.org/
+[firefox-containers]: https://support.mozilla.org/en-US/kb/containers
+[Firefox]: https://getfirefox.com/
+[Gleam]: https://gleam.run/
+[keyd]: https://github.com/rvaiya/keyd
 [Mold]: https://github.com/rui314/mold
+[Neovim]: https://neovim.io/
+[Obsidian]: https://obsidian.md/
+[Prince]: https://www.princexml.com/
+[Rails]: https://rubyonrails.org/
+[Rocket]: https://rocket.rs/
+[Rust Rover]: https://www.jetbrains.com/rust/
 [Rust]: https://www.rust-lang.org/
-[Zola]: https://www.getzola.org/
+[Shotwell]: https://wiki.gnome.org/Apps/Shotwell
+[Stylus]: https://github.com/openstyles/stylus
+[Sylus]: https://github.com/openstyles/stylus
 [torrent]: https://www.fractal-design.com/products/cases/torrent/
 [WK870]: https://www.keebmonkey.com/en-au/products/wk870?syclid=ck4d58iusvis73cshbug
-[Stylus]: https://github.com/openstyles/stylus
+[Zed]: https://zed.dev/
+[zfs-autosnap]: https://github.com/wezm/zfs-autosnap
+[ZFS]: https://openzfs.org/
+[Zola]: https://www.getzola.org/
+[zsh]: https://www.zsh.org/
+
