@@ -8,7 +8,19 @@
     <meta property="og:description" content="{{ page.summary | default(value="") | striptags }}" />
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="en_AU" />
-    <meta name="twitter:card" content="summary" />
+    {% if page.colocated_path %}
+      {% set cover_path = "/" ~ page.colocated_path ~ "cover.jpg" %}
+      {% if cover_path in page.assets %}
+        {% set cover_url = get_url(path=cover_path) %}
+        <meta property="og:image" content="{{ cover_url }}" />
+        <meta name="twitter:image" content="{{ cover_url }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+      {% else %}
+        <meta name="twitter:card" content="summary" />
+      {% endif %}
+    {% else %}
+      <meta name="twitter:card" content="summary" />
+    {% endif %}
     <meta name="twitter:creator" content="{{ config.extra.twitter_name }}" />
 {% endblock %}
 
