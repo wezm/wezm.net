@@ -3,7 +3,7 @@ title = "Exporting YouTube Subscriptions to OPML and Watching via RSS"
 date = 2024-05-06T10:38:22+10:00
 
 [extra]
-updated = 2024-05-06T20:24:23+10:00
+updated = 2024-06-06T08:24:45+10:00
 +++
 
 This post describes how I exported my 500+ YouTube subscriptions to an OPML
@@ -259,6 +259,12 @@ Shorts. It has the ability to automatically filter items matching any of the
 supported [search syntax][feedbin-search] but I'm not sure if Shorts are
 easily identifiable.
 
+**Update 6 June 2024:** Feedbin has a `media_duration` search term. I was able
+to use that in an [action] to filter out YouTube items less than 90 seconds long,
+successfully filtering out Shorts.
+
+{{ figure(image="posts/2024/youtube-subscriptions-opml/feedbin-shorts-filter.png", link="posts/2024/youtube-subscriptions-opml/feedbin-shorts-filter.png", width=532, alt='Screenshot of the Feedbin settings UI. It shows a new action with name "Filter out YouTube Shorts", the search term is "media_duration:<90" and Article is in Tag has "YouTube" ticked.', caption="Shorts filter in Feedbin") }}
+
 Lastly, what about desktop usage? When I'm on a real computer I read my RSS via
 the Feedbin web app. It supports [custom sharing
 integrations][feedbin-sharing]. In order to open a video on an Invidious
@@ -286,17 +292,18 @@ option.
 <!-- * [Hacker News](https://news.ycombinator.com/item?id=36742534) -->
 
 
-[url-shortener]: https://www.youtube.com/watch?v=d-tsfUVg4II
-[Invidious]: https://invidious.io/
+[action]: https://feedbin.com/blog/2013/11/06/actions-workflows-for-your-rss-feeds/
+[feedbin-search]: https://feedbin.com/help/search-syntax/
+[feedbin-sharing]: https://feedbin.com/help/sharing-read-it-later-services/
 [Feedbin]: https://feedbin.com/
-[scraper]: https://github.com/causal-agent/scraper
-[repo]: https://forge.wezm.net/wezm/youtube-to-opml
-[NewPipe]: https://newpipe.net/
-[subscriptions]: https://www.youtube.com/feed/channels
+[FeedMe]: https://play.google.com/store/apps/details?id=com.seazon.feedme
+[Invidious]: https://invidious.io/
 [jaq]: https://github.com/01mf02/jaq
 [jq]: https://jqlang.github.io/jq/
-[FeedMe]: https://play.google.com/store/apps/details?id=com.seazon.feedme
-[feedbin-sharing]: https://feedbin.com/help/sharing-read-it-later-services/
+[NewPipe]: https://newpipe.net/
 [OpenGraph]: https://ogp.me/
-[feedbin-search]: https://feedbin.com/help/search-syntax/
+[repo]: https://forge.wezm.net/wezm/youtube-to-opml
+[scraper]: https://github.com/causal-agent/scraper
 [sedmonds]: https://aus.social/@popcorncx/112392881683597817
+[subscriptions]: https://www.youtube.com/feed/channels
+[url-shortener]: https://www.youtube.com/watch?v=d-tsfUVg4II
