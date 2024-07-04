@@ -2,8 +2,8 @@
 title = "Why Chimera Linux"
 date = 2024-07-04T08:48:55+10:00
 
-#[extra]
-#updated = 2024-06-04T07:49:36+10:00
+[extra]
+updated = 2024-07-04T12:24:30+10:00
 +++
 
 I received a reply to my [Tech Stack 2024](@/posts/2024/tech-stack/index.md)
@@ -42,7 +42,7 @@ them depending on the host system accidentally—this is definitely an advantage
 over building packages on Arch. Most run-time dependencies are automatically
 determined so you don't have to list all those out in the package template.
 
-[apk] is fast (although not as fast as Pacman when doing updates). It has a
+[apk] is fast (although not as fast as Pacman when doing updates[^1]). It has a
 clever way of tracking packages where [the world file][world] specifies all the packages
 that should be present and it uses a solver to determine what needs to be
 installed/removed. The neat bit is that when you `apk del` a package it can remove all
@@ -63,6 +63,11 @@ computers, and hopefully eventually my new ARM based Snapdragon X Elite laptop.
 Having written that all out I guess Chimera feels like a distro that is
 full-featured but also simple enough that you can poke around and understand
 all the parts. It's also easy to get involved with the project.
+
+[^1]: Pacman downloads in parallel (5 at time in my config), then does the actual upgrades. `apk` fetches one package at at time and then stages the upgrade before moving on to the next one. There's a couple of related open issues:
+
+      - <https://gitlab.alpinelinux.org/alpine/apk-tools/-/issues/10963>
+      - <https://gitlab.alpinelinux.org/alpine/apk-tools/-/issues/5977>
 
 [cbuild]: https://github.com/chimera-linux/cports/blob/master/Usage.md
 [cports]: https://github.com/chimera-linux/cports
