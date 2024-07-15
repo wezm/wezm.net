@@ -1,0 +1,10 @@
+{% set forex = load_data(path=path) %}
+{% set currencies = [ "USD", "AUD", "GBP", "EUR", "RUB", "CAD", "INR", "SEK", "BRL", "JPY", "PLN", "KRW", "CHF", "HKD" ] %}
+<label>Currency:
+<select id="forex">
+    {% for ccy in currencies | sort %}
+    {% set rate = forex[ccy] %}
+    <option value="{{ ccy }}" data-price="{{ rate }}">{{ ccy }}</option>
+    {% endfor %}
+</select>
+</label>

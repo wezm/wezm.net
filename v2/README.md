@@ -17,6 +17,10 @@ Resize:
 
     xdotool windowsize $(xdotool selectwindow) 1600 1200
 
+## Remove location
+
+    exiftool -gps:all= -xmp:geotag= *.JPEG
+
 ## Video poster images
 
     for m in *.m4v; do ffmpeg -i $m -vf "select=1" -vframes 1 $m.png; done
