@@ -4,7 +4,7 @@ date = 2024-07-16T07:19:09+10:00
 template = "yoga7x.html"
 
 [extra]
-updated = 2024-07-16T07:24:19+10:00
+updated = 2024-07-16T13:39:35+10:00
 +++
 
 {{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-on-desk.jpg",
@@ -731,6 +731,7 @@ free to get in contact and I'll do my best to answer any questions.
 
 - [Lobsters](https://lobste.rs/s/p0hx8s/developer_s_review_snapdragon_x_laptop)
 - [Hacker News](https://news.ycombinator.com/item?id=40971564)
+- [Reddit](https://old.reddit.com/r/Lenovo/comments/1e47g09/a_developers_review_of_a_snapdragon_x_laptop/)
 
 #### Credits
 
