@@ -1,9 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const select = document.getElementById('forex');
-    select.addEventListener('change', updatePrices);
-    // Trigger initial conversion (Firefox preserves selected option across refresh
-    updatePrices.call(select);
-})
+const select = document.getElementById('forex');
+select.addEventListener('change', updatePrices);
+// Trigger initial conversion (Firefox preserves selected option across refresh
+updatePrices.call(select);
 
 /**
  * @this {HTMLSelectElement}
