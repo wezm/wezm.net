@@ -358,7 +358,7 @@ ul.projects {
   img, svg {
     width: 32px;
     vertical-align: middle;
-    margin-right: 0.5em;
+    margin-right: 0.25em;
   }
   .emoji-img {
     display: inline-block;
@@ -409,6 +409,10 @@ ul.projects {
   display: block;
 }
 
+.image-left {
+  float: left;
+  margin: 0.5em 1em 1em 0;
+}
 .image-right {
   float: right;
   margin: 0.5em 0 1em 1em;
