@@ -3,7 +3,7 @@ title = "Why Chimera Linux"
 date = 2024-07-04T08:48:55+10:00
 
 [extra]
-updated = 2024-07-04T12:24:30+10:00
+updated = 2024-07-26T09:58:10+10:00
 +++
 
 I received a reply to my [Tech Stack 2024](@/posts/2024/tech-stack/index.md)
@@ -58,13 +58,14 @@ automatically with a build bot server for all supported architectures, whereas
 I believe Arch is still working towards automated packaging. Additionally first
 class support for multiple CPU architectures allows me to run the same system
 on different devices I use such as Raspberry Pis, RISC-V single board
-computers, and hopefully eventually my new ARM based Snapdragon X Elite laptop.
+computers, and hopefully eventually
+[my new ARM based Snapdragon X Elite laptop](@posts/2024/yoga-7x-snapdragon-developer-review/index.md).
 
 Having written that all out I guess Chimera feels like a distro that is
 full-featured but also simple enough that you can poke around and understand
 all the parts. It's also easy to get involved with the project.
 
-[^1]: Pacman downloads in parallel (5 at time in my config), then does the actual upgrades. `apk` fetches one package at at time and then stages the upgrade before moving on to the next one. There's a couple of related open issues:
+[^1]: Pacman downloads in parallel (5 at a time in my config), then does the actual upgrades. `apk` fetches one package at at time and then stages the upgrade before moving on to the next one. There's a couple of related open issues:
 
       - <https://gitlab.alpinelinux.org/alpine/apk-tools/-/issues/10963>
       - <https://gitlab.alpinelinux.org/alpine/apk-tools/-/issues/5977>

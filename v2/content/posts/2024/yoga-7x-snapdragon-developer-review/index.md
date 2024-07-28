@@ -4,7 +4,7 @@ date = 2024-07-16T07:19:09+10:00
 template = "yoga7x.html"
 
 [extra]
-updated = 2024-07-16T13:39:35+10:00
+updated = 2024-07-26T10:34:50+10:00
 +++
 
 {{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-on-desk.jpg",
@@ -158,7 +158,7 @@ dynamic refresh rate but the 7x does not appear to be compatible.
    caption="Camera bump.") }}
 
 Instead of a notch there's a slightly taller region at the top of the screen
-where the camera, and other sensors are. The is also a camera bump behind this
+where the camera, and other sensors are. There is also a camera bump behind this
 part of the display. I saw at least one video deriding this, but I think it's
 an excellent compromise. The bump on the top edge of the display is a nice
 affordance for your fingers when opening the laptop. It also means there's no
@@ -310,7 +310,7 @@ typical computer user the situation is quite good. Most, if not all the
 software included with Windows is Arm native. I do all my browsing with Firefox
 and a native Arm version of it has been [available for many
 years][firefox-arm]. The note-taking tool [Obsidian] has an Arm native version,
-as does [1Password] \(in preview), [Rust Rover], and [Rufus] to name a few.
+as does [1Password] \(in preview), [Rust Rover], and [Rufus] to name a few more.
 
 However, there's still plenty of software out there that assumes Windows = x86.
 For that there's the [Prism x86 emulator built into Windows][prism]. This
@@ -531,6 +531,11 @@ I did revisit the topic about a week later though as I wanted to test an
 extremely basic Makefile in one of my projects. I found [pymake], which seems
 to have been created specifically to improve the `make` experience on Windows.
 I was able to `pip install py-make` and do what I needed to do in my project.
+
+**Update 26 Jul 2024:** [Adam on Mastodon pointed out][voltagex] that GNU make
+has a `bat` file for building with MSVC on Windows. I tried this and it built
+successfully without the need to install any other dependencies. It did however
+build an x86 binary and not an Arm one.
 
 _End rant_
 
@@ -790,3 +795,4 @@ free to get in contact and I'll do my best to answer any questions.
 [qcom-upstream]: https://www.qualcomm.com/developer/blog/2024/05/upstreaming-linux-kernel-support-for-the-snapdragon-x-elite
 [wsl]: https://learn.microsoft.com/en-us/windows/wsl/about
 [yoga-7x]: https://archive.is/kgfke
+[voltagex]: https://aus.social/@voltagex/112832696768580115
