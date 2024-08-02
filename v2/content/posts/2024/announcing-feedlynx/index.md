@@ -119,8 +119,6 @@ you'd be interested in that let me know.
 - [Source code][Feedlynx]
 - [Browser extension code][feedlynx-ext]
 
-----
-
 [^1]: I refer to the feed as an RSS feed throughout but it's actually an Atom feed.
 
 [Feedlynx]: https://github.com/wezm/feedlynx

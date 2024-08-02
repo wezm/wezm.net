@@ -746,8 +746,6 @@ free to get in contact and I'll do my best to answer any questions.
 - [OpenBSD mascot](https://commons.wikimedia.org/wiki/File:OpenBSD_Logo.svg)
 - [Tux](https://commons.wikimedia.org/wiki/File:Tux-shaded.svg)
 
-----
-
 [^1]: The 15-inch is the closest match in display resolution.
 
 [^2]: While Windows on Arm is not new the X Elite CPUs are the first ones to be widely adopted by PC manufacturers.
