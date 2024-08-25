@@ -46,4 +46,4 @@ See the footer for my email and social media links.
 This website would not be possible without the generous work of others:
 
 * [Zola](https://www.getzola.org/) static site compiler.
-* [Manrope](https://manropefont.com/) font.
+* [Manrope](https://www.gent.media/manrope) font.
