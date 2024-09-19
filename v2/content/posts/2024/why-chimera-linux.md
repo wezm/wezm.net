@@ -59,7 +59,7 @@ I believe Arch is still working towards automated packaging. Additionally first
 class support for multiple CPU architectures allows me to run the same system
 on different devices I use such as Raspberry Pis, RISC-V single board
 computers, and hopefully eventually
-[my new ARM based Snapdragon X Elite laptop](@posts/2024/yoga-7x-snapdragon-developer-review/index.md).
+[my new ARM based Snapdragon X Elite laptop](@/posts/2024/yoga-7x-snapdragon-developer-review/index.md).
 
 Having written that all out I guess Chimera feels like a distro that is
 full-featured but also simple enough that you can poke around and understand
