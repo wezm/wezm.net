@@ -2,8 +2,8 @@
 title = "Generate a JSON Feed for a Zola Website"
 date = 2024-09-28T20:50:30+10:00
 
-#[extra]
-#updated = 2024-06-06T08:24:45+10:00
+[extra]
+updated = 2024-09-30T09:08:57+10:00
 +++
 
 [JSON Feed] is a specification for representing an RSS-style feed in JSON. I
@@ -86,7 +86,7 @@ help:
 
 build:
 	zola build
-	jaq --from-file json-feed.jaq public/dump.xml > public/json.feed
+	jaq --from-file json-feed.jaq public/dump.xml > public/feed.json
 	rm public/dump.xml
 
 deploy:
