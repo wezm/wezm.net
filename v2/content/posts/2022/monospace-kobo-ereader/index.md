@@ -3,7 +3,7 @@ title = "Fixing Monospace Text in Kobo eReaders"
 date = 2022-04-10T09:14:50+10:00
 
 [extra]
-updated = 2022-08-22T14:10:50+10:00
+updated = 2024-11-14T18:10:31+10:00
 +++
 
 After verifying with friends that eBook readers do a decent job of rendering
@@ -13,6 +13,18 @@ and started reading… but something was off. Sure enough, after verifying the
 text with CSS rules like `font-family: monospace` in a monospace font.
 
 <!-- more -->
+
+**Update Nov 2024:** Oliver Fink wrote in to tell me that the issue is that
+the font now has to have the font family name "Courier", not just have a
+file name of Courier. [Check out their write-up][olifink] for all the details.
+
+Additionally Roman Frołow wrote in with a tip for a tool that can turn off
+behaviour that overrides the font family in KePub books, which could also
+result in monospace fonts not showing up in books. [Visit this Reddit
+thread][rofrol] for the details.
+
+[olifink]: https://memos.mountmerlin.com/m/Gy8venDj6xej3vabw2idwx
+[rofrol]: https://www.reddit.com/r/kobo/comments/12kgo49/comment/jg4p6gj/
 
 **Update Aug 2022:** I was told and have confirmed myself that the workaround
 described in this post no longer works with the latest firmware. I tested
