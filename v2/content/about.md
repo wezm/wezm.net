@@ -12,8 +12,8 @@ large servers and the operating systems that run upon them.
 [Arch Linux] is my primary desktop operating system, with the [Awesome] window
 manager. However, I have migrated to [Chimera Linux] on my laptop and plan to
 eventually do the same on my desktop. The [server hosting this website][my
-server] runs [Alpine Linux]. You can read more about my OS adventures on
-[bitcannon.net].
+server] runs [Alpine Linux] and is hosted by [Vultr]<sup>(affiliate link)</sup>.
+You can read more about my OS adventures on [bitcannon.net].
 
 [{{ float_image(image="../static/images/keyboards.jpg", float="right", width=128, alt="Photo of my keyboards") }}](../images/keyboards.jpg)
 I prefer typing on mechanical keyboards. I have a small collection in a range
@@ -36,6 +36,7 @@ I am fine with either he/him or they/them pronouns.
 [Read Rust]: https://readrust.net/
 [Rust]: https://www.rust-lang.org/
 [WK870]: https://www.keebmonkey.com/en-au/products/wk870
+[Vultr]: https://www.vultr.com/?ref=7903263
 
 ## Contact
 
