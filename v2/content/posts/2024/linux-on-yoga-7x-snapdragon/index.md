@@ -23,6 +23,11 @@ installed and tested on my Lenovo Yoga Slim 7x.
 
 ### Installation
 
+{% aside(title="Want a full review?", float="right") %}
+See: [A Developer's Review of a Snapdragon X Laptop (Lenovo Yoga Slim 7x)](@/posts/2024/linux-on-yoga-7x-snapdragon/index.md)
+for my detailed review of this laptop.
+{% end %}
+
 Installation alongside Windows was almost as straightforward as a normal Ubuntu
 install. It booted to a graphical live environment with working Wi-Fi.
 

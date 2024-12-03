@@ -4,7 +4,7 @@ date = 2024-07-16T07:19:09+10:00
 template = "yoga7x.html"
 
 [extra]
-updated = 2024-07-26T10:34:50+10:00
+updated = 2024-12-03T20:16:27+10:00
 +++
 
 {{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-on-desk.jpg",
@@ -691,6 +691,11 @@ Chimera Linux and Ubuntu-daily ISO. Perhaps worth noting that the 7x runs good
 old UEFI and after turning off Secure Boot loaded up grub off these Linux
 install disks just fine. However, after selecting an entry in grub it would say
 loading Linux then promptly reboot… definitely not working yet.
+
+**Update Dec 2024:** There's still some rough edges, but Linux now works.
+See
+[my post on running Ubuntu](@/posts/2024/linux-on-yoga-7x-snapdragon/index.md)
+for more details.
 
 All was not lost though. The keen eyed among you may have noticed the OpenBSD
 entry in the benchmark table. Yep OpenBSD runs on it right now. After resizing
