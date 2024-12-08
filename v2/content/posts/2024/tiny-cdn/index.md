@@ -868,6 +868,11 @@ on older hardware[^3], but after some basic testing seemed fine.
 
 ### Provisioning & Configuration
 
+{% aside(title="Want the code?", float="right") %}
+I've [published the pyinfra install scripts to my git forge](https://forge.wezm.net/wezm/chimera-pyinfra)
+if you're curious.
+{% end %}
+
 To provision the servers I used some some [pyinfra] code I'd written previously
 to automate the installation of [Chimera Linux] in virtual machines. I picked
 Chimera Linux because I like it and it's easy to do minimal installs with just
