@@ -1,14 +1,14 @@
 +++
 title = "Building a Tiny CDN With pyinfra and Chimera Linux"
-date = 2024-12-08T10:18:01+10:00
+date = 2024-12-09T10:02:49+10:00
 
 # [extra]
 # updated = 2024-07-26T10:34:50+10:00
 +++
 
-In my quest to make my [linkedlist.org][linkedlist]—my link blog—faster, I set
-up multiple deployments around the world. I used pyinfra to automate the
-process and Chimera Linux as the host operating system. Join me on this
+In my quest to make [linkedlist.org][linkedlist]—my link blog—faster, I set
+up multiple deployments around the world. I used [pyinfra] to automate the
+process and [Chimera Linux] as the host operating system. Join me on this
 adventure in over-engineering to see how I dropped the average response time
 across nine global locations from 807ms to 189ms without spending a fortune.
 
@@ -806,7 +806,7 @@ A digram of what we're building.[^1]
 
 <!-- more -->
 
-I previously wrote about my Linked List project in [Building and Launching My
+For some back story on Linked Listed see: [Building and Launching My
 New Link Blog, linkedlist.org (Twice)](@/posts/2024/linked-list.md). While I
 should have been focussing on writing content for the site, I instead continued
 optimising what is currently a very low traffic website. Since the last post, I
@@ -815,8 +815,8 @@ cached render result is reused for subsequent responses. These cached responses
 are typically generated in about a third of a millisecond (~323µs on average),
 which I was pretty happy with.
 
-The problem was, for my convenience the server that hosts Linked List was
-located in Australia, where I live. Unfortunately, most other people do not
+The problem was, for my convenience the server hosting Linked List was
+located in Australia, where I live. Unfortunately most other people do not
 live in Australia, and we're a long way from everywhere. This meant that
 visitors would often encounter a lot of latency, just due to the
 distances covered. Is this _really_ a problem for a lightweight website with
@@ -849,17 +849,17 @@ My stats in [GoatCounter] showed the top 10 visitor locations were:
 1. Poland
 
 This suggested I'd get a decent improvement in latency for the most number of
-visitors by adding a presence in Europe and the US. It's probably worth noting
+visitors by adding presences in Europe and the US. It's probably worth noting
 at this point that due to the nature of Linked List there is no central
 database, so it's a relatively simple to improve performance by deploying an
 instance in each location to be sped up.
 
 
 Linked List is implemented in Rust and has very meagre system requirements. I
-did some research into bargain-basement VPS's on [LowEndBox]. I found
+did some research into bargain-basement VPS's on [LowEndBox]. I found that
 [RackNerd]<sup>(affiliate link)</sup> were offering [KVM] based VMs with 1Gb of
 RAM[^2], custom ISO support, and US and European data centres for about US$12
-per **year**—probably still more than Cloudflare or Fastly but still cheap. 
+per **year**—probably still more than Cloudflare or Fastly, but still cheap.
 
 I created servers in the New York US datacentre, as well as France. These
 servers were so cheap that I wanted to make sure the network and underlying
@@ -876,10 +876,9 @@ if you're curious.
 To provision the servers I used some some [pyinfra] code I'd written previously
 to automate the installation of [Chimera Linux] in virtual machines. I picked
 Chimera Linux because I like it and it's easy to do minimal installs with just
-the things I want, and nothing more. There were some other benefits
-described later on too.
+the things I want. There were some other benefits described later on too.
 
-The basic steps for provisioning are:
+The basic steps for provisioning were:
 
 1. Boot from the ISO and login as `root`
 2. Bootstrap ssh access to the live environment with [xdotool]:
@@ -898,12 +897,10 @@ includes things like installing packages, creating users, nginx configuration,
 and ensuring services are started.
 
 To deploy the Linked List application I defined a [cports] template to
-build Linked List as a system (apk) package:
+build Linked List as a system ([apk]) package:
 
 ```python
 pkgname = "linkedlist"
-# pkgver = "2.0.0_git20241108"
-# until this is fixed: https://github.com/pyinfra-dev/pyinfra/pull/1233
 pkgver = "2.0.12"
 pkgrel = 1
 _gitrev = "5e1aed8"
@@ -952,7 +949,14 @@ The servers are configured with an additional `apk` repository that points at
 my locally built packages. A pyinfa deployment takes care of building the
 packages and syncing the repo to the servers.
 
-Using Chimera Linux and building the binary through `cports` has some really
+{% aside(title="I thought cross-compiling Rust was easy?", float="right") %}
+Cross-compiling Rust binaries is easy when just Rust is involved, but it gets
+harder when there are system library dependencies. For example,
+[oniguruma](https://github.com/kkos/oniguruma), which
+Linked List uses transitively. Using `cports` makes managing this easy.
+{% end %}
+
+Using Chimera Linux and building the binary through `cports` has some other
 neat benefits:
 
 1. The cports build tool, `cbuild`, does not require a Chimera Linux host.
@@ -965,27 +969,26 @@ neat benefits:
    on. This allows me to build and deploy an updated package from the
    aarch64 WSL2 Chimera install on my laptop as well as my x86\_64 desktop.
 
-Cross-compiling Rust binaries is easy when just Rust is involved, but it gets
-harder when there are system library dependencies. For example, [oniguruma], which
-Linked List uses transitively. Using `cports` makes managing this easy.
-
 ### TLS Certificates
 
 At this point I had the application running on the servers. Next I needed to
 handle certificates for `https`. I usually use [Lego] to manage certificates
 from Let's Encrypt. This posed a challenge though, as each server needed to get
-a copy of the certs.
+a copy of the same certificates.
 
-I explored various options here. It's common problem with a bunch of hosted and
-self-hosted solutions. All seemed too complicated for my need of syncing two
-files between three servers. I also wasn't super keen on one of the internet
-facing app servers having access to the others in order to push updated
-certificates to them.
+I explored various options here. It's a common problem with a bunch of hosted
+and self-hosted solutions. All seemed too complicated for my need of syncing
+two files between three servers.
+
+One option would be to designate one of the servers the primary, and have it sync
+the certificates to the others. However, I wasn't keen on one of the internet
+facing app servers having passwordless (key based) access to the others in
+order to push updated certificates to them.
 
 In the end I revived a [fanless Qotom Mini
 PC](https://qotom.net/product/29.html) I had at home. I again used my pyinfra
 Chimera install scripts to set it up, followed by more pyinfra code to
-configure it. This machine is responsible for managing the certs with Lego. It
+configure it. This machine is responsible for managing the certificates with Lego. It
 pushes out updated files when they're renewed via a renew-hook script. The
 script is managed by pyinfra and templated so that it syncs to each server in
 my pyinfra inventory within the `linkedlist_servers` group:
@@ -1005,8 +1008,9 @@ fi
 ```
 
 The compromise here was that I had to allow the cert server `ssh` access to
-each of the app servers. I created a dedicated user for this purpose. A `doas`
-rule allows this user to restart `nginx` to pick up the updated certificates:
+each of the app servers, but each of the app servers has no access to the
+others. I created a dedicated user for this purpose. A `doas` rule allows this
+user to restart `nginx` to pick up the updated certificates:
 
 ```doas
 permit nopass lego as root cmd dinitctl args restart nginx
@@ -1018,10 +1022,10 @@ The final piece of the puzzle was how to determine which server to send a
 visitor to in order to minimise their latency. One option would be to use an
 edge compute service like [Deno Deploy], and proxy the request to the desired
 host. However, that adds another request, with its own latency—a bit over 20ms
-in my testing. I wanted to avoid the extra hop, so I looked into GeoDNS where
-the source IP of DNS requests is geo-located in order to resolve to an server
-IP that should minimise latency. Geo-location from IP address is imperfect but
-good enough for this project.
+in my testing. I wanted to avoid the extra hop, so I looked into GeoDNS. With
+GeoDNS the source IP of DNS requests is geo-located in order to resolve to an
+server IP that should minimise latency. Geo-location from IP addresses is
+imperfect but good enough for this project.
 
 I settled on [Gcore's Managed DNS service][gcore] as it had the necessary Geo
 features, a generous free tier, and a reasonable paid tier if that was ever
@@ -1034,14 +1038,15 @@ as desired:
    alt="Screenshot of the Gcore DNS configuration. There's three records. The first is assigned to North America, the second Europe, Africa, and South America, the last one is the default fallback record.",
    caption="Gcore DNS configuration for linkedlist.org.") }}
 
-* North America is served by the US server
-* Europe, Africa, and South America are served by the French server
-* Everything else is served by the Australian server
+* North America is served by the US server.
+* Europe, Africa, and South America are served by the French server.
+* Everything else is served by the Australian server.
 
 The default is the AU server because it's an existing server I already had that
 has more RAM and CPU than the others. Some of these mappings were informed by
-results from [PingBear]. I was also able to utilise the health checking in
-Gcore to avoid resolving DNS requests to servers that are down for some reason.
+results from [PingBear] \(down at the time of writing). I was also able to
+utilise the health checking feature in Gcore to avoid resolving DNS requests to
+servers that are down for some reason.
 
 ### Taking It Live
 
@@ -1103,10 +1108,11 @@ I didn't do since the application manages caching itself.
 [^1]: The icons in this diagram are from the [Haiku project][Haiku] used under
     the terms of [their BSD license][haiku-licence]. Haiku is a really cool
     operating system, you should check it out.
-[^2]: This give plenty of headroom as each server is currently only using about 240MiB of memory.
+[^2]: This gave plenty of headroom, as each server is currently only using about 240MiB of memory.
 [^3]: `/proc/cpuinfo` reports: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
 [^4]: I covered `systemd-sysusers` in [a previous post](@/posts/2023/systemd-sysusers-and-chimera-linux.md)
 
+[apk]: https://gitlab.alpinelinux.org/alpine/apk-tools
 [AUR]: https://aur.archlinux.org/
 [Chimera Linux]: https://chimera-linux.org/
 [cports]: https://github.com/chimera-linux/cports
@@ -1121,7 +1127,6 @@ I didn't do since the application manages caching itself.
 [Lego]: https://go-acme.github.io/lego/
 [linkedlist]: https://linkedlist.org/
 [LowEndBox]: https://lowendbox.com/
-[oniguruma]: https://github.com/kkos/oniguruma
 [PingBear]: https://pingbear.com/
 [pyinfra]: https://pyinfra.com/
 [RackNerd]: https://my.racknerd.com/aff.php?aff=12841
