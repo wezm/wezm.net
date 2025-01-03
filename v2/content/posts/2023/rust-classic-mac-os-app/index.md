@@ -111,7 +111,7 @@ the crate compatible with `no_std`, which allows it to be used in embedded
 environments and WebAssembly.
 
 As something of a test-bed I created some
-WebAssembly bindings and built a page that allows you inspect MacBinary
+WebAssembly bindings and built a page that allows you to inspect MacBinary
 files online, with all parsing done client-side via the crate. You can
 try it out at: <https://7bit.org/macbinary/>
 
