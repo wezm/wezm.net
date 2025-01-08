@@ -799,7 +799,7 @@ across nine global locations from 807ms to 189ms without spending a fortune.
        aria-label="Certs" /></g></svg>
 <figcaption>
 
-A digram of what we're building.[^1]
+A diagram of what we're building.[^1]
 
 </figcaption>
 </figure>
