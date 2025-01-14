@@ -3,7 +3,7 @@ title = "Replicating My Alacritty Appearance in Ghostty"
 date = 2025-01-10T08:54:40+10:00
 
 [extra]
-#updated = 2024-07-26T09:58:10+10:00
+updated = 2025-01-15T09:51:03+10:00
 +++
 
 [Ghostty] by Mitchell Hashimoto is the new hotness in the terminal emulator
@@ -61,9 +61,16 @@ emulators can be found in my dotfiles repo:
 - [Alacritty](https://github.com/wezm/dotfiles/blob/master/config/alacritty/alacritty.yml) (I need to migrate this one to TOML)
 - [Ghostty](https://github.com/wezm/dotfiles/blob/master/config/ghostty/config)
 
+**Update 15 Jan 2025:** I have suspended my use of Ghostty for now, as [the
+text rendering is not right][rendering-bug]. I've been staring at PragmataPro
+for more than a decade, so the difference from how I expect it to look keeps
+distracting me. If that issue is fixed I will likely revisit Ghostty as I did
+enjoy some of the features.
+
 [Alacritty]: https://alacritty.org/
 [awesomewm]: https://awesomewm.org/
 [Ghostty]: https://ghostty.org/
 [Kitty]: https://sw.kovidgoyal.net/kitty/
 [mdcat]: https://github.com/swsnr/mdcat
+[rendering-bug]: https://github.com/ghostty-org/ghostty/issues/4504#issuecomment-2589154353
 [Zig]: https://ziglang.org/
