@@ -3,8 +3,8 @@ title = "Ubuntu Linux on Snapdragon X Laptop (Lenovo Yoga Slim 7x)"
 date = 2024-12-01T11:17:03+10:00
 # template = "yoga7x.html"
 
-# [extra]
-# updated = 2024-07-26T10:34:50+10:00
+[extra]
+updated = 2025-02-17T16:16:06+10:00
 +++
 
 {{ figure(image="posts/2024/linux-on-yoga-7x-snapdragon/fastfetch.png",
@@ -24,7 +24,7 @@ installed and tested on my Lenovo Yoga Slim 7x.
 ### Installation
 
 {% aside(title="Want a full review?", float="right") %}
-See: [A Developer's Review of a Snapdragon X Laptop (Lenovo Yoga Slim 7x)](@/posts/2024/linux-on-yoga-7x-snapdragon/index.md)
+See: [A Developer's Review of a Snapdragon X Laptop (Lenovo Yoga Slim 7x)](@/posts/2024/yoga-7x-snapdragon-developer-review/index.md)
 for my detailed review of this laptop.
 {% end %}
 
