@@ -69,6 +69,8 @@ h1,h2,h3,h4 {
   font-family: $heading-family;
   margin: $heading-margin;
   line-height: 1.2;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 h1,h2 {
   font-weight: 300;
