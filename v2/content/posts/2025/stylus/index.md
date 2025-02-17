@@ -3,7 +3,7 @@ title = "Making the Web More Readable With Stylus"
 date = 2025-02-17T10:21:22+10:00
 
 [extra]
-#updated = 2025-01-15T09:51:03+10:00
+updated = 2025-02-17T13:14:49+10:00
 +++
 
 [Stylus] is an open-source browser extension for managing and applying "user
@@ -13,7 +13,7 @@ Stylus to make my browsing experience nicer.
 
 <!-- more -->
 
-Stylus has the ability to share and use shared styles, but I just use styles
+Stylus has the ability to share and use shared-styles, but I just use styles
 I write myself. Styles can by applied to all sites, specific sub-domains,
 domains, or domains + paths. I note the matching rule of each style at the
 top of each entry.
@@ -126,7 +126,7 @@ html {
 
 **Applies to:** URLs on the domain: [goughlui.com](https://goughlui.com)
 
-Uses a Times New Roman font by default, which it a bit ugly on my system.
+Uses a Times New Roman font by default, which is a bit ugly on my system.
 Replace with a nicer serif font.
 
 ```css
@@ -164,8 +164,8 @@ DIV.ArticleText {
 
 **Applies to:** URLs on the domain: [news.ycombinator.com](https://news.ycombinator.com)
 
-The post text in Hacker News self-posts like "Ask HN" posts is shown in light grey.
-Fix this.
+The post text in Hacker News self-posts like "Ask HN" posts is shown in barely
+legible light grey. Fix this.
 
 ```css
 /* Make HN post text readable */
@@ -251,7 +251,7 @@ This is a hosted Matrix instance using the Element client.
 * Use the system emoji font ([JoyPixels]) instead of the heinous Noto Color Emoji.
 * Use the system monospace font ([PragmataPro]) instead of a custom one.
 * Reduce line height of monospace text to match other places monospace text shown on my system.
-* Hide the space wasting "Spaces" bar.
+* Stop the aptly named "Spaces" bar from wasting space.
 
 ```css
 body {
