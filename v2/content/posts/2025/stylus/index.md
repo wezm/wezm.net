@@ -160,7 +160,7 @@ DIV.ArticleText {
 }
 ```
 
-### news.ycombinator.com
+### news.ycombinator&#8203;.com
 
 **Applies to:** URLs on the domain: [news.ycombinator.com](https://news.ycombinator.com)
 
@@ -177,9 +177,10 @@ Fix this.
 }
 ```
 
-### https://okmij.org/ftp/papers/DreamOSPaper.html
+### https://okmij.org&#8203;/ftp/papers/&#8203;DreamOSPaper.html
 
-**Applies to:** URLs starting with: <https://okmij.org/ftp/papers/DreamOSPaper.html>
+**Applies to:** URLs starting with:
+[https://okmij.org/ftp/papers/&#8203;DreamOSPaper.html](https://okmij.org/ftp/papers/DreamOSPaper.html)
 
 Readable `max-width`.
 
@@ -226,7 +227,7 @@ html, body {
 }
 ```
 
-### www.bleepingcomputer.com
+### www.&#8203;bleepingcomputer&#8203;.com
 
 **Applies to:** URLs on the domain: [www.bleepingcomputer.com](https://www.bleepingcomputer.com)
 
