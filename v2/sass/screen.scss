@@ -56,6 +56,15 @@ pre[data-lang]:after {
 	content: attr(data-lang);
 	text-transform: capitalize;
 }
+pre[data-lang="css"]:after,
+pre[data-lang="html"]:after,
+pre[data-lang="json"]:after,
+pre[data-lang="toml"]:after,
+pre[data-lang="xml"]:after,
+pre[data-lang="yaml"]:after {
+	text-transform: uppercase;
+}
+
 h1,h2,h3,h4 {
   font-family: $heading-family;
   margin: $heading-margin;
