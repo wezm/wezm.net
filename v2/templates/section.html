@@ -3,7 +3,13 @@
 {% block title %}{{ section.title }} - {{ config.title }}{% endblock %}
 
 {% block body %}
-<h1 class="logo"><a href="{{ config.base_url }}/" class="no-border hover-underline">👨‍💻 {{ config.title }}</a></h1>
+<header>
+  <h1 class="logo">
+    <a href="{{ config.base_url }}/" class="no-border hover-underline"
+      >👨‍💻 {{ config.title }}</a
+    >
+  </h1>
+</header>
 
 <nav>
   {% for ancestor in section.ancestors %}
