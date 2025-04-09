@@ -4,7 +4,7 @@ date = 2024-12-01T11:17:03+10:00
 # template = "yoga7x.html"
 
 [extra]
-updated = 2025-02-17T16:16:06+10:00
+updated = 2025-04-09T19:47:25+10:00
 +++
 
 {{ figure(image="posts/2024/linux-on-yoga-7x-snapdragon/fastfetch.png",
@@ -62,7 +62,7 @@ try most common functionality to get an idea of what works though.
 
 #### Wi-Fi
 
-I was about to connect to my 5Ghz AP without issue. A [speed test] showed very
+I was able to connect to my 5Ghz AP without issue. A [speed test] showed very
 similar results between Windows and Linux (although Linux was a bit faster):
 
 - Linux: 137 Mbps down, 47 Mbps up
@@ -106,8 +106,8 @@ trackpad. The brightness and volume controls work on the keyboard.
 
 As mentioned above, installing and running `qcom-firmware-extract` copies
 firmware from the Windows installation and fixed battery level reporting. I
-can't comment on battery life yet but it did seem to run a bit warmer than
-Windows, although not as hot as
+can't comment on battery life yet, but it did seem to run a bit warmer than
+Windows—although not as hot as
 [my early testing of OpenBSD](@/posts/2024/yoga-7x-snapdragon-developer-review/index.md#non-windows-operating-systems).
 
 #### Other
@@ -122,9 +122,9 @@ Linux support for these laptops is coming along quite nicely, and if you're
 willing to put up with a few rough edges Ubuntu is quite usable. No doubt
 things will continue to improve.
 
-There's been working happen in other distros too. Relevant to my interests
-[Jami Kettunen has also being working on X1E support in Chimera Linux][JamiKettunen]
-and has that running on a HP OmniBook X. It's on my TODO list to try out Jami's
+There's been work happening in other distros too. Relevant to my interests,
+[Jami Kettunen has been working on X1E support in Chimera Linux][JamiKettunen]
+and has that running on a HP OmniBook X. It's on my todo list to try out Jami's
 work on my Yoga 7x.
 
 {{ figure(image="posts/2024/linux-on-yoga-7x-snapdragon/chimera-kde-plasma-x1e.png",
