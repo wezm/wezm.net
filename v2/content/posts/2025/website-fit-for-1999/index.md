@@ -3,11 +3,11 @@ title = "Building a Website Fit for 1999"
 date = 2025-04-21T08:29:24+10:00
 
 [extra]
-updated = 2025-04-21T13:03:36+10:00
+updated = 2025-04-21T13:49:56+10:00
 +++
 
-Over the last week I've had a _lot_ of fun building a little retro-themed
-website that I'm hosting at home. Inspired by [Ruben's Retro Corner][ruben]
+Over the last week I've had a _lot_ of fun building a little [retro-themed
+website][home] that I'm hosting at home. Inspired by [Ruben's Retro Corner][ruben]
 I've been meaning to do this for a while, and actually started on it in June
 last year. More recently Joel Humphries shared on [The Sizzle] forum that he'd
 built [a little site][joel] that he was hosting at home on a Raspberry Pi. This
@@ -65,8 +65,8 @@ about the server on the home page:
    link="posts/2025/website-fit-for-1999/untitled-website.png",
    width="655",
    border=1,
-   alt="TODO",
-   caption="TODO") }}
+   alt="Screenshot of Untitled Website showing information about the server and a brief FAQ",
+   caption="Server stats and 88×31 buttons!") }}
 
 I used the [MiniJinja] CLI, [jaq], and [make] to regenerate the static HTML from templates,
 funnelling the dynamic content into a JSON file.
@@ -215,7 +215,7 @@ UTF-8, like Netscape 3 most of the content is fine as it is just ASCII, but the
 UTF-8 encoded chars come out using a Latin-1 rendition, such as "Wesâ\*™
 Nonsense" for "Wes’ Nonsense". For a silly website, that's good enough.
 
-Along with the static content I included some dynamic content. The [home page]
+Along with the static content I included some dynamic content. The [home page][home]
 shows live energy information about the Qotom server. This is pulled from an
 [Athom smart plug][athom] running [Tasmota] that the server is plugged into.
 The Rust server refreshes this information every 10s. The [about page] shows
@@ -284,8 +284,10 @@ stuff has changed.
 
 I still want to add more content on the [Computer] and [Calculator] pages, but
 decided it was time to return to slightly less frivolous projects for a bit.
-Finally, all [the code is published on my git forge][code], including the Nginx
-virtual host configuration.
+If you haven't checked out the site itself, you can do so at:
+<http://home.wezm.net/~wmoore/>.
+
+Finally, all [the code is published on my git forge][code].
 
 [Dinit]: https://davmac.org/projects/dinit/
 [cport]: https://github.com/wezm/cports/blob/wezm/user/nonsense/template.py
@@ -316,5 +318,5 @@ virtual host configuration.
 [HTML4]: https://www.w3.org/TR/html401/cover.html
 [cgi]: https://en.wikipedia.org/wiki/Common_Gateway_Interface
 [pineapples]: http://home.wezm.net/~wmoore/pineapples.html
-[home page]: http://home.wezm.net/~wmoore/
+[home]: http://home.wezm.net/~wmoore/
 [about page]: http://home.wezm.net/~wmoore/cgi-bin/about.cgi
