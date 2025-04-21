@@ -2,8 +2,8 @@
 title = "Building a Website Fit for 1999"
 date = 2025-04-21T08:29:24+10:00
 
-#[extra]
-#updated = 2025-02-17T13:14:49+10:00
+[extra]
+updated = 2025-04-21T13:03:36+10:00
 +++
 
 Over the last week I've had a _lot_ of fun building a little retro-themed
@@ -169,7 +169,7 @@ Nginx does the static files.
 ### The Joy of HTML4
 
 Here's where the fun really began. I thoroughly enjoyed filling out the
-pages on what was now known as "Wes' Nonsense Website'. Nonsense in the
+pages on what was now known as "Wes' Nonsense Website"—nonsense in the
 _extravagant foolishness or frivolity_ sense. It was genuinely fun to
 write [about growing pineapples][pineapples], include pixelated GIF icons, and the
 odd animated GIF.
@@ -177,7 +177,8 @@ odd animated GIF.
 Coding in HTML4 Transitional is somewhat freeing. CSS is great, but it's large
 and sprawling. Throwing that away and sticking to only what you can achieve
 with a comparatively small set of HTML tags and their attributes dramatically
-reduces the scope of things.
+reduces the scope of things. Also feels a bit cheeky to mix content and style
+with wild abandon.
 
 It wouldn't be the classic web without feeding your pages through the
 [W3C Validator](https://validator.w3.org/). Amazingly the validator still
