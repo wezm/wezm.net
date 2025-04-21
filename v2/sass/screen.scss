@@ -29,7 +29,7 @@ body.home {
   max-width: 1000px;
 }
 pre, code {
-  font-family: "Pragmata Pro", "Pragmata Pro Mono", "JetBrains Mono", "Iosevka", "Consolas", monospace;
+  font-family: "PragmataPro", "PragmataPro Mono", "JetBrains Mono", "Iosevka", "Consolas", monospace;
 }
 :not(pre) > code {
   background-color: #ffedf0;
@@ -146,6 +146,9 @@ nav a:link, nav a:visited {
   }
 }
 article {
+  h1,h2,h3,h4 {
+    clear: both;
+  }
   h2,h3 {
     a:link, a:visited {
       color: currentColor;
@@ -365,6 +368,9 @@ ul.projects {
 .image-right {
   float: right;
   margin: 0.5em 0 1em 1em;
+}
+.float-left {
+  float: left;
 }
 .float-right {
   float: right;

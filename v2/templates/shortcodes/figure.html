@@ -5,6 +5,9 @@
 {% if pixelated %}
   {% set figure_class = figure_class | concat(with="figure-pixelated") %}
 {% endif %}
+{% if float %}
+  {% set figure_class = figure_class | concat(with="float-" ~ float) %}
+{% endif %}
 <figure class="{{ figure_class | join(sep=" ") }}">
   {% if link is matching("^https?:") %}
   <a href="{{ link }}">
