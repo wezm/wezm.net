@@ -2,8 +2,8 @@
 title = "Trying to Get Chimera Linux Running on Pentium Class Hardware"
 date = 2025-05-04T08:09:28+10:00
 
-# [extra]
-# updated = 2025-04-21T13:49:56+10:00
+[extra]
+updated = 2025-05-04T19:51:02+10:00
 +++
 
 Since declaring in [my last post](@/posts/2025/website-fit-for-1999/index.md)
@@ -41,12 +41,12 @@ website][retro-site].
 They are powered by an AMD Geode LX800 CPU clocked at 500Mhz with 256Mb of RAM.
 The Geode is [mostly an i686][i686-geode] class 32-bit x86 CPU. Instead
 of installing an OS that I know works on them like [OpenWRT] or [NetBSD] I have
-spent that last week and bit bringing up Chimera Linux on i586 (Pentium).
+spent the last week and a bit bringing up Chimera Linux on i586 (Pentium).
 
 I wanted to use Chimera Linux because:
 
 1. I was already hosting my retro site with it.
-1. I has already packaged the Rust binary that serves part of the site.
+1. I had already packaged the Rust binary that serves part of the site.
    Chimera makes cross-compiling that package super easy, as well as service
    monitoring with [Dinit].
 1. I thought it would be fun to use a modern distro on Pentium class hardware.
@@ -59,9 +59,10 @@ case it happens to be useful.
 
 <!-- more -->
 
-As I was working this out as I went, I made a few missteps along the way
-had to repeat the process a few times (I compiled LLVM _many_ times).
-I'll mostly leave those out, and describe the process that I ended up doing.
+As I was working this out as I went, I made a few missteps along the way and
+had to repeat the process a few times (I compiled LLVM _many_ times). I'll
+mostly leave those missteps out, and describe the process that ended up
+working.
 
 All of this work was completed on my Arch Linux system. Since the Chimera
 tooling does everything in a sandbox, this works fine. These are the steps
@@ -70,10 +71,10 @@ I took:
 1. Add a new x86 build profile.
 1. Cross-compile a toolchain via the `base-cbuild` package.
     1. Update various packages to accept the x86 architecture.
-1. Re-build the toolchain in a native sandbox
-1. Attempt to build `base-full` addressing issues along the way.
+1. Re-build the toolchain in a native sandbox.
+1. Attempt to build `base-full`, addressing issues along the way.
 1. Bootstrap Rust and Cargo.
-1. Build `fastfetch` addressing issues along the way.
+1. Build `fastfetch`, addressing issues along the way.
 1. Build `limine` and `grub`.
 1. Define and build a Linux kernel.
 1. Update `chimera-live` to produce an ISO.
@@ -177,7 +178,7 @@ Next was to build `base-full`, which provides the core packages for a Chimera sy
 This was a somewhat iterative process of run `./cbuild -A x86 pkg main/base-full` until
 a package failed to build, and then work out how to fix it. The fixes were usually one of:
 
-- Fix the package to make it build (unrelated to x86) like setting<br>
+- Fix the package to make it build (unrelated to x86), like setting<br>
   `-DCMAKE_POLICY_VERSION_MINIMUM=3.5` to make it build under CMake 4.0.
 - Patch the package so that it builds on x86. Patches from Alpine and Debian
   were often helpful here.
