@@ -43,6 +43,7 @@ pre {
   overflow: auto;
   font-size: 14px;
   color: #fcfcfc;
+  background-color: #2b303b;
   position: relative;
 }
 pre[data-lang]:after {
@@ -58,6 +59,7 @@ pre[data-lang]:after {
 }
 pre[data-lang="css"]:after,
 pre[data-lang="html"]:after,
+pre[data-lang="ini"]:after,
 pre[data-lang="json"]:after,
 pre[data-lang="toml"]:after,
 pre[data-lang="xml"]:after,
