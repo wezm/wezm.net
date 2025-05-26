@@ -18,3 +18,4 @@ tmp/*
 output/weather.json
 .sass-cache
 crash.log
+/bundle

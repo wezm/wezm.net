@@ -25,9 +25,8 @@ Trim CLI screenshots:
 Setup
 -----
 
-    frum install (then cd ..; cd -)
-    gem install bundler --no-doc --version '~> 1'
     bundle install
+    bundle exec ..
 
 Building and Deployment
 -----------------------
