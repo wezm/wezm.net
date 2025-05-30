@@ -3,7 +3,7 @@ title = "Building a Website Fit for 1999"
 date = 2025-04-21T08:29:24+10:00
 
 [extra]
-updated = 2025-04-21T13:49:56+10:00
+updated = 2025-05-30T17:54:08+10:00
 +++
 
 Over the last week I've had a _lot_ of fun building a little [retro-themed
@@ -60,6 +60,10 @@ This one was hosted by the [mini fanless Qotom computer][qotom] running
 [Chimera Linux] already sitting on my desk. I wanted it to be _slightly_ more
 interesting than just static HTML so I included `free` and `uptime` information
 about the server on the home page:
+
+**Update 30 May 2025:** I migrated the hosting of the site to another fanless computer
+I had in a drawer today: a [LattePanda V1 single-board computer][LattePanda]. See
+[the about page][about page] for more info.
 
 {{ figure(image="posts/2025/website-fit-for-1999/untitled-website.png",
    link="posts/2025/website-fit-for-1999/untitled-website.png",
@@ -320,3 +324,4 @@ Finally, all [the code is published on my git forge][code].
 [pineapples]: http://home.wezm.net/~wmoore/pineapples.html
 [home]: http://home.wezm.net/~wmoore/
 [about page]: http://home.wezm.net/~wmoore/cgi-bin/about.cgi
+[LattePanda]: https://www.lattepanda.com/lattepanda-v1
