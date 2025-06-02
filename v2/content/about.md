@@ -4,32 +4,45 @@ title = "About"
 
 {{ resize_image(image="../static/images/Photo of Wesley Moore.jpg", width=1600, quality=60, alt="Photo of me against a Boab tree in Broome, Western Australia") }}
 
-I'm a software developer originally from Melbourne, Australia. I now live on
-the Sunshine Coast in Queensland. I like open-source software and warm weather.
-I enjoy tinkering with computers, ranging from small microcontrollers up to
-large servers and the operating systems that run upon them.
+Hi, I'm Wes (he/him) I'm a software developer originally from Melbourne,
+Australia. I now live on the Sunshine Coast in Queensland. I like open-source
+software and warm weather. I enjoy tinkering with computers, ranging from small
+microcontrollers up to large servers and the operating systems that run upon
+them. I like to take photos around my home and places I visit. The better ones
+end up on [Flickr].
 
-[Arch Linux] is my primary desktop operating system, with the [Awesome] window
-manager. However, I have migrated to [Chimera Linux] on my laptop and plan to
-eventually do the same on my desktop. The [server hosting this website][my
-server] runs [Alpine Linux] and is hosted by [Vultr]<sup>(affiliate link)</sup>.
-You can read more about my OS adventures on [bitcannon.net].
+[Arch Linux] is my primary desktop operating system, with the [COSMIC] desktop.
+However, I have migrated to [Chimera Linux] on my laptop and plan to eventually
+do the same on my desktop. I detailed my desktop computing stack in more detail
+in the post [Tech Stack 2024](@/posts/2024/tech-stack/index.md).
+
+The server hosting this website runs [Alpine Linux] and is hosted by
+[Vultr]<sup>(affiliate link)</sup>. I've written more about my personal server
+infrastructure in
+[Rebuilding My Personal Infrastructure With Alpine Linux and Docker][my server].
+
+This site is built with the [Zola] static site compiler and [the source
+code][src] is published on GitHub. I have some other websites as well: you can
+read more about my operating system adventures on [bitcannon.net]. I maintain a
+custom-built link blog at [linkedlist.org](https://linkedlist.org/). Finally I
+have a retro themed website hosted at home on a LattePanda single board
+computer. It's a lot of fun to work on and is an ode to late 90s and early
+2000s websites and the computers we used to make
+them:<br><http://home.wezm.net/~wmoore/>.
 
 [{{ float_image(image="../static/images/keyboards.jpg", float="right", width=128, alt="Photo of my keyboards") }}](../images/keyboards.jpg)
 I prefer typing on mechanical keyboards. I have a small collection in a range
-of sizes. Almost all are fully programmable. My current favourite is a [WK870] with
-Gateron G Pro 2.0 brown switches, which has had the factory controller replaced
-with a programmable one.
+of sizes. Almost all are fully programmable. My current favourite is a [WK870]
+with Gateron G Pro 2.0 brown switches, which has had the factory controller
+replaced with a programmable one.
 
 [Rust] is my preferred programming language. I am fairly active in the Rust
 community and used to curate [Read Rust], a website that collects interesting
-posts from the Rust community.
-
-I am fine with either he/him or they/them pronouns.
+posts about Rust.
 
 [Alpine Linux]: https://alpinelinux.org/
 [Arch Linux]: https://www.archlinux.org/
-[Awesome]: https://awesomewm.org/
+[COSMIC]: https://system76.com/cosmic/
 [bitcannon.net]: https://bitcannon.net/
 [Chimera Linux]: https://chimera-linux.org/
 [my server]: https://www.wezm.net/technical/2019/02/alpine-linux-docker-infrastructure/
@@ -37,6 +50,9 @@ I am fine with either he/him or they/them pronouns.
 [Rust]: https://www.rust-lang.org/
 [WK870]: https://www.keebmonkey.com/en-au/products/wk870
 [Vultr]: https://www.vultr.com/?ref=7903263
+[Zola]: https://www.getzola.org/
+[src]: https://github.com/wezm/wezm.net
+[Flickr]: https://www.flickr.com/photos/wezm/
 
 ## Contact
 
@@ -46,5 +62,5 @@ See the footer for my email and social media links.
 
 This website would not be possible without the generous work of others:
 
-* [Zola](https://www.getzola.org/) static site compiler.
+* [Zola] static site compiler.
 * [Manrope](https://www.gent.media/manrope) font.
