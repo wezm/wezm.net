@@ -3,35 +3,37 @@
 {% block title %}{{ section.title }} - {{ config.title }}{% endblock %}
 
 {% block body %}
-<header>
-  <h1 class="logo">
-    <a href="{{ config.base_url }}/" class="no-border hover-underline">👨‍💻 {{ config.title }}</a>
-  </h1>
-</header>
-
-<nav>
-  {% for ancestor in section.ancestors %}
-    {% set section = get_section(path=ancestor) %}
-    {% if section.path == "/" %}
-      <a href="{{ config.base_url }}{{ section.path }}" class="no-border hover-underline">Home</a>
-    {% else %}
-      <span class="breadcrumb-sep">/</span>
-      <a href="{{ config.base_url }}/{{ section.path }}" class="no-border hover-underline">{{ section.title }}</a>
-    {% endif %}
-  {% endfor %}
-</nav>
-
 <main class="{{ section.extra.main_class | default(value="") }}">
+  {% include "nav.html" %}
+  <header>
+    <h1 class="logo">
+      <a href="{{ config.base_url }}/" class="no-border hover-underline">👨‍💻 {{ config.title }}</a>
+    </h1>
+  </header>
+
   <h2>{{ section.title }}</h2>
 
   {{ section.content | safe }}
 
-  {% for page in section.pages %}
-    {% include "article.html" %}
-  {% endfor %}
-
+  {% set prev = "" %}
   {% for page in paginator.pages %}
-    {% include "article.html" %}
+    {% set year = page.date | date(format="%Y") %}
+    {% if year != prev %}
+      {% if prev != "" %}
+      </ul>
+      {% endif %}
+      {% set_global prev = year %}
+      {% if year != section.title %}
+      <h3>{{ year }}</h3>
+      {% endif %}
+      <ul class="list-style-none">
+    {% endif %}
+
+    {# include "article.html" #}
+    <li>
+        <time class="time-fixed" datetime="{{ page.date }}">{{ page.date | date(format="%d %b %Y") }}</time>
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+    </li>
   {% endfor %}
 </main>
 {% endblock %}

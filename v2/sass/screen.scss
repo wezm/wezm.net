@@ -1,6 +1,7 @@
 $heading-margin: 0.25em 0 0.5em 0;
 $heading-family: "Manrope VF", sans-serif;
 $link-color: hsl(204, 50.8%, 26.1%);
+$monospace: "PragmataPro Mono", "PragmataPro", "JetBrains Mono", "Iosevka", "Consolas", monospace;
 
 @font-face {
   font-family: "Manrope VF";
@@ -14,22 +15,43 @@ html {
   min-height: 100%;
 }
 body {
-  margin:40px auto;
-  max-width: 800px;
-  line-height:1.6;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
   font-family: "Manrope VF", sans-serif;
-  font-size:18px;
-  color:#444;
-  padding:0 10px;
+  font-size: 18px;
+  color: #444;
   display: flex;
   flex-direction: column;
   min-height: 100%;
+
+  border: 3px solid black;
+  border-image: linear-gradient(in hsl longer hue 90deg, red 0 100%) 3;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
 }
-body.home {
-  max-width: 1000px;
+main {
+  max-width: 800px;
+  margin: 0 auto 0;
+  padding: 0 10px;
+}
+#nav {
+  font-size: 10pt;
+  font-weight: 900;
+  margin-bottom: 2em;
+  margin-bottom: 2rem;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 0.5em;
+    min-height: 44px;
+    line-height: 44px;
+  }
 }
 pre, code {
-  font-family: "PragmataPro", "PragmataPro Mono", "JetBrains Mono", "Iosevka", "Consolas", monospace;
+  font-family: $monospace;
 }
 :not(pre) > code {
   background-color: #ffedf0;
@@ -84,6 +106,8 @@ main img {
   max-width: 100%;
 }
 main.home {
+  max-width: 1000px;
+
   h1 {
     text-align: center;
     font-size: 5em;
@@ -429,8 +453,28 @@ ul.projects {
 .mastodon-embed {
   display: block;
 }
+.list-style-none {
+    padding: 0;
+    list-style: none;
+}
+.time-fixed {
+    font-family: $monospace;
+    font-size: 9pt;
+    font-weight: bold;
+    color: #666;
+    text-transform: uppercase;
+    margin-right: 1em;
+}
 
+@media screen and (max-width: 1000px) {
+  #nav {
+    font-size: 13pt;
+  }
+}
 @media screen and (max-width: 800px) {
+  main {
+    margin: 0;
+  }
   .tagline {
     display: initial;
   }
@@ -452,6 +496,10 @@ ul.projects {
         border-bottom: none;
       }
     }
+  }
+  .time-fixed {
+      display: block;
+      margin-top: 1em;
   }
 }
 @media screen and (max-width: 375px) {
@@ -505,7 +553,5 @@ ul.projects {
   }
   body {
     color: black;
-    // margin: 0;
-    // max-width: auto;
   }
 }

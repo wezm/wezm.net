@@ -27,25 +27,14 @@
 {% endblock %}
 
 {% block body %}
-<header>
-  <h1 class="logo">
-    <a href="{{ config.base_url }}/" class="no-border hover-underline">👨‍💻 {{ config.title }}</a>
-  </h1>
-</header>
-
-<nav>
-  {% for ancestor in page.ancestors %}
-    {% set section = get_section(path=ancestor) %}
-    {% if section.path == "/" %}
-      <a href="{{ config.base_url }}{{ section.path }}" class="no-border hover-underline">Home</a>
-    {% else %}
-      <span class="breadcrumb-sep">/</span>
-      <a href="{{ config.base_url }}/{{ section.path }}" class="no-border hover-underline">{{ section.title }}</a>
-    {% endif %}
-  {% endfor %}
-</nav>
-
 <main>
+  {% include "nav.html" %}
+  <header>
+    <h1 class="logo">
+      <a href="{{ config.base_url }}/" class="no-border hover-underline">👨‍💻 {{ config.title }}</a>
+    </h1>
+  </header>
+
   <article id="{{ page.slug }}">
     <h2>
       <a href="{{ page.permalink }}">{{ page.title }}</a>
