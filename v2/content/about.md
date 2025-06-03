@@ -4,7 +4,7 @@ title = "About"
 
 {{ resize_image(image="../static/images/Photo of Wesley Moore.jpg", width=1600, quality=60, alt="Photo of me against a Boab tree in Broome, Western Australia") }}
 
-Hi, I'm Wes (he/him) I'm a software developer originally from Melbourne,
+Hi, I'm Wes (he/him). I'm a software developer originally from Melbourne,
 Australia. I now live on the Sunshine Coast in Queensland. I like open-source
 software and warm weather. I enjoy tinkering with computers, ranging from small
 microcontrollers up to large servers and the operating systems that run upon
@@ -24,8 +24,8 @@ infrastructure in
 This site is built with the [Zola] static site compiler and [the source
 code][src] is published on GitHub. I have some other websites as well: you can
 read more about my operating system adventures on [bitcannon.net]. I maintain a
-custom-built link blog at [linkedlist.org](https://linkedlist.org/). Finally I
-have a retro themed website hosted at home on a LattePanda single board
+custom-built link blog at [linkedlist.org](https://linkedlist.org/). Finally, I
+have a retro-themed website hosted at home on a LattePanda single board
 computer. It's a lot of fun to work on and is an ode to late 90s and early
 2000s websites and the computers we used to make
 them:<br><http://home.wezm.net/~wmoore/>.
