@@ -33,11 +33,12 @@ them:<br><http://home.wezm.net/~wmoore/>.
 [{{ float_image(image="../static/images/keyboards.jpg", float="right", width=128, alt="Photo of my keyboards") }}](../images/keyboards.jpg)
 I prefer typing on mechanical keyboards. I have a small collection in a range
 of sizes. Almost all are fully programmable. My current favourite is a [WK870]
-with Gateron G Pro 2.0 brown switches, which has had the factory controller
-replaced with a programmable one.
+with Gateron G Pro 2.0 brown switches. This keyboard is not programmable, so I
+use [keyd] to do low-level key-mapping on Linux. You can see
+[my configuration][keyd.conf] in my [dotfiles repo][dotfiles].
 
 [Rust] is my preferred programming language. I am fairly active in the Rust
-community and used to curate [Read Rust], a website that collects interesting
+community and used to curate [Read Rust], a website that collected interesting
 posts about Rust.
 
 [Alpine Linux]: https://alpinelinux.org/
@@ -53,6 +54,9 @@ posts about Rust.
 [Zola]: https://www.getzola.org/
 [src]: https://github.com/wezm/wezm.net
 [Flickr]: https://www.flickr.com/photos/wezm/
+[keyd]: https://github.com/rvaiya/keyd
+[dotfiles]: https://github.com/wezm/dotfiles
+[keyd.conf]: https://github.com/wezm/dotfiles/blob/master/keyd.conf
 
 ## Contact
 
