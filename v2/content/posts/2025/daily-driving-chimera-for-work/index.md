@@ -23,16 +23,16 @@ manager</a>, and <a href="https://davmac.org/projects/dinit/">dinit binary init
 system</a>. The whole system is built with the <a href="https://llvm.org/">LLVM</a> toolchain.
 {% end %}
 
-Since I started running the first alpha release of [Chimera Linux] in 2023, my
-goal has been to eventually migrate to Chimera as my primary distro for my job
-as a programmer, as well as personal computing. A recent trip to Central
-Queensland afforded an opportunity to test it out. The trip was over two weeks
-and involved working remotely as usual during the week and sightseeing on the
-weekends.
+Since [I started running the first alpha][alpha] release of [Chimera Linux] in
+2023, my goal has been to eventually migrate to Chimera as my primary operating
+system. This includes personal tinkering as well as for my job as a programmer.
+A recent trip to Central Queensland afforded an opportunity to test the waters
+of daily driving Chimera Linux for work. The trip spanned two weeks and involved
+working remotely (as usual) during the week, and sightseeing on the weekends.
 
 This post details some of the barriers that I encountered and how I worked
-around them. While the post is about Chimera Linux, the details probably apply
-to most distributions using [musl libc][musl].
+around them. While the post is focussed on Chimera Linux, the details probably
+apply to most distributions using [musl libc][musl].
 
 <!-- more -->
 
@@ -58,18 +58,17 @@ everything I had open is gone. Apparently [I'm not the only one
 experiencing the issue][win-crash]. I've tried various things to fix it, including a
 clean reinstall, but the issue remains.
 
-After the reinstall failed to fix Windows I finally got around to installing
-Chimera Linux on it. Linux support for Snapdragon X based laptops is still a
-work in progress. The main issues are the webcam
-doesn't work, and the battery drains pretty quickly while suspended. Although
-it has zero issues like I encountered on Windows.
+After the reinstall failed to fix Windows [I finally got around to installing
+Chimera Linux on it][x1e-linux]. However, Linux support for Snapdragon X based laptops is
+still a work in progress. The main issues are: the webcam doesn't work, and the
+battery drains pretty quickly while suspended. It is more stable than Windows though.
 
 While usable, this felt a little too bleeding edge for a machine I'd need to
 work from, so I picked up a [Lenovo Yoga 7 2-in-1 (14\", Gen 10)][2in1] laptop
-with a decent EOFY discount. It's got a AMD Ryzen AI 7 350 CPU with 8
-cores (4×Zen 5, 4×Zen 5c), 32 Gb RAM, and 1Tb NVMe. I was also curious to see
-what things were looking like on the x86 side of the fence (my last x86\_64
-laptop was from 2022).
+with a decent <abbr title="End of Financial Year">EoFY</abbr> discount. It's
+got a AMD Ryzen AI 7 350 CPU with 8 cores (4×Zen 5, 4×Zen 5c), 32 Gb RAM, and
+1Tb NVMe. I was also curious to see what things were looking like on the x86
+side of the fence (my last x86\_64 laptop was from 2022).
 
 {{ figure(image='posts/2025/daily-driving-chimera-for-work/Lenovo Yoga 7 2-in-1 (14", Gen 10).jpg',
    link='posts/2025/daily-driving-chimera-for-work/Lenovo Yoga 7 2-in-1 (14", Gen 10).jpg',
@@ -89,11 +88,10 @@ Installation of Chimera on the new laptop was straightforward:
    link="posts/2025/daily-driving-chimera-for-work/fastfetch-chimera-yoga7.png",
    resize_width=1600,
    alt="Screenshot of a terminal window with the output of fastfetch.",
-   caption="fastfetch output on the Yoga 7.") }}
-
+   caption="fastfetch output on the Yoga 7 2-in-1.") }}
 
 The product I work on, [Prince], is implemented in a mixture of [Mercury] and [Rust].
-I created [an apk package][mmc] for the specific version of the Mercury compiler we use.
+I created [an apk package for the specific version of the Mercury][mmc] compiler we use.
 The main issue I encountered here was Chimera's `fortify-headers` did not play nice
 with the Mercury build, so I added a [patch to disable it][patch].
 
@@ -140,7 +138,7 @@ diff_pdf () {
 Notably, grouping in GNU `diff` uses escaped parenthesis `\(`, `\)`, which is
 what our test harness uses. Whereas BSD `diff` uses the more conventional
 unescaped version `(`, `)`. If I edited the `diff_pdf` function to remove the
-escaped parens then the test suite passed. I didn't want to carry this change
+escaped parenthesis, then the test suite passed. I didn't want to carry this change
 specifically for my environment though. For various reasons I also didn't come
 up with a satisfying way to automatically switch syntax, so I [packaged GNU
 diffutils][diffutils]. Our test runner is already set up to prefer using a
@@ -148,26 +146,29 @@ diffutils][diffutils]. Our test runner is already set up to prefer using a
 suite passed without modification.
 
 The last piece of the puzzle was a text editor. For work I use a mix of [Zed]
-and [Rust Rover]. I have previously got Rust Rover running on Chimera, but when
-I tried again it failed to start with an `IOException`. Zed used to be packaged
-for Chimera, but it started depending on the `livekit` crate, which downloads
-a pre-compiled `libwebrtc` in `build.rs`. Unsurprisingly this pre-built library
-does not work on Chimera, and the [Zed project are unwilling to make LiveKit
+and [Rust Rover] \(although now that [Zed has debugger support][zed-debug] Rust
+Rover's days may be numbered). I have previously got Rust Rover running on
+Chimera, but when I tried again it failed to start with an `IOException`.
+
+I turned my attention to Zed. Zed used to be packaged for Chimera, but it
+started depending on the `livekit` crate, which downloads a pre-compiled
+`libwebrtc.so` in `build.rs`. Unsurprisingly this pre-built library does not work
+on Chimera, and the [Zed project are unwilling to make LiveKit
 optional][livekit]. The Zed project in general is extremely [free-and-easy with
 downloading pre-compiled binaries][zed-binaries] (that don't run on Chimera),
 and despite this being raised, acknowledged, and work started in October 2024
 it remains unresolved as of 29 Jun 2025.
 
-Fortunately Zed is open-source, and Chimera community member [pj has a fork of
-Zed][pj-zed] that strips it down and makes it buildable on Chimera. He also
+Fortunately Zed is open-source, and Chimera community member [pj has a
+fork][pj-zed] that strips it down and makes it buildable on Chimera. He also
 resurrected the [cports package][zed-cports]. I built this and my editor
 situation was solved. I could also fall back to Neovim if needed too.
 
 Four other programs that are important to my workflow are [1Password],
 [Obsidian], [Signal], and [Beyond Compare]. 1Password, Obsidian, and Signal
 were readily installed via [Flatpak] packages on [Flathub]. For Beyond Compare
-I set up a [Distrobox] Arch Linux container. This worked great whenever I
-needed to call upon BCs merge conflict resolution abilities:
+I set up a [Distrobox] Arch Linux container. This worked great, whenever I
+needed to call upon Beyond Compare's merge conflict resolution abilities I ran:
 `distrobox enter arch -- git mergetool`.
 
 After confirming that the webcam worked in Signal (we do meetings in Signal) I
@@ -176,20 +177,20 @@ was good to travel!
 ### How did it go?
 
 Totally fine. My preparations paid off and I didn't encounter any blockers to
-getting my work done as usual. I did run into one tool that I use occasionally
+getting my work done. I did run into one tool that I use occasionally
 that was not available for Chimera: the [MuPDF tools][mupdf-tools]. I briefly
 considered packaging them, but after seeing [the Arch PKGBUILD][PKGBUILD] I
-promptly aborted that plan and installed them in the Arch Distrobox container
+promptly aborted that plan, and installed them in the Arch Distrobox container
 with `paru -S mupdf-tools` and carried on.
 
-As a Rust developer (i.e. someone that primary develops in Rust) one of the main annoyances
-is missing support for `rustup`. Being able to install and switch to
-different Rust versions is nice at times, but the main issue is being unable to
-install targets for cross-compiling—as is needed when targeting
-microcontrollers, or say a Raspberry Pi Zero. I also can't do `rustup doc
---std` to open an offline copy of the standard library documentation (it seems
-the `rust-doc` package in Chimera only contains licences). I think the solution
-to this will have to be Distrobox.
+As a Rust developer (i.e. someone that primary develops in Rust) one of the
+main annoyances on Chimera is missing support for `rustup`. Being able to
+install and switch to different Rust versions is nice at times, but the main
+issue is being unable to install targets for cross-compiling. This is needed when
+targeting microcontrollers, or say a Raspberry Pi Zero. I also can't do `rustup
+doc --std` to open an offline copy of the standard library documentation (it
+seems the `rust-doc` package in Chimera only contains licences). I think the
+solution to this will have to be Distrobox for now.
 
 Having said that, `rustup` is fully statically linked and _does_ run on
 Chimera. The issue is that the toolchains that it installs do not work. There
@@ -203,7 +204,7 @@ To make it easier to switch between the system rust and nightly rust I installed
 RUSTUP_INIT_SKIP_PATH_CHECK=1 sh rustup-init --default-toolchain none
 ```
 
-And then linked the toolchains:
+And then linked the local toolchains:
 
 ```
 rustup toolchain link system /usr
@@ -211,7 +212,7 @@ rustup default system
 rustup toolchain link musl-nightly ~/.local
 ```
 
-This at least makes it easy to use the nightly version when needed. For
+This makes it easy to use the nightly version only when needed. For
 example, I wanted to format the code in a doc-test, which is not stable yet. I
 could do this with:
 
@@ -223,19 +224,19 @@ rustup musl-nightly cargo fmt -- --unstable-features --config format_code_in_doc
 
 On Distrobox, I reached for an Arch Linux container as my fallback distro, but
 Arch only officially supports x86\_64. This poses a challenge if I am to
-replicate this setup on the ARM-based Yoga Slim 7x. For this reason I think I'll
-switch to using [Void Linux] as my Distrobox fallback. (In case it isn't obvious I have no
-desire to use Debian/Ubuntu if I can avoid it).
+replicate this setup on the ARM-based Yoga Slim 7x. For this reason I think
+I'll switch to using [Void Linux] as my Distrobox fallback in the future. (In
+case it isn't obvious I have no desire to use Debian/Ubuntu if I can avoid it).
 
 ### Thoughts on the laptop
 
-As an aside, how did a current generation AMD laptop compare to
-the ARM-based Yoga Slim 7x? Overall fine, although I still strongly prefer the
-7x. The 7x runs cooler, and is thinner and lighter, which makes it more pleasant to move and
-hold. The AMD machine seemed to run hotter, and fire up the fan more. In
-particular, the fan seemed to run whenever it was charging. Battery life seemed
-decent. I was able to do about 7 hours of work on Prince, before it needed
-charging.
+As an aside, how did a current generation AMD laptop compare to the year old
+ARM-based Yoga Slim 7x? Overall fine, although I still strongly prefer the 7x.
+The 7x runs cooler, and is thinner and lighter, which makes it more pleasant to
+move and hold. The AMD machine seemed to run hotter, and fire up the fan more.
+In particular, the fan seemed to run whenever it was charging and being used at
+the same time. Battery life seemed decent. I was able to do about 7 hours of
+programming work on Prince, before it needed charging.
 
 As in my [original review of the Yoga Slim 7x](@/posts/2024/yoga-7x-snapdragon-developer-review/index.md)
 I used a clean build of the [Gleam] compiler to do some crude benchmarking:
@@ -272,42 +273,64 @@ detects the different lid configurations, and the on-screen keyboard didn't
 appear when the screen was flipped around (although this could be a setting I
 missed).
 
-In the end the 7x is cooler, faster, lighter, and thinner. I plan to sell the 2-in-1.
+In the end the 7x is cooler, faster, lighter, and thinner. I plan to sell the
+2-in-1.
 
-[apk]: https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper
-[dinit]: https://davmac.org/projects/dinit/
-[Linux kernel]: https://www.kernel.org/
-[q66]: https://q66.moe/
-[FreeBSD]: https://www.freebsd.org/
+### Conclusion
 
-[chimera-install]: https://chimera-linux.org/docs/installation
-[mmc]: https://github.com/wezm/cports/blob/4123e5be51d28dc084642bbd917d009b779d4441/user/mercury/template.py
-[patch]: https://github.com/wezm/cports/blob/4123e5be51d28dc084642bbd917d009b779d4441/user/mercury/patches/no-fortify.patch
-[diffutils]: https://github.com/chimera-linux/cports/pull/430
-[livekit]: https://github.com/zed-industries/zed/issues/22374
-[zed-binaries]: https://github.com/zed-industries/zed/issues/12589
-[mupdf-tools]: https://archlinux.org/packages/extra/x86_64/mupdf-tools/
-[PKGBUILD]: https://gitlab.archlinux.org/archlinux/packaging/packages/mupdf/-/blob/15c222524843735a69387cfa9c9b97a4b1f914d7/PKGBUILD
-[musl.rs]: https://musl.rs/
+The experiment was a success. This has given me more confidence to pursue
+setting up my dev environment on my primary desktop computer, but there's still
+some things to address. Currently that machine runs the [COSMIC Desktop], which
+is not packaged for Chimera, and doesn't look like it would be a lot of fun to
+implement.
+
+The switch to COSMIC was prompted by X11 having unfixable tearing on my Intel
+B580 GPU. Prior to that I ran [AwesomeWM] for many years, and would like to
+explore [Pinnacle] \(an Awesome-like Wayland compositor) as an alternative. It
+is simpler to package than COSMIC, and I've already [partially completed
+it][cports-pinnacle]. I shall continue to check things off the TODO list and
+will get there eventually.
+
+[AwesomeWM]: https://awesomewm.org/
+[Pinnacle]: https://github.com/pinnacle-comp/pinnacle
+[cports-pinnacle]: https://mastodon.decentralised.social/@wezm/114712597249998867
+[1Password]: https://1password.com/
 [2in1]: https://www.lenovo.com/au/en/p/laptops/yoga/yoga-2-in-1-series/lenovo-yoga-7-2-in-1-gen-10-14-inch-amd/83jrcto1wwau1
-[musl]: https://musl.libc.org/
+[alpha]: https://mastodon.decentralised.social/@wezm/110545610926304063
+[apk]: https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper
+[Beyond Compare]: https://www.scootersoftware.com/
 [Chimera Linux]: https://chimera-linux.org/
+[chimera-install]: https://chimera-linux.org/docs/installation
+[COSMIC Desktop]: https://system76.com/cosmic
+[diffutils]: https://github.com/chimera-linux/cports/pull/430
+[dinit]: https://davmac.org/projects/dinit/
+[Distrobox]: https://distrobox.it/
+[Flathub]: https://flathub.org/
+[Flatpak]: https://flatpak.org/
+[FreeBSD]: https://www.freebsd.org/
+[Gleam]: https://gleam.run/
+[Linux kernel]: https://www.kernel.org/
+[livekit]: https://github.com/zed-industries/zed/issues/22374
+[Mercury]: https://mercurylang.org/
+[mmc]: https://github.com/wezm/cports/blob/4123e5be51d28dc084642bbd917d009b779d4441/user/mercury/template.py
+[mupdf-tools]: https://archlinux.org/packages/extra/x86_64/mupdf-tools/
+[musl.rs]: https://musl.rs/
+[musl]: https://musl.libc.org/
+[Obsidian]: https://obsidian.md/
+[patch]: https://github.com/wezm/cports/blob/4123e5be51d28dc084642bbd917d009b779d4441/user/mercury/patches/no-fortify.patch
+[pj-zed]: https://github.com/panekj/zed/tree/pj/release/0.194.0
+[PKGBUILD]: https://gitlab.archlinux.org/archlinux/packaging/packages/mupdf/-/blob/15c222524843735a69387cfa9c9b97a4b1f914d7/PKGBUILD
+[Prince]: https://www.princexml.com/
+[q66]: https://q66.moe/
+[Rust Rover]: https://www.jetbrains.com/rust/
+[Rust]: https://www.rust-lang.org/
+[rustup]: https://rustup.rs/
+[Signal]: https://signal.org/
+[Void Linux]: https://voidlinux.org/
 [void-2019]: https://bitcannon.net/post/huawei-matebook-x-pro-void-linux/
 [win-crash]: https://mastodon.social/@Darep/114661470696786319
-[Prince]: https://www.princexml.com/
-[Mercury]: https://mercurylang.org/
-[Rust]: https://www.rust-lang.org/
-[Zed]: https://zed.dev/
-[Rust Rover]: https://www.jetbrains.com/rust/
-[rustup]: https://rustup.rs/
-[1Password]: https://1password.com/
-[Obsidian]: https://obsidian.md/
-[Signal]: https://signal.org/
-[Distrobox]: https://distrobox.it/
-[Beyond Compare]: https://www.scootersoftware.com/
+[x1e-linux]: https://mastodon.decentralised.social/@wezm/114506161082726738
+[zed-binaries]: https://github.com/zed-industries/zed/issues/12589
 [zed-cports]: https://github.com/panekj/cports/blob/821d3ebe00e9d83c33c0b364bb09eeebcbf8e444/user/zed/template.py
-[pj-zed]: https://github.com/panekj/zed/tree/pj/release/0.194.0
-[Gleam]: https://gleam.run/
-[Flatpak]: https://flatpak.org/
-[Flathub]: https://flathub.org/
-[Void Linux]: https://voidlinux.org/
+[zed-debug]: https://zed.dev/blog/debugger
+[Zed]: https://zed.dev/
