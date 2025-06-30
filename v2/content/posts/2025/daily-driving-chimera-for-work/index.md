@@ -2,8 +2,8 @@
 title = "Doing My Day Job on Chimera Linux"
 date = 2025-06-29T12:05:41+10:00
 
-# [extra]
-# updated = 2025-05-04T19:51:02+10:00
+[extra]
+updated = 2025-06-30T13:45:50+10:00
 +++
 
 {{ figure(image="posts/2025/daily-driving-chimera-for-work/cane-fields.jpg",
@@ -183,7 +183,7 @@ considered packaging them, but after seeing [the Arch PKGBUILD][PKGBUILD] I
 promptly aborted that plan, and installed them in the Arch Distrobox container
 with `paru -S mupdf-tools` and carried on.
 
-As a Rust developer (i.e. someone that primary develops in Rust) one of the
+As a Rust developer (i.e. someone that primarily develops in Rust) one of the
 main annoyances on Chimera is missing support for `rustup`. Being able to
 install and switch to different Rust versions is nice at times, but the main
 issue is being unable to install targets for cross-compiling. This is needed when
