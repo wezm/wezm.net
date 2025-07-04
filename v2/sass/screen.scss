@@ -135,9 +135,6 @@ main.home {
       width: 20px;
     }
   }
-  section h2 {
-    margin-bottom: 1em;
-  }
 }
 
 a {
@@ -328,6 +325,9 @@ footer .copyright {
   flex-shrink: 0;
   margin-left: 2em;
 }
+.newsletter-section {
+  margin-top: 2em;
+}
 ul.projects {
   padding: 0;
   margin: 0;
@@ -467,6 +467,22 @@ ul.projects {
     color: #666;
     text-transform: uppercase;
     margin-right: 1em;
+}
+
+.embeddable-buttondown-form {
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  .bd-field {
+    display: flex;
+  }
+  input[type='email'] {
+    flex: 1;
+  }
+  input[type='submit'] {
+    margin-left: 10px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
