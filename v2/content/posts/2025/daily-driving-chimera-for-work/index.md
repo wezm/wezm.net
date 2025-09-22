@@ -302,7 +302,7 @@ will get there eventually.
 [Chimera Linux]: https://chimera-linux.org/
 [chimera-install]: https://chimera-linux.org/docs/installation
 [COSMIC Desktop]: https://system76.com/cosmic
-[diffutils]: https://github.com/chimera-linux/cports/pull/430
+[diffutils]: https://github.com/chimera-linux/cports/pull/4309
 [dinit]: https://davmac.org/projects/dinit/
 [Distrobox]: https://distrobox.it/
 [Flathub]: https://flathub.org/
