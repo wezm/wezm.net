@@ -3,7 +3,7 @@ title = "Tech Stack 2026"
 date =  2026-01-09T08:36:37+10:00
 
 [extra]
-updated = 2026-01-09T08:49:02+10:00
+updated = 2026-01-09T13:18:42+10:00
 +++
 
 A summary of my personal tech stack as we start 2026. I previously did one of these
@@ -42,7 +42,7 @@ of the tools mentioned below check out [github.com/wezm/dotfiles](https://github
   - [fd](https://github.com/sharkdp/fd) — file finder
   - [fzf](https://github.com/junegunn/fzf) — fuzzy finder (integrated with zsh and nvim)
   - [lsd](https://github.com/lsd-rs/lsd) — `ls` but better
-  - [mergiraf](https://mergiraf.org/) - syntax aware merge conflict resolution tool
+  - [mergiraf](https://mergiraf.org/) — syntax aware merge conflict resolution tool
   - [ripgrep](https://github.com/BurntSushi/ripgrep) — clever regex search
   - [tig](https://github.com/jonas/tig) — git TUI
   - [paru](https://github.com/Morganamilo/paru) — `pacman` wrapper
