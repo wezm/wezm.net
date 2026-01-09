@@ -3,7 +3,7 @@ title = "Tech Stack 2026"
 date =  2026-01-09T08:36:37+10:00
 
 [extra]
-updated = 2026-01-09T13:18:42+10:00
+updated = 2026-01-09T20:37:39+10:00
 +++
 
 A summary of my personal tech stack as we start 2026. I previously did one of these
@@ -60,7 +60,7 @@ of the tools mentioned below check out [github.com/wezm/dotfiles](https://github
 #### Desktop Computer
 
 My computer is a desktop machine that I assembled myself in 2023, it has had a few
-upgrades since I last documented it—how great are upgradable computers!
+upgrades since I last documented it—how great are upgradeable computers!
 
 - AMD Ryzen 9 9950X3D 16-Core/32-Thread Processor
 - 64 Gb DDR5 6000 MT/s RAM
@@ -80,19 +80,27 @@ upgrades since I last documented it—how great are upgradable computers!
 [Alacritty]: https://alacritty.org/
 [Aperture]: https://web.archive.org/web/20150407001931/http://www.apple.com/aperture/
 [Arch Linux]: https://archlinux.org/
+[Audacity]: https://www.audacityteam.org/
 [Awesome]: https://awesomewm.org/
+[Beyond Compare]: https://www.scootersoftware.com/
 [Chimera Linux]: https://chimera-linux.org/
 [CopyQ]: https://hluk.github.io/CopyQ/
 [COSMIC]: https://blog.system76.com/tags/COSMIC%20DE
 [David Bushell]: https://dbushell.com/2026/01/08/app-defaults/
 [Espanso]: https://espanso.org/
+[Fastmail]: https://www.fastmail.com/
+[Feedbin]: https://feedbin.com/
 [firefox-containers]: https://support.mozilla.org/en-US/kb/containers
 [Firefox]: https://getfirefox.com/
+[GIMP]: https://www.gimp.org/
 [Gleam]: https://gleam.run/
+[GNOME]: https://www.gnome.org/
 [keyd]: https://github.com/rvaiya/keyd
+[Mastodon]: https://joinmastodon.org/
 [Mold]: https://github.com/rui314/mold
 [Neovim]: https://neovim.io/
 [Obsidian]: https://obsidian.md/
+[Phanpy]: https://phanpy.social/
 [Prince]: https://www.princexml.com/
 [Rails]: https://rubyonrails.org/
 [Robb Knight]: https://rknight.me/blog/app-defaults-2026/
@@ -103,17 +111,9 @@ upgrades since I last documented it—how great are upgradable computers!
 [Stylus]: https://github.com/openstyles/stylus
 [Sylus]: https://github.com/openstyles/stylus
 [torrent]: https://www.fractal-design.com/products/cases/torrent/
-[WK870]: https://www.keebmonkey.com/en-au/products/wk870?syclid=ck4d58iusvis73cshbug
+[WK870]: https://web.archive.org/web/20250905143853/https://www.keebmonkey.com/en-au/products/wk870
 [Zed]: https://zed.dev/
 [zfs-autosnap]: https://github.com/wezm/zfs-autosnap
 [ZFS]: https://openzfs.org/
 [Zola]: https://www.getzola.org/
 [zsh]: https://www.zsh.org/
-[GNOME]: https://www.gnome.org/
-[Feedbin]: https://feedbin.com/
-[Fastmail]: https://www.fastmail.com/
-[GIMP]: https://www.gimp.org/
-[Audacity]: https://www.audacityteam.org/
-[Beyond Compare]: https://www.scootersoftware.com/
-[Mastodon]: https://joinmastodon.org/
-[Phanpy]: https://phanpy.social/
