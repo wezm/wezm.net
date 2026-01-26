@@ -2,8 +2,8 @@
 title = "Exploring Linux on a LoongArch Mini PC"
 date =  2026-01-26T11:36:15+10:00
 
-# [extra]
-# updated = 2026-01-09T20:37:39+10:00
+[extra]
+updated = 2026-01-26T22:04:07+10:00
 +++
 
 {{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-box.JPG", link="/posts/2026/loongarch-mini-pc-m700s/", resize_width=1600, alt="Photo of the MOREFINE mini PC with its box in the background. The box has the text 'MINI PC' in large letters outlined in gold, which is reflecting in the top of the PC.", caption="MOREFINE M700S Mini PC") }}
@@ -101,10 +101,7 @@ they confirmed that it was expected:
 > Does not affect normal operations<br>
 > There is currently no other way to adjust its noise; this is a normal state
 
-<figure>
-  <audio controls src="/posts/2026/loongarch-mini-pc-m700s/fan-noise.mp3"></audio>
-  <figcaption>Listen to the fan.</figcaption>
-</figure>
+{{ audio(src="posts/2026/loongarch-mini-pc-m700s/fan-noise.mp3", caption="Listen to the fan.") }}
 
 Opening the top of the case requires removing the two screws on the back panel
 above the ports. Then using something thin in one of the screw holes lever the
