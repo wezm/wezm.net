@@ -1,12 +1,12 @@
 +++
 title = "Exploring Linux on a LoongArch Mini PC"
-date =  2026-01-22T14:59:42+10:00
+date =  2026-01-26T11:36:15+10:00
 
 # [extra]
 # updated = 2026-01-09T20:37:39+10:00
 +++
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-box.JPG", link="posts/2026/loongarch-mini-pc-m700s/m700s-box.JPG", resize_width=1600, alt="Photo of the MOREFINE mini PC with its box in the background. The box has the text 'MINI PC' in large letters outlined in gold, which is reflecting in the top of the PC.", caption="MOREFINE M700S Mini PC") }}
+{{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-box.JPG", link="/posts/2026/loongarch-mini-pc-m700s/", resize_width=1600, alt="Photo of the MOREFINE mini PC with its box in the background. The box has the text 'MINI PC' in large letters outlined in gold, which is reflecting in the top of the PC.", caption="MOREFINE M700S Mini PC") }}
 
 Ever the fan of an underdog, I recently acquired a new mini-PC with a
 [Loongson 3A6000 CPU][ls3a6000]. This CPU uses the LoongArch64 instruction set
@@ -257,8 +257,8 @@ As you can see the list is pretty small. Most of the software packaged
 in cports is compatible.
 
 Many of the broken ports are Rust projects using old versions of the `nix` or
-`rustix` crates. So far I have looked into `systeroid`, `spotify-player`, and
-`tiny`. For the first two the problematic dependency is deep in the tree via
+`rustix` crates. So far I have looked into `systeroid`, `spotify-player`, `halloy`,
+and `tiny`. For the first two the problematic dependency is deep in the tree via
 `protobuf-parse`:
 
 ```
@@ -285,12 +285,13 @@ different API with C dependencies:
 > Prior major versions were developed by as a community project by stepancheg
 > who generously donated the crate name to Google.
 >
-> V4 is a completely new implementation with a different API, as well as a fundamentally different
-> approach than prior versions of this crate. It focuses on delivering a high-quality Rust API which
-> is backed by either a pure C implementation (upb) or the Protobuf C++ implementation. This choice
-> was made for performance, feature parity, development velocity, and security reasons. More
-> discussion about the rationale and design philosophy can be found at
-> <https://protobuf.dev/reference/rust/>.
+> V4 is a completely new implementation with a different API, as well as a
+> fundamentally different approach than prior versions of this crate. It
+> focuses on delivering a high-quality Rust API which is backed by either a
+> pure C implementation (upb) or the Protobuf C++ implementation. This choice
+> was made for performance, feature parity, development velocity, and security
+> reasons. More discussion about the rationale and design philosophy can be
+> found at <https://protobuf.dev/reference/rust/>.
 >
 > It is not planned for the V3 pure Rust lineage to be actively developed going
 > forward. While it is not expected to receive significant further development,
@@ -299,14 +300,18 @@ different API with C dependencies:
 
 So, `spotify-player` and `systeroid` are difficult to fix. The ideal fix would
 be a new release of the 3.x series of the protobuf crates. They would bump
-their `rustix` dependency by way of updating `which`. However, since that lineage is
-unmaintained it's unlikely. Given I use neither tool personally I gave up on
-them, and moved on to `tiny`.
+their `rustix` dependency by way of updating `which`. However, since that
+lineage is unmaintained it's unlikely. Given I use neither tool personally I
+gave up on them, and moved on to `tiny`.
 
 `tiny` is a command line IRC client that I do use. It turned out to be easier
 to fix: use a newer version of the `nix` crate. I have made that change and
-[opened a PR upstream][tiny-pr], which has been merged. Over time I plan to
-look into some of the other broken projects as well.
+[opened a PR upstream][tiny-pr], which has been merged. 
+
+Finally, there was a new release of `halloy`, a GUI IRC client. The new version
+uses an updated version of `ring`, which fixed the build issues. I've [opened a
+PR][halloy-pr] to bump the package to that version. Over time I plan to look
+into some of the other broken projects as well.
 
 ### Conclusion
 
@@ -317,19 +322,20 @@ died out or are expensive to acquire. That's why it's interesting to me to see
 a new affordable one spring up in recent times, and get adopted in the Linux
 ecosystem relatively quickly. Happy computing.
 
-[duckdb]: https://duckdb.org/2026/01/06/duckdb-on-loongarch-morefine
-[rust-protobuf4]: https://github.com/protocolbuffers/protobuf/tree/3a3560bb87058b31ac5f094fcd4dbbf6f90dddaf/rust/release_crates/protobuf#v4-ownership-and-implementation-change
-[tiny-pr]: https://github.com/osa1/tiny/pull/459
-[cports]: https://github.com/chimera-linux/cports
-[allsorts]: https://github.com/yeslogic/allsorts
-[install-chimera]: https://chimera-linux.org/docs/installation
-[ls3a6000]: https://web.archive.org/web/20260112212150/https://www.loongson.cn/EN/product/show?id=11
-[speedometer]: https://browserbench.org/Speedometer3.1/
 [ali-link]: https://s.click.aliexpress.com/e/_c2J96QUj
+[allsorts]: https://github.com/yeslogic/allsorts
 [Chimera Linux]: https://chimera-linux.org/
-[Wayfire]: https://wayfire.org/
+[cports]: https://github.com/chimera-linux/cports
+[duckdb]: https://duckdb.org/2026/01/06/duckdb-on-loongarch-morefine
 [GNOME]: https://www.gnome.org/
+[halloy-pr]: https://github.com/chimera-linux/cports/pull/5123
+[install-chimera]: https://chimera-linux.org/docs/installation
 [Labwc]: https://labwc.github.io/
-[Xfce]: https://www.xfce.org/
-[Mattermost]: https://github.com/mattermost/mattermost
+[ls3a6000]: https://web.archive.org/web/20260112212150/https://www.loongson.cn/EN/product/show?id=11
 [Mastodon]: https://mastodon.decentralised.social/@wezm
+[Mattermost]: https://github.com/mattermost/mattermost
+[rust-protobuf4]: https://github.com/protocolbuffers/protobuf/tree/3a3560bb87058b31ac5f094fcd4dbbf6f90dddaf/rust/release_crates/protobuf#v4-ownership-and-implementation-change
+[speedometer]: https://browserbench.org/Speedometer3.1/
+[tiny-pr]: https://github.com/osa1/tiny/pull/459
+[Wayfire]: https://wayfire.org/
+[Xfce]: https://www.xfce.org/
