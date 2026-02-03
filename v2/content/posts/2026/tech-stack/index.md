@@ -3,7 +3,7 @@ title = "Tech Stack 2026"
 date =  2026-01-09T08:36:37+10:00
 
 [extra]
-updated = 2026-01-09T20:37:39+10:00
+updated = 2026-02-03T20:53:28+10:00
 +++
 
 A summary of my personal tech stack as we start 2026. I previously did one of these
@@ -62,18 +62,18 @@ of the tools mentioned below check out [github.com/wezm/dotfiles](https://github
 My computer is a desktop machine that I assembled myself in 2023, it has had a few
 upgrades since I last documented it—how great are upgradeable computers!
 
-- AMD Ryzen 9 9950X3D 16-Core/32-Thread Processor
-- 64 Gb DDR5 6000 MT/s RAM
-- Storage:
+- **CPU:** AMD Ryzen 9 9950X3D 16-Core/32-Thread Processor
+- **RAM:** 64 Gb DDR5 6000 MT/s
+- **Storage:**
   - Root disk: Crucial T700 1TB PCIe Gen5 NVMe M.2 SSD, ext4
   - /home: 2x WD_BLACK 2TB SN850X PCIe Gen4 NVMe, ZFS mirror
   - Extra storage: 3x Samsung 1Tb Evo 870 SSDs, ZFS RAIDZ-1
-- AMD Radeon RX 9060 XT GPU with 16Gb VRAM
-- ASUS PA32QCV 6016x3384 6K display at 2x scaling
-- Razer Kiyo web cam
-- Audio Technica ATR2100X microphone
-- Logi MX Vertical mouse + BenQ ZOWIE FK2-C mouse
-- [WK870 mechanical keyboard][WK870] with Gateron G Pro 2.0 brown switches
+- **GPU:** AMD Radeon RX 9060 XT with 16Gb VRAM
+- **Display:** ASUS PA32QCV 6016x3384 6K display at 2x scaling
+- **Web Cam:** Razer Kiyo
+- **Microphone:** Audio Technica ATR2100X
+- **Mouse:** Logi MX Vertical mouse + BenQ ZOWIE FK2-C mouse
+- **Keyboard:** [WK870 mechanical keyboard][WK870] with Gateron G Pro 2.0 brown switches
 
 [1Password]: https://1password.com/
 [achan]: https://www.alexchantastic.com/tools-of-the-trade
