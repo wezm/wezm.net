@@ -3,7 +3,7 @@ title = "Exploring Linux on a LoongArch Mini PC"
 date =  2026-01-26T11:36:15+10:00
 
 [extra]
-updated = 2026-01-26T22:04:07+10:00
+updated = 2026-01-27T09:25:58+10:00
 +++
 
 {{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-box.JPG", link="/posts/2026/loongarch-mini-pc-m700s/", resize_width=1600, alt="Photo of the MOREFINE mini PC with its box in the background. The box has the text 'MINI PC' in large letters outlined in gold, which is reflecting in the top of the PC.", caption="MOREFINE M700S Mini PC") }}
@@ -318,6 +318,8 @@ alpha, mips, arm, x86, m68k, powerpc, sparc to name a few. Most of these have
 died out or are expensive to acquire. That's why it's interesting to me to see
 a new affordable one spring up in recent times, and get adopted in the Linux
 ecosystem relatively quickly. Happy computing.
+
+{{ comments(fedi="https://mastodon.decentralised.social/@wezm/115961431304905606", hn="https://news.ycombinator.com/item?id=46762098", lobsters="https://lobste.rs/s/ve0986/exploring_linux_on_loongarch_mini_pc", bluesky="https://bsky.app/profile/wezm.net/post/3mddddziqos2a") }}
 
 [ali-link]: https://s.click.aliexpress.com/e/_c2J96QUj
 [allsorts]: https://github.com/yeslogic/allsorts
