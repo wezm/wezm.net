@@ -66,7 +66,7 @@ As part of the [Macintosh Programmers Workshop][mpw] (MPW) theres is a tool
 called `DeRez` that does what I want. First up I had to work out how to operate
 MPW. It's an editable shell where you run commands with ⌘-Return. Once I worked
 that out I could run `DeRez` on my edited application but I only got the
-fullback hexadecimal representation of the resources, not the structured output
+fallback hexadecimal representation of the resources, not the structured output
 I wanted:
 
 ```
