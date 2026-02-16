@@ -2,8 +2,8 @@
 title = "Australian Chimera Linux Mirror"
 date = 2024-08-25T09:17:27+10:00
 
-#[extra]
-#updated = 2024-06-06T08:24:45+10:00
+[extra]
+updated = 2026-02-16T14:10:52+10:00
 +++
 
 I have set up a mirror of
@@ -23,20 +23,7 @@ also provide a speed improvement for folks in parts of Asia too.
 
 #### Packages
 
-Edit the files in `/etc/apk/repositories.d/` to point to the mirror. For example
-`/etc/apk/repositories.d/00-repo-main.list` contains this by default:
-
-```
-https://repo.chimera-linux.org/current/main
-```
-
-Change that to:
-
-```
-https://au.mirror.7bit.org/chimera/current/main
-```
-
-I.e. replace `repo.chimera-linux.org` with `au.mirror.7bit.org/chimera`.
+Refer to [the documentation on the Chimera Linux website][mirrors].
 
 #### Downloads
 
@@ -71,3 +58,4 @@ last synced.
 [atomic-rsync]: https://github.com/RsyncProject/rsync/blob/9615a2492bbf96bc145e738ebff55bbb91e0bbee/support/atomic-rsync
 [Lego]: https://go-acme.github.io/lego/
 [doas]: https://github.com/Duncaen/OpenDoas
+[mirrors]: https://chimera-linux.org/docs/apk/mirrors
