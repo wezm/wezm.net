@@ -3,6 +3,8 @@ $heading-family: "Manrope VF", sans-serif;
 $link-color: hsl(204, 50.8%, 26.1%);
 $monospace: "PragmataPro Mono", "PragmataPro", "JetBrains Mono", "Iosevka", "Consolas", monospace;
 
+// Manrope doesn't have an italic version so we rely on fake italic and a
+// specific oblique angle.
 @font-face {
   font-family: "Manrope VF";
   src: url("ManropeGX.ttf") format("truetype-variations");
@@ -214,6 +216,9 @@ article {
   }
   aside.float-right {
     margin: 0 0 1em 1em;
+  }
+  em {
+    font-style: oblique 10deg;
   }
 }
 .respond {
