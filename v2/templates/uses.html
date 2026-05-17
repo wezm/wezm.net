@@ -1,0 +1,52 @@
+{% import "macros.html" as macros %}
+
+{% extends "layout.html" %}
+
+{% block title %}{{ page.title }} - {{ config.title }}{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ config.base_url }}/uses.css" type="text/css" charset="utf-8" />
+{% endblock %}
+
+{% block metadata %}
+    <meta property="og:url" content="{{ page.permalink }}" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page.summary | default(value="") | striptags }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_AU" />
+    {% if page.colocated_path %}
+      {% set cover_path = "/" ~ page.colocated_path ~ "cover.jpg" %}
+      {% if cover_path in page.assets %}
+        {% set cover_url = get_url(path=cover_path) %}
+        <meta property="og:image" content="{{ cover_url }}" />
+        <meta name="twitter:image" content="{{ cover_url }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+      {% else %}
+        <meta name="twitter:card" content="summary" />
+      {% endif %}
+    {% else %}
+      <meta name="twitter:card" content="summary" />
+    {% endif %}
+    <meta name="twitter:creator" content="{{ config.extra.twitter_name }}" />
+{% endblock %}
+
+{% block body %}
+<main>
+  {% include "nav.html" %}
+  <header>
+    <h1 class="xlogo">
+      <a href="{{ config.base_url }}/" class="no-border hover-underline">{{ config.title }}</a>
+    </h1>
+  </header>
+
+  <article id="{{ page.slug }}">
+    <h2>
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+    </h2>
+
+    <div class="post-body">
+      {{ page.content | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe }}
+    </div>
+  </article>
+</main>
+{% endblock %}
