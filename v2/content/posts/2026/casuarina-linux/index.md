@@ -23,10 +23,11 @@ build Casuarina. It inherits most of the composition of Chimera, with the except
 - [FreeBSD derived core utilities][chimerautils]
 - [apk package manager][apk]
 
-The resulting system is compact and efficient, but still full-featured and well suited to desktop
-use. It may appeal to people that want a Linux distribution that's up-to-date, doesn't compromise on
-functionality, compatible, and easy to understand and contribute to. I've been using as the primary
-OS on my laptop and desktop for personal and day job computing since mid-April.
+The resulting system is compact and efficient, but still full-featured and well
+suited to desktop use. It may appeal to people that want a Linux distribution
+that's up-to-date, doesn't compromise on functionality or compatibility, and is
+easy to understand and contribute to. I've been using as the primary OS on my
+laptop and desktop for personal and day job computing since mid-April.
 
 Read more about it in the [announcement post on the Casuarina Linux website][announce].
 
