@@ -617,8 +617,7 @@ fastest run, rounded to the nearest second.
 | <img class="os-logo" src="windows.svg" width="24"> | [HP Aero]      | [Ryzen 7 5800U] | 8c/16t   | x86  | Windows 11         | 1.79.0 | 2:03 |
 | <img class="os-logo" src="windows.svg" width="24"> | [Dev Kit 2023] | [8cx Gen3]      | 8c       | ARM  | Windows 11         | 1.79.0 | 2:39 |
 
-<small>
-
+{% smaller() %}
 **Key:** c = core, t = thread, p = performance core, e = efficiency core
 
 **Notes:**
@@ -636,8 +635,7 @@ computing I'm going to stick with the Balanced setting.
 - For Windows testing the code was checked out onto a [Dev Drive] volume.
 - \* This machine was configured to use 14 cores in WSL and was not using
   a Dev Drive.
-
-</small>
+{% end %}
 
 Overall I think the Snapdragon X Elite does very well. It's in between an M1
 Pro and an M3 Max, it handily beat my outgoing laptop (comparing Windows

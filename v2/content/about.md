@@ -2,7 +2,7 @@
 title = "About"
 +++
 
-{{ resize_image(image="../static/images/Photo of Wesley Moore.jpg", width=1600, quality=60, alt="Photo of me against a Boab tree in Broome, Western Australia") }}
+{{ resize_image(image="../static/images/Photo-of-Wesley-Moore.jpg", width=1600, quality=60, alt="Photo of me against a Boab tree in Broome, Western Australia") }}
 
 Hi, I'm Wes (he/him). I'm a software developer originally from Melbourne,
 Australia. I now live on the Sunshine Coast in Queensland. I like open-source
