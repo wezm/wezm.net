@@ -11,10 +11,10 @@ microcontrollers up to large servers and the operating systems that run upon
 them. I like to take photos around my home and places I visit. The better ones
 end up on [Flickr].
 
-[Arch Linux] is my primary desktop operating system, with the [COSMIC] desktop.
-However, I have migrated to [Chimera Linux] on my laptop and plan to eventually
-do the same on my desktop. I detailed my desktop computing stack in more detail
-in the post [Tech Stack 2024](@/posts/2024/tech-stack/index.md).
+[Casuarina Linux], the Linux distribution I derived from [Chimera Linux] is my
+primary desktop operating system. I use the [COSMIC] desktop environment. I
+detailed my desktop computing stack in more detail in the post [Tech Stack
+2024](@/posts/2024/tech-stack/index.md).
 
 The server hosting this website runs [Alpine Linux] and is hosted by
 [Vultr]<sup>(affiliate link)</sup>. I've written more about my personal server
@@ -42,7 +42,7 @@ community and used to curate [Read Rust], a website that collected interesting
 posts about Rust.
 
 [Alpine Linux]: https://alpinelinux.org/
-[Arch Linux]: https://www.archlinux.org/
+[Casuarina Linux]: https://casuarina.org/
 [COSMIC]: https://system76.com/cosmic/
 [bitcannon.net]: https://bitcannon.net/
 [Chimera Linux]: https://chimera-linux.org/
