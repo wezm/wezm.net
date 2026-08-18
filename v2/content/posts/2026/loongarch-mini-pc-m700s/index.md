@@ -104,7 +104,7 @@ they confirmed that it was expected:
 {{ audio(src="posts/2026/loongarch-mini-pc-m700s/fan-noise.mp3", caption="Listen to the fan.") }}
 
 Opening the top of the case requires removing the two screws on the back panel
-above the ports. Then using something thin in one of the screw holes lever the
+above the ports. Then use something thin in one of the screw holes to lever the
 top up a bit so you can get under it and flip it up. Be careful as it has Wi-Fi and
 Bluetooth antennas attached to it.
 
