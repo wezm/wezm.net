@@ -14,7 +14,7 @@ Rust, and then built a stripped down Linux image to run it.
 
 <!-- more -->
 
-{{ figure(image="posts/2022/garage-door-monitor/garage-door-monitor.jpg", link="posts/2022/garage-door-monitor/garage-door-monitor.jpg", alt="Photo of the garage door monitor stuck to the wall. It has wires going to the power supply and reed switch, which is visible on the right of the photo.", caption="What we'll be building in this post. (In reality the reed switch and magnet are better aligned than they appear in the photo)") }}
+{{ <figure image="posts/2022/garage-door-monitor/garage-door-monitor.jpg" link="posts/2022/garage-door-monitor/garage-door-monitor.jpg" alt="Photo of the garage door monitor stuck to the wall. It has wires going to the power supply and reed switch, which is visible on the right of the photo." caption="What we'll be building in this post. (In reality the reed switch and magnet are better aligned than they appear in the photo)" /> }}
 
 ### Overview & Goals
 
@@ -26,7 +26,7 @@ door state in the status bar of my [Awesome] desktop. An LED on the device
 flashes to indicate status around once every second. All code and designs
 are published in a [git repo][repo].
 
-{{ figure(image="posts/2022/garage-door-monitor/mattermost-notification.png", link="posts/2022/garage-door-monitor/mattermost-notification.png", alt="Screenshot of the message posted to Mattermost by the garage door monitor. It reads: Garage door has been open for 5 minutes.", caption="Mattermost message posted by the monitor. A notification will be shown on my desktop or mobile if I'm away from my computer.", width=380, border=true) }}
+{{ <figure image="posts/2022/garage-door-monitor/mattermost-notification.png" link="posts/2022/garage-door-monitor/mattermost-notification.png" alt="Screenshot of the message posted to Mattermost by the garage door monitor. It reads: Garage door has been open for 5 minutes." caption="Mattermost message posted by the monitor. A notification will be shown on my desktop or mobile if I'm away from my computer." width={380} border={true} /> }}
 
 When I embarked on this project I researched the garage door opener that opens
 and closes the door. The installation document mentions an "E-Serial port" but
@@ -98,7 +98,7 @@ reason I won't know unless I observe the status LED. To remedy this I included
 a web server that allows the status of the device to be checked remotely (on
 the local network) via a web page.
 
-{{ figure(image="posts/2022/garage-door-monitor/webpage.png", link="posts/2022/garage-door-monitor/webpage.png", alt="Screenshots of the web page served by the garage door monitor. The left side shows the closed state with a green dot emoji and the right one shows the open state with a red dot emoji and the text: Opened 1 minute ago.", caption="Screenshots of the web page when the door is closed and open.", width=700) }}
+{{ <figure image="posts/2022/garage-door-monitor/webpage.png" link="posts/2022/garage-door-monitor/webpage.png" alt="Screenshots of the web page served by the garage door monitor. The left side shows the closed state with a green dot emoji and the right one shows the open state with a red dot emoji and the text: Opened 1 minute ago." caption="Screenshots of the web page when the door is closed and open." width={700} /> }}
 
 I then extended this with a JSON endpoint `/door.json`:
 
@@ -112,7 +112,7 @@ I then extended this with a JSON endpoint `/door.json`:
 
 I use the JSON endpoint in my [status bar][bar] to show the door status:
 
-{{ figure(image="posts/2022/garage-door-monitor/awesome-status-bar.png", link="posts/2022/garage-door-monitor/awesome-status-bar.png", alt="Screenshot of my status bar showing the garage door state on the far right.", caption="Screenshot of my status bar showing the garage door state on the far right.", width=398) }}
+{{ <figure image="posts/2022/garage-door-monitor/awesome-status-bar.png" link="posts/2022/garage-door-monitor/awesome-status-bar.png" alt="Screenshot of my status bar showing the garage door state on the far right." caption="Screenshot of my status bar showing the garage door state on the far right." width={398} /> }}
 
 - 🚪: Closed
 - 🪟: Open
@@ -161,7 +161,7 @@ application itself starts running about 13 seconds after power is applied, as
 shown in the video below. The time between boot and the application running is
 taken by bringing up the Wi-Fi connection and syncing the clock.
 
-{{ video(video="posts/2022/garage-door-monitor/power-on.m4v", height=360, alt="Video showing power being connected to the Raspberry Pi and the time passing until the status LED starts blinking", caption="Power on to status LED blinking in about 13 seconds.") }}
+{{ <video video="posts/2022/garage-door-monitor/power-on.m4v" height={360} alt="Video showing power being connected to the Raspberry Pi and the time passing until the status LED starts blinking" caption="Power on to status LED blinking in about 13 seconds." /> }}
 
 The image runs entirely from the initial RAM disk embedded in the kernel image.
 The SD card is not even mounted, nor can it be mounted as the kernel lacks the
@@ -207,7 +207,7 @@ was working properly.
 
 The diagram below shows the limited wiring required:
 
-{{ figure(image="posts/2022/garage-door-monitor/wiring-diagram.svg", link="posts/2022/garage-door-monitor/wiring-diagram.svg", alt="Wiring diagram", caption="Wiring diagram") }}
+{{ <figure image="posts/2022/garage-door-monitor/wiring-diagram.svg" link="posts/2022/garage-door-monitor/wiring-diagram.svg" alt="Wiring diagram" caption="Wiring diagram" /> }}
 
 * The Pi is powered through header pins 4 (5V) and 6 (GND).
 * A reed switch is connected between pin 1 (3.3V) and pin 38 via a 10kΩ
@@ -221,7 +221,7 @@ an alert eventually sent.
 
 #### Status LED
 
-{{ figure(image="posts/2022/garage-door-monitor/soldering-led.jpg", link="posts/2022/garage-door-monitor/soldering-led.jpg", alt="Photo of alligator clip holding a piece of solid write in place for soldering between the Raspberry Pi header and LED cathode.", caption="Soldering the LED to the Raspberry Pi header.", resize_width=1600) }}
+{{ <figure image="posts/2022/garage-door-monitor/soldering-led.jpg" link="posts/2022/garage-door-monitor/soldering-led.jpg" alt="Photo of alligator clip holding a piece of solid write in place for soldering between the Raspberry Pi header and LED cathode." caption="Soldering the LED to the Raspberry Pi header." resize_width={1600} /> }}
 
 The LED periodically blinks to show the state of the device. This allows
 correct operation to easily be observed in person.
@@ -235,9 +235,9 @@ correct operation to easily be observed in person.
 - Two blinks: Door open
 - Three blinks: Door state unknown
 
-{{ video(video="posts/2022/garage-door-monitor/one-flash.m4v", height=338, alt="Video of the status LED blinking once every second.", caption="One blink for door closed.") }}
+{{ <video video="posts/2022/garage-door-monitor/one-flash.m4v" height={338} alt="Video of the status LED blinking once every second." caption="One blink for door closed." /> }}
 
-{{ video(video="posts/2022/garage-door-monitor/two-flash.m4v", height=338, alt="Video of the status LED blinking twice.", caption="Two blinks for door open.") }}
+{{ <video video="posts/2022/garage-door-monitor/two-flash.m4v" height={338} alt="Video of the status LED blinking twice." caption="Two blinks for door open." /> }}
 
 #### Installation
 
@@ -256,9 +256,9 @@ I cut the camera cable and spliced a little connector into it for the BEC to
 connect to. This turned out to be extremely fiddly and time consuming,
 requiring three attempts before I got a result I was happy with.
 
-{{ figure(image="posts/2022/garage-door-monitor/splicing-power.jpg", link="posts/2022/garage-door-monitor/splicing-power.jpg", alt="Photo of three exposed wires that have been soldered being held with helping hands.", caption="Splicing the BEC connector into the video camera cable.", resize_height=1200, height=600) }}
+{{ <figure image="posts/2022/garage-door-monitor/splicing-power.jpg" link="posts/2022/garage-door-monitor/splicing-power.jpg" alt="Photo of three exposed wires that have been soldered being held with helping hands." caption="Splicing the BEC connector into the video camera cable." resize_height={1200} height={600} /> }}
 
-{{ figure(image="posts/2022/garage-door-monitor/spliced-power.jpg", link="posts/2022/garage-door-monitor/spliced-power.jpg", alt="Photo of the camera cable completed with heatshrink tubing over the joint", caption="The completed splice with heatshrink tubing over the joint.", resize_height=1200, height=600) }}
+{{ <figure image="posts/2022/garage-door-monitor/spliced-power.jpg" link="posts/2022/garage-door-monitor/spliced-power.jpg" alt="Photo of the camera cable completed with heatshrink tubing over the joint" caption="The completed splice with heatshrink tubing over the joint." resize_height={1200} height={600} /> }}
 
 The only other part I had to buy for this project was the [reed switch](https://www.jaycar.com.au/security-alarm-reed-switch/p/LA5072?pos=12&queryId=70baa88bc7dd47cd48c78012da5a86be&sort=relevance).
 I picked this up from the local Jaycar for about AU$5. I mounted it between a
@@ -272,14 +272,14 @@ weren't quite big enough—I'm still new to 3D modeling and 3D printing. I
 tweaked the design (yay for parametric modeling) and printed a second version,
 which worked well.
 
-{{ figure(image="posts/2022/garage-door-monitor/reed-switch-mounting.jpg", link="posts/2022/garage-door-monitor/reed-switch-mounting.jpg", alt="Photo of the reed switch mounted on it's 3D printed mounting block.", caption="The reed switch mounted on the 3D printed spacer block.", resize_height=1200, height=600) }}
+{{ <figure image="posts/2022/garage-door-monitor/reed-switch-mounting.jpg" link="posts/2022/garage-door-monitor/reed-switch-mounting.jpg" alt="Photo of the reed switch mounted on it's 3D printed mounting block." caption="The reed switch mounted on the 3D printed spacer block." resize_height={1200} height={600} /> }}
 
 I used super sticky double sided tape to attach everything to the wall and
 bracket.
 
-{{ figure(image="posts/2022/garage-door-monitor/tape.jpg", link="posts/2022/garage-door-monitor/tape.jpg", alt="Photo of a roll of double sided body mounting tape on a table with mini screwdrivers to the left, a roll of solder above, and a Raspberry Pi Zero with an LED attached to the right.", caption="Mounting tape I had left over from another job around the house.", resize_width=1200, width=600) }}
+{{ <figure image="posts/2022/garage-door-monitor/tape.jpg" link="posts/2022/garage-door-monitor/tape.jpg" alt="Photo of a roll of double sided body mounting tape on a table with mini screwdrivers to the left, a roll of solder above, and a Raspberry Pi Zero with an LED attached to the right." caption="Mounting tape I had left over from another job around the house." resize_width={1200} width={600} /> }}
 
-{{ figure(image="posts/2022/garage-door-monitor/prepared-for-sticking.jpg", link="posts/2022/garage-door-monitor/prepared-for-sticking.jpg", alt="Photo of reed switch, UBEC, and Raspberry Pi Zero with double sided tape attached.", caption="All taped and ready to stick on.", resize_width=1200, width=600) }}
+{{ <figure image="posts/2022/garage-door-monitor/prepared-for-sticking.jpg" link="posts/2022/garage-door-monitor/prepared-for-sticking.jpg" alt="Photo of reed switch, UBEC, and Raspberry Pi Zero with double sided tape attached." caption="All taped and ready to stick on." resize_width={1200} width={600} /> }}
 
 Before connecting the Pi to power I tested the BEC output and reed switch
 behaviour with a multimeter. I used washers under the reed switch to fine tune

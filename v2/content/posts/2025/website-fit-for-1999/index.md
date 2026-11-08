@@ -15,10 +15,7 @@ reignited my interest in getting my own site up again. For the fun of it I
 decided to implement it in [HTML4] and serve it over plain HTTP so that it
 would work on old computers.
 
-{{ figure(image="posts/2025/website-fit-for-1999/nonsense-website-mac-os-8.png",
-   link="posts/2025/website-fit-for-1999/nonsense-website-mac-os-8.png",
-   alt="Screenshot of a Mac OS 8.1 desktop with a IE 4 window open showing Wes' Nonsense Website",
-   caption="The site in IE 4.01 on Mac OS 8.1") }}
+{{ <figure image="posts/2025/website-fit-for-1999/nonsense-website-mac-os-8.png" link="posts/2025/website-fit-for-1999/nonsense-website-mac-os-8.png" alt="Screenshot of a Mac OS 8.1 desktop with a IE 4 window open showing Wes' Nonsense Website" caption="The site in IE 4.01 on Mac OS 8.1" /> }}
 
 <!-- more -->
 
@@ -32,21 +29,9 @@ felt a little _too_ constrained, and there was some [non-ideal behaviour][edge-h
 of the http crate I used. Nonetheless I published [the code][esp32-website] to
 my git forge.
 
-{{ figure(image="posts/2025/website-fit-for-1999/esp32-c3.jpg",
-   link="posts/2025/website-fit-for-1999/esp32-c3.jpg",
-   width="350",
-   resize_width=700,
-   float="left",
-   alt="Photo of a ESP32-C3 dev board sitting in red foam with a USB cable attached. A white LED on it is illuminated",
-   caption="The ESP32 Rust powered web sever") }}
+{{ <figure image="posts/2025/website-fit-for-1999/esp32-c3.jpg" link="posts/2025/website-fit-for-1999/esp32-c3.jpg" width={350} resize_width={700} float="left" alt="Photo of a ESP32-C3 dev board sitting in red foam with a USB cable attached. A white LED on it is illuminated" caption="The ESP32 Rust powered web sever" /> }}
 
-{{ figure(image="posts/2025/website-fit-for-1999/esp32-website.png",
-   link="posts/2025/website-fit-for-1999/esp32-website.png",
-   width="350",
-   resize_width=700,
-   float="right",
-   alt="Screenshot of the web page hosted by the ESP32. Is includes basic information about the microcontroller and the internal temperature of the device.",
-   caption="The ESP32 web page") }}
+{{ <figure image="posts/2025/website-fit-for-1999/esp32-website.png" link="posts/2025/website-fit-for-1999/esp32-website.png" width={350} resize_width={700} float="right" alt="Screenshot of the web page hosted by the ESP32. Is includes basic information about the microcontroller and the internal temperature of the device." caption="The ESP32 web page" /> }}
 
 ### The Best Server Is the Server You Already Have
 
@@ -65,12 +50,7 @@ about the server on the home page:
 I had in a drawer today: a [LattePanda V1 single-board computer][LattePanda]. See
 [the about page][about page] for more info.
 
-{{ figure(image="posts/2025/website-fit-for-1999/untitled-website.png",
-   link="posts/2025/website-fit-for-1999/untitled-website.png",
-   width="655",
-   border=1,
-   alt="Screenshot of Untitled Website showing information about the server and a brief FAQ",
-   caption="Server stats and 88×31 buttons!") }}
+{{ <figure image="posts/2025/website-fit-for-1999/untitled-website.png" link="posts/2025/website-fit-for-1999/untitled-website.png" width={655} border={true} alt="Screenshot of Untitled Website showing information about the server and a brief FAQ" caption="Server stats and 88×31 buttons!" /> }}
 
 I used the [MiniJinja] CLI, [jaq], and [make] to regenerate the static HTML from templates,
 funnelling the dynamic content into a JSON file.
@@ -194,10 +174,7 @@ is so that it has a chance of working on old computers. As I was building
 the site I continually tested it in Internet Explorer 4.01 and Netscape
 Navigator 3.01 running in Mac OS 8.1 in the [Basilisk II 68k emulator][BasiliskII].
 
-{{ figure(image="posts/2025/website-fit-for-1999/netscape-and-ie.png",
-   link="posts/2025/website-fit-for-1999/netscape-and-ie.png",
-   alt="Screenshot of a Mac OS 8.1 desktop with a IE 4 and Netscape 3 windows showing Wes' Nonsense Website",
-   caption="Testing in IE4 and Netscape 3") }}
+{{ <figure image="posts/2025/website-fit-for-1999/netscape-and-ie.png" link="posts/2025/website-fit-for-1999/netscape-and-ie.png" alt="Screenshot of a Mac OS 8.1 desktop with a IE 4 and Netscape 3 windows showing Wes' Nonsense Website" caption="Testing in IE4 and Netscape 3" /> }}
 
 These posed some unique challenges, mostly around text encoding. The content is
 authored and served as UTF-8, but this was only supported by version 4 onwards

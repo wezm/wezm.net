@@ -9,7 +9,7 @@ updated = 2023-09-22T11:56:57+10:00
 I tried creating an OpenBSD 7.3 virtual machine on my new computer (Arch Linux
 host) and the installer kept crashing with the error:
 
-{{ figure(image="posts/2023/openbsd-db-atapi-start-not-ready/openbsd_panic_dc_atapi_start_not_ready.png", link="posts/2023/openbsd-db-atapi-start-not-ready/openbsd_panic_dc_atapi_start_not_ready.png", alt="Screenshot of the installer crash.", caption="Screenshot of the installer crash.") }}
+{{ <figure image="posts/2023/openbsd-db-atapi-start-not-ready/openbsd_panic_dc_atapi_start_not_ready.png" link="posts/2023/openbsd-db-atapi-start-not-ready/openbsd_panic_dc_atapi_start_not_ready.png" alt="Screenshot of the installer crash." caption="Screenshot of the installer crash." /> }}
 
 ```
 dc_atapi_start: not ready, st = 50
@@ -36,9 +36,9 @@ I use [virt-manager] to manage VMs. These are the steps to do that when creating
 
 After that the VM installed successfully.
 
-{{ figure(image="posts/2023/openbsd-db-atapi-start-not-ready/virt-manager-customize-configuration.png", link="posts/2023/openbsd-db-atapi-start-not-ready/virt-manager-customize-configuration.png", alt="Screenshot of step 5 in the new virtual machine wizard in virt-manager showing the 'Customize configuration before install' option checked.", caption="Customize configuration before install.", width=504) }}
+{{ <figure image="posts/2023/openbsd-db-atapi-start-not-ready/virt-manager-customize-configuration.png" link="posts/2023/openbsd-db-atapi-start-not-ready/virt-manager-customize-configuration.png" alt="Screenshot of step 5 in the new virtual machine wizard in virt-manager showing the 'Customize configuration before install' option checked." caption="Customize configuration before install." width={504} /> }}
 
-{{ figure(image="posts/2023/openbsd-db-atapi-start-not-ready/virt-manager-sata-cd-rom.png", link="posts/2023/openbsd-db-atapi-start-not-ready/virt-manager-sata-cd-rom.png", alt="Screenshot of the virt-manager CD ROM tab showing 'Disk bus: SATA' selected.", caption="Disk bus: SATA", width=1028) }}
+{{ <figure image="posts/2023/openbsd-db-atapi-start-not-ready/virt-manager-sata-cd-rom.png" link="posts/2023/openbsd-db-atapi-start-not-ready/virt-manager-sata-cd-rom.png" alt="Screenshot of the virt-manager CD ROM tab showing 'Disk bus: SATA' selected." caption="Disk bus: SATA" width={1028} /> }}
 
 [reddit]: https://www.reddit.com/r/openbsd/comments/12jzg2y/when_i_tried_to_install_openbsd_73_in_qemu_i/jhhk1gx/
 [virt-manager]: https://virt-manager.org/

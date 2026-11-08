@@ -1,5 +1,6 @@
+{% component audio(@config, src, caption) %}
 <figure>
   <audio controls src="{{ config.base_url }}/{{ src }}"></audio>
-  <figcaption>Listen to the fan.</figcaption>
+  <figcaption>{{ caption }}</figcaption>
 </figure>
-
+{% endcomponent %}

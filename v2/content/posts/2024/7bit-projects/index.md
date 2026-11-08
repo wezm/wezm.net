@@ -46,7 +46,7 @@ Instead of simply capitalizing each word `titlecase` does the following
 
 I have compiled it to WebAssembly so that it can be [used online][Titlecase].
 
-{{ figure(image="posts/2024/7bit-projects/Convert%20Text%20to%20Titlecase%20-%207bit.org.png", link="https://7bit.org/titlecase/", border=1, width="739", alt='Screenshot of the Titlecase web page showing the result of converting the text ‘an iPhone review: "our take in 10 minutes"’ to title case with the tool. The resulting text is ‘An iPhone Review: "Our Take in 10 Minutes"’.', caption="Screenshot of the Titlecase web page") }}
+{{ <figure image="posts/2024/7bit-projects/Convert%20Text%20to%20Titlecase%20-%207bit.org.png" link="https://7bit.org/titlecase/" border={true} width={739} alt='Screenshot of the Titlecase web page showing the result of converting the text ‘an iPhone review: "our take in 10 minutes"’ to title case with the tool. The resulting text is ‘An iPhone Review: "Our Take in 10 Minutes"’.' caption="Screenshot of the Titlecase web page" /> }}
 
 ### RSS Please
 
@@ -54,7 +54,7 @@ I have compiled it to WebAssembly so that it can be [used online][Titlecase].
 CSS selectors to extract parts of the page to generate the feed from.
 It's implemented as a command line tool in Rust.
 
-{{ figure(image="posts/2024/7bit-projects/RSS%20Please.png", link="https://rsspls.7bit.org/", alt="Screenshot of the RSS Please website. It has a teal backgound and features a screenshot of the tool running in a terminal. There is an orange RSS logo in the top left and download button in the bottom left.", caption="Screenshot of the RSS Please website") }}
+{{ <figure image="posts/2024/7bit-projects/RSS%20Please.png" link="https://rsspls.7bit.org/" alt="Screenshot of the RSS Please website. It has a teal backgound and features a screenshot of the tool running in a terminal. There is an orange RSS logo in the top left and download button in the bottom left." caption="Screenshot of the RSS Please website" /> }}
 
 ### Dew Point Forecast
 
@@ -67,7 +67,7 @@ I built this one after moving to Queensland in 2021 and it was the first
 project published to `7bit.org`. It's implemented in Rust using the [Rocket]
 web framework.
 
-{{ figure(image="posts/2024/7bit-projects/Dew%20Point%20-%20Forecast%20for%20Brisbane%20City.png", link="https://dewpoint.7bit.org/", border=1, width="739", alt="Screenshot of the dew point forecast for Brisbane, Australia. There are boxes for current conditions, Sat 4 May, Sun 5 May, and Mon 6 May. Each box contains values for temperature, dew point, sunrise, sunset, UV index, and relative humidity.", caption="Dewpoint forecast for Brisbane") }}
+{{ <figure image="posts/2024/7bit-projects/Dew%20Point%20-%20Forecast%20for%20Brisbane%20City.png" link="https://dewpoint.7bit.org/" border={true} width={739} alt="Screenshot of the dew point forecast for Brisbane, Australia. There are boxes for current conditions, Sat 4 May, Sun 5 May, and Mon 6 May. Each box contains values for temperature, dew point, sunrise, sunset, UV index, and relative humidity." caption="Dewpoint forecast for Brisbane" /> }}
 
 ### MacBinary
 
@@ -78,7 +78,7 @@ for use on [the web page][MacBinary]. I wrote more about this project in [this
 post](@/posts/2023/rust-classic-mac-os-app/index.md#macbinary).
 
 
-{{ figure(image="posts/2024/7bit-projects/Decode%20MacBinary%20Online%20-%207bit.org.png", link="https://7bit.org/macbinary/", border=1, width="739", alt="Screenshot of the MacBinary webpage. It is showing the parsed information from a file called 'bbedit_lite_612.smi_.bin'. Several resources are lists such as 'BNDL', and 'CODE'.", caption="Screenshot of the MacBinary web page") }}
+{{ <figure image="posts/2024/7bit-projects/Decode%20MacBinary%20Online%20-%207bit.org.png" link="https://7bit.org/macbinary/" border={true} width={739} alt="Screenshot of the MacBinary webpage. It is showing the parsed information from a file called 'bbedit_lite_612.smi_.bin'. Several resources are lists such as 'BNDL', and 'CODE'." caption="Screenshot of the MacBinary web page" /> }}
 
 ### Comments
 

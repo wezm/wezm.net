@@ -1,38 +1,40 @@
-{% set figure_class = ["text-center"] %}
-{% if border %}
-  {% set figure_class = figure_class | concat(with="figure-border") %}
-{% endif %}
-{% if pixelated %}
-  {% set figure_class = figure_class | concat(with="figure-pixelated") %}
-{% endif %}
-{% if float %}
-  {% set figure_class = figure_class | concat(with="float-" ~ float) %}
-{% endif %}
+{%- component figure(@config, image, link, width = none, height = none, resize_width = none, resize_height = none, alt, caption, border = false, pixelated = false, float = none) -%}
+{%- set figure_class = ["text-center"] -%}
+{%- if border -%}
+  {%- set figure_class = [...figure_class, "figure-border"] -%}
+{%- endif -%}
+{%- if pixelated -%}
+  {%- set figure_class = [...figure_class, "figure-pixelated"] -%}
+{%- endif -%}
+{%- if float is not none -%}
+  {%- set figure_class = [...figure_class, "float-" ~ float] -%}
+{%- endif -%}
 <figure class="{{ figure_class | join(sep=" ") }}">
-  {% if link is matching("^https?:") %}
-  <a href="{{ link }}">
-  {% else %}
-  <a href="{{ config.base_url }}/{{ link }}">
-  {% endif %}
-  {% if resize_width %}
-    {% set image = resize_image(path=image, width=resize_width, op="fit_width", quality=quality | default(value=75)) %}
-    {% if width %}
+  {%- if link is matching(pat="^https?:") -%}
+    <a href="{{ link }}">
+  {%- else -%}
+    <a href="{{ config.base_url }}/{{ link }}">
+  {%- endif -%}
+  {%- if resize_width is not none -%}
+    {%- set image = resize_image(path=image, width=resize_width, op="fit_width", quality=quality | default(value=75)) -%}
+    {%- if width is not none -%}
       <img src="{{ image.url }}" width="{{ width }}" alt="{{ alt }}" />
-    {% else %}
+    {%- else -%}
       <img src="{{ image.url }}" alt="{{ alt }}" />
-    {% endif %}
-  {% elif resize_height %}
-    {% set image = resize_image(path=image, height=resize_height, op="fit_height", quality=quality | default(value=75)) %}
-    {% if height %}
+    {%- endif -%}
+  {%- elif resize_height -%}
+    {%- set image = resize_image(path=image, height=resize_height, op="fit_height", quality=quality | default(value=75)) -%}
+    {%- if height is not none -%}
       <img src="{{ image.url }}" style="max-height: {{ height }}px" alt="{{ alt }}" />
-    {% else %}
+    {%- else -%}
       <img src="{{ image.url }}" alt="{{ alt }}" />
-    {% endif %}
-  {% elif width %}
+    {%- endif -%}
+  {%- elif width is not none -%}
     <img src="{{ config.base_url }}/{{ image }}" width="{{ width }}" alt="{{ alt }}" />
-  {% else %}
+  {%- else -%}
     <img src="{{ config.base_url }}/{{ image }}" alt="{{ alt }}" />
-  {% endif %}
+  {%- endif -%}
   </a>
   <figcaption>{{ caption }}</figcaption>
 </figure>
+{%- endcomponent -%}

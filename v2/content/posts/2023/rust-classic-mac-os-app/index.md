@@ -17,7 +17,7 @@ the end of [#MARCHintosh].
 
 Before I get into the details this is where we're headed:
 
-{{ video(video="posts/2023/rust-classic-mac-os-app/ferris-weather-2023-03-31_12.37.49_edit.mp4", height=480, poster="png", preload="auto", alt="Video showing the Ferris Weather application in operation. Initially there is a window with a Ferris icon, the text, 'An application that exercises my Open Transport Rust bindings and HTTP client', and a button 'Get Weather'. Clicking the button results in an alert that says: 'The temperature in Brisbane is 26.9°C'.", caption="Ferris Weather, a weather app built with Rust (and some C)") }}
+{{ <video video="posts/2023/rust-classic-mac-os-app/ferris-weather-2023-03-31_12.37.49_edit.mp4" height={480} poster="png" preload="auto" alt="Video showing the Ferris Weather application in operation. Initially there is a window with a Ferris icon, the text, 'An application that exercises my Open Transport Rust bindings and HTTP client', and a button 'Get Weather'. Clicking the button results in an alert that says: 'The temperature in Brisbane is 26.9°C'." caption="Ferris Weather, a weather app built with Rust (and some C)" /> }}
 
 ### DeRez Redux
 
@@ -172,11 +172,11 @@ luck I was able to solve that by using the updated `binutils` on the
 `gcc12-update branch` branch of Retro68. I now had a working temperature
 converter:
 
-{{ video(video="posts/2023/rust-classic-mac-os-app/classic-mac-rust-2023-03-28_20.00.31.mp4", height=480, poster="png", preload="auto", alt="Video of the temperature converter converting values to and from Celsius, running on Mac OS 8.1 (in emulator).", caption="The temperature converter application ported to Rust") }}
+{{ <video video="posts/2023/rust-classic-mac-os-app/classic-mac-rust-2023-03-28_20.00.31.mp4" height={480} poster="png" preload="auto" alt="Video of the temperature converter converting values to and from Celsius, running on Mac OS 8.1 (in emulator)." caption="The temperature converter application ported to Rust" /> }}
 
 It worked on Mac OS 7.5 too:
 
-{{ figure(image="posts/2023/rust-classic-mac-os-app/rust-on-mac-os-7.png", link="posts/2023/rust-classic-mac-os-app/rust-on-mac-os-7.png", pixelated=true, border=1, alt="Screenshot of the temperature converter application running on Mac OS 7.5 (in emulator).", caption="Temperature converter application running on Mac OS 7.5") }}
+{{ <figure image="posts/2023/rust-classic-mac-os-app/rust-on-mac-os-7.png" link="posts/2023/rust-classic-mac-os-app/rust-on-mac-os-7.png" pixelated={true} border={true} alt="Screenshot of the temperature converter application running on Mac OS 7.5 (in emulator)." caption="Temperature converter application running on Mac OS 7.5" /> }}
 
 The Rust version is a bit more efficient than the [Nim version][nim-version] as
 it avoids some copying and heap allocation. That latter of which because I'm
@@ -238,7 +238,7 @@ blocker for some reason. To work around this I copied a snapshot of the JSON to
 my own server. So, unfortunately the data shown by the application does not
 update but you still get the idea.
 
-{{ figure(image="posts/2023/rust-classic-mac-os-app/Ferris%20Weather.png", link="posts/2023/rust-classic-mac-os-app/Ferris%20Weather.png", pixelated=true, border=1, alt="Screenshot of the Ferris Weather application showing an alert with the temperature in Brisbane.", caption="Ferris Weather") }}
+{{ <figure image="posts/2023/rust-classic-mac-os-app/Ferris%20Weather.png" link="posts/2023/rust-classic-mac-os-app/Ferris%20Weather.png" pixelated={true} border={true} alt="Screenshot of the Ferris Weather application showing an alert with the temperature in Brisbane." caption="Ferris Weather" /> }}
 
 So there you have it, that's how I built an application in Rust (and some C)
 for classic Mac OS. The [source code to Ferris Weather][ferris-weather] is on

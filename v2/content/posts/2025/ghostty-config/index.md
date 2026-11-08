@@ -29,30 +29,18 @@ This prompted me to take another look at Ghostty. I set about tweaking the
 settings to remove all the UI chrome and get the theme to match my Alacritty
 config. This is the result:
 
-{{ figure(image="posts/2025/ghostty-config/ghostty-fastfetch.png",
-   link="posts/2025/ghostty-config/ghostty-fastfetch.png",
-   width="700",
-   alt="Screenshot of the output of fastfetch in Ghostty.",
-   caption="fastfetch output in Ghostty.") }}
+{{ <figure image="posts/2025/ghostty-config/ghostty-fastfetch.png" link="posts/2025/ghostty-config/ghostty-fastfetch.png" width={700} alt="Screenshot of the output of fastfetch in Ghostty." caption="fastfetch output in Ghostty." /> }}
 
 Compared to Alacritty:
 
-{{ figure(image="posts/2025/ghostty-config/alacritty-fastfetch.png",
-   link="posts/2025/ghostty-config/alacritty-fastfetch.png",
-   width="700",
-   alt="Screenshot of the output of fastfetch in Ghostty. It's slightly narrower than the Ghostty output.",
-   caption="fastfetch output in Alacritty.") }}
+{{ <figure image="posts/2025/ghostty-config/alacritty-fastfetch.png" link="posts/2025/ghostty-config/alacritty-fastfetch.png" width={700} alt="Screenshot of the output of fastfetch in Ghostty. It's slightly narrower than the Ghostty output." caption="fastfetch output in Alacritty." /> }}
 
 For some reason Ghostty is rendering PragmataPro slightly wider than Alacritty
 despite them both being set to the same font size.
 
 Finally here's a sample document in [mdcat] showing image and ligature support:
 
-{{ figure(image="posts/2025/ghostty-config/ghostty-mdcat.png",
-   link="posts/2025/ghostty-config/ghostty-mdcat.png",
-   width="700",
-   alt="Screenshot of the output of mdcat rendering a showcase Markdown file that includes formatting, images, and ligatures.",
-   caption="mdcat rendering a sample Markdown document.") }}
+{{ <figure image="posts/2025/ghostty-config/ghostty-mdcat.png" link="posts/2025/ghostty-config/ghostty-mdcat.png" width={700} alt="Screenshot of the output of mdcat rendering a showcase Markdown file that includes formatting, images, and ligatures." caption="mdcat rendering a sample Markdown document." /> }}
 
 With the visuals out of the way, now I just need to spend some time with
 Ghostty to see how it compares in practice. My configuration for both terminal

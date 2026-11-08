@@ -1,4 +1,4 @@
-{% macro toc(page, type="text") %}
+{% component toc(page, type="text") %}
 {% if page.toc %}
 <strong>Contents</strong><br>
 <ul>
@@ -18,4 +18,4 @@
     {% endfor %}
 </ul>
 {% endif %}
-{% endmacro input %}
+{% endcomponent %}

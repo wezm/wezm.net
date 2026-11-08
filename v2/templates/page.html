@@ -1,5 +1,3 @@
-{% import "macros.html" as macros %}
-
 {% extends "layout.html" %}
 
 {% block title %}{{ page.title }} - {{ config.title }}{% endblock %}
@@ -7,7 +5,7 @@
 {% block metadata %}
     <meta property="og:url" content="{{ page.permalink }}" />
     <meta property="og:title" content="{{ page.title }}" />
-    <meta property="og:description" content="{{ page.summary | default(value="") | striptags }}" />
+    <meta property="og:description" content="{{ page.summary or "" | striptags }}" />
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="en_AU" />
     {% if page.colocated_path %}
@@ -56,7 +54,7 @@
     {% endif %}
 
     <div class="post-body">
-      {{ page.content | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe }}
+      {{ page.content | safe | replace(from="<!-- toc -->", to=<toc page={page} />)  }}
     </div>
     <div class="respond">
       <h3>

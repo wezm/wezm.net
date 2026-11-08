@@ -12,7 +12,7 @@ you'd just like to see the code, I have published that at:
 
 <https://forge.wezm.net/wezm/gleam-tauri-experiment>
 
-{{ figure(image="posts/2024/gleam-tauri/screenshot.png", link="posts/2024/gleam-tauri/screenshot.png", alt="Screenshot of the application showing a name field, minus button, plus button, Greet button and the current time.", caption="Screenshot of the application.", width="650") }}
+{{ <figure image="posts/2024/gleam-tauri/screenshot.png" link="posts/2024/gleam-tauri/screenshot.png" alt="Screenshot of the application showing a name field, minus button, plus button, Greet button and the current time." caption="Screenshot of the application." width={650} /> }}
 
 <!-- more --> 
 
@@ -153,12 +153,12 @@ export function main() {
 
 ### Building a Hybrid Native App
 
-{% aside(title="Version Information", float="right") %}
+{% <aside title="Version Information" float="right"> %}
 I used the following pre-release versions of Gleam and Tauri:
 
 - Gleam 1.0.0-rc2
 - Tauri 2.0.0-beta.1.
-{% end %}
+{% </aside> %}
 
 [Tauri] is a framework for building hybrid native applications. By that I mean
 an application that uses native code for the back-end and web technology for the
@@ -187,7 +187,7 @@ I then followed [Erika Rowland's guide to using Gleam with Vite][erika]. This
 resulted in a simple counter demo running in the Tauri window. At this point
 the Gleam code was almost identical to Erika's post.
 
-{{ figure(image="posts/2024/gleam-tauri/phase1.png", link="posts/2024/gleam-tauri/phase1.png", alt="Screenshot of the application showing a counter with plus and minus buttons", caption="Phase 1 complete.", width="650") }}
+{{ <figure image="posts/2024/gleam-tauri/phase1.png" link="posts/2024/gleam-tauri/phase1.png" alt="Screenshot of the application showing a counter with plus and minus buttons" caption="Phase 1 complete." width={650} /> }}
 
 Now came the uncharted waters: how to integrate [Tauri's command
 system][tauri-command] to invoke commands in the back-end. Commands are a sort

@@ -237,12 +237,12 @@ Now that Feedbin is the source of truth for subscriptions, how do I actually
 watch them? I set up the [FeedMe] app on my Android tablet. In the settings I
 enabled the NewPipe integration and set it to open the video page when tapped:
 
-{{ figure(image="posts/2024/youtube-subscriptions-opml/feedme-settings.png", link="posts/2024/youtube-subscriptions-opml/feedme-settings.png", alt='Screenshot of the FeedMe integration settings. There are lots of apps listed. The entry for NewPipe is turned on.', caption="Screenshot of the FeedMe integration settings") }}
+{{ <figure image="posts/2024/youtube-subscriptions-opml/feedme-settings.png" link="posts/2024/youtube-subscriptions-opml/feedme-settings.png" alt='Screenshot of the FeedMe integration settings. There are lots of apps listed. The entry for NewPipe is turned on.' caption="Screenshot of the FeedMe integration settings" /> }}
 
 Now when viewing an item in FeedMe there is a NewPipe button that I can tap to
 watch it:
 
-{{ figure(image="posts/2024/youtube-subscriptions-opml/feedme.png", link="posts/2024/youtube-subscriptions-opml/feedme.png", alt='Screenshot of FeedMe viewing a video item. In the top left there is a NewPipe button, which when tapped opens the video in NewPipe.', caption="Screenshot of FeedMe viewing a video item") }}
+{{ <figure image="posts/2024/youtube-subscriptions-opml/feedme.png" link="posts/2024/youtube-subscriptions-opml/feedme.png" alt='Screenshot of FeedMe viewing a video item. In the top left there is a NewPipe button, which when tapped opens the video in NewPipe.' caption="Screenshot of FeedMe viewing a video item" /> }}
 
 ### Closing Thoughts & Future Work
 
@@ -263,7 +263,7 @@ easily identifiable.
 to use that in an [action] to filter out YouTube items less than 90 seconds long,
 successfully filtering out Shorts.
 
-{{ figure(image="posts/2024/youtube-subscriptions-opml/feedbin-shorts-filter.png", link="posts/2024/youtube-subscriptions-opml/feedbin-shorts-filter.png", width=532, alt='Screenshot of the Feedbin settings UI. It shows a new action with name "Filter out YouTube Shorts", the search term is "media_duration:<90" and Article is in Tag has "YouTube" ticked.', caption="Shorts filter in Feedbin") }}
+{{ <figure image="posts/2024/youtube-subscriptions-opml/feedbin-shorts-filter.png" link="posts/2024/youtube-subscriptions-opml/feedbin-shorts-filter.png" width={532} alt='Screenshot of the Feedbin settings UI. It shows a new action with name "Filter out YouTube Shorts", the search term is "media_duration:<90" and Article is in Tag has "YouTube" ticked.' caption="Shorts filter in Feedbin" /> }}
 
 Lastly, what about desktop usage? When I'm on a real computer I read my RSS via
 the Feedbin web app. It supports [custom sharing

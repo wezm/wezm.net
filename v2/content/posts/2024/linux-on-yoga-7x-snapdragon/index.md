@@ -7,11 +7,7 @@ date = 2024-12-01T11:17:03+10:00
 updated = 2025-04-09T19:47:25+10:00
 +++
 
-{{ figure(image="posts/2024/linux-on-yoga-7x-snapdragon/fastfetch.png",
-   link="posts/2024/linux-on-yoga-7x-snapdragon/fastfetch.png",
-   resize_width=1600,
-   alt="Screenshot of fastfetch output in a terminal window. The details indicate that it's running Ubuntu oracular 24.10 on aarch64.",
-   caption="Ubuntu running on Yoga Slim 7x") }}
+{{ <figure image="posts/2024/linux-on-yoga-7x-snapdragon/fastfetch.png" link="posts/2024/linux-on-yoga-7x-snapdragon/fastfetch.png" resize_width={1600} alt="Screenshot of fastfetch output in a terminal window. The details indicate that it's running Ubuntu oracular 24.10 on aarch64." caption="Ubuntu running on Yoga Slim 7x" /> }}
 
 Over the course of the last few months some fine folks in the Linux community
 have been plugging away implementing support for Qualcomm Snapdragon X based
@@ -23,10 +19,10 @@ installed and tested on my Lenovo Yoga Slim 7x.
 
 ### Installation
 
-{% aside(title="Want a full review?", float="right") %}
+{% <aside title="Want a full review?" float="right"> %}
 See: [A Developer's Review of a Snapdragon X Laptop (Lenovo Yoga Slim 7x)](@/posts/2024/yoga-7x-snapdragon-developer-review/index.md)
 for my detailed review of this laptop.
-{% end %}
+{% </aside> %}
 
 Installation alongside Windows was almost as straightforward as a normal Ubuntu
 install. It booted to a graphical live environment with working Wi-Fi.
@@ -42,19 +38,11 @@ after installation to fetch and install firmware blobs from the Windows
 partition, and then rebooted. This appeared to fix battery level reporting and
 possibly hardware video acceleration.
 
-{{ figure(image="posts/2024/linux-on-yoga-7x-snapdragon/qcom-firmware-extract.png",
-   link="posts/2024/linux-on-yoga-7x-snapdragon/qcom-firmware-extract.png",
-   resize_width=1600,
-   alt="Screenshot of a terminal showing the output from running qcom-firmware-extract. It says 'extracting firmware' followed by a list of files, and ends with 'Building package qcom-x1e-firmware-extracted_20241201_arm64'.",
-   caption="Running qcom-firmware-extract") }}
+{{ <figure image="posts/2024/linux-on-yoga-7x-snapdragon/qcom-firmware-extract.png" link="posts/2024/linux-on-yoga-7x-snapdragon/qcom-firmware-extract.png" resize_width={1600} alt="Screenshot of a terminal showing the output from running qcom-firmware-extract. It says 'extracting firmware' followed by a list of files, and ends with 'Building package qcom-x1e-firmware-extracted_20241201_arm64'." caption="Running qcom-firmware-extract" /> }}
 
 ### Usage
 
-{{ figure(image="posts/2024/linux-on-yoga-7x-snapdragon/system-details.png",
-   link="posts/2024/linux-on-yoga-7x-snapdragon/system-details.png",
-   resize_width=1600,
-   alt="Screenshot of System Details in GNOME settings indicating that GNOME is running on a Lenovo Yoga Slim 7 14Q8X9 with 32Gb RAM, 1Tb disk, GNOME 47 on Wayland. The Processor section is blank.",
-   caption="System Details in GNOME Settings") }}
+{{ <figure image="posts/2024/linux-on-yoga-7x-snapdragon/system-details.png" link="posts/2024/linux-on-yoga-7x-snapdragon/system-details.png" resize_width={1600} alt="Screenshot of System Details in GNOME settings indicating that GNOME is running on a Lenovo Yoga Slim 7 14Q8X9 with 32Gb RAM, 1Tb disk, GNOME 47 on Wayland. The Processor section is blank." caption="System Details in GNOME Settings" /> }}
 
 I have not spent a huge amount of time with this installation as Ubuntu isn't my
 distro of choice, so I don't want to invest much time setting it up. I did
@@ -78,11 +66,7 @@ The display works fine. I was able to change it to run at the full 90Hz in the
 GNOME settings. The Wayland based GNOME desktop appears to be using GPU
 acceleration and runs smoothly.
 
-{{ figure(image="posts/2024/linux-on-yoga-7x-snapdragon/glxgears.png",
-   link="posts/2024/linux-on-yoga-7x-snapdragon/glxgears.png",
-   resize_width=1600,
-   alt="Screenshot showing glxgears running and reporting 89fps in the terminal.",
-   caption="glxgears running at 90Hz") }}
+{{ <figure image="posts/2024/linux-on-yoga-7x-snapdragon/glxgears.png" link="posts/2024/linux-on-yoga-7x-snapdragon/glxgears.png" resize_width={1600} alt="Screenshot showing glxgears running and reporting 89fps in the terminal." caption="glxgears running at 90Hz" /> }}
 
 [glxinfo](glxinfo.txt) and [vulkaninfo](vulkaninfo.txt) both suggest hardware
 graphics acceleration is available. However, Firefox reports `llvmpipe` in
@@ -127,11 +111,7 @@ There's been work happening in other distros too. Relevant to my interests,
 and has that running on a HP OmniBook X. It's on my todo list to try out Jami's
 work on my Yoga 7x.
 
-{{ figure(image="posts/2024/linux-on-yoga-7x-snapdragon/chimera-kde-plasma-x1e.png",
-   link="posts/2024/linux-on-yoga-7x-snapdragon/chimera-kde-plasma-x1e.png",
-   resize_width=1600,
-   alt="About this system in KDE Plasma showing Chimera Linux running on Snapdragon X hardware.",
-   caption="About this system in KDE Plasma showing Chimera Linux running on Snapdragon X hardware.") }}
+{{ <figure image="posts/2024/linux-on-yoga-7x-snapdragon/chimera-kde-plasma-x1e.png" link="posts/2024/linux-on-yoga-7x-snapdragon/chimera-kde-plasma-x1e.png" resize_width={1600} alt="About this system in KDE Plasma showing Chimera Linux running on Snapdragon X hardware." caption="About this system in KDE Plasma showing Chimera Linux running on Snapdragon X hardware." /> }}
 
 
 [JamiKettunen]: https://github.com/JamiKettunen/cports/tree/x1e

@@ -128,12 +128,12 @@ the blog post looked as I implemented the following improvements.
 
 ### Expanding t.co Links
 
-{% aside(title="You used Rust for this!?", float="right") %}
+{% <aside title="You used Rust for this!?" float="right"> %}
 This is the sort of thing that would be well suited to a scripting language
 too.  These days I tend to reach for Rust, even for little tasks like this.
 It's what I'm most familiar with nowadays and I can mostly write a "script"
 like this off the cuff with little need to refer to API docs.
-{% end %}
+{% </aside> %}
 
 The markup Twitter returns is full of `t.co` redirect links. I wanted to avoid
 sending my visitors through the Twitter redirect so I needed to expand these

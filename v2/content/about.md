@@ -2,7 +2,7 @@
 title = "About"
 +++
 
-{{ resize_image(image="../static/images/Photo-of-Wesley-Moore.jpg", width=1600, quality=60, alt="Photo of me against a Boab tree in Broome, Western Australia") }}
+{{ <resize_image image="../static/images/Photo-of-Wesley-Moore.jpg" width={1600} quality={60} alt="Photo of me against a Boab tree in Broome, Western Australia" /> }}
 
 Hi, I'm Wes (he/him). I'm a software developer originally from Melbourne,
 Australia. I now live on the Sunshine Coast in Queensland. I like open-source
@@ -30,7 +30,7 @@ computer. It's a lot of fun to work on and is an ode to late 90s and early
 2000s websites and the computers we used to make
 them:<br><http://home.wezm.net/~wmoore/>.
 
-[{{ float_image(image="../static/images/keyboards.jpg", float="right", width=128, alt="Photo of my keyboards") }}](../images/keyboards.jpg)
+[{{ <float_image image="../static/images/keyboards.jpg" float="right" width={128} alt="Photo of my keyboards" /> }}](../images/keyboards.jpg)
 I prefer typing on mechanical keyboards. I have a small collection in a range
 of sizes. Almost all are fully programmable. My current favourite is a [WK870]
 with Gateron G Pro 2.0 brown switches. This keyboard is not programmable, so I

@@ -6,8 +6,7 @@ date = 2024-07-29T09:43:57+10:00
 #updated = 2024-07-26T10:34:50+10:00
 +++
 
-{{ float_svg(image="images/feedlynx.svg", width=75, float="left",
-   alt="Feedlynx logo: a caricature of a Lynx with a stem in its mouth. At the end of the stem is the orange RSS logo.") }}
+{{ <float_svg image="images/feedlynx.svg" width={75} float="left" alt="Feedlynx logo: a caricature of a Lynx with a stem in its mouth. At the end of the stem is the orange RSS logo." /> }}
 
 My latest project, [Feedlynx], is a self-hosted tool that allows you to
 collect links in an RSS feed[^1]. You subscribe to the feed in your RSS reader of
@@ -45,11 +44,7 @@ On a real computer new links are added via [the Firefox browser extension][feedl
 wrote. Click the icon and a moment later a notification is shown indicating the
 link was added.
 
-{{ figure(image="posts/2024/announcing-feedlynx/notification.png",
-   link="posts/2024/announcing-feedlynx/notification.png",
-   width=303,
-   alt="TODO",
-   caption="Notification from Firefox extension.") }}
+{{ <figure image="posts/2024/announcing-feedlynx/notification.png" link="posts/2024/announcing-feedlynx/notification.png" width={303} alt="TODO" caption="Notification from Firefox extension." /> }}
 
 On my phone, I've set up a workflow using the Shortcuts app that lets me add
 links directly from the share sheet.. The Shortcut can be installed on iOS,

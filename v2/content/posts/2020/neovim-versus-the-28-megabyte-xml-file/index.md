@@ -37,10 +37,10 @@ superiority. Mostly I thought it was interesting — opening a large but not
 ridiculously sized file proved to be a challenge for several professional
 editors running on a modern, fairly high-end desktop computer.
 
-{% aside(title="Want to see how your editor handles the file?", float="right") %}
+{% <aside title="Want to see how your editor handles the file?" float="right"> %}
 You can [download it](https://files.wezm.net/twitter/NotoColorEmoji.ttx.bz2),
 just be sure to uncompress it first.
-{% end %}
+{% </aside> %}
 
 I use Neovim for most text editing, except Rust where I use CLion and it will
 take a lot more than a once in a decade experience with one file to make me

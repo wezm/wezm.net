@@ -86,7 +86,7 @@ last time. By default `rsspls` looks for its configuration file in
 `~/.config/rsspls/feeds.toml` if `XDG_CONFIG_HOME` is not set. Alternatively
 the path can be supplied with `--config`.
 
-{{ figure(image="posts/2022/generate-rss-from-webpage/rsspls-output.png", link="posts/2022/generate-rss-from-webpage/rsspls-output.png", alt="Screenshot of the output when running rsspls. It has several log messages prefixed with INFO describing the actions taken", caption="rsspls prints informational messages when updating feeds", width=335, border=false) }}
+{{ <figure image="posts/2022/generate-rss-from-webpage/rsspls-output.png" link="posts/2022/generate-rss-from-webpage/rsspls-output.png" alt="Screenshot of the output when running rsspls. It has several log messages prefixed with INFO describing the actions taken" caption="rsspls prints informational messages when updating feeds" width={335} border={false} /> }}
 
 ### Deployment
 

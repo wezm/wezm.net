@@ -6,13 +6,9 @@ date = 2025-06-29T12:05:41+10:00
 updated = 2025-06-30T13:45:50+10:00
 +++
 
-{{ figure(image="posts/2025/daily-driving-chimera-for-work/cane-fields.jpg",
-   link="posts/2025/daily-driving-chimera-for-work/cane-fields.jpg",
-   resize_width=1600,
-   alt="Landscape scene with trimmed, green grass in the foreground, sugar cane fields in the middle, and foggy bushland mountains in the background topped with a clear blue sky.",
-   caption="View of sugar cane fields from where I was working.") }}
+{{ <figure image="posts/2025/daily-driving-chimera-for-work/cane-fields.jpg" link="posts/2025/daily-driving-chimera-for-work/cane-fields.jpg" resize_width={1600} alt="Landscape scene with trimmed, green grass in the foreground, sugar cane fields in the middle, and foggy bushland mountains in the background topped with a clear blue sky." caption="View of sugar cane fields from where I was working." /> }}
 
-{% aside(title="What Is Chimera Linux?", float="right") %}
+{% <aside title="What Is Chimera Linux?" float="right"> %}
 <a href="https://chimera-linux.org/">Chimera Linux</a> is a unique from-scratch
 Linux distribution created in 2021 by <a href="https://q66.moe/">q66</a> that
 combines the <a href="https://www.kernel.org/">Linux kernel</a>, <a
@@ -21,7 +17,7 @@ href="https://www.freebsd.org/">FreeBSD</a> userland, <a
 href="https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper">apk package
 manager</a>, and <a href="https://davmac.org/projects/dinit/">dinit binary init
 system</a>. The whole system is built with the <a href="https://llvm.org/">LLVM</a> toolchain.
-{% end %}
+{% </aside> %}
 
 Since [I started running the first alpha][alpha] release of [Chimera Linux] in
 2023, my goal has been to eventually migrate to Chimera as my primary operating
@@ -70,11 +66,7 @@ got a AMD Ryzen AI 7 350 CPU with 8 cores (4×Zen 5, 4×Zen 5c), 32 Gb RAM, and
 1Tb NVMe. I was also curious to see what things were looking like on the x86
 side of the fence (my last x86\_64 laptop was from 2022).
 
-{{ figure(image='posts/2025/daily-driving-chimera-for-work/Lenovo Yoga 7 2-in-1 (14", Gen 10).jpg',
-   link='posts/2025/daily-driving-chimera-for-work/Lenovo Yoga 7 2-in-1 (14", Gen 10).jpg',
-   resize_width=1600,
-   alt="Lenovo Yoga 7 2-in-1 sitting open with two windows in GNOME open",
-   caption='Lenovo Yoga 7 2-in-1 (14" Gen 10)') }}
+{{ <figure image='posts/2025/daily-driving-chimera-for-work/Lenovo Yoga 7 2-in-1 (14", Gen 10).jpg' link='posts/2025/daily-driving-chimera-for-work/Lenovo Yoga 7 2-in-1 (14", Gen 10).jpg' resize_width={1600} alt="Lenovo Yoga 7 2-in-1 sitting open with two windows in GNOME open" caption='Lenovo Yoga 7 2-in-1 (14" Gen 10)' /> }}
 
 #### Software
 
@@ -84,11 +76,7 @@ Installation of Chimera on the new laptop was straightforward:
 2. Boot from live USB flash drive
 3. Follow [installation instructions][chimera-install]
 
-{{ figure(image="posts/2025/daily-driving-chimera-for-work/fastfetch-chimera-yoga7.png",
-   link="posts/2025/daily-driving-chimera-for-work/fastfetch-chimera-yoga7.png",
-   resize_width=1600,
-   alt="Screenshot of a terminal window with the output of fastfetch.",
-   caption="fastfetch output on the Yoga 7 2-in-1.") }}
+{{ <figure image="posts/2025/daily-driving-chimera-for-work/fastfetch-chimera-yoga7.png" link="posts/2025/daily-driving-chimera-for-work/fastfetch-chimera-yoga7.png" resize_width={1600} alt="Screenshot of a terminal window with the output of fastfetch." caption="fastfetch output on the Yoga 7 2-in-1." /> }}
 
 The product I work on, [Prince], is implemented in a mixture of [Mercury] and [Rust].
 I created [an apk package for the specific version of the Mercury][mmc] compiler we use.
@@ -251,11 +239,7 @@ cargo clean && time cargo build --release --locked
 
 Yoga Slim 7x specifications for reference:
 
-{{ figure(image="posts/2025/daily-driving-chimera-for-work/fastfetch-chimera-yoga7x.png",
-   link="posts/2025/daily-driving-chimera-for-work/fastfetch-chimera-yoga7x.png",
-   resize_width=1600,
-   alt="Screenshot of a terminal window with the output of fastfetch.",
-   caption="fastfetch output on the Yoga 7x") }}
+{{ <figure image="posts/2025/daily-driving-chimera-for-work/fastfetch-chimera-yoga7x.png" link="posts/2025/daily-driving-chimera-for-work/fastfetch-chimera-yoga7x.png" resize_width={1600} alt="Screenshot of a terminal window with the output of fastfetch." caption="fastfetch output on the Yoga 7x" /> }}
 
 I ran the Gleam build a couple of times on both laptops while plugged into power
 using Rust 1.87.0. These were the results:

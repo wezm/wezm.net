@@ -1,13 +1,6 @@
-{% if poster %}
-{% else %}
-  {% set poster = "jpg" %}
-{% endif %}
-{% if preload %}
-{% else %}
-  {% set preload = "none" %}
-{% endif %}
-
+{% component video(@config, video, preload="none", poster="jpg", loop=false, height, alt, caption) %}
 <figure class="text-center">
   <video controls preload="{{ preload }}" src="{{ config.base_url }}/{{ video }}" poster="{{ config.base_url }}/{{ video }}.{{ poster }}" {% if loop %}loop="loop"{% endif %} style="max-height: {{ height }}px" aria-label="{{ alt }}"></video>
   <figcaption>{{ caption }}</figcaption>
 </figure>
+{% endcomponent %}

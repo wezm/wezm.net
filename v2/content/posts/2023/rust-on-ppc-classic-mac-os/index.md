@@ -92,7 +92,7 @@ This successfully compiles and produces
 I used the [Dialog sample] from Retro68 as the basis of my Mac app. Here it is
 running prior to Rust integration:
 
-{{ figure(image="posts/2023/rust-on-ppc-classic-mac-os/dialog-sample.png", link="posts/2023/rust-on-ppc-classic-mac-os/dialog-sample.png", alt="Screenshot of SheepShaver running Mac OS 8.1. It shows some Finder windows with a frontmost dialog that has a text label, text field, radio buttons, check box and Quit button.", caption="Dialog Sample") }}
+{{ <figure image="posts/2023/rust-on-ppc-classic-mac-os/dialog-sample.png" link="posts/2023/rust-on-ppc-classic-mac-os/dialog-sample.png" alt="Screenshot of SheepShaver running Mac OS 8.1. It shows some Finder windows with a frontmost dialog that has a text label, text field, radio buttons, check box and Quit button." caption="Dialog Sample" /> }}
 
 This is my tweaked version of the C file:
 
@@ -300,7 +300,7 @@ The main differences are:
 * Adding `target_link_libraries(Dialog ${CMAKE_SOURCE_DIR}/target/powerpc-apple-macos/release/libclassic_mac_rust.a)`
   to `CMakeLists.txt` to have CMake link with the Rust library.
 
-{{ figure(image="posts/2023/rust-on-ppc-classic-mac-os/ParamText.jpg", link="posts/2023/rust-on-ppc-classic-mac-os/ParamText.jpg", alt="Photo of ParamText documentation from my copy of Inside Macintosh Volume Ⅰ", caption="ParamText documentation from my copy of Inside Macintosh Volume Ⅰ") }}
+{{ <figure image="posts/2023/rust-on-ppc-classic-mac-os/ParamText.jpg" link="posts/2023/rust-on-ppc-classic-mac-os/ParamText.jpg" alt="Photo of ParamText documentation from my copy of Inside Macintosh Volume Ⅰ" caption="ParamText documentation from my copy of Inside Macintosh Volume Ⅰ" /> }}
 
 Now when building the project we get…
 

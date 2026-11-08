@@ -6,10 +6,10 @@ date = 2023-03-01T18:33:33+10:00
 updated = 2023-03-01T21:54:06+10:00
 +++
 
-{% aside(title="Just want the feed?", float="right") %}
+{% <aside title="Just want the feed?" float="right"> %}
 Here you go:<br>
 [ATPrewind podcast feed](https://files.wezm.net/atprewind.rss)
-{% end %}
+{% </aside> %}
 
 I recently discovered the [ATPrewind account on Mastodon][ATPrewind]. It's an account
 sharing "gems discovered while re-listening to [@atpfm] from the very first
@@ -97,7 +97,7 @@ that the MP4 container for video and audio is the same, the audio only version
 is just lacking the video stream. I figured that podcast players might still be
 able to play the video and at least for Overcast it works:
 
-{{ figure(image="posts/2023/xslt-podcast/overcast-screenshot.png", link="posts/2023/xslt-podcast/overcast-screenshot.png", alt="Screenshot of Overcast showing the podcast 'episodes'.", caption="Screenshot of Overcast showing the 'episodes'.", width=393) }}
+{{ <figure image="posts/2023/xslt-podcast/overcast-screenshot.png" link="posts/2023/xslt-podcast/overcast-screenshot.png" alt="Screenshot of Overcast showing the podcast 'episodes'." caption="Screenshot of Overcast showing the 'episodes'." width={393} /> }}
 
 
 ### Deployment

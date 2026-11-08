@@ -37,11 +37,11 @@ traffic I used it to filter requests and return a very basic 404 page for all
 but a handful of routes. A day later the impact of this change is obvious in
 the usage graphs.
 
-{{ figure(image="posts/2021/nitter-bandwidth/daily-bandwidth.png", link="posts/2021/nitter-bandwidth/daily-bandwidth.png", alt="Chart showing daily bytes sent and received for the last 30 days. The last day shows a significant drop", caption="Daily data sent and received for the last 30 days") }}
+{{ <figure image="posts/2021/nitter-bandwidth/daily-bandwidth.png" link="posts/2021/nitter-bandwidth/daily-bandwidth.png" alt="Chart showing daily bytes sent and received for the last 30 days. The last day shows a significant drop" caption="Daily data sent and received for the last 30 days" /> }}
 
-{{ figure(image="posts/2021/nitter-bandwidth/network-usage.png", link="posts/2021/nitter-bandwidth/network-usage.png", alt="Chart showing network activity for the last week with a significant drop in the last two days", caption="Network activity, last 7 days") }}
+{{ <figure image="posts/2021/nitter-bandwidth/network-usage.png" link="posts/2021/nitter-bandwidth/network-usage.png" alt="Chart showing network activity for the last week with a significant drop in the last two days" caption="Network activity, last 7 days" /> }}
 
-{{ figure(image="posts/2021/nitter-bandwidth/cpu-usage.png", link="posts/2021/nitter-bandwidth/cpu-usage.png", alt="Chart showing CPU usage for the last week with a significant drop in the last two days", caption="CPU usage, last 7 days") }}
+{{ <figure image="posts/2021/nitter-bandwidth/cpu-usage.png" link="posts/2021/nitter-bandwidth/cpu-usage.png" alt="Chart showing CPU usage for the last week with a significant drop in the last two days" caption="CPU usage, last 7 days" /> }}
 
 After letting the changes sit overnight I was still seeing a lot of requests
 from user-agents that appear to be Chinese bots of some sort. They almost

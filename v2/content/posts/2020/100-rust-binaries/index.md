@@ -22,7 +22,7 @@ I also wrote a follow-up post about how this page was built and the
 considerations that went into making it as lightweight as possible:
 [Turning One Hundred Tweets Into a Blog Post](@/posts/2020/turning-one-hundred-tweets-into-a-blog-post.md).
 
-{{ tweet_list() }}
+{{ <tweet_list /> }}
 
 [Continue to page 2 »](@/posts/2020/100-rust-binaries/page2.md)
 

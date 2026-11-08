@@ -823,11 +823,7 @@ distances covered. Is this _really_ a problem for a lightweight website with
 low traffic? Not really, but it bothered me, so I set about looking into
 options to improve the situation.
 
-{{ figure(image="posts/2024/tiny-cdn/response-times-before.png",
-   link="posts/2024/tiny-cdn/response-times-before.png",
-   resize_width=1600,
-   alt="Screenshot of updown.io monitoring. It has response times for nine locations around the world. The average total time is 807ms.",
-   caption="Average response timing from my monitoring at updown.io before the changes.") }}
+{{ <figure image="posts/2024/tiny-cdn/response-times-before.png" link="posts/2024/tiny-cdn/response-times-before.png" resize_width={1600} alt="Screenshot of updown.io monitoring. It has response times for nine locations around the world. The average total time is 807ms." caption="Average response timing from my monitoring at updown.io before the changes." /> }}
 
 I briefly explored options like Cloudflare and Fastly. These would have been
 a cheap and sensible choice, but I didn't really feel like giving them (especially
@@ -868,10 +864,10 @@ on older hardware[^3], but after some basic testing seemed fine.
 
 ### Provisioning & Configuration
 
-{% aside(title="Want the code?", float="right") %}
+{% <aside title="Want the code?" float="right"> %}
 I've [published the pyinfra install scripts to my git forge](https://forge.wezm.net/wezm/chimera-pyinfra)
 if you're curious.
-{% end %}
+{% </aside> %}
 
 To provision the servers I used some some [pyinfra] code I'd written previously
 to automate the installation of [Chimera Linux] in virtual machines. I picked
@@ -949,12 +945,12 @@ The servers are configured with an additional `apk` repository that points at
 my locally built packages. A pyinfa deployment takes care of building the
 packages and syncing the repo to the servers.
 
-{% aside(title="I thought cross-compiling Rust was easy?", float="right") %}
+{% <aside title="I thought cross-compiling Rust was easy?" float="right"> %}
 Cross-compiling Rust binaries is easy when just Rust is involved, but it gets
 harder when there are system library dependencies. For example,
 [oniguruma](https://github.com/kkos/oniguruma), which
 Linked List uses transitively. Using `cports` makes managing this easy.
-{% end %}
+{% </aside> %}
 
 Using Chimera Linux and building the binary through `cports` has some other
 neat benefits:
@@ -993,6 +989,7 @@ pushes out updated files when they're renewed via a renew-hook script. The
 script is managed by pyinfra and templated so that it syncs to each server in
 my pyinfra inventory within the `linkedlist_servers` group:
 
+{% raw -%}
 ```j2
 #!/bin/sh -x
 
@@ -1006,6 +1003,7 @@ if [ "$LEGO_CERT_DOMAIN" = "linkedlist.org" ]; then
   {%- endfor %}
 fi
 ```
+{% endraw -%}
 
 The compromise here was that I had to allow the cert server `ssh` access to
 each of the app servers, but each of the app servers has no access to the
@@ -1032,11 +1030,7 @@ features, a generous free tier, and a reasonable paid tier if that was ever
 reached. The UI is perhaps not super intuitive but I eventually got it set up
 as desired:
 
-{{ figure(image="posts/2024/tiny-cdn/gcore-dns-config.png",
-   link="posts/2024/tiny-cdn/gcore-dns-config.png",
-   width="709",
-   alt="Screenshot of the Gcore DNS configuration. There's three records. The first is assigned to North America, the second Europe, Africa, and South America, the last one is the default fallback record.",
-   caption="Gcore DNS configuration for linkedlist.org.") }}
+{{ <figure image="posts/2024/tiny-cdn/gcore-dns-config.png" link="posts/2024/tiny-cdn/gcore-dns-config.png" width={709} alt="Screenshot of the Gcore DNS configuration. There's three records. The first is assigned to North America, the second Europe, Africa, and South America, the last one is the default fallback record." caption="Gcore DNS configuration for linkedlist.org." /> }}
 
 * North America is served by the US server.
 * Europe, Africa, and South America are served by the French server.
@@ -1070,21 +1064,13 @@ So how did I go, was this whole exercise in over-engineering worth it? Yep, it
 looks like it was. This is the end result in [updown.io], which shows a decent
 improvement over the stats at the beginning of the post:
 
-{{ figure(image="posts/2024/tiny-cdn/response-times-after.png",
-   link="posts/2024/tiny-cdn/response-times-after.png",
-   resize_width=1600,
-   alt="Screenshot of updown.io monitoring. It has response times for nine locations around the world. The average total time is 189ms.",
-   caption="Average response timing from my monitoring after the changes") }}
+{{ <figure image="posts/2024/tiny-cdn/response-times-after.png" link="posts/2024/tiny-cdn/response-times-after.png" resize_width={1600} alt="Screenshot of updown.io monitoring. It has response times for nine locations around the world. The average total time is 189ms." caption="Average response timing from my monitoring after the changes" /> }}
 
 Most of the monitored locations are showing lower average response times. In
 particular, the times in Europe are much improved. It also scores 100 for
 performance in a Lighthouse test in Chromium:
 
-{{ figure(image="posts/2024/tiny-cdn/linked-list-lighthouse.png",
-   link="posts/2024/tiny-cdn/linked-list-lighthouse.png",
-   width="741",
-   alt="Screenshot of a Lighthouse report for linkedlist.org in Chromium. It shows 100 for performance, 82 for accessibility, 100 for best practices, adn 92 for SEO.",
-   caption="linkedlist.org Lighthouse report.") }}
+{{ <figure image="posts/2024/tiny-cdn/linked-list-lighthouse.png" link="posts/2024/tiny-cdn/linked-list-lighthouse.png" width={741} alt="Screenshot of a Lighthouse report for linkedlist.org in Chromium. It shows 100 for performance, 82 for accessibility, 100 for best practices, adn 92 for SEO." caption="linkedlist.org Lighthouse report." /> }}
 
 While these results are good, I still only have a presence in three places
 around the world. Notably absent are servers in Asia and Africa. Should I start

@@ -13,7 +13,7 @@ across [this interesting video][video] that tested 16 different cards. Their
 recommendation was the Lexar ones. So I found [some 32Gb ones for
 AU$4.13][mycards] and placed an order[^1].
 
-{{ figure(image="posts/2024/testing-aliexpress-sdcards/lexar-32gb-micro-sd-card.jpg", link="posts/2024/testing-aliexpress-sdcards/lexar-32gb-micro-sd-card.jpg", alt="Photo of the micro SD card in its packaging.", caption="The card being tested.", resize_width=880, width=440) }}
+{{ <figure image="posts/2024/testing-aliexpress-sdcards/lexar-32gb-micro-sd-card.jpg" link="posts/2024/testing-aliexpress-sdcards/lexar-32gb-micro-sd-card.jpg" alt="Photo of the micro SD card in its packaging." caption="The card being tested." resize_width={880} width={440} /> }}
 
 As per the video's suggestion I tested one with an open-source tool called
 [F3 (Fight Flash Fraud)][f3] when they arrived. F3 verifies the capacity against

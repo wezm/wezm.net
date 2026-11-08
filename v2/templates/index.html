@@ -23,7 +23,7 @@
       </h2>
 
       {% set section = get_section(path="posts/_index.md") %}
-      {% for page in section.pages | sort(attribute="date") | reverse | slice(end=10) %}
+      {% for page in section.pages | sort(attribute="date") | reverse[:10] %}
         {% include "article.html" %}
       {% endfor %}
 

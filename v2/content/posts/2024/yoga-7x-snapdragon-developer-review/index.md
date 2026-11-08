@@ -7,11 +7,7 @@ template = "yoga7x.html"
 updated = 2024-12-03T20:16:27+10:00
 +++
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-on-desk.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-on-desk.jpg",
-   resize_width=1600,
-   alt="Photo of the Yoga 7x laptop open on a desk showing the Glass House Mountains on the desktop. To the right of the laptop is a coffee mug and a pair of glasses.",
-   caption="Lenovo Yoga Slim 7x Snapdragon") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-on-desk.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-on-desk.jpg" resize_width={1600} alt="Photo of the Yoga 7x laptop open on a desk showing the Glass House Mountains on the desktop. To the right of the laptop is a coffee mug and a pair of glasses." caption="Lenovo Yoga Slim 7x Snapdragon" /> }}
 
 For the last two weeks I've been testing out my new laptop, a [Lenovo Yoga Slim
 7x (14&quot;, Gen 9) Snapdragon][yoga-7x]. This laptop is interesting because
@@ -30,17 +26,16 @@ All prices are quoted in Australian dollars. You can select a
 different currency, which will use exchange rates at the time I purchased the
 laptop.
 
-{{ select_currency(path="content/posts/2024/yoga-7x-snapdragon-developer-review/forex.json") }}
+{{ <select_currency path="content/posts/2024/yoga-7x-snapdragon-developer-review/forex.json" /> }}
 
-I purchased the Yoga 7x for {{ money(amount=2466.98) }} direct from Lenovo.
+I purchased the Yoga 7x for {{ <money amount={2466.98} /> }} direct from Lenovo.
 There are two models offered, one with 16 Gb RAM/512 Gb storage the other with
 32 Gb/1 Tb. Strangely, if you option the first model up to the same specs as
 the other one the price is cheaper, so I did that. Additionally, I was able to
-get a {{ money(amount=200) }} discount and carry case for {{ money(amount=1) }}
+get a {{ <money amount={200} /> }} discount and carry case for {{ <money amount={1} /> }}
 by asking in the web chat if they had any "special offers" for this machine.
 
-The Yoga 7x is to replace a [HP Aero] that I bought for {{ money(amount=1079)
-}} two years ago. My use-case for a laptop is mostly for tinkering in the
+The Yoga 7x is to replace a [HP Aero] that I bought for {{ <money amount={1079} /> }} two years ago. My use-case for a laptop is mostly for tinkering in the
 evening and for work when travelling. Normally for work I use a desktop
 computer. The main tasks I perform on my laptop are programming, web browsing,
 YouTube, and other technical pursuits.
@@ -62,11 +57,7 @@ have with Windows.
 Let's get the specifications and inevitable comparisons to MacBooks out of the
 way first:
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/fastfetch.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/fastfetch.png",
-   resize_width=1600,
-   alt="Screenshot of a Windows Terminal window with the output of fastfetch.",
-   caption="fastfetch output on the Yoga 7x.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/fastfetch.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/fastfetch.png" resize_width={1600} alt="Screenshot of a Windows Terminal window with the output of fastfetch." caption="fastfetch output on the Yoga 7x." /> }}
 
 |                        |                                                                                                                   |
 |------------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -105,7 +96,7 @@ spec-wise, while managing to be significantly cheaper than both. I configured a
 - Two Thunderbolt/USB 4 ports
 - 70W USB-C Power Adapter
 
-{{ money(amount=3399) }}
+{{ <money amount={3399} /> }}
 
 **MacBook Pro 14-inch**
 
@@ -119,21 +110,17 @@ spec-wise, while managing to be significantly cheaper than both. I configured a
 - 96W USB-C Power Adapter
 - Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port
 
-{{ money(amount=4799) }}
+{{ <money amount={4799} /> }}
 
-The Air comes out {{ money(amount=932) }} more than the Yoga 7x, and the Pro is
-whopping {{ money(amount=2332) }} more (almost enough to buy a second Yoga 7x),
+The Air comes out {{ <money amount={932} /> }} more than the Yoga 7x, and the Pro is
+whopping {{ <money amount={2332} /> }} more (almost enough to buy a second Yoga 7x),
 but it is admittedly more full-featured.
 
 ### Usage
 
 #### Case Construction
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-top.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-top.jpg",
-   resize_width=1600,
-   alt="Photo of the top of the laptop showing the Lenovo detail in the middle.",
-   caption="Top of laptop, back to the reader.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-top.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-top.jpg" resize_width={1600} alt="Photo of the top of the laptop showing the Lenovo detail in the middle." caption="Top of laptop, back to the reader." /> }}
 
 The laptop is dressed in a lovely blue-grey colour that Lenovo call Cosmic
 Blue. The surface/colour of the case is a bit of fingerprint magnet but cleans
@@ -151,11 +138,7 @@ difference. However, after changing back to 60Hz I can see that scrolling in
 Firefox is a lot smoother with the 90Hz refresh rate. Windows 11 supports
 dynamic refresh rate but the 7x does not appear to be compatible.
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-camera-bump.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-camera-bump.jpg",
-   resize_width=1600,
-   alt="Photo of the front edge of the laptop showing the camera bump.",
-   caption="Camera bump.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-camera-bump.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-camera-bump.jpg" resize_width={1600} alt="Photo of the front edge of the laptop showing the camera bump." caption="Camera bump." /> }}
 
 Instead of a notch there's a slightly taller region at the top of the screen
 where the camera, and other sensors are. There is also a camera bump behind this
@@ -179,11 +162,7 @@ work. It seems they sell [a version specifically for laptops][pen].
 
 #### Keyboard
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-keyboard-and-stickers.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-keyboard-and-stickers.jpg",
-   resize_width=1600,
-   alt="Photo of the keyboard and trackpad. On the right hand palm rest there is a Snapdragon X sticker and a tall sticker from Lenovo.",
-   caption="Keyboard and trackpad. Yes, free of the tyranny of Intel Inside stickers what did Lenovo do? More stickers! The tall one peeled off ok, but you could see where it had been. A quick wipe with an alcohol swab sorted it out. I left the Snapdragon one on for now. I don't know what's wrong with me.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-keyboard-and-stickers.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-keyboard-and-stickers.jpg" resize_width={1600} alt="Photo of the keyboard and trackpad. On the right hand palm rest there is a Snapdragon X sticker and a tall sticker from Lenovo." caption="Keyboard and trackpad. Yes, free of the tyranny of Intel Inside stickers what did Lenovo do? More stickers! The tall one peeled off ok, but you could see where it had been. A quick wipe with an alcohol swab sorted it out. I left the Snapdragon one on for now. I don't know what's wrong with me." /> }}
 
 The keyboard is pleasant to type on. It has an unsurprising layout without any
 weird quirks. It has a firm feel and slightly more travel than my old laptop,
@@ -238,11 +217,7 @@ The camera does not seem to be anything remarkable. In indoor conditions
 without any direct lighting of the subject it produces an image that shows
 heavy noise reduction but is fairly bright.
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/camera.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/camera.jpg",
-   resize_width=1600,
-   alt="Photo of your author taken with the built-in webcam.",
-  caption="Photo of the author taken with the built-in webcam.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/camera.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/camera.jpg" resize_width={1600} alt="Photo of your author taken with the built-in webcam." caption="Photo of the author taken with the built-in webcam." /> }}
 
 I have not used the built-in microphones. The speakers are extremely crisp and
 clear in mid and high ranges. They are capable of going very loud without
@@ -259,11 +234,7 @@ least I'm hoping that's the case.
 
 #### Ports & Power
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-left-edge.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-left-edge.jpg",
-   resize_width=1600,
-   alt="Photo of the left edge of the laptop showing the two USB-C ports.",
-   caption="The left-side ports.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-left-edge.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-left-edge.jpg" resize_width={1600} alt="Photo of the left edge of the laptop showing the two USB-C ports." caption="The left-side ports." /> }}
 
 On the left hand side are two of the three USB-C ports. Between them is an LED
 that glows orange when charging and white when full. On the right hand side is
@@ -272,11 +243,7 @@ power button is a thin phone-style unit on the edge of the body. It has a small
 white LED the glows when the laptop is on and pulses slowly while it is
 sleeping.
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-right-edge.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-right-edge.jpg",
-   resize_width=1600,
-   alt="Photo of the left edge of the laptop showing the two USB-C ports.",
-   caption="The right-side ports.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-right-edge.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-right-edge.jpg" resize_width={1600} alt="Photo of the left edge of the laptop showing the two USB-C ports." caption="The right-side ports." /> }}
 
 Pressing the power button will sleep/wake the laptop. You must dwell with the
 button pressed for just a moment to have it work, which helps prevent
@@ -284,11 +251,7 @@ accidental presses. Although, it is natural to brace the right side where the
 button is when plugging in something to the left, which can result in the power
 button being pressed if you aren't careful.
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-camera-switch.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-camera-switch.jpg",
-   resize_width=1600,
-   alt="Photo of the laptop upside-down showing the camera privacy switch.",
-   caption="The camera privacy switch. This sticker was easy to remove with the little red pull tab.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-camera-switch.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-camera-switch.jpg" resize_width={1600} alt="Photo of the laptop upside-down showing the camera privacy switch." caption="The camera privacy switch. This sticker was easy to remove with the little red pull tab." /> }}
 
 There is no fingerprint reader, instead Windows Hello uses the camera and IR
 sensor to use your face to authenticate. The utility of the camera privacy
@@ -300,7 +263,7 @@ Waking from suspend is nearly instant. If opening the laptop it's usually
 resumed and ready to go before you've finished moving the display into
 position.
 
-{{ video(video="posts/2024/yoga-7x-snapdragon-developer-review/wake-from-sleep.m4v", height=450, preload="metadata", loop=true, alt="Video showing the laptop waking from sleep quickly. Windows Hello uses the camera to grant access without having to type in a password.", caption="Video showing the laptop waking from sleep. Windows Hello uses the camera to grant access without having to type in a password.") }}
+{{ <video video="posts/2024/yoga-7x-snapdragon-developer-review/wake-from-sleep.m4v" height={450} preload="metadata" loop={true} alt="Video showing the laptop waking from sleep quickly. Windows Hello uses the camera to grant access without having to type in a password." caption="Video showing the laptop waking from sleep. Windows Hello uses the camera to grant access without having to type in a password." /> }}
 
 ### Compatibility & Gaming
 
@@ -333,11 +296,7 @@ did a constant 60fps, at least in the early game. With a reduced (from native)
 resolution of 1600×900 Cities Skylines ran acceptably at 25–30fps in a city
 with a population of a bit under 10k.
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/factorio.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/factorio.png",
-   resize_width=1600,
-   alt="Screenshot of Factorio. The view is fairly zoomed out. There a lot of trees in the bottom left of the image and the FPS counter is showing 60 FPS.",
-   caption="Screenshot of Factorio taken while moving diagonally down and to the left.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/factorio.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/factorio.png" resize_width={1600} alt="Screenshot of Factorio. The view is fairly zoomed out. There a lot of trees in the bottom left of the image and the FPS counter is showing 60 FPS." caption="Screenshot of Factorio taken while moving diagonally down and to the left." /> }}
 
 As you can probably guess I'm not much of a gamer and this is not a gaming PC,
 but for older, or lighter games it does just fine under emulation. I didn't
@@ -359,17 +318,12 @@ gunzipping it and then importing it. Both distros work well. It was
 particularly satisfying to `apt install x11-apps` in the Debian install, then
 run `xeyes` and have it just work™.
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/xeyes.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/xeyes.png",
-   resize_width=1600,
-   alt="Screen shot with an xeyes window above a terminal window showing apt output from installing x11-apps and running xeyes.",
-   caption="xeyes running via WSL.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/xeyes.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/xeyes.png" resize_width={1600} alt="Screen shot with an xeyes window above a terminal window showing apt output from installing x11-apps and running xeyes." caption="xeyes running via WSL." /> }}
 
 WSL2 uses Hyper-V virtualisation under the covers but frustratingly creating
 virtual machines manually with Hyper-V requires Windows Pro and the 7x comes
 with Windows Home. Through a website of dubious legitimacy I was able to
-purchase a Windows Pro key for considerably less than the {{ money(amount=169)
-}} Microsoft was asking on the Microsoft Store for a Home to Pro upgrade.
+purchase a Windows Pro key for considerably less than the {{ <money amount={169} /> }} Microsoft was asking on the Microsoft Store for a Home to Pro upgrade.
 
 After the updates were applied I fired up Hyper-V Manager and tried booting the
 Chimera Linux `aarch64` ISO. The grub menu is shown promptly but after
@@ -617,7 +571,7 @@ fastest run, rounded to the nearest second.
 | <img class="os-logo" src="windows.svg" width="24"> | [HP Aero]      | [Ryzen 7 5800U] | 8c/16t   | x86  | Windows 11         | 1.79.0 | 2:03 |
 | <img class="os-logo" src="windows.svg" width="24"> | [Dev Kit 2023] | [8cx Gen3]      | 8c       | ARM  | Windows 11         | 1.79.0 | 2:39 |
 
-{% smaller() %}
+{% <smaller> %}
 **Key:** c = core, t = thread, p = performance core, e = efficiency core
 
 **Notes:**
@@ -635,7 +589,7 @@ computing I'm going to stick with the Balanced setting.
 - For Windows testing the code was checked out onto a [Dev Drive] volume.
 - \* This machine was configured to use 14 cores in WSL and was not using
   a Dev Drive.
-{% end %}
+{% </smaller> %}
 
 Overall I think the Snapdragon X Elite does very well. It's in between an M1
 Pro and an M3 Max, it handily beat my outgoing laptop (comparing Windows
@@ -658,11 +612,7 @@ website, in this case `copilot.microsoft.com`. As a result it can be a bit
 janky and is completely dependent on an internet connection to render the UI
 and respond to prompts.
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/copilot-offline.png",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/copilot-offline.png",
-   width=630,
-   alt="Screenshot of the Copilot app showing 'You're offline' and no other UI.",
-   caption="Copilot 'app' when you're offline.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/copilot-offline.png" link="posts/2024/yoga-7x-snapdragon-developer-review/copilot-offline.png" width={630} alt="Screenshot of the Copilot app showing 'You're offline' and no other UI." caption="Copilot 'app' when you're offline." /> }}
 
 I did use it a few times when seeking answers for how to do something I know
 how to do on Linux in Windows. The responses were generally helpful. One detail
@@ -671,11 +621,7 @@ intended to provide a source for the information. Belying its Edge
 underpinnings clicking these links opens in Edge instead of the default
 browser.
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/copilot-response.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/copilot-response.png",
-   resize_width=1600,
-   alt="Screenshot of the Copilot app with a response to a query about PowerShell. The response includes several numbered footnotes, each of which is a link.",
-   caption="Copilot response with links to sources.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/copilot-response.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/copilot-response.png" resize_width={1600} alt="Screenshot of the Copilot app with a response to a query about PowerShell. The response includes several numbered footnotes, each of which is a link." caption="Copilot response with links to sources." /> }}
 
 ### Non-Windows Operating Systems
 
@@ -700,11 +646,7 @@ entry in the benchmark table. Yep OpenBSD runs on it right now. After resizing
 the Windows partition I was able to install a recent snapshot of OpenBSD
 -current.
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/openbsd-fvwm.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/openbsd-fvwm.png",
-   resize_width=1600,
-   alt="Screenshot of OpenBSD running fvwm. There are Firefox and Alacritty windows. The Firefox window is showing the OpenBSD homepage. The Alacritty window is showing the output of neofetch.",
-   caption="OpenBSD running on the Yoga 7x.") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/openbsd-fvwm.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/openbsd-fvwm.png" resize_width={1600} alt="Screenshot of OpenBSD running fvwm. There are Firefox and Alacritty windows. The Firefox window is showing the OpenBSD homepage. The Alacritty window is showing the output of neofetch." caption="OpenBSD running on the Yoga 7x." /> }}
 
 Now it's all still pretty bleeding edge and I can't say the experience is
 particularly good at this point. It runs pretty hot with the fan going most of
@@ -716,11 +658,7 @@ alternative OSes are pretty easy to run on these systems.
 
 ### Conclusion
 
-{{ figure(image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-yoga-detail.jpg",
-   link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-yoga-detail.jpg",
-   resize_width=1600,
-   alt="Photo of the laptop at and angle showing the YOGA detail on the right-side palm rest.",
-   caption="YOGA") }}
+{{ <figure image="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-yoga-detail.jpg" link="posts/2024/yoga-7x-snapdragon-developer-review/yoga-7x-yoga-detail.jpg" resize_width={1600} alt="Photo of the laptop at and angle showing the YOGA detail on the right-side palm rest." caption="YOGA" /> }}
 
 Overall I'm very happy with the Yoga 7x. It has mostly met my expectations for
 a device this early in its release cycle. It is not without its quirks, bugs,

@@ -11,7 +11,7 @@ down my current tech stack and then revisit it in a few years to see how things
 evolve. As per Alex's post I'll break it down into three sections: software,
 (development) tech stack, and hardware.
 
-{{ figure(image="posts/2024/tech-stack/desktop.jpg", link="posts/2024/tech-stack/desktop.jpg", resize_width=1600, alt="A photo of my desk. There's two displays, the one on the right is rotated into a portait orientation, the left on is on a wooden monitor stand. In front of the monitors are: a PS4 controller, TI-89, tenkeyless mechanical keyboard, mouse, and Kobo e-Reader.", caption="My desk. The computer is behind the displays.") }}
+{{ <figure image="posts/2024/tech-stack/desktop.jpg" link="posts/2024/tech-stack/desktop.jpg" resize_width={1600} alt="A photo of my desk. There's two displays, the one on the right is rotated into a portait orientation, the left on is on a wooden monitor stand. In front of the monitors are: a PS4 controller, TI-89, tenkeyless mechanical keyboard, mouse, and Kobo e-Reader." caption="My desk. The computer is behind the displays." /> }}
 
 <!-- more -->
 
@@ -264,4 +264,3 @@ hardware catches up.
 [ZFS]: https://openzfs.org/
 [Zola]: https://www.getzola.org/
 [zsh]: https://www.zsh.org/
-

@@ -46,6 +46,7 @@ to investigate it today. To find the failing command I ran
 `coredumpctl list` then identified one of the docker crashes and ran
 `coredumpctl info` with its PID:
 
+{% raw -%}
 ```
 $ coredumpctl info 78255
            PID: 78255 (docker)
@@ -64,6 +65,7 @@ $ coredumpctl info 78255
        Storage: /var/lib/systemd/coredump/core.docker.0.0ac9f0dd246548949c3a90a0e7494665.78255.1677283403000000.zst (inaccessible)
        Message: Process 78255 (docker) of user 0 dumped core.
 ```
+{% endraw -%}
 
 Strangely I could run the command myself (`Command Line` line) just fine. I
 figured I needed to see where in docker it was crashing. I learned how to

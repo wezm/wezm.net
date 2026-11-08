@@ -6,7 +6,7 @@ date =  2026-01-26T11:36:15+10:00
 updated = 2026-01-27T09:25:58+10:00
 +++
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-box.JPG", link="/posts/2026/loongarch-mini-pc-m700s/", resize_width=1600, alt="Photo of the MOREFINE mini PC with its box in the background. The box has the text 'MINI PC' in large letters outlined in gold, which is reflecting in the top of the PC.", caption="MOREFINE M700S Mini PC") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/m700s-box.JPG" link="/posts/2026/loongarch-mini-pc-m700s/" resize_width={1600} alt="Photo of the MOREFINE mini PC with its box in the background. The box has the text 'MINI PC' in large letters outlined in gold, which is reflecting in the top of the PC." caption="MOREFINE M700S Mini PC" /> }}
 
 Ever the fan of an underdog, I recently acquired a new mini-PC with a
 [Loongson 3A6000 CPU][ls3a6000]. This CPU uses the LoongArch64 instruction set
@@ -61,9 +61,9 @@ The specific hardware I bought is a [MOREFINE M700S mini-PC from
 AliExpress][ali-link] (affiliate link). It's about the size of the original Mac
 mini and constructed from aluminium: 15×14.5×5 cm.
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-front.JPG", link="posts/2026/loongarch-mini-pc-m700s/m700s-front.JPG", resize_width=1600, alt="Photo of the top and front of the M700S. It's a small black computer with a Type-C and two Type-A USB ports on the front along with a power button.", caption="M700S Front") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/m700s-front.JPG" link="posts/2026/loongarch-mini-pc-m700s/m700s-front.JPG" resize_width={1600} alt="Photo of the top and front of the M700S. It's a small black computer with a Type-C and two Type-A USB ports on the front along with a power button." caption="M700S Front" /> }}
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-back.JPG", link="posts/2026/loongarch-mini-pc-m700s/m700s-back.JPG", resize_width=1600, alt="Back of the M700S showing a variety of ports: DC in, four USB-A, two HDMI, two Ethernet, one 3.5mm audio jack.", caption="M700S Back") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/m700s-back.JPG" link="posts/2026/loongarch-mini-pc-m700s/m700s-back.JPG" resize_width={1600} alt="Back of the M700S showing a variety of ports: DC in, four USB-A, two HDMI, two Ethernet, one 3.5mm audio jack." caption="M700S Back" /> }}
 
 #### Specifications
 
@@ -90,9 +90,9 @@ Opening the bottom of the case requires removing the four screws in the bottom,
 one under each of the rubber feet. In the bottom section is the M.2 slot and
 large blower fan.
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-bottom-grill.JPG", link="posts/2026/loongarch-mini-pc-m700s/m700s-bottom-grill.JPG", resize_width=1600, alt="Photo of the underside of the M700S with the feet and screws removed. There's a four-by-four grid of slots cut into it with the slots alternating between vertical and horizontal. There is a mesh behind the slots.", caption="Underside with feet & screws removed.") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/m700s-bottom-grill.JPG" link="posts/2026/loongarch-mini-pc-m700s/m700s-bottom-grill.JPG" resize_width={1600} alt="Photo of the underside of the M700S with the feet and screws removed. There's a four-by-four grid of slots cut into it with the slots alternating between vertical and horizontal. There is a mesh behind the slots." caption="Underside with feet & screws removed." /> }}
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-bottom.JPG", link="posts/2026/loongarch-mini-pc-m700s/m700s-bottom.JPG", resize_width=1600, alt="Inside the bottom of the M700S showing a large blower fan and M.2 NVMe drive.", caption="M700S with bottom grill removed.") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/m700s-bottom.JPG" link="posts/2026/loongarch-mini-pc-m700s/m700s-bottom.JPG" resize_width={1600} alt="Inside the bottom of the M700S showing a large blower fan and M.2 NVMe drive." caption="M700S with bottom grill removed." /> }}
 
 The blower fan runs constantly at a fairly high speed, making it much noisier
 than any other computer I own. I contacted MOREFINE about it, and
@@ -101,7 +101,7 @@ they confirmed that it was expected:
 > Does not affect normal operations<br>
 > There is currently no other way to adjust its noise; this is a normal state
 
-{{ audio(src="posts/2026/loongarch-mini-pc-m700s/fan-noise.mp3", caption="Listen to the fan.") }}
+{{ <audio src="posts/2026/loongarch-mini-pc-m700s/fan-noise.mp3" caption="Listen to the fan." /> }}
 
 Opening the top of the case requires removing the two screws on the back panel
 above the ports. Then use something thin in one of the screw holes to lever the
@@ -112,7 +112,7 @@ In the top you get access to the SO-DIMM RAM slots. There's also space for a
 3.5" SATA SSD or HD. The M700S came with mounting hardware for this and a small SATA
 cable that plugs into the ports at the top right.
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-top.JPG", link="posts/2026/loongarch-mini-pc-m700s/m700s-top.JPG", resize_width=1600, alt="M700S with top lid flipped up and being held in place with my hand. Inside is a circuit board filling the space. On the right is a double-decker SO-DIMM RAM slot with one slot populated.", caption="Under the top lid. Note one spare RAM slot, M.2 slot for WiFI/Bluetooth, and microphone (bottom right).") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/m700s-top.JPG" link="posts/2026/loongarch-mini-pc-m700s/m700s-top.JPG" resize_width={1600} alt="M700S with top lid flipped up and being held in place with my hand. Inside is a circuit board filling the space. On the right is a double-decker SO-DIMM RAM slot with one slot populated." caption="Under the top lid. Note one spare RAM slot, M.2 slot for WiFI/Bluetooth, and microphone (bottom right)." /> }}
 
 ### Installing Chimera Linux
 
@@ -124,18 +124,18 @@ No matter, as the goal was always to run Chimera Linux on it. The password to
 the Loongnix installation was not readily obvious to me, but a recent post on
 the [DuckDB blog about the same machine][duckdb] had the necessary details.
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/loongnix.png", link="posts/2026/loongarch-mini-pc-m700s/loongnix.png", resize_width=1600, alt="Screenshot of KDE System Information showing Loongnix GNU/Linux 20 with KDE 5, Qt 5, and Linux kernel 4.19.0.", caption="KDE System Information in Loongnix.") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/loongnix.png" link="posts/2026/loongarch-mini-pc-m700s/loongnix.png" resize_width={1600} alt="Screenshot of KDE System Information showing Loongnix GNU/Linux 20 with KDE 5, Qt 5, and Linux kernel 4.19.0." caption="KDE System Information in Loongnix." /> }}
 
 The BIOS (UEFI) is in Chinese by default. When the machine boots press F2 or down arrow
 to enter the UEFI.
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/uefi.png", link="posts/2026/loongarch-mini-pc-m700s/uefi.png", resize_width=1600, alt="Screen capture of UEFI in Chinese. There is a dialog in the middle of the screen with the English option highlighted.", caption="UEFI in Chinese.") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/uefi.png" link="posts/2026/loongarch-mini-pc-m700s/uefi.png" resize_width={1600} alt="Screen capture of UEFI in Chinese. There is a dialog in the middle of the screen with the English option highlighted." caption="UEFI in Chinese." /> }}
 
 The initial option selected when the UEFI starts is the language
 selector. Press Enter, then select English. If you save and exit at this point the
 UEFI and boot messages will remain in English.
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/uefi-english.png", link="posts/2026/loongarch-mini-pc-m700s/uefi-english.png", resize_width=1600, alt="Screen capture of UEFI in English. There's a menu with the following options: Main, Set Date and Time, Security, Device Manager, Boot Manager, Boot Maintenance Manager, Save & Exit, Continue.", caption="UEFI in English.") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/uefi-english.png" link="posts/2026/loongarch-mini-pc-m700s/uefi-english.png" resize_width={1600} alt="Screen capture of UEFI in English. There's a menu with the following options: Main, Set Date and Time, Security, Device Manager, Boot Manager, Boot Maintenance Manager, Save & Exit, Continue." caption="UEFI in English." /> }}
 
 With that out of the way I booted off a Chimera ISO on a USB stick and followed
 [the instructions][install-chimera] for a normal install. There's nothing out
@@ -144,7 +144,7 @@ to an x86\_64 install, right down to using `systemd-boot` as the bootloader.
 This makes for a refreshing change from Snapdragon X machines, which still
 don't have complete or widespread Linux distribution support.
 
-{{ video(video="posts/2026/loongarch-mini-pc-m700s/M700S.mp4", height=450, preload="auto", poster="png", alt="Video capture of M700S boot to Chimera login prompt. It starts with a Loongson logo, briefly shows a menu, then starts systemd-boot, and finally starts booting Chimera Linux, finishing at a login prompt.", caption="Video capture of M700S booting to Chimera login prompt.") }}
+{{ <video video="posts/2026/loongarch-mini-pc-m700s/M700S.mp4" height={450} preload="auto" poster="png" alt="Video capture of M700S boot to Chimera login prompt. It starts with a Loongson logo, briefly shows a menu, then starts systemd-boot, and finally starts booting Chimera Linux, finishing at a login prompt." caption="Video capture of M700S booting to Chimera login prompt." /> }}
 
 With the base installation complete I proceeded to install [GNOME]. This is
 where I ran into my first issue. I could log in with GDM and get to the
@@ -169,21 +169,21 @@ EE 24-01-26 11:52:43.809 - [render/gles2/renderer.c:804] Could not initialize EG
 
 Undeterred, I installed X.Org and started an Xfce X11 session, and all was well.
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/xfce.png", link="posts/2026/loongarch-mini-pc-m700s/xfce.png", resize_width=1600, alt="Screenshot of Xfce 4 desktop with Firefox, Terminal, and sticky notes application open.", caption="Xfce 4") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/xfce.png" link="posts/2026/loongarch-mini-pc-m700s/xfce.png" resize_width={1600} alt="Screenshot of Xfce 4 desktop with Firefox, Terminal, and sticky notes application open." caption="Xfce 4" /> }}
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-desk.JPG", link="posts/2026/loongarch-mini-pc-m700s/m700s-desk.JPG", resize_width=1600, alt="MOREFINE on wooden desktop with portable LCD on top. In front is a mechanical keyboard styled after the keyboard on the original Macintosh and a red and white Raspberry Pi mouse.", caption="Miniature computing.") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/m700s-desk.JPG" link="posts/2026/loongarch-mini-pc-m700s/m700s-desk.JPG" resize_width={1600} alt="MOREFINE on wooden desktop with portable LCD on top. In front is a mechanical keyboard styled after the keyboard on the original Macintosh and a red and white Raspberry Pi mouse." caption="Miniature computing." /> }}
 
 ### Performance & Efficiency
 
 The Loongson-3A6000 is not particularly fast or efficient. At idle it consumes
 about 27W and under load it goes up to 65W.
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/m700s-power.JPG", link="posts/2026/loongarch-mini-pc-m700s/m700s-power.JPG", resize_width=1600, alt="Photo of a watt-meter in front of the M700S showing 27.7W of power.", caption="Idle power usage.") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/m700s-power.JPG" link="posts/2026/loongarch-mini-pc-m700s/m700s-power.JPG" resize_width={1600} alt="Photo of a watt-meter in front of the M700S showing 27.7W of power." caption="Idle power usage." /> }}
 
 As a crude benchmark it scores 4.45 on the [Speedometer 3.1 browser benchmark][speedometer]
 in Firefox.
 
-{{ figure(image="posts/2026/loongarch-mini-pc-m700s/speedometer.png", link="posts/2026/loongarch-mini-pc-m700s/speedometer.png", alt="Screenshot of Speedometer result. It's styled like an old car speedometer and has a large number, 4.45 with ± 0.078 under it.", caption="M700S Speedometer 3.1 benchmark result.") }}
+{{ <figure image="posts/2026/loongarch-mini-pc-m700s/speedometer.png" link="posts/2026/loongarch-mini-pc-m700s/speedometer.png" alt="Screenshot of Speedometer result. It's styled like an old car speedometer and has a large number, 4.45 with ± 0.078 under it." caption="M700S Speedometer 3.1 benchmark result." /> }}
 
 For comparison the Intel N100 based mini-PC connected to my TV consumes ~7W
 when idle and scores 12.7 on Speedometer 3.1. My AMD Ryzen 9950X3D scores 36.7 (and
@@ -319,7 +319,7 @@ died out or are expensive to acquire. That's why it's interesting to me to see
 a new affordable one spring up in recent times, and get adopted in the Linux
 ecosystem relatively quickly. Happy computing.
 
-{{ comments(fedi="https://mastodon.decentralised.social/@wezm/115961431304905606", hn="https://news.ycombinator.com/item?id=46762098", lobsters="https://lobste.rs/s/ve0986/exploring_linux_on_loongarch_mini_pc", bluesky="https://bsky.app/profile/wezm.net/post/3mddddziqos2a") }}
+{{ <comments fedi="https://mastodon.decentralised.social/@wezm/115961431304905606" hn="https://news.ycombinator.com/item?id=46762098" lobsters="https://lobste.rs/s/ve0986/exploring_linux_on_loongarch_mini_pc" bluesky="https://bsky.app/profile/wezm.net/post/3mddddziqos2a" /> }}
 
 [ali-link]: https://s.click.aliexpress.com/e/_c2J96QUj
 [allsorts]: https://github.com/yeslogic/allsorts

@@ -17,13 +17,13 @@ months.
 The first new feature is a bit more visibility into the state of the system. I
 added uptime and memory info to the web page:
 
-{{ figure(image="posts/2022/garage-door-monitor-update/webpage.png", link="posts/2022/garage-door-monitor-update/webpage.png", alt="Screenshot of the web page served by the garage door monitor. It shows the state of the door, uptime of the device, and memory usage information.", caption="Screenshot of the web page now including uptime and memory info.", width=625) }}
+{{ <figure image="posts/2022/garage-door-monitor-update/webpage.png" link="posts/2022/garage-door-monitor-update/webpage.png" alt="Screenshot of the web page served by the garage door monitor. It shows the state of the door, uptime of the device, and memory usage information." caption="Screenshot of the web page now including uptime and memory info." width={625} /> }}
 
 The second and more practical addition is a subsequent notification when the
 door is closed again after it was left open for longer that the trigger time (5
 minutes).
 
-{{ figure(image="posts/2022/garage-door-monitor-update/new-mattermost-notification.png", link="posts/2022/garage-door-monitor-update/new-mattermost-notification.png", alt="Screenshot of the message posted to Mattermost by the garage door monitor. It reads: Garage door closed after 5 minutes open.", caption="The new notification", width=403, border=true) }}
+{{ <figure image="posts/2022/garage-door-monitor-update/new-mattermost-notification.png" link="posts/2022/garage-door-monitor-update/new-mattermost-notification.png" alt="Screenshot of the message posted to Mattermost by the garage door monitor. It reads: Garage door closed after 5 minutes open." caption="The new notification" width={403} border={true} /> }}
 
 Since I set up the garage door monitor I haven't accidentally left it open.
 However, I have triggered the notification when washing the car or packing for

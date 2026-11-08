@@ -47,7 +47,7 @@ the solution via a [summary of the release notes for a firmware update in
 With this knowledge in hand I was able to make it render monospace text in the
 one true monospace font, [PragmataPro]:
 
-{{ figure(image="posts/2022/monospace-kobo-ereader/kobo-monospace.jpg", link="posts/2022/monospace-kobo-ereader/kobo-monospace.jpg", resize_width=600, alt="Kobo Libra 2 rendering monospace text in PragmataPro", caption="Kobo Libra 2 rendering monospace text in PragmataPro.") }}
+{{ <figure image="posts/2022/monospace-kobo-ereader/kobo-monospace.jpg" link="posts/2022/monospace-kobo-ereader/kobo-monospace.jpg" resize_width={600} alt="Kobo Libra 2 rendering monospace text in PragmataPro" caption="Kobo Libra 2 rendering monospace text in PragmataPro." /> }}
 
 ## Instructions
 

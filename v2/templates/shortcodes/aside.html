@@ -1,6 +1,8 @@
+{% component aside(title, float) %}
 <aside class="float-{{ float }}">
   <div class="emoji text-center">💡</div>
   <strong>{{ title }}</strong>
 
   {{ body | markdown | safe }}
 </aside>
+{% endcomponent %}

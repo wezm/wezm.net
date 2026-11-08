@@ -1,7 +1,6 @@
+{% component tweet_list(offset = 0, limit = 50, media_prefix = "") %}
 {% set tweets = load_data(path="content/posts/2020/100-rust-binaries/tweets.json", format="json") %}
-{% set start = offset | default(value=0) %}
-{% set limit = limit | default(value=50) %}
-{% set media_prefix = media_prefix | default(value="") %}
+{% set start = offset %}
 {% if start + limit > tweets | length %}
   {% set end = tweets | length %}
 {% else %}
@@ -12,7 +11,7 @@
 {% else %}
 <ol class="tweet-list" start="{{ start + 1 }}">
 {% endif %}
-  {% for tweet in tweets | slice(start=start, end=end) %}
+  {% for tweet in tweets[start:end] %}
   <li>
     {{ tweet.html | safe }}
     {% if tweet.media %}
@@ -24,7 +23,7 @@
         {% set height = tweet.height %}
       {% endif %}
 
-      {% if tweet.media is ending_with(".mp4") %}
+      {% if tweet.media is ending_with(pat=".mp4") %}
       <video controls muted preload="none" src="{{ media_prefix }}{{ tweet.media }}" poster="{{ media_prefix }}{{ tweet.media }}.jpg" style="max-height: {{ height }}px"></video>
       {% else %}
         <span class="screenshot">
@@ -41,3 +40,4 @@
   </li>
   {% endfor %}
 </ol>
+{% endcomponent %}

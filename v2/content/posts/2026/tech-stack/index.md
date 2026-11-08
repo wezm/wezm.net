@@ -10,7 +10,7 @@ A summary of my personal tech stack as we start 2026. I previously did one of th
 in [2024](@/posts/2024/tech-stack/index.md). I was prompted to write this one
 by [David Bushell] and [Robb Knight]'s App Defaults 2026 posts.
 
-{{ figure(image="posts/2026/tech-stack/desktop.jpg", link="posts/2026/tech-stack/desktop.jpg", resize_width=1600, alt="A photo of my standing desk. There's a large display showing a Chimera Linux GNOME desktop, on the right is Macintosh LC 475. In front of the monitor is: a PS4 controller, TI voyage 200 graphing calculator, tenkeyless mechanical keyboard, mouse, and Boox Go 103 e-Note.", caption="My desk in late 2025.") }}
+{{ <figure image="posts/2026/tech-stack/desktop.jpg" link="posts/2026/tech-stack/desktop.jpg" resize_width={1600} alt="A photo of my standing desk. There's a large display showing a Chimera Linux GNOME desktop, on the right is Macintosh LC 475. In front of the monitor is: a PS4 controller, TI voyage 200 graphing calculator, tenkeyless mechanical keyboard, mouse, and Boox Go 103 e-Note." caption="My desk in late 2025." /> }}
 
 <!-- more -->
 

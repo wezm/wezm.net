@@ -35,7 +35,7 @@ You can watch all the talks in the [RustConf 2021 playlist on YouTube][playlist]
 
 The best thing about Esteban's talk may have been this exchange on Discord:
 
-{{ figure(image="posts/2021/rust-conf/speed.png", link="posts/2021/rust-conf/speed.png", width=357, alt="Screenshot of Discord chat in which someone suggests that Esteban sounds like he's speaking at 1.25×. Esteban replies saying that the talk was a couple of minutes over the 15 minutes allocated so he sped it up. One of the conference staff, replied that they would have happily given him the extra couple of minutes.", caption="People are really good at detecting sped up speech.") }}
+{{ <figure image="posts/2021/rust-conf/speed.png" link="posts/2021/rust-conf/speed.png" width={357} alt="Screenshot of Discord chat in which someone suggests that Esteban sounds like he's speaking at 1.25×. Esteban replies saying that the talk was a couple of minutes over the 15 minutes allocated so he sped it up. One of the conference staff, replied that they would have happily given him the extra couple of minutes." caption="People are really good at detecting sped up speech." /> }}
 
 [RustConf]: https://rustconf.com/
 [playlist]: https://www.youtube.com/playlist?list=PL85XCvVPmGQgACNMZlhlRZ4zlKZG_iWH5

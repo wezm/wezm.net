@@ -10,7 +10,7 @@ Over the past few months I've been working on a Linux distribution derived from 
 it's now available for download. The distribution is called Casuarina Linux. It swaps out `musl` in
 Chimera for `glibc` to gain more binary compatibility with the wider GNU/Linux ecosystem.
 
-{{ figure(image="posts/2026/casuarina-linux/casuarina-gnome.webp", link="posts/2026/casuarina-linux/casuarina-gnome.webp", resize_width=1600, border=true, alt="Casuarina Linux GNOME desktop with a music player open and compact fastfetch output showing OS: Casuarina Linux x86, boot manager: systemd-boot, kernel: Linux, init: dinit, libc: glibc, pkgs: apk (1786)", caption="GNOME desktop on Casuarina Linux.") }}
+{{ <figure image="posts/2026/casuarina-linux/casuarina-gnome.webp" link="posts/2026/casuarina-linux/casuarina-gnome.webp" resize_width={1600} border={true} alt="Casuarina Linux GNOME desktop with a music player open and compact fastfetch output showing OS: Casuarina Linux x86, boot manager: systemd-boot, kernel: Linux, init: dinit, libc: glibc, pkgs: apk (1786)" caption="GNOME desktop on Casuarina Linux." /> }}
 
 <!-- more -->
 

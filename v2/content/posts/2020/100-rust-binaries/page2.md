@@ -9,7 +9,7 @@ date = 2020-11-02T13:00:01+11:00
 This is page two of my [#100binaries] list containing binaries 51–100.
 [See the first page for the introduction and binaries 1–50](@/posts/2020/100-rust-binaries/index.md).
 
-{{ tweet_list(offset=50, media_prefix="../") }}
+{{ <tweet_list offset={50} media_prefix="../" /> }}
 
 [« Back to page 1](@/posts/2020/100-rust-binaries/index.md)
 

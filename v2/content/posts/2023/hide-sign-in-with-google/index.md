@@ -18,7 +18,7 @@ to ensure that the bulk of my browsing is done without ever being
 signed in to a Google account. This means that I see a lot of these pop ups
 encouraging me to sign in, so Google can track me more.
 
-{{ figure_no(image="posts/2023/hide-sign-in-with-google/sign-in-with-google.png", border=true, width=357, alt="Screenshot of the pop up", caption="Be gone evil pop up") }}
+{{ <figure_no image="posts/2023/hide-sign-in-with-google/sign-in-with-google.png" border={true} width={357} alt="Screenshot of the pop up" caption="Be gone evil pop up" /> }}
 
 I use [Stylus] to manage user styles. I created a new rule that applies to all
 sites and put this CSS in there:

@@ -9,7 +9,7 @@
   {% block metadata %}{% endblock %}
   {% block head %}{% endblock %}
 </head>
-<body class="{{ section.extra.body_class | default(value="") }}">
+<body class="{{ section?.extra?.body_class or "" }}">
   {% block body %}{% endblock %}
   <footer class="text-center">
     <div class="socials">

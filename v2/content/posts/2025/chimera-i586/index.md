@@ -11,11 +11,7 @@ that "it was time to return to slightly less frivolous projects for a bit" I
 instead spent the last week-and-change attempting to make [Chimera Linux]
 run on Pentium class 32-bit x86 hardware.
 
-{{ figure(image="posts/2025/chimera-i586/chimera-i586-qemu.png",
-   link="posts/2025/chimera-i586/chimera-i586-qemu.png",
-   width=594,
-   alt="Screenshot of a terminal with the output of fastfetch. It indicates the OS is Chimera Linux i586. It's using 216 MiB of 256MiB of RAM (85%).",
-   caption="I was moderately successful.") }}
+{{ <figure image="posts/2025/chimera-i586/chimera-i586-qemu.png" link="posts/2025/chimera-i586/chimera-i586-qemu.png" width={594} alt="Screenshot of a terminal with the output of fastfetch. It indicates the OS is Chimera Linux i586. It's using 216 MiB of 256MiB of RAM (85%)." caption="I was moderately successful." /> }}
 
 This was sparked by a friend linking to the
 [EoL page on the PC Engines website](https://pcengines.ch/eol.htm)
@@ -33,10 +29,7 @@ an [alix2d13] purchased in 2011, and an [alix3d2] purchased in 2012. My
 immediate thought was the alix3d2 would be perfect for hosting [my retro
 website][retro-site].
 
-{{ figure(image="posts/2025/chimera-i586/alix3d2.jpg",
-   link="posts/2025/chimera-i586/alix3d2.jpg",
-   alt="Photo of alix3d2 in aluminum case. It's longer than it is wide, kinda like a modem. It has power, Ethernet, and DB-9 serial cables connected.",
-   caption="alix3d2") }}
+{{ <figure image="posts/2025/chimera-i586/alix3d2.jpg" link="posts/2025/chimera-i586/alix3d2.jpg" alt="Photo of alix3d2 in aluminum case. It's longer than it is wide, kinda like a modem. It has power, Ethernet, and DB-9 serial cables connected." caption="alix3d2" /> }}
 
 They are powered by an AMD Geode LX800 CPU clocked at 500Mhz with 256Mb of RAM.
 The Geode is [mostly an i686][i686-geode] class 32-bit x86 CPU. Instead
@@ -825,11 +818,7 @@ kernel config over and tweaked it a little (to enable some things like
 compressed initramfs that Chimera uses). That still failed to start. After
 the GRUB menu and choosing an entry this is all that is seen:
 
-{{ figure(image="posts/2025/chimera-i586/chimera-i585-alix-boot.svg",
-   link="posts/2025/chimera-i586/chimera-i585-alix-boot.svg",
-   width=600,
-   alt="asciinema capture of the output on the serial console when trying to boot Chimera on the ALIX. It starts off with the tinyBIOS memory check, then loading GRUB, the GRUB boot menu, loading Linux, loading initial ramdisk, decompressing Linux, and finally booting the kernel.",
-   caption="Serial output captured from the ALIX when booting.") }}
+{{ <figure image="posts/2025/chimera-i586/chimera-i585-alix-boot.svg" link="posts/2025/chimera-i586/chimera-i585-alix-boot.svg" width={600} alt="asciinema capture of the output on the serial console when trying to boot Chimera on the ALIX. It starts off with the tinyBIOS memory check, then loading GRUB, the GRUB boot menu, loading Linux, loading initial ramdisk, decompressing Linux, and finally booting the kernel." caption="Serial output captured from the ALIX when booting." /> }}
 
 Given more-or-less the same config is able to boot on OpenWRT, there must
 be something particular about the Chimera build that's causing it to fail.

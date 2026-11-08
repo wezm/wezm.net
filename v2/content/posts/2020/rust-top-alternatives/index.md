@@ -10,11 +10,11 @@ Recently I aliased `top` to [ytop]. Then I became aware of [bottom], and
 [zenith]. These are all terminal based system monitoring tools that you might
 use instead of `top`. In this post I set out to compare them.
 
-{{ figure(image="posts/2020/rust-top-alternatives/ytop-btm-zenith-screenshot.png", link="posts/2020/rust-top-alternatives/ytop-btm-zenith-screenshot.png", alt="Screenshot of ytop, bottom, and zenith while building some Rust code", caption="Left to right: ytop, bottom, and zenith.") }}
+{{ <figure image="posts/2020/rust-top-alternatives/ytop-btm-zenith-screenshot.png" link="posts/2020/rust-top-alternatives/ytop-btm-zenith-screenshot.png" alt="Screenshot of ytop, bottom, and zenith while building some Rust code" caption="Left to right: ytop, bottom, and zenith." /> }}
 
 <!-- more -->
 
-{% aside(title="Why Rust?", float="right") %}
+{% <aside title="Why Rust?" float="right"> %}
 The Rust programming language helps people write efficient, reliable software.
 I like the language and the tools people are
 building with it.
@@ -22,7 +22,7 @@ building with it.
 If you're interested in more Rust CLI tools check out my
 post: [An Illustrated Guide to Some Useful Command Line
 Tools](https://www.wezm.net/technical/2019/10/useful-command-line-tools/).
-{% end %}
+{% </aside> %}
 
 As the title states all three tools are written in Rust. They show similar
 information and are all open source under the MIT license. I tested each one
