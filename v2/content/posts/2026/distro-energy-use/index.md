@@ -2,11 +2,11 @@
 title = "How Much Energy Does Building Distro Packages Use"
 date = 2026-11-09T16:38:01+10:00
 
-# [extra]
-# updated = 2026-01-27T09:25:58+10:00
+[extra]
+updated = 2026-11-09T17:14:51+10:00
 +++
 
-{{ figure(image="posts/2026/distro-energy-use/sushi-slide.svg", link="posts/2026/distro-energy-use/sushi-slide.svg", alt="A series of metrics arranged in round rects: 2786 commits, 7 months, 1 builder, 5200 package builds, 98kWh energy consumed", caption="Some metrics") }}
+{{ figure(image="posts/2026/distro-energy-use/bento-slide.svg", link="posts/2026/distro-energy-use/bento-slide.svg", alt="A series of metrics arranged in round rects: 2786 commits, 7 months, 1 builder, 5200 package builds, 98kWh energy consumed", caption="Some metrics") }}
 
 When I set up the infrastructure for [Casuarina Linux] I repurposed an AMD AM4 system with
 Ryzen&nbsp;9&nbsp;5950X 16-Core CPU (105W TDP) and 32Gb of DDR4 RAM as the build server. I set it up
