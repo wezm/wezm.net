@@ -1,14 +1,16 @@
+zola := "zola"
+
 default:
     @just --list
 
 # build and rsync to production
 deploy: build
-    rsync -avzhP --delete public/ hardforze.binarytrance.com:infrastructure/volumes/www/wezm.net/v2/
+    rsync -avzhP --delete public/ hardforze2:infrastructure/volumes/www/wezm.net/v2/
 
 # build with zola
 build:
-    zola build
+    {{ zola }} build
 
 # start zola dev server
 serve:
-    zola serve
+    {{ zola }} serve
